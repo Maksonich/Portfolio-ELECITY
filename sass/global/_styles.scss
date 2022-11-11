@@ -1,0 +1,28 @@
+#wrapper,
+main,
+#content,
+#sidebar,
+aside,
+section{
+	@include box;
+}
+.layout {
+	@include box;
+	width:1400px;
+	margin:0 auto;
+}
+body{
+	font-family: 'Montserrat';
+	font-style: normal;
+	color: $colorText;
+}
+h3{
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 35px;
+	color: #1E1E1E;
+	padding-bottom: 7px;
+	border-bottom: 1px solid #E5E5E5;
+}

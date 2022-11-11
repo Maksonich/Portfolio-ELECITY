@@ -1,0 +1,78 @@
+.main-title {
+    margin-top: 10px;
+    
+    .layout {
+        .play-img {
+            position: relative;
+            height: 460px;
+            .main-background {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+            }
+            .main-background-white {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 0;
+            }
+            .washing-mashines {
+                display: flex;
+                justify-content: end;
+                position: relative;
+                .one {
+                    position: absolute;
+                    top: 74px;
+                    right: 461px;
+                    z-index: 1;
+                }
+                .two {
+                    position: absolute;
+                    top: 32px;
+                    right: 245px;
+                    z-index: 3;
+                }
+                .three {
+                    position: absolute;
+                    top: 74px;
+                    right: 89px;
+                    z-index: 2;
+                }
+            }
+            .banner-text {
+                margin: 104px 0 0 114px;
+                max-width: 500px;
+                .title {
+                    font-weight: 600;
+                    font-size: 45px;
+                    line-height: 50px;
+                    color: #FFFFFF;
+                }
+                .subtitle {
+                    margin: 15px 0 40px 0;
+                    font-weight: 500;
+                    font-size: 22px;
+                    line-height: 55px;
+                    color: #FFFFFF;
+                }
+                a{
+                    background-color: #FFFFFF;
+                    position: relative;
+                    z-index: 3;
+                    padding: 15px 35px;
+                    border-radius:30px;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 35px;
+                    color: rgba(28, 80, 143, 0.95);
+                }
+            }
+        }
+      
+      
+    }
+}
+
+
+

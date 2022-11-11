@@ -1,0 +1,35 @@
+.advantages {
+    margin-top: 50px;
+    margin-bottom: 61px;
+    .layout {
+        overflow: visible;
+        ul{
+            display: flex;
+            justify-content: space-evenly;
+            position: relative;
+            li{
+                display: block;i
+                a{
+                    img{
+                        display: block;
+                    }
+                }
+            }
+            &::before{
+                content: "";
+                background-image: url(../images/advantages/arrow.png);
+                background-repeat: no-repeat;
+                background-position: 25px;
+                
+                width: 76px;
+                height: 76px;
+                background-color:#E5E5E5;
+
+                position: absolute;
+                top: 20px;right: -100px;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+        }
+    }
+}

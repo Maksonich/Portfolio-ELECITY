@@ -1,0 +1,71 @@
+.news-and-review {
+    margin-top: 85px;
+    .layout {
+        overflow: visible;
+        .content {
+            margin-top: 30px;
+            display: flex;
+            height: 516px;
+            
+            .left-news {
+                display: flex;
+                width: 50%;
+                margin-right: 15px;
+                .robot-cleaner {
+                    width: 376px;
+                    height: 516px;
+                    margin-right: 19px;
+                    img{
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+                .other-news {
+                    display: flex;
+                    flex-direction: column;
+                    .img-block,
+                    .img-block-two {
+                         width: 335px;
+                          height: 100%;
+                        img{
+                            width: 100%;
+                        }
+                        &:first-child{
+                            margin-bottom: 15px;
+                        }
+                    }
+                    
+                    
+                   
+                }
+            }
+            .right-news {
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+                .upper-img {
+                    
+                }
+                .lower-block {
+                    display: flex;
+                    margin-top: 16px;
+                    .left-lower {
+                        margin-right: 13px;
+                    }
+                    .right-lower {
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
