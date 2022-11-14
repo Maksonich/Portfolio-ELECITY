@@ -12,37 +12,143 @@
 </head>
 
 <body>
+	<!-- <div class="popup_catalog popup">
+		<div class="blocker"></div>
+		<div class="flex">
+			<div class="box">
+				<span class="close">
+					<img src="./images/icons/cross.png" alt="close">
+				</span>
+				<h3>Выберите город</h3>
+				<div class="successfully">
+					<img src="./images/icons/successfully.png" alt="successfully">
+				</div>
+				<form >
+					<input type="text" id="name" placeholder="Ваше имя">
+					<input type="text" id="mail" placeholder="Почта">
+					
+					<label for="" class="not-necessarily" id="tell"><input type="text" placeholder="Телефон"></label>
+					<button class="button-form"> Отправить</button>
+				</form>
+			</div>
+		</div>
+	</div> -->
+	<!-- <div class="popup_catalog popup">
+		<div class="blocker"></div>
+		<div class="flex">
+			<div class="box">
+				<span class="close">
+					<img src="./images/icons/cross.png" alt="close">
+				</span>
+				<h3>Обратный звонок</h3>
+				<div class="successfully">
+					<img src="./images/icons/successfully.png" alt="successfully">
+				</div>
+				<form >
+					<input type="text" id="name" placeholder="Ваше имя">
+					<input type="text" id="mail" placeholder="Почта">
+					
+					<label for="" class="not-necessarily" id="tell"><input type="text" placeholder="Телефон"></label>
+					<button class="button-form"> Отправить</button>
+				</form>
+			</div>
+		</div>
+	</div> -->
+	<div class="popup_catalog-loginAccount popup">
+		<div class="blocker"></div>
+		<div class="flex">
+			<div class="box-one ">
+				<h3>Вход в личный кабинет</h3>
+				<span class="subtitle">Введите номер телефона. Вам будет выслан код с паролем  по смс</span>
+				<form >
+					<input type="text" name="" id="enterNumber" placeholder="+38 ___ ___ __ __">
+					<span id="timer">Код будет отправлен через <b></b> секунд.....</span>
+					<button id="error">Повторить отправку</button>
+				</form>
+			</div>
+			<div class="next-step">
+				<h3>Введите код из смс</h3>
+				<span class="subtitle">Мы отправили код на телефон с номером<br><b id="your-number"></b></span>
+				<form >
+					<input type="text" name="" id="verification" placeholder="__ __ __ __" >
+					<span >Отправить код повторно через  <b id="timerNextStep"></b></span>
+					<button id="enter">Войти</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="popup_catalog-cities popup">
+		<div class="blocker"></div>
+		<div class="flex">
+			<div class="box">
+				<h3>Выберите город</h3>
+				<form >
+					<input type="search" name="" id="" placeholder="Начните вводить">
+					<ul>
+						<li><a href="#">Москва</a></li>
+						<li><a href="#">Санкт-Петербург</a></li>
+						<li><a href="#">Казань</a></li>
+						<li><a href="#">Смоленск</a></li>
+						<li><a href="#">Москва</a></li>
+						<li><a href="#">Санкт-Петербург</a></li>
+						<li><a href="#">Казань</a></li>
+						<li><a href="#">Смоленск</a></li>
+						<li><a href="#">Москва</a></li>
+						<li><a href="#">Санкт-Петербург</a></li>
+						<li><a href="#">Казань</a></li>
+						<li><a href="#">Смоленск</a></li>
+						<li><a href="#">Москва</a></li>
+						<li><a href="#">Санкт-Петербург</a></li>
+						<li><a href="#">Казань</a></li>
+						<li><a href="#">Смоленск</a></li>
+					</ul>
+				</form>
+			</div>
+		</div>
+	</div>
 	<div id="wrapper">
 	<header>
 		<div class="layout">
-			<nav>
-				<div class="nav-upper">
-					<div class="location">
-						<div class="icon-location">
-							<img src="./images/icons/geolocation.png" alt="geolocation">
-						</div>
-						<a href="#">Москва</a>
+			<div class="nav-upper">
+				<div class="location" id="selectSity">
+					<div class="icon-location ">
+						<img src="./images/icons/geolocation.png" alt="geolocation">
 					</div>
-					<ul>
-						<li><a href="#">Отзывы</a></li>
-						<li><a href="#"> О нас</a></li>
-						<li><a href="#">Доставка</a></li>
-						<li><a href="#">Оплата</a></li>
-						<li><a href="#">Подключение техники</a></li>
-						<li><a href="#">Доп. сервис</a></li>
-						<li><a href="#">Наши гарантии</a></li>
-						<li><a href="#">Почему мы?</a></li>
-						<li><a href="#">Контакты</a></li>
-						<li><a href="#">Оставить обращение</a></li>
-					</ul>
-					<div class="autorization">
-						<a href="#"><img src="./images/icons/autorization.png" alt="autorization"></a>
-						<a href="#">Личный кабинет</a>
-					</div>
+					<a href="#">Москва</a>
 				</div>
+				<ul>
+					<li><a href="#">Отзывы</a></li>
+					<li><a href="#"> О нас</a></li>
+					<li><a href="#">Доставка</a></li>
+					<li><a href="#">Оплата</a></li>
+					<li><a href="#">Подключение техники</a></li>
+					<li><a href="#">Доп. сервис</a></li>
+					<li><a href="#">Наши гарантии</a></li>
+					<li><a href="#">Почему мы?</a></li>
+					<li><a href="#">Контакты</a></li>
+					<li><a href="#">Оставить обращение</a></li>
+				</ul>
+				<div class="authorization" id="authorization">
+					<a href="#"><img src="./images/icons/autorization.png" alt="autorization"></a>
+					<a href="#">Личный кабинет</a>
+					<ul class="pop-up_input">
+						<li><a href="#" id="loginAccount">Личный кабинет</a></li>
+						<li><a href="./personal-account.html">Настройки</a></li>
+						<li><a href="#">Сообщения </a><span class="notice"></span></li>
+						<li><a href="#">Избранное</a><span class="notice"></span></li>
+						<li><a href="#">Мои заказы</a><span class="notice"></span></li>
+						<li class="exit"><a href="#">Выйти</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<span></span>
+		<div class="layout">
+			<nav>
+			
 				<div class="nav-search">
 					<div class="logotype">
-						<img src="./images/icons/logotype.png" alt="logotype">
+						<a href="./index.html"><img src="./images/icons/logotype.png" alt="logotype"></a>
 					</div>
 					<ul >
 						<li><a href="#">Техника</a></li>
@@ -389,5 +495,6 @@
 		</div>
 	</footer>
 	</div>
+	<script src="./js/script.js"></script>
 </body>
 </html>

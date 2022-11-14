@@ -1,0 +1,212 @@
+.personal-account {
+    margin-bottom: 86px;
+    .layout {
+        .way {
+            display: flex;
+            margin-top: 30px;
+            .main {
+                a{
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 35px;
+                    color: #1E1E1E;
+                }
+            }
+            .here {
+                margin-left: 10px;
+                a{  
+                    font-weight: 600px;
+                    font-size: 14px;
+                    line-height: 35px;
+                    color: #1E1E1E;
+                    
+                }
+            }
+        }
+        .control {
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            li{
+                
+                
+                a{
+                    img{
+                        position: relative;
+                        top: 6px;
+                        margin-right: 9px;
+                    }
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 35px;
+                    color: #404040;
+                    @include navHover;
+                }
+                &:last-child{
+                    a{
+                        color: red;}
+                }
+            }
+        }
+        h2{
+            margin-top: 34px;
+            font-weight: 400;
+            font-size: 30px;
+            line-height: 35px;
+            color: #1E1E1E;
+        }
+        .user-data {
+            margin-top: 12px;
+            .main-data {
+                 display: flex;
+                .user-photo {
+                    width: 108px;
+                    height: 108px;
+                    background-color:rgba(239, 243, 249, 1) ;
+                    border-radius: 50%;
+                    margin-right: 20px;
+                    img{
+                        padding: 27px 30px;
+                    }
+                }
+                .user-name {
+                    h3{
+                        border:none;
+                        font-weight: 600;
+                        font-size: 24px;
+                        line-height: 30px;
+                        color: #1E1E1E;
+                        
+                    }
+                    input[type=file]{
+                        display: none;
+                    }
+                    label{
+                        width: 203.11px;
+                        height: 20.62px;
+                        position: relative;
+                        display: block;
+                      img{
+                        width: 16px;
+                        height: 16px;
+                        position: relative;
+                        top: 4px;
+                        margin-right: 10px;
+                      }
+                    }
+                    
+                    
+                }
+            }
+            .data {
+                display: flex;
+                .data-settings {
+                    h3{
+                        margin-top: 30px;
+                        font-weight: 400;
+                        font-size: 24px;
+                        line-height: 35px;
+                        color: #1E1E1E;
+                        border:none;
+                    }
+                    ul{
+                        display: flex;
+                        justify-content: space-between;
+                        &:last-child{
+                            justify-content: flex-start;
+                        }
+                        li{
+                            margin-right: 160px;
+                           width: 305px;
+                            h4{
+                                font-weight: 400;
+                                font-size: 14px;
+                                line-height: 35px;
+                                color: #999999;
+                                
+                            }
+                            input{
+                                font-weight: 400;
+                                font-size: 18px;
+                                line-height: 35px;
+                                color: #404040;
+                                width: 305px;
+                                border: none;
+                            }
+                                                        
+                            .edit {
+                                display: flex;
+                                align-items: center;
+                                img{
+                                    margin-right: 10px;
+                                    width: 16px;
+                                    height: 16px;
+                                }
+                                span{
+                                    font-weight: 500;
+                                    font-size: 14px;
+                                    line-height: 30px;
+                                    color: $navHover;
+                                    cursor: pointer;
+
+                                }
+                            }
+                        }
+                    }
+                }
+                .form {
+                    max-width: 30%;
+                    h4{
+                        font-weight: 400;
+                        font-size: 24px;
+                        line-height: 35px;
+                        color: #1E1E1E;
+                        margin-bottom: 11px;
+                    }
+                    form{
+                        display: flex;
+                        flex-direction: column;
+
+                        label{
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 35px;
+                            color: #999999;
+                           
+                        }
+                        input{
+                            border: 1px solid #C4C4C4;
+                            border-radius: 5px;
+                            width: 332.49px;
+                            height: 45.82px;
+                            padding-left: 20px;
+                        }
+                        button{
+                            width: 213.49px;
+                            height: 54.65px;
+                            background: #437FC8;
+                            border-radius: 5px;
+                            border: none;
+                            color: #fff;
+                            font-weight: 600;
+                            font-size: 18px;
+                            line-height: 25px;
+                            margin-top:25px;
+                            align-self: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+

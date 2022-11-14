@@ -36,8 +36,148 @@
     color: $navHover;
   }
 }
+////
 
+@mixin anim{
+	-webkit-transition: all 500ms ease-in-out;
+	-moz-transition: all 500ms ease-in-out;
+	-ms-transition: all 500ms ease-in-out;
+	-o-transition: all 500ms ease-in-out;
+	transition: all 500ms ease-in-out;
+}
+@mixin img {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+@mixin font {
+	font-family: 'GT Eesti Pro Display';
+    font-size: 2.5em;
+    line-height: 125%;
+    font-weight: 400;
+    color: #141B41;
+}
+@mixin box {
+	display: block;
+  position:relative;
+  overflow: hidden;
+  width: 100%;
+	box-sizing: border-box;
+	height: auto;
+}
 
+@mixin font-header{
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 114.8%;
+  letter-spacing: 0.01em;
+  transition-duration: 0.5s;
+  a{
+    color: $colortext;
+  }
+  &:hover{
+    text-shadow: 0px 0px 1px $colortext;
+
+  }
+}
+@mixin button{
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 114.8%;
+  letter-spacing: 0.01em;
+  padding:14px 31px;
+  background: $colorbtn;
+  border-radius: 27px;
+  text-align: center;
+  transition-duration: 0.5s;
+  cursor: pointer;
+ a{
+  color: #fff;
+ }
+ &:hover{
+  background-color: #008f39;
+  cursor: pointer;
+ }
+}
+@mixin green-line{
+  &::before{
+    content: " ";
+    width: 52px;
+    height: 2px;
+
+    position: absolute;
+    top: 16px;
+    left: -78px;
+
+    background-color: $colorbtn;
+    @media(max-width:768px){
+      width: 41px;
+      left:  -58px;
+    }
+    
+}
+}
+@mixin form-style{
+  
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  @media (max-width:1183px){
+    align-items: center;
+    label input{
+    display: flex;
+    justify-content: center;
+  }
+  }
+  @media (max-width:385px){
+    max-width: 90%;
+  }
+  label{
+    display: flex;
+    flex-direction: column; 
+    
+    @media (max-width:405px){
+    align-items: center; 
+    width: 100%;
+    }
+    
+  }
+  input{
+      margin-bottom: 10px;
+      width: 387px;
+      height: 48px;
+      background: #FBFBFB;
+      border: 1px solid #EEEDED;
+      border-radius: 4px;
+      font-family: 'Gilroy';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 114.8%;
+      letter-spacing: 0.01em;
+      color: #1D1B1B;
+      padding-left: 15px;
+      @media (max-width:405px){
+        width: 90%;
+      }
+  }
+  button{
+        @include button;
+      margin-top: 5px;
+      border: none;
+      width: 387px;
+      height: 43px;
+      color: #fff;
+      @media (max-width:381px){
+        max-width: 90%;
+      }
+      
+  }
+}
 
 
 
