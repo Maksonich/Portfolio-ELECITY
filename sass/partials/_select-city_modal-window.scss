@@ -1,4 +1,5 @@
-.popup .blocker {
+// choise city
+.popup_catalog-cities .blocker {
     position: fixed;
     top: 0;
     left: 0;
@@ -125,7 +126,17 @@
 			
 	}
 }
-// choise city 
+// madal window login account
+.popup_catalog-loginAccount .blocker {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    content: ' ';
+    background: rgba(0,0,0,.7);
+    
+}
 .popup_catalog-loginAccount { 
 	@include anim;
 	position: fixed;

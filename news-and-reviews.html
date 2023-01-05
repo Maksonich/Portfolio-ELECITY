@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div class="popup_catalog-loginAccount popup">
+	<div class="popup_catalog-loginAccount popup">
 		<div class="blocker"></div>
 		<div class="flex">
 			<div class="box-one ">
@@ -28,7 +28,7 @@
 				<h3>Введите код из смс</h3>
 				<span class="subtitle">Мы отправили код на телефон с номером<br><b id="your-number"></b></span>
 				<form >
-					<input type="text" name="" id="" placeholder="__ __ __ __" >
+					<input type="text" name="" id="verification" placeholder="__ __ __ __" >
 					<span >Отправить код повторно через  <b id="timerNextStep"></b></span>
 					<button id="enter">Войти</button>
 				</form>
@@ -64,7 +64,7 @@
 			</div>
 		</div>
 	</div>
-	<div id="wrapper" class="personal-account-page">
+	<div id="wrapper" class="news-and-review-page">
 	<header>
 		<div class="layout">
 			<div class="nav-upper">
@@ -79,11 +79,11 @@
 					<li><a href="#"> О нас</a></li>
 					<li><a href="#">Доставка</a></li>
 					<li><a href="#">Оплата</a></li>
-					<li><a href="#">Подключение техники</a></li>
+					<li><a href="./connection-household.html">Подключение техники</a></li>
 					<li><a href="#">Доп. сервис</a></li>
 					<li><a href="#">Наши гарантии</a></li>
 					<li><a href="#">Почему мы?</a></li>
-					<li><a href="#">Контакты</a></li>
+					<li><a href="./contacts.html">Контакты</a></li>
 					<li><a href="#">Оставить обращение</a></li>
 				</ul>
 				<div class="authorization" id="authorization">
@@ -91,7 +91,7 @@
 					<a href="#">Личный кабинет</a>
 					<ul class="pop-up_input">
 						<li><a href="#" id="loginAccount">Личный кабинет</a></li>
-						<li><a href="#">Настройки</a></li>
+						<li><a href="./personal-account.html">Настройки</a></li>
 						<li><a href="#">Сообщения </a><span class="notice"></span></li>
 						<li><a href="#">Избранное</a><span class="notice"></span></li>
 						<li><a href="#">Мои заказы</a><span class="notice"></span></li>
@@ -145,7 +145,8 @@
 				</div>
 				<div class="nav-filter">
 					<div class="all-category">
-					<a href="#"><span></span> Все категории </a>	 
+					    <a href="#"><span></span> Все категории </a>
+                        	 
 					</div>
 					<ul>
 						<li><a href="#">Бытовая техника</a></li>
@@ -156,113 +157,103 @@
 						<li><a href="#">Спорт и отдых </a></li>
 						<li><a href="#">Инструмент </a></li>
 						<li><a href="#">Авто </a></li>
-						<li сlass="#"><a href="sale">% Распродажа</a></li>
+						<li сlass="sale"><a href="#">% Распродажа</a></li>
 					</ul>
 				</div>
 			</nav>
 		</div>
 	</header>
-    <main>
-		<div class="layout">
-			<div class="way">
-				<div class="main">
-					<a href="./index.html">Главная /</a>
-				</div>
-				<div class="here">
-					<a href="./personal-account.html"><b>Личный кабинет</b> </a>
+	<main>
+        <div class="layout">
+            <div class="way">
+                <div class="main">
+                    <a href="./index.html">Главная /</a> 
+                </div>
+                <div class="here">
+                    <a href="./news-and-reviews.html"><b>Новости и обзоры</b> </a>
+                </div>
+            </div>
+        </div>
+		<section class="news-and-review">
+			<div class="layout">
+				<h3>Новости и обзоры</h3>
+				<div class="content">
+					<div class="left-news">
+						<div class="robot-cleaner">
+							<a href="./robotVacuumCleaner.html"><img src="./images/news/one.png" alt="robot-cleaner"></a>
+						</div>
+						<div class="other-news">
+							<div class="img-block"><a href="#"><img src="./images/news/two.png" alt=""></a></div>
+							<div class="img-block-two"><a href="#"><img src="./images/news/three.png" alt=""></a>	</div>
+							
+						</div>
+					</div>
+					<div class="right-news">
+						<div class="upper-img">
+							<a href="#"><img src="./images/news/four.png" alt=""></a>
+						</div>
+						<div class="lower-block">
+							<div class="left-lower">
+								<a href="#"><img src="./images/news/five.png" alt=""></a>
+							</div>
+							<div class="right-lower">
+								<a href="#"><img src="./images/news/six.png" alt=""></a>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-		</div>
-        <section class="personal-account">
-            <div class="layout">
-                 <ul class="control">
-                    <li><a href="#"><img src="./images/icons/control/sent1.png" alt="">Мои заказы</a></li>
-                    <li><a href="#"><img src="./images/icons/control/sent2.png" alt="">Отложенные товары</a></li>
-                    <li><a href="#"><img src="./images/icons/control/sent3.png" alt="">Мои сравнения</a></li>
-                    <li><a href="#"><img src="./images/icons/control/sentt4.png" alt="">Мои отзывы</a></li>
-                    <li><a href="#"><img src="./images/icons/control/sent5.png" alt="">Профиль</a></li>
-                 </ul>
-                 <h2>Мой профиль</h2>
-                 <div class="user-data">
-                    <div class="main-data">
-                        <div class="user-photo">
-                            <img src="./images/icons/user.png" alt="user icon">
-                        </div>
-                        <div class="user-name">
-                            <h3>Парфенов Андрей</h3>
-                            <label >
-                                <img src="./images/icons/pencil.png" alt="">Загрузить фото
-                                <input type="file" name="" id="" value="" >
-                            </label>
-                            
-                        </div>
-                    </div>
-                    <div class="data">
-                        <div class="data-settings">
-                        <h3>Учетные данные</h3>
-                        <ul>
-                            <li>
-                                <h4>ФИО</h4>
-                                <input id="editName" type="text" readonly value="Парфенов Андрей Витальевич">
-                                <div class="edit">
-                                    <div class="img-edit">
-                                        <img src="./images/icons/pencil.png" alt="pencil">
-                                    </div>
-                                    <span id="editNameClick">Редактировать</span>
-                                </div>
-                            </li>
-                            <li>
-                                <h4>Адрес</h4>
-                                <input  id="editAddress" type="text" readonly value="г. Москва, ул. Набережная 42-77">
-                                
-                                <div class="edit">
-                                    <div class="img-edit">
-                                        <img src="./images/icons/pencil.png" alt="pencil">
-                                    </div>
-                                    <span id="editAddressClick">Редактировать</span>
-                                </div>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <h4>Email</h4>
-                                <input  id="editMail" type="text" readonly value="parfenov@gmail.com">
-                                <div class="edit">
-                                    <div class="img-edit">
-                                        <img src="./images/icons/pencil.png" alt="pencil">
-                                    </div>
-                                    <span id="editMailClick">Редактировать</span>
-                                </div>
-                            </li>
-                            <li>
-                                <h4>Телефон</h4>
-                                <input  id="editNumber" type="text" readonly value="+795 25 356 25 87">
-                                <div class="edit">
-                                    <div class="img-edit">
-                                        <img src="./images/icons/pencil.png" alt="pencil">
-                                    </div>
-                                    <span  id="editNumberClick">Редактировать</span>
-                                </div>
-                            </li>
-                        </ul>
-                        </div>
-                        <div class="form">
-                            <h4>Изменить номер телефона</h4>
-                            <form action="">
-                                <label for="">Введите старый номер телефона</label>
-                                <input type="text">
-                                <label for="">Введите новый номер телефона</label>
-                                <input type="text">
-                                <button>Сохранить</button>
-                            </form>
-                        </div>
-                    </div>
+		</section>
+        <section class="reviw-info">
+           <div class="layout">
+            <ul >
+                <li>
+                    <a href="#"><img src="./images/news/second-block/snegouborshhik_stiga.png" alt=""></a>
+                    <h4>Как выбрать снегоуборщик</h4>
+                    <span>В данной статье мы подробно разберем вопрос о выборе снегоуборочной машины.</span>
+                </li>
+                <li>
+                    <a href="#"><img src="./images/news/second-block/lawn-mover.png" alt=""></a>
+                    <h4>Как выбрать снегоуборщик</h4>
+                    <span>В данной статье мы подробно разберем вопрос о выборе снегоуборочной машины.</span>
+                </li>
+                <li>
+                    <a href="#"><img src="./images/news/second-block/snegouborshhik_stiga.png" alt=""></a>
+                    <h4>Как выбрать снегоуборщик</h4>
+                    <span>В данной статье мы подробно разберем вопрос о выборе снегоуборочной машины.</span>
+                </li>
+                <li>
+                    <a href="#"><img src="./images/news/second-block/lawn-mover.png" alt=""></a>
+                    <h4>Как выбрать снегоуборщик</h4>
+                    <span>В данной статье мы подробно разберем вопрос о выборе снегоуборочной машины.</span>
+                </li>
+            </ul>
+            <ul >
+                <li>
+                    <a href="#"><img src="./images/news/three.png" alt=""></a>
                     
-                 </div>
-            </div>
+                    <span></span>
+                </li>
+                <li>
+                    <a href="#"><img src="./images/news/five.png" alt=""></a>
+                    
+                    <span></span>
+                </li>
+                <li>
+                    <a href="#"><img src="./images/news/six.png" alt=""></a>
+                    
+                    <span></span>
+                </li>
+                <li>
+                    <a href="#"><img src="./images/news/five.png" alt=""></a>
+                    
+                    <span></span>
+                </li>
+            </ul>
+           </div>
         </section>
-    </main>
-    <footer>
+	</main>
+	<footer>
 		<div class="layout">
 			<ul>
 				<li>
@@ -316,7 +307,7 @@
 						<li><a href="#">Гарантийное обслуживание</a></li>
 						<li><a href="#">Сервисные центры</a></li>
 						<li><a href="#">Наши гарантии</a></li>
-						<li><a href="#">Обмен и возврат товара</a></li>
+						<li><a href="./exchange-and-return.html">Обмен и возврат товара</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -330,15 +321,6 @@
 		</div>
 	</footer>
 	</div>
-	<script>
-		//my personal account 
-		// console.log(document.querySelector("#allowEditName"))
-		// function allowEdit (element){
-		//        element.addEventListener('click', function (){
-		//               allowEditElem.
-		//        })
-		// }
-	</script>
 	<script src="./js/script.js"></script>
 </body>
 </html>

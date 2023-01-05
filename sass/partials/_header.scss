@@ -98,11 +98,8 @@ header {
 		border-bottom: 1px solid rgba(229, 229, 229, 1);
 	}
 	.layout {
-			
 		nav{
-			
 			height: 140px;
-	
 			.nav-search {
 				display: flex;
 				justify-content: space-between;
@@ -236,13 +233,17 @@ header {
 				font-weight: 400;
 				font-size: 15px;
 				line-height: 18px;
+				position: relative;
 				.all-category {
 					margin-right: 40px;
+					
 					a{
 						padding: 13px 16px 13px 46px;
 						color: $navHover;
 						position: relative;
+						white-space: nowrap;
 						transition-duration: 1s;
+						font-weight: 600;
 						&:hover{
 							background-color:$navHover;
 							color: #fff;
@@ -281,7 +282,7 @@ header {
 						}
 						span{
 							width: 18px;
-							height: 3px;
+							height: 2.5px;
 							position:absolute;
 							left: 12px;
 							top: 21px;
@@ -311,8 +312,221 @@ header {
 							}
 						}
 					}
+					&.active{
+						a{
+							background-color:$navHover;
+							color: #fff;
+							border-radius: 5px;
+							span{
+								
+								width: 22px;
+								height: 2px;
+								position:absolute;
+								left: 12px;
+								top: 21px;
+								z-index: 30;
+								background-color: #fff;
+								transform: rotateZ(45deg);
+								&::after{
+									position: absolute;
+									left: 0px;
+									top: 0px;
+									background-color: #fff;
+									transform: rotateZ(90deg);
+								}
+								&::before{
+									position: absolute;
+									left: 0px;
+									top: 0px;
+									background-color: rgba(255, 255, 255, 0.0);
+								}
+							}	
+						}
+						
+					}
 				}
-				
+				ul.all-category-menu{
+					display: none;
+					&.active{
+						overflow:hidden;
+						position: absolute;
+						top: 30px;left: 0;
+						display: flex;
+						flex-direction: column;
+						width: 100%;
+						height:755px;
+						background-color: #fff;
+						z-index: 99;
+						
+						box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.1);
+						border-radius: 5px;
+						li{
+							width: 300px;
+							height: 39px;
+							padding: 0px;
+							margin-right: 0;
+							
+							&:hover{
+								background-color: #DCE9F8;
+								cursor: pointer;
+							}
+							.name-category{
+								a{
+									font-weight: 400;
+									font-size: 14px;
+									line-height: 40px;
+									padding: 0 0  0 27px;
+									width: 344.29px;
+									height: 26px;
+									
+									&:hover{
+										color: $colorText;
+									}
+								}
+							}
+							.category-info{
+								width: 1350px;
+								display: none;
+								&.active{
+									position: absolute;
+									top: 10px;left: 0;
+									display:flex;
+									justify-content: space-between;
+									padding-left: 30px;
+									.category-menu{
+										margin-left: 300px;
+										display: flex;
+										flex-direction: column;
+										position: relative;
+										.top{
+											display: flex;
+											align-items: flex-start;
+											margin-bottom: 16px;
+											position: absolute;
+											a{
+												font-weight: 500;
+												font-size: 14px;
+												line-height: 25px;
+												color: $navHover;
+												margin-right: 50px;
+											}
+										}
+										.list-category{
+											margin-top: 50px;
+												height: 694.94px;
+												display: flex;
+												.left{
+													display: flex;
+													flex-direction: column;
+													.sub-category-block{
+														display: flex;
+														flex-direction: column;
+
+														&:nth-child(2){
+															margin-top: 30px;
+														}
+														h4{
+															font-weight: 500;
+															font-size: 14px;
+															line-height: 25px;
+														}
+														.sub-category{
+															display: flex;
+															flex-direction: column;
+															li{
+																width: 100%;
+																border: none;
+																height:30px;
+																
+																a{
+																font-weight: 400;
+																font-size: 14px;
+																line-height: 25px;
+																
+																span{
+																	display: block;
+																	border:none;
+																}
+																}
+															}
+													}
+													}
+												}
+												.right{
+													margin-left: 100px;
+													.sub-category-block{
+														display: flex;
+														flex-direction: column;
+														&:nth-child(2){
+															justify-content:flex-start;
+														}
+														h4{
+															font-weight: 500;
+															font-size: 14px;
+															line-height: 25px;
+														}
+														.sub-category{
+															display: flex;
+															flex-direction: column;
+															li{
+																border: none;
+																height:30px;
+																a{
+																font-weight: 400;
+																font-size: 14px;
+																line-height: 25px;
+																span{
+																	border:none
+																}
+																}
+															}
+													}
+													}
+												}
+											
+										}
+									}
+									.categori-banner{
+										background-color:rgba(243, 248, 255, 1);
+										align-self: center;
+										width: 274.64px;
+										height: 490.84px;
+										border-radius: 5px;
+										text-align: center;
+										position: relative;
+										z-index: 20;
+										display: flex;
+										flex-direction: column;
+										align-items: center;
+										padding: 10px;
+										img{
+											
+											width: 189.07px;
+											height: 259px;
+											display: block;
+											margin: 15px 0;
+										}
+										.title-discount {
+											font-weight: 500;
+											font-size: 20px;
+											line-height: 37px;
+										}
+										span{
+											margin-top: 20px;
+											border: none;
+										}
+										a{
+											@include  btnBuy;
+											color: #fff;
+											padding: 10px 20px;
+											background-color: $colorBtn;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
 				ul{
 					display: flex;
 					align-content: flex-end;
@@ -320,9 +534,10 @@ header {
 						margin-right: 30px;
 						a{
 							color: $colorText;
+							white-space: nowrap;
 							@include navHover;
 						}
-						&:last-child{
+						&.last-child{
 							margin-right: 0;
 							a{
 								color:rgba(252, 68, 59, 1);

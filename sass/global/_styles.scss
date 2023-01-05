@@ -26,3 +26,24 @@ h3{
 	padding-bottom: 7px;
 	border-bottom: 1px solid #E5E5E5;
 }
+.way {
+	display: flex;
+	margin-top: 30px;
+	a{
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 35px;
+		color: #1E1E1E;
+		margin-right: 10px;
+	}
+	.here {
+		
+		a{  
+			font-weight: 600px;
+			font-size: 14px;
+			line-height: 35px;
+			color: #1E1E1E;
+			
+		}
+	}
+}

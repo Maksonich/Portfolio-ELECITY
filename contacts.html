@@ -1,0 +1,390 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width; initial-scale=1">
+	<link rel="stylesheet" href="css/all.css" type="text/css"/>
+	<link rel="stylesheet" href="sass/fonts.css" type="text/css"/>
+	<script type="text/javascript" src="js/jquery-3.2.0.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<title>ELECITY</title>
+</head>
+
+<body>
+<div class="popup_catalog-loginAccount popup">
+    <div class="blocker"></div>
+    <div class="flex">
+        <div class="box-one ">
+            <h3>Вход в личный кабинет</h3>
+            <span class="subtitle">Введите номер телефона. Вам будет выслан код с паролем  по смс</span>
+            <form >
+                <input type="text" name="" id="enterNumber" placeholder="+38 ___ ___ __ __">
+                <span id="timer">Код будет отправлен через <b></b> секунд.....</span>
+                <button id="error">Повторить отправку</button>
+            </form>
+        </div>
+        <div class="next-step">
+            <h3>Введите код из смс</h3>
+            <span class="subtitle">Мы отправили код на телефон с номером<br><b id="your-number"></b></span>
+            <form >
+                <input type="text" name="" id="verification" placeholder="__ __ __ __" >
+                <span >Отправить код повторно через  <b id="timerNextStep"></b></span>
+                <button id="enter">Войти</button>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="popup_catalog-cities popup">
+    <div class="blocker"></div>
+    <div class="flex">
+        <div class="box">
+            <h3>Выберите город</h3>
+            <form >
+                <input type="search" name="" id="" placeholder="Начните вводить">
+                <ul>
+                    <li><a href="#">Москва</a></li>
+                    <li><a href="#">Санкт-Петербург</a></li>
+                    <li><a href="#">Казань</a></li>
+                    <li><a href="#">Смоленск</a></li>
+                    <li><a href="#">Москва</a></li>
+                    <li><a href="#">Санкт-Петербург</a></li>
+                    <li><a href="#">Казань</a></li>
+                    <li><a href="#">Смоленск</a></li>
+                    <li><a href="#">Москва</a></li>
+                    <li><a href="#">Санкт-Петербург</a></li>
+                    <li><a href="#">Казань</a></li>
+                    <li><a href="#">Смоленск</a></li>
+                    <li><a href="#">Москва</a></li>
+                    <li><a href="#">Санкт-Петербург</a></li>
+                    <li><a href="#">Казань</a></li>
+                    <li><a href="#">Смоленск</a></li>
+                </ul>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="wrapper" class="contacts-page">
+    <header>
+        <div class="layout">
+            <div class="nav-upper">
+                <div class="location" id="selectSity">
+                    <div class="icon-location ">
+                        <img src="./images/icons/geolocation.png" alt="geolocation">
+                    </div>
+                    <a href="#">Москва</a>
+                </div>
+                <ul>
+                    <li><a href="#">Отзывы</a></li>
+                    <li><a href="#"> О нас</a></li>
+                    <li><a href="#">Доставка</a></li>
+                    <li><a href="#">Оплата</a></li>
+                    <li><a href="#">Подключение техники</a></li>
+                    <li><a href="#">Доп. сервис</a></li>
+                    <li><a href="#">Наши гарантии</a></li>
+                    <li><a href="#">Почему мы?</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">Оставить обращение</a></li>
+                </ul>
+                <div class="authorization" id="authorization">
+                    <a href="#"><img src="./images/icons/autorization.png" alt="autorization"></a>
+                    <a href="#">Личный кабинет</a>
+                    <ul class="pop-up_input">
+                        <li><a href="#" id="loginAccount">Личный кабинет</a></li>
+                        <li><a href="./personal-account.html">Настройки</a></li>
+                        <li><a href="#">Сообщения </a><span class="notice"></span></li>
+                        <li><a href="#">Избранное</a><span class="notice"></span></li>
+                        <li><a href="#">Мои заказы</a><span class="notice"></span></li>
+                        <li class="exit"><a href="#">Выйти</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <span></span>
+        <div class="layout">
+            <nav>
+            
+                <div class="nav-search">
+                    <div class="logotype">
+                        <a href="./index.html"><img src="./images/icons/logotype.png" alt="logotype"></a>
+                    </div>
+                    <ul >
+                        <li><a href="#">Техника</a></li>
+                        <li><a href="#">Мебель</a></li>
+                        <li><a href="#">Инструменты</a></li>
+                    </ul>
+                    <label for="search">
+                        <input type="search" name="" id="" placeholder="Что будем искать?">
+                        <img src="./images/icons/search.png" alt="search">
+                    </label>
+                    <div class="contacts">
+                        <div class="viber-icon">
+                            <a href="#"><img src="./images/icons/viber.png" alt="viber"></a>
+                        </div>
+                        <div class="telegram">
+                            <a href="#"><img src="./images/icons/telegram.png" alt="telegram"></a>
+                        </div>
+                        <div class="call">
+                            <a href="tel:+7(495)150-95-55">+7(495)150-95-55</a>
+                            <div class="everyday">
+                                9:00 - 22:00 без выходных
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buy-list">
+                        <div class="cart">
+                        <a href="#"><img src="./images/icons/shoping-cart.png" alt="shoping-cart"></a>	
+                        </div>
+                        <div class="amount-block">
+                            <div class="name-block">Корзина</div>
+                            <div class="amount">0 ₽</div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="nav-filter">
+                    <div class="all-category">
+                    <a href="#"><span></span> Все категории </a>	 
+                    </div>
+                    <ul>
+                        <li><a href="#">Бытовая техника</a></li>
+                        <li><a href="#">Видео и аудио</a></li>
+                        <li><a href="#">Климат </a></li>
+                        <li><a href="#">Компьютерная техника</a></li>
+                        <li><a href="#">Дом и дача</a></li>
+                        <li><a href="#">Спорт и отдых </a></li>
+                        <li><a href="#">Инструмент </a></li>
+                        <li><a href="#">Авто </a></li>
+                        <li сlass="#"><a href="sale">% Распродажа</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="layout">
+            <div class="way">
+                <div class="main">
+                    <a href="./index.html">Главная /</a> 
+                </div>
+                <div class="here">
+                    <a href="./contacts.html"><b>Контакты</b> </a>
+                </div>
+            </div>
+        </div>
+        <section class="contacts">
+            <div class="layout">
+                <h2>Контакты</h2>
+                <div class="contacts-block">
+                    <div class="sales-departament">
+                        <h3>Отдел продаж</h3>
+                        <div class="work-shedule">
+                            <div class="main-shedule">
+                                <div class="calendar-img">
+                                  <img src="./images/icons/block-contacts/Calendar.png" alt="calendar">
+                                </div>
+                                <h4>График работы отдела продаж</h4> 
+                            </div>
+                            <p>9:00 - 22:00 (пн-пт)</p>
+                            <p>9:00 - 22:00 (сб-вс)</p>
+                        </div>
+                        <h4 class="around-the-clock">Оформление заказов через сайт круглосуточно</h4>
+                        <div class="mob-number">
+                            <div class="main-number">
+                                <div class="tell-img">
+                                   <a href="tel:+"><img src="./images/icons/block-contacts/tell.png" alt="tell"></a> 
+                                </div>
+                                <h4>Телефоны</h4>
+                                <div class="viber-img">
+                                    <a href="tel:+"><img src="./images/icons/viber.png" alt="viber"></a>
+                                </div>
+                                <div class="telegram-img">
+                                    <a href="tel:+"><img src="./images/icons/telegram.png" alt="telegram"></a>
+                                </div>
+                                
+                            </div>
+                            <span>Для оформления заказов и консультаций: +7 (495) 150-95-55 добавочный 1</span>
+                        </div>
+                        <div class="mail-contact">
+                           <div class="main-mail">
+                            <div class="mail-img">
+                                <a href="mailto:info@elecity.ru"><img src="./images/icons/block-contacts/mail.png" alt="mail"></a>
+                            </div>
+                            <h4>E-mail</h4>
+                           </div>
+                           <span>info@elecity.ru</span>
+                        </div>
+                        <div class="cashless-payments">
+                            <div class="mail-cashless">
+                                <div class="img-list">
+                                    <img src="./images/icons/block-contacts/list.png" alt="list">
+                                </div>
+                                <h4>Безналичный расчет</h4>
+                            </div>
+                            <span>Для покупки по безналичному расчету отправляйте запрос на bn@elecity.ru.</span>
+                        </div>
+                    </div>
+                    <div class="advertise-departament">
+                        <h3>Рекламационный отдел</h3>
+                        <div class="sales-departament">
+                            <div class="work-shedule">
+                                <div class="main-shedule">
+                                    <div class="calendar-img">
+                                      <img src="./images/icons/block-contacts/Calendar.png" alt="calendar">
+                                    </div>
+                                    <h4>График работы рекламационного отдела</h4> 
+                                </div>
+                                <p>9:00 - 22:00 (пн-пт)</p>
+                                <p>9:00 - 22:00 (сб-вс)</p>
+                            </div>
+                            <h4 class="around-the-clock">Оформление заказов через сайт круглосуточно</h4>
+                            <div class="mob-number">
+                                <div class="main-number">
+                                    <div class="tell-img">
+                                       <a href="tel:+"><img src="./images/icons/block-contacts/tell.png" alt="tell"></a> 
+                                    </div>
+                                    <h4>Телефоны</h4>
+                                    <div class="viber-img">
+                                       <a href="tel:+"> <img src="./images/icons/viber.png" alt="viber"></a>
+                                    </div>
+                                    <div class="telegram-img">
+                                      <a href="tel:+"><img src="./images/icons/telegram.png" alt="telegram"></a>
+                                    </div>
+                                </div>
+                                <span>Для оформления заказов и консультаций: +7 (495) 150-95-55 добавочный 1</span>
+
+                            </div>
+                            <div class="mail-contact">
+                               <div class="main-mail">
+                                <div class="mail-img">
+                                   <a href="mailto:info@elecity.ru"><img src="./images/icons/block-contacts/mail.png" alt="mail"></a> 
+                                </div>
+                                <h4>E-mail</h4>
+                               </div>
+                               <span>info@elecity.ru</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        <section class="leaveMessage">
+            <div class="layout">
+                <h3>Оставить обращение</h3>
+                <form action="#">
+                    <fieldset class="yourData">
+                       <div class="name">
+                        <label for="name">ФИО</label>
+                        <input type="text" name="name">
+                       </div>
+                       <div class="mob-number">
+                        <label for="number">Телефон</label>
+                        <input type="text" name="number">
+                       </div>
+                       <div class="mail">
+                        <label for="name">Email</label>
+                        <input type="email" name="mail">
+                       </div>
+                       <div class="departament-shop">
+                        <label for="depShop">Выберите отдел</label>
+                        <select name="depShop" id="">
+                            <option value="exchange">Обмен товара</option>
+                            <option value="return">Возврат товара</option>
+                            <option value="exchange">Обмен товара</option>
+                            <option value="return">Возврат товара</option>
+                        </select>
+                       </div>
+                    </fieldset>
+                    <fieldset class="message">
+                        <div class="yourMessage">
+                            <label for="msg">Ваше сообщение</label>
+                            <textarea name="msg" id="" cols="30" rows="10"></textarea>
+                        </div>
+                        <button>Отправить</button>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+        <section class="map">
+            <div class="layout">
+                <div class="map-block">
+                    <img src="./images/map.png" alt="map">
+                    <span class="add"></span>
+                    <span class="div"></span>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+		<div class="layout">
+			<ul>
+				<li>
+					<div class="logo-footer">
+						<img src="./images/icons/logotype.png" alt="">
+					</div>
+					<div class="contacts">
+						<div class="call">
+							<a href="tel:+7(495)150-95-55">+7(495)150-95-55</a>
+						</div>
+						<ul>
+							<li><a href="#"><img src="./images/icons/footer/telegram.png" alt=""></a></li>
+							<li><a href="#"><img src="./images/icons/footer/vk.png" alt=""></a></li>
+							<li><a href="#"><img src="./images/icons/footer/viber.png" alt=""></a></li>
+							<li><a href="#"><img src="./images/icons/footer/odnoklassniki.png" alt=""></a></li>
+						</ul>
+					</div>
+					<div class="firm">ООО "БТ МАРКЕТ", ИНН7728483067 </div>
+					<div class="address">Москва, пр-д Соловьиный д. 2, ком. 1</div>
+				</li>
+				<li>
+					<ul>
+						<li><a href="#">Как оформить заказ</a></li>
+						<li><a href="#">Доставка</a></li>
+						<li><a href="#">Оплата</a></li>
+						<li><a href="#">Прием товара</a></li>
+						<li><a href="#">Почему покупать у нас</a></li>
+						<li><a href="#">Подключение техники</a></li>
+						<li><a href="#">Отзывы о нас</a></li>
+						<li><a href="#">Пользовательское соглашение</a></li>
+					</ul>
+				</li>
+				<li>
+					<ul>
+						<li><a href="#">Контакты</a></li>
+						<li><a href="#">О компании</a></li>
+						<li><a href="#">Юридическая информация</a></li>
+						<li><a href="#">Для поставщиков</a></li>
+						<li><a href="#">Для оптовых клиентов</a></li>
+						<li><a href="#">Оставить обращение</a></li>
+						<li><a href="#">Политика конфиденциальности</a></li>
+						<li><a href="#">Новости и обзоры</a></li>
+					</ul>
+				</li>
+				<li>
+					<ul>
+						<li><a href="#">Вопрос-ответ</a></li>
+						<li><a href="#">Дополнительный сервис</a></li>
+						<li><a href="#">Проверка на битые пиксели</a></li>
+						<li><a href="#">Утилизация техники</a></li>
+						<li><a href="#">Гарантийное обслуживание</a></li>
+						<li><a href="#">Сервисные центры</a></li>
+						<li><a href="#">Наши гарантии</a></li>
+						<li><a href="#">Обмен и возврат товара</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+			<span></span>
+		<div class="layout">
+			<div class="foot-inf">
+				Обращаем Ваше внимание на то, что данный интернет-сайт носит исключительно информационный характер и ни при каких условиях информационные материалы и цены, размещенные на сайте, не являются публичной офертой, определяемой положениями Статьи 437 Гражданского кодекса РФ.
+				elecity.ru © 2011-2021
+			</div>
+		</div>
+	</footer>
+</div>
+<script src="./js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+.exchange-and-return {
+    .layout {
+        h2{
+            margin: 15px 0 20px 0;
+            font-weight: 400;
+            font-size: 30px;
+            line-height: 35px;
+        }
+        p{
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 25px;
+        }
+        ul{
+            margin: 20px 0 30px 0;
+            li{
+                list-style: url(../images/icons/circle-style-list.png);
+                margin: 20px 0 20px 15px;
+            }
+        }
+        .links-exchange {
+            margin: 40px 0 30px 0; 
+            display: flex;
+            
+            .btn-first{
+                width: 335px;
+                height: 63.51px;
+                background-color: rgba(67, 127, 200, 1);
+                margin-right: 20px;
+                cursor: pointer;
+                padding: 23px 0;
+                text-align: center;
+                border-radius: 5px;
+            }
+            .btn-second{ 
+                width: 335px;
+                height: 63.51px;
+                background-color: rgba(67, 127, 200, 1);
+                cursor: pointer;
+                padding: 23px 0;
+               text-align: center;
+                white-space: nowrap;
+                border-radius: 5px;
+            }
+            a{ 
+                color: #fff;
+            }
+        }
+    }
+}
+

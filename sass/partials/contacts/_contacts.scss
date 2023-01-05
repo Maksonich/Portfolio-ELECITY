@@ -1,0 +1,134 @@
+.contacts {
+    .layout {
+        h2{
+            margin: 10px 0;
+            font-weight: 400;
+            font-size: 30px;
+            line-height: 35px;
+            color: #1E1E1E;
+        }
+        .contacts-block {
+            display: flex;
+            justify-content: space-between;
+            .sales-departament,
+            .advertise-departament {
+                h4{
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 25px;
+                }
+                span{
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 35px;
+                }
+                h3{
+                    margin: 21px 0;
+                    font-size: 24px;
+                    line-height: 25px;
+                    border: none;
+                }
+                .work-shedule {
+                    .main-shedule{
+                        display: flex;
+                        align-items: center;
+                        .calendar-img {
+                            margin-right: 11px;
+                        }
+                       
+                    }
+                    p{
+                        margin:17px 0 17px 37px;
+                    }
+                   
+                }
+                .around-the-clock{
+                    margin-left: 37px;
+                }
+                .mob-number {
+                    margin-top: 17px;
+                    .main-number {
+                        display: flex;
+                        align-items: center;
+                        .tell-img {
+                            margin-right: 10px;
+                            position: relative;
+                            img{
+                                display: block;
+                            }
+                        }
+                        h4{
+                            margin-right: 25px;
+                        }
+                        .viber-img {
+                            margin-right: 25px;
+                            position: relative;
+                            img{
+                                display: block;
+                            }
+                        }
+                        .telegram-img {
+                            position: relative;
+                            img{
+                                display: block;
+                            }
+                        }
+                       
+                    }
+                    span{
+                        display: block;
+                        margin: 20px 0 0 35px;
+                    }
+                }
+                
+                .mail-contact {
+                    margin-top: 20px;
+                    .main-mail {
+                        display: flex;
+                        align-items: center;
+                        .mail-img {
+                            margin-right: 10px;
+                            img{
+                                display: block;
+                            }
+                        }
+                        
+                    }
+                    span{
+                        display: block;
+                        margin: 17px 0 0 35px;
+                    }
+                    
+                }
+                .cashless-payments {
+                    margin-top: 20px;
+                    .mail-cashless {
+                        display: flex;
+                        align-items: center;
+                        .img-list {
+                            margin-right: 10px;
+                        }
+                    }
+                    span{
+                        display: block;
+                        margin: 17px 0 0 35px;
+                    }
+                }
+                
+               
+                
+                
+            }
+            .sales-departament{
+                margin-right: 20px;
+            }
+            
+.advertise-departament {
+}
+}
+    }   
+
+}
+
+
+

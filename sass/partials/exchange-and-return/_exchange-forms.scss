@@ -1,0 +1,77 @@
+.exchange-instructions {
+    margin-top: 30px;
+    .layout {
+        .title-document {
+            display: flex;
+            align-items: center;
+            
+            .title-img {
+                margin-right: 11px;
+            }
+            h4{
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 25px;
+            }
+        }
+        p{
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 25px;
+        }
+        .document {
+            margin-bottom: 30px;
+            ul{
+                margin: 20px 0;
+                li{
+                    
+                    margin: 10px 0;
+                }
+            }
+            
+        }
+        .attention {
+            margin-bottom: 50px;
+            p{
+                margin: 25px 0;
+            }
+            ul{
+                margin: 20px 0;
+                li{
+                    list-style: url(../images/icons/circle-style-list.png);
+                    margin: 10px 0 10px 15px;
+                }
+            }
+        }
+        .good-quality-exchange {
+            margin-bottom: 50px;
+            p{
+                margin: 25px 0;
+            }
+         
+        }     
+        .replacement{
+            p{
+                margin: 25px 0  30px;
+            }
+        }
+        .return-many {
+            .title-document{
+                margin-bottom: 20px;
+            }
+            p{
+                margin: 25px 0  30px;
+            }
+            ul{
+                li{
+                    margin: 10px 0;
+                }
+            }
+        }  
+    }
+}
+
+
+
+
+

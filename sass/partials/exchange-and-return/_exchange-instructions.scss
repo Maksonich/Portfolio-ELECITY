@@ -1,0 +1,217 @@
+.exchange-forms {
+    .layout {
+        h3 {
+            border: none;
+            font-weight: 400;
+            font-size: 30px;
+            line-height: 25px;
+        }
+        form{
+            display: flex;
+            justify-content: space-between;
+            .form-for-user {
+                width: 50%;
+                .form-block {
+                    display: flex;
+                    justify-content: space-between;
+                    .left{
+                            margin-right: 25px;
+                        .departament{
+                            display: flex;
+                            flex-direction: column;
+                            label{
+                                font-weight: 400;
+                                font-size: 14px;
+                                line-height: 35px;
+                                color: #999999;
+                            }
+                            select{
+                                width: 332.49px;
+                                height: 45.82px;
+                                border: 1px solid #C4C4C4;
+                                border-radius: 5px;
+                                padding-left: 10px;
+                            }
+                        }
+                        .sales-receipt,
+                        .address,
+                        .mail {
+                            display: flex;
+                            flex-direction: column;
+                            label{
+                                font-weight: 400;
+                                font-size: 14px;
+                                line-height: 35px;
+                                color: #999999;
+                            }
+                            input{
+                                width: 332.49px;
+                                height: 45.82px;
+                                border: 1px solid #C4C4C4;
+                                border-radius: 5px;
+                                padding-left: 10px;
+                            }
+                        }
+                    }
+                    .right{
+                        .user-name,
+                        .shield,
+                        .user-number,
+                        .essence {
+                            display: flex;
+                            flex-direction: column;
+                            label{
+                                font-weight: 400;
+                                font-size: 14px;
+                                line-height: 35px;
+                                color: #999999;
+                            }
+                            input{
+                                width: 332.49px;
+                                height: 45.82px;
+                                border: 1px solid #C4C4C4;
+                                border-radius: 5px;
+                                padding-left: 10px;
+                            }
+                        }
+                    }
+                    
+                }
+                .form-service {
+                    margin-top: 20px;
+                    label{
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 35px;
+                        color: #999999;
+                    }
+                    input{
+                        width: 690.44px;
+                        height: 45.82px;
+                        border: 1px solid #C4C4C4;
+                        border-radius: 5px;
+                        padding-left: 10px;
+                    }
+                
+                }
+            }
+            
+            .downoland-img {
+                margin-left: 85px;
+                max-width: 50%;
+                h4{
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 35px;
+                    color: #404040;
+                }
+                span{
+                    display: block;
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 25px;
+                    color: #6E6E6E;
+                    margin-bottom:40px;
+                }
+                
+                .downoload-inp {
+                    display: flex;
+                    flex-direction: column;
+                  
+                    
+                    .downoload-block{
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 10px 10px;
+                        margin: 7px 0;
+                        // width: 389px;
+                        width: 420.72px;
+                        height: 48px;
+                        background: #FEFEFE;
+                        border: 1px solid #E5E5E5;
+                        border-radius: 30px;
+                        label{
+                            font-weight: 400;
+                            font-size: 15px;
+                            line-height: 18px;
+                            white-space: nowrap;
+                            color: #AEAEAE;
+                           margin-right: 35px;
+                        }
+                        input{
+                            
+                            font-weight: 400;
+                            font-size: 15px;
+                            line-height: 18px;
+                            color: #666666;
+                        }
+                    }
+                    
+                  
+                }
+                input[type="submit"]{
+                    margin-top: 50px;
+                    width: 271.72px;
+                    height: 63.51px;
+                    left: 1033.28px;
+                    top: 3364.39px;
+                    background: $colorBtn;
+                    border-radius: 5px;
+                    border: none;
+                    font-weight: 600;
+                    font-size: 18px;
+                    line-height: 25px;
+                    color: #FFFFFF;
+                }
+            }
+            
+        }
+        .check-status {
+            margin: 85px 0 91px ;
+
+            h4{
+                font-weight: 400;
+                font-size: 30px;
+                line-height: 25px;
+                margin-bottom: 20px;
+            }
+            form{
+                display: flex;
+                flex-direction: column;
+                .check {
+                    display: flex;
+                    flex-direction: column;
+                    label{
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 35px;
+                        color: #999999;
+                    }
+                    input{
+                        width: 690px;
+                        height: 45.82px;
+                        border: 1px solid #C4C4C4;
+                        border-radius: 5px;
+                    }
+                }
+                button{
+                    margin-top: 31px;
+                    width: 271.72px;
+                    height: 63.51px;
+                    left: 261px;
+                    top: 3655.09px; 
+                    border:none;
+                    font-weight: 600;
+                    font-size: 18px;
+                    line-height: 25px;
+                    color: #FFFFFF;
+                    background: $colorBtn;
+                    border-radius: 5px;
+                }
+            }
+        }
+        
+    }
+
+}
+

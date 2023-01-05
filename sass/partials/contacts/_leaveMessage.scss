@@ -1,0 +1,116 @@
+.leaveMessage {
+    .layout {
+        h3{ 
+            border: none;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 25px;
+            margin: 56px 0 20px;
+        }
+        form{
+            width: 100%;
+            .yourData {
+                display: flex;
+                justify-content: space-between;
+                .name,
+                .mob-number,
+                .mail{
+                    display: flex;
+                    flex-direction: column;
+                    label{
+                        margin-left: 10px;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 35px;
+                        color: #999999;
+                    }
+                    input{
+                        width: 270px;
+                        height: 35px;
+                        padding-left: 10px;
+                        border : 1px solid rgba(196, 196, 196, 1);
+                        border-radius: 5px;
+                    }
+                   
+                }
+                .departament-shop{
+                    display: flex;
+                    flex-direction: column;
+                    label{
+                        padding-left: 10px;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 35px;
+                        color: #999999;
+                    }
+                    select{
+                        padding: 0 10px;
+                        width: 270px;
+                        height: 35px;
+                        border : 1px solid rgba(196, 196, 196, 1);
+                        border-radius: 5px;
+                    }
+                }
+                 
+            }
+            .message {
+                margin-top: 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .yourMessage {
+                    display: flex;
+                    flex-direction: column;
+                    label{
+                        padding-left: 10px;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 35px;
+                        color: #999999;
+                    }
+                    textarea{
+                        width: 1044.09px;
+                        height: 111.62px;
+                        border-radius: 5px;
+                        border: 1px solid rgba(196, 196, 196, 1);
+                        resize: none;
+                    }
+                }
+                button{
+                    width: 271.72px;
+                    height: 63.51px;
+                    left: 1355px;
+                    top: 1028.6px;
+                    background: #437FC8;
+                    border-radius: 5px;
+                    border: none;
+                    color: #fff;
+                    font-weight: 600;
+                    font-size: 18px;
+                    line-height: 25px;
+                    cursor: pointer;
+                }
+            }
+            
+        }
+    }
+}
+
+
+
+
+.map{
+    margin: 36px 0 101px 0;
+    .layout{
+        .map-block{
+            img{
+
+            }
+            .add {
+            }
+            .div {
+            }
+        }
+
+    }
+}

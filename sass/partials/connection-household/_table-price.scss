@@ -1,0 +1,94 @@
+.table-price {
+    margin-bottom: 100px;
+    .layout {
+        h3{
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 25px;
+            border: none;
+            margin-bottom: 5px;
+        }
+        .title-price {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 25px;
+            padding: 0 30px 8px 15px;
+            border-bottom: 2px solid rgba(67, 127, 200, 1);
+            
+        }
+        ul{
+
+            li{
+                border-bottom:  1px solid #C4C4C4;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 22px;
+                padding: 15px 70px 15px 15px;
+                .main-price{
+                    display: flex;
+                    justify-content: space-between;
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 22px;
+                }
+                .price{
+                    
+                }
+                &:nth-child(3){
+                    border-bottom: 0px;
+                }
+                ul.hidden{
+                    display: none;
+                }
+                ul.hidden.active{
+                    display:flex;
+                    justify-content: flex-start;
+                    flex-direction: column;
+                    margin-top: 10px;
+                    li{
+
+                        display: flex;
+                        justify-content: space-between;
+                        background-color: #ffffff;
+                        margin-left: -15px;
+                        
+                        width: 103%;
+                        
+                    }
+                }
+                &.accord-btn{
+                    background-color: #EFF3F9;
+                    border-bottom: 3px solid #ffffff ;
+                    padding-right: 20px;
+                    
+                    .click-btn-accord{
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        cursor: pointer;
+                        .naming{
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: 22px;
+                            color: #1E1E1E;
+                        }
+                        .arrow-img{
+                            display: block;
+                            img{
+                                position: relative;
+                            }
+                            &.active{
+                                transform:  rotateZ(180deg);
+                            }
+                        }
+                       
+                    }
+                }
+            }
+           
+        }
+    }
+}
+
