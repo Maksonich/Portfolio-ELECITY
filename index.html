@@ -61,18 +61,18 @@
 				<h3>Вход в личный кабинет</h3>
 				<span class="subtitle">Введите номер телефона. Вам будет выслан код с паролем  по смс</span>
 				<form >
-					<input type="text" name="" id="enterNumber" placeholder="+38 ___ ___ __ __">
+					<label for="enterNumb"><input type="text" name="enterNumb" id="enterNumber" placeholder="123456789" value="" min="10" max="10"></label>
 					<span id="timer">Код будет отправлен через <b></b> секунд.....</span>
-					<button id="error">Повторить отправку</button>
+					<a id="error">Отправить</a>
 				</form>
 			</div>
 			<div class="next-step">
 				<h3>Введите код из смс</h3>
 				<span class="subtitle">Мы отправили код на телефон с номером<br><b id="your-number"></b></span>
 				<form >
-					<input type="text" name="" id="verification" placeholder="__ __ __ __" >
+					<input type="text" name="" id="verification" min="4" max="4" placeholder="__ __ __ __" >
 					<span >Отправить код повторно через  <b id="timerNextStep"></b></span>
-					<button id="enter">Войти</button>
+					<a id="enter">Войти</a>
 				</form>
 			</div>
 		</div>
@@ -84,7 +84,7 @@
 				<h3>Выберите город</h3>
 				<form >
 					<input type="search" name="" id="" placeholder="Начните вводить">
-					<ul class="list-sities"> 
+					<ul class="list-cities"> 
 						<li><a href="#">Москва</a></li>
 						<li><a href="#">Санкт-Петербург</a></li>
 						<li><a href="#">Казань</a></li>
@@ -1853,11 +1853,12 @@
 		<section class="advantages">
 			<div class="layout">
 				<ul>
-					<li><img src="./images/advantages/one.png" alt=""></li>
-					<li><img src="./images/advantages/two.png" alt=""></li>
-					<li><img src="./images/advantages/three.png" alt=""></li>
-					<li><img src="./images/advantages/four.png" alt=""></li>
-					<li><img src="./images/advantages/five.png" alt=""></li>
+					<li><img src="./images/advantages/one.png" 	alt="advantages image"></li>
+					<li><img src="./images/advantages/two.png" 	alt="advantages image"></li>
+					<li><img src="./images/advantages/three.png" 	alt="advantages image"></li>
+					<li><img src="./images/advantages/four.png" alt="advantages image"></li>
+					<li><img src="./images/advantages/five.png" alt="advantages image"></li>
+					<li id="scroll_top"><a href="#"><img src="./images/advantages/arrow.png" alt=""></a></li>
 				</ul>
 			</div>
 		</section>

@@ -1,102 +1,112 @@
 ////////////// pop-up header autorization
-let buttonuAthorization = document.querySelector("#authorization").addEventListener("click", function(){
+document.querySelector("#authorization").addEventListener("click", function(){
     document.querySelector(".pop-up_input").classList.toggle("active");
 })
 //////////////open modal window select sity
-function selectSity (select){
-       let wind = document.querySelector(select);
+function changeСities(){
+
+       let wind = document.querySelector("#selectSity");
        wind.addEventListener("click", function(){
               document.querySelector(".popup_catalog-cities").classList.add("open");
               document.querySelector("#wrapper").classList.add("popup");   
        })
-       
+
        let close =  document.querySelector(".popup_catalog-cities .blocker");
-       close.addEventListener("click", function(){
+       close.addEventListener("click",  function closePopupSities(){
               document.querySelector(".popup_catalog-cities").classList.remove("open");
               document.querySelector("#wrapper").classList.remove("popup");  
        })
 
-       // let listSities = wind.querySelectorAll(".list-sities li");
-       // for ( let i = 0; i < listSities.length; i++ ){
-       //        let item = listSities[i]
-       //        console.log(item)
-       //        item.addEventListener("click" , function (e) {
-                     
-       //        })
-       // }
+       let changeСity = document.querySelector(".list-cities")
+       changeСity.addEventListener("click", function(e){
+              wind.querySelector("a").innerHTML = e.target.innerHTML
+              
+              document.querySelector(".popup_catalog-cities").classList.remove("open");
+              document.querySelector("#wrapper").classList.remove("popup");  
+       })
 
 }
-selectSity("#selectSity")
+changeСities()
 //close black-window
 
-let block =  document.querySelector(".popup .blocker");
-block.addEventListener("click", function() {
-       document.querySelector(".popup").classList.remove("open");
-       document.querySelector("#wrapper").classList.remove("popup");
-       
-})
-
 ///////////////////////////////////////////////////////////////////////////////// login Account header click && timer
-let login = document.querySelector("#loginAccount").addEventListener("click", function(){
-       document.querySelector(".popup_catalog-loginAccount").classList.add("open");
-       document.querySelector("#wrapper").classList.add("popup");
 
-       let timer = document.querySelector("#timer b")
-       let time = 59
-       setInterval(timerStart , 1000)
-       function timerStart () {
-              const minutes = Math.floor(time / 60);
-              let seconds = time % 60;
-              seconds = seconds < 10 ? "0" + seconds:seconds;
-              timer.innerHTML = seconds
-              time--;
-              if (time === 0 ){
-                     document.querySelector(".popup").classList.remove("open");
-                     document.querySelector("#wrapper").classList.remove("popup");
-              } //else if (block()){
-                    //нужно написать прекращение фукции  таймстарт
-              // }
+function loginPersonesAccount (){
+
+       let timerEnterNumber ;
+       let login = document.querySelector("#loginAccount").addEventListener("click", function(){
+              document.querySelector(".popup_catalog-loginAccount").classList.add("open");
+              document.querySelector("#wrapper").classList.add("popup");
+              timerEnterNumber = setInterval(timerStart , 1000);
+              let timer = document.querySelector("#timer b")
+              let time = 59
               
-       }
-})
-
-let number = document.querySelector("#enterNumber")
-let button = document.querySelector("#error")
-let yourNumber = document.querySelector("#your-number")
-button.addEventListener("click", function (){
-      if (number.value !== undefined && (number.value !== NaN && number.value !== "")) {
-         console.log(number.value)
-         document.querySelector(".box-one").classList.add("close");
-         document.querySelector(".next-step").classList.add("active");
-
-         let timer = document.querySelector("#timerNextStep")
-         let time = 179
-         setInterval(timeNextStep , 1000)
-              function timeNextStep(){
+              function timerStart () {
                      const minutes = Math.floor(time / 60);
                      let seconds = time % 60;
                      seconds = seconds < 10 ? "0" + seconds:seconds;
-                     timer.innerHTML = `${minutes} : ${seconds}`
+                     timer.innerHTML = seconds
                      time--;
                      if (time === 0 ){
                             document.querySelector(".popup").classList.remove("open");
                             document.querySelector("#wrapper").classList.remove("popup");
-                     } //else if (block()){
-                     //        //нужно написать прекращение фукции  таймстарт
-                     // }
+                            document.querySelector("#enterNumber").value = ""
+                            clearInterval(timerEnterNumber)
+                     }
+                     
               }
-         yourNumber.textContent = number.value;
-      } else{
-              number.style.border = "1px dashed red"
-              number.value = "Введите номер телефона"
-              number.style.color = "red"
-      }
-      
-})
+       })
 
-let enter = document.querySelector("enter");
-let verification = document.querySelector("#verification");
+       document.querySelector(".popup .blocker").addEventListener("click", function closeModalWindLoginPers() {
+              document.querySelector(".popup").classList.remove("open");
+              document.querySelector("#wrapper").classList.remove("popup");
+              document.querySelector("#enterNumber").value = ""
+              clearInterval(timerEnterNumber)
+              
+       })
+       let number = document.querySelector("#enterNumber")
+       let button = document.querySelector("#error")
+       let yourNumber = document.querySelector("#your-number")
+       let reg = /[0-9]{9}/;
+       button.addEventListener("click", function (){
+              if (reg.test(number.value)) {
+                     console.log(number.value)
+                     document.querySelector(".box-one").classList.add("close");
+                     document.querySelector(".next-step").classList.add("active");
+       
+                     let timer = document.querySelector("#timerNextStep")
+                     let time = 179
+                     let timerEnterCodeMessage = setInterval(timeNextStep , 1000);
+                            function timeNextStep(){
+                                   const minutes = Math.floor(time / 60);
+                                   let seconds = time % 60;
+                                   seconds = seconds < 10 ? "0" + seconds:seconds;
+                                   timer.innerHTML = `${minutes} : ${seconds}`
+                                   time--;
+                                   if (time === 0 ){
+                                          document.querySelector(".popup").classList.remove("open");
+                                          document.querySelector("#wrapper").classList.remove("popup");
+                                          clearInterval(timerEnterCodeMessage)
+                                   } 
+                            }
+                     yourNumber.textContent = " 380" + number.value;
+              } else{       
+                            
+                            number.style.border = "1px solid red";
+                            number.placeholder = "не корректный номер";
+                            number.style.color = "red";
+                            button.innerHTML = "Повторить отправку";
+              }
+       })
 
+
+       number.addEventListener("change" , function inputValid(){
+             
+       })
+       let enter = document.querySelector("enter");
+       let verification = document.querySelector("#verification");
+}
+loginPersonesAccount()
 // enter.addEventListener ("click", function (){
 //        if (verification === 1111){
 //             let link = document.createElement("a")
@@ -357,3 +367,23 @@ function getBadgeProduct (nameBadge, element, elemStyle){
        }
 }
 /////////////////////////////////////////////////////////////////////////
+//scroll top button
+let scrolled;
+let timer;
+document.querySelector("#scroll_top").addEventListener("click", function(){
+       let scrolled = window.pageYOffset;
+       console.log(scrolled)
+       scrollToTop();
+
+       function scrollToTop (){
+              if(scrolled > 0){
+                     window.scrollTo(0, scrolled)
+                     scrolled = scrolled - 100;
+                     timer = setTimeout(scrollToTop, 5);
+              } else {
+                     clearTimeout(timer);
+                     window.scrollTo(0,0);
+              }
+       }
+})
+/////////////

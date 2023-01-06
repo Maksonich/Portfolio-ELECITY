@@ -126,7 +126,7 @@
 			
 	}
 }
-// madal window login account
+// madal window enter account
 .popup_catalog-loginAccount .blocker {
     position: fixed;
     top: 0;
@@ -211,39 +211,48 @@
 		@media (max-width:385px){
 			max-width: 90%;
 		}
-		input{
-			// margin-bottom: 23px;
-			// width: 95%;
-			// height: 48px;
-			// background: #FBFBFB;
-			// border: 1px solid #EEEDED;
-			// border-radius: 4px;
-			// font-family: 'Gilroy';
-			// font-style: normal;
-			// font-weight: 400;
-			// font-size: 14px;
-			// line-height: 114.8%;
-			// letter-spacing: 0.01em;
-			// color: #1D1B1B;
-				padding-left: 15px;
-				width: 454px;
-				height: 46.81px;
-				left: 733px;
-				top: 353px;
-				margin-bottom: 15px;
-				border: 1px solid #E5E5E5;
-				border-radius: 5px;
-            &::placeholder {
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 25px;
-                color: #999999;
-              }
-
-			@media (max-width:405px){
-				width: 90%;
+		label{
+			position: relative;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 25px;
+			color: #999999;
+			
+			input{
+				
+					padding-left: 55px;	
+					width: 454px;
+					height: 46.81px;
+					left: 733px;
+					top: 353px;
+					margin-bottom: 15px;
+					border: 1px solid #E5E5E5;
+					border-radius: 5px;
+					font-weight: 400;
+					font-size: 16px;
+					line-height: 25px;
+					color: #999999;
+					&::placeholder{
+						color: #999999;;
+					}
+				@media (max-width:405px){
+					width: 90%;
+				}
+				
+			}
+			&:after{
+				content: "+380";
+				position: absolute;
+				top: 10px;
+				left: 10px;
+				font-family: 'Montserrat';
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 25px;
+				color: #999999;
 			}
 		}
+		
 		span{
 			font-weight: 400;
 			font-size: 15px;
@@ -251,7 +260,9 @@
 			color: #1E1E1E;
 		}
        
-		button{
+		a{	
+			text-align: center;
+			padding: 13px 0;
 			margin-top: 20px;
 			font-weight: 600;
 			font-size: 16px;
@@ -350,7 +361,9 @@
 				color: #1E1E1E;
 			}
 		   
-			button{
+			a{
+				text-align: center;
+				padding: 13px 0;
 				margin-top: 20px;
 				font-weight: 600;
 				font-size: 16px;

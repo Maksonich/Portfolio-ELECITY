@@ -1162,19 +1162,24 @@ footer {
         .advantages .layout ul li i
 a img {
           display: block; }
-      .advantages .layout ul::before {
-        content: "";
-        background-image: url(../images/advantages/arrow.png);
-        background-repeat: no-repeat;
-        background-position: 25px;
-        width: 76px;
-        height: 76px;
-        background-color: #E5E5E5;
-        position: absolute;
-        top: 20px;
-        right: -100px;
-        border-radius: 50%;
-        cursor: pointer; }
+        .advantages .layout ul li#scroll_top {
+          width: 76px;
+          height: 76px;
+          background-color: #E5E5E5;
+          position: absolute;
+          top: 20px;
+          right: -100px;
+          border-radius: 50%;
+          cursor: pointer; }
+          .advantages .layout ul li#scroll_top a {
+            display: block; }
+            .advantages .layout ul li#scroll_top a img {
+              position: absolute;
+              top: 40%;
+              left: 50%;
+              -webkit-transform: translate(-50%);
+              -ms-transform: translate(-50%);
+              transform: translate(-50%); }
 
 .popup_catalog-cities .blocker {
   position: fixed;
@@ -1418,44 +1423,54 @@ a img {
       @media (max-width: 385px) {
         .popup_catalog-loginAccount .box-one form {
           max-width: 90%; } }
-      .popup_catalog-loginAccount .box-one form input {
-        padding-left: 15px;
-        width: 454px;
-        height: 46.81px;
-        left: 733px;
-        top: 353px;
-        margin-bottom: 15px;
-        border: 1px solid #E5E5E5;
-        border-radius: 5px; }
-        .popup_catalog-loginAccount .box-one form input::-webkit-input-placeholder {
+      .popup_catalog-loginAccount .box-one form label {
+        position: relative;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 25px;
+        color: #999999; }
+        .popup_catalog-loginAccount .box-one form label input {
+          padding-left: 55px;
+          width: 454px;
+          height: 46.81px;
+          left: 733px;
+          top: 353px;
+          margin-bottom: 15px;
+          border: 1px solid #E5E5E5;
+          border-radius: 5px;
           font-weight: 400;
           font-size: 16px;
           line-height: 25px;
           color: #999999; }
-        .popup_catalog-loginAccount .box-one form input:-ms-input-placeholder {
+          .popup_catalog-loginAccount .box-one form label input::-webkit-input-placeholder {
+            color: #999999; }
+          .popup_catalog-loginAccount .box-one form label input:-ms-input-placeholder {
+            color: #999999; }
+          .popup_catalog-loginAccount .box-one form label input::-ms-input-placeholder {
+            color: #999999; }
+          .popup_catalog-loginAccount .box-one form label input::placeholder {
+            color: #999999; }
+          @media (max-width: 405px) {
+            .popup_catalog-loginAccount .box-one form label input {
+              width: 90%; } }
+        .popup_catalog-loginAccount .box-one form label:after {
+          content: "+380";
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          font-family: 'Montserrat';
           font-weight: 400;
           font-size: 16px;
           line-height: 25px;
           color: #999999; }
-        .popup_catalog-loginAccount .box-one form input::-ms-input-placeholder {
-          font-weight: 400;
-          font-size: 16px;
-          line-height: 25px;
-          color: #999999; }
-        .popup_catalog-loginAccount .box-one form input::placeholder {
-          font-weight: 400;
-          font-size: 16px;
-          line-height: 25px;
-          color: #999999; }
-        @media (max-width: 405px) {
-          .popup_catalog-loginAccount .box-one form input {
-            width: 90%; } }
       .popup_catalog-loginAccount .box-one form span {
         font-weight: 400;
         font-size: 15px;
         line-height: 20px;
         color: #1E1E1E; }
-      .popup_catalog-loginAccount .box-one form button {
+      .popup_catalog-loginAccount .box-one form a {
+        text-align: center;
+        padding: 13px 0;
         margin-top: 20px;
         font-weight: 600;
         font-size: 16px;
@@ -1568,7 +1583,9 @@ a img {
         font-size: 15px;
         line-height: 20px;
         color: #1E1E1E; }
-      .popup_catalog-loginAccount .next-step.active form button {
+      .popup_catalog-loginAccount .next-step.active form a {
+        text-align: center;
+        padding: 13px 0;
         margin-top: 20px;
         font-weight: 600;
         font-size: 16px;
