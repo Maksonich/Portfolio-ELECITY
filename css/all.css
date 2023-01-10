@@ -523,17 +523,16 @@ header {
             width: 300px;
             height: 39px;
             padding: 0px;
-            margin-right: 0; }
+            margin-right: 0;
+            padding: 0 0  0 27px;
+            line-height: 40px;
+            font-size: 14px;
+            font-weight: 400; }
             header .layout nav .nav-filter ul.all-category-menu.active li:hover {
               background-color: #DCE9F8;
               cursor: pointer; }
             header .layout nav .nav-filter ul.all-category-menu.active li .name-category a {
-              font-weight: 400;
-              font-size: 14px;
-              line-height: 40px;
-              padding: 0 0  0 27px;
-              width: 344.29px;
-              height: 26px; }
+              display: block; }
               header .layout nav .nav-filter ul.all-category-menu.active li .name-category a:hover {
                 color: #1E1E1E; }
             header .layout nav .nav-filter ul.all-category-menu.active li .category-info {
@@ -1430,7 +1429,7 @@ a img {
         line-height: 25px;
         color: #999999; }
         .popup_catalog-loginAccount .box-one form label input {
-          padding-left: 55px;
+          padding-left: 58px;
           width: 454px;
           height: 46.81px;
           left: 733px;
@@ -1438,10 +1437,12 @@ a img {
           margin-bottom: 15px;
           border: 1px solid #E5E5E5;
           border-radius: 5px;
+          font-family: 'Montserrat';
           font-weight: 400;
           font-size: 16px;
           line-height: 25px;
-          color: #999999; }
+          color: #999999;
+          letter-spacing: 2px; }
           .popup_catalog-loginAccount .box-one form label input::-webkit-input-placeholder {
             color: #999999; }
           .popup_catalog-loginAccount .box-one form label input:-ms-input-placeholder {
@@ -1456,12 +1457,13 @@ a img {
         .popup_catalog-loginAccount .box-one form label:after {
           content: "+380";
           position: absolute;
-          top: 10px;
+          top: 9px;
           left: 10px;
           font-family: 'Montserrat';
           font-weight: 400;
           font-size: 16px;
-          line-height: 25px;
+          line-height: 28px;
+          letter-spacing: 2px;
           color: #999999; }
       .popup_catalog-loginAccount .box-one form span {
         font-weight: 400;
@@ -1546,38 +1548,50 @@ a img {
       @media (max-width: 385px) {
         .popup_catalog-loginAccount .next-step.active form {
           max-width: 90%; } }
-      .popup_catalog-loginAccount .next-step.active form input {
-        padding-left: 15px;
-        width: 183px;
-        height: 46.81px;
-        left: 733px;
-        top: 353px;
-        margin-bottom: 15px;
-        border: 1px solid #E5E5E5;
-        border-radius: 5px; }
-        .popup_catalog-loginAccount .next-step.active form input::-webkit-input-placeholder {
+      .popup_catalog-loginAccount .next-step.active form label {
+        position: relative; }
+        .popup_catalog-loginAccount .next-step.active form label input {
+          padding-left: 15px;
+          width: 183px;
+          height: 46.81px;
+          margin-bottom: 15px;
+          border: 1px solid #E5E5E5;
+          border-radius: 5px;
           font-weight: 400;
           font-size: 16px;
           line-height: 25px;
-          color: #999999; }
-        .popup_catalog-loginAccount .next-step.active form input:-ms-input-placeholder {
+          color: #999999;
+          text-align: center;
+          letter-spacing: 10px; }
+          .popup_catalog-loginAccount .next-step.active form label input::-webkit-input-placeholder {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 25px;
+            color: #999999; }
+          .popup_catalog-loginAccount .next-step.active form label input:-ms-input-placeholder {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 25px;
+            color: #999999; }
+          .popup_catalog-loginAccount .next-step.active form label input::-ms-input-placeholder {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 25px;
+            color: #999999; }
+          .popup_catalog-loginAccount .next-step.active form label input::placeholder {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 25px;
+            color: #999999; }
+          @media (max-width: 405px) {
+            .popup_catalog-loginAccount .next-step.active form label input {
+              width: 90%; } }
+        .popup_catalog-loginAccount .next-step.active form label span#info-verify {
+          margin-left: 20px;
           font-weight: 400;
-          font-size: 16px;
-          line-height: 25px;
-          color: #999999; }
-        .popup_catalog-loginAccount .next-step.active form input::-ms-input-placeholder {
-          font-weight: 400;
-          font-size: 16px;
-          line-height: 25px;
-          color: #999999; }
-        .popup_catalog-loginAccount .next-step.active form input::placeholder {
-          font-weight: 400;
-          font-size: 16px;
-          line-height: 25px;
-          color: #999999; }
-        @media (max-width: 405px) {
-          .popup_catalog-loginAccount .next-step.active form input {
-            width: 90%; } }
+          font-size: 15px;
+          line-height: 20px;
+          color: #be0404; }
       .popup_catalog-loginAccount .next-step.active form span {
         font-weight: 400;
         font-size: 15px;
@@ -1590,6 +1604,7 @@ a img {
         font-weight: 600;
         font-size: 16px;
         line-height: 25px;
+        cursor: pointer;
         width: 224.54px;
         height: 53.46px;
         background: #437FC8;
@@ -1599,9 +1614,11 @@ a img {
 
 .products {
   margin-top: 80px; }
-  .products .layout .product-block h3 {
+  .products .layout .product-block h3,
+  .products .layout .product-block-two h3 {
     margin-bottom: 40px; }
-  .products .layout .product-block ul {
+  .products .layout .product-block ul,
+  .products .layout .product-block-two ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1611,7 +1628,8 @@ a img {
     -ms-flex-pack: justify;
     justify-content: space-between;
     margin: 0 5px; }
-    .products .layout .product-block ul li {
+    .products .layout .product-block ul li,
+    .products .layout .product-block-two ul li {
       border-radius: 5px;
       height: 465px;
       margin-bottom: 70px;
@@ -1632,98 +1650,126 @@ a img {
       align-items: flex-start;
       -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0);
       box-shadow: 0 0 10px rgba(0, 0, 0, 0); }
-      .products .layout .product-block ul li:hover {
+      .products .layout .product-block ul li:hover,
+      .products .layout .product-block-two ul li:hover {
         -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.274);
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.274); }
-      .products .layout .product-block ul li .special-offer {
+      .products .layout .product-block ul li .special-offer,
+      .products .layout .product-block-two ul li .special-offer {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
         position: absolute;
         top: 10px;
         left: 10px; }
-        .products .layout .product-block ul li .special-offer span.new {
+        .products .layout .product-block ul li .special-offer span.new,
+        .products .layout .product-block-two ul li .special-offer span.new {
           width: 85px;
           height: 30px;
           border-radius: 5px;
           text-align: center;
           color: #fff;
-          padding: 7px 7px;
+          padding: 4px 7px;
           background-color: #55bb9f;
           border-radius: 5px;
+          font-family: 'Montserrat';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 25px;
           margin-right: 20px; }
-        .products .layout .product-block ul li .special-offer span.sale-prod {
+        .products .layout .product-block ul li .special-offer span.sale-prod,
+        .products .layout .product-block-two ul li .special-offer span.sale-prod {
           width: 48.51px;
           height: 29.72px;
           font-family: 'Montserrat';
+          font-style: normal;
           font-weight: 600;
-          font-size: 13px;
-          line-height: 17px;
+          font-size: 14px;
+          line-height: 25px;
           color: #FFFFFF;
           background: #FC443B;
           border-radius: 5px;
-          padding: 7px 7px;
+          padding: 4px 7px;
           text-align: center;
           margin-right: 20px; }
-        .products .layout .product-block ul li .special-offer span.present {
+        .products .layout .product-block ul li .special-offer span.present,
+        .products .layout .product-block-two ul li .special-offer span.present {
           width: 85px;
           height: 30px;
           border-radius: 5px;
           text-align: center;
           color: #fff;
-          padding: 7px 7px;
+          padding: 4px 7px;
           background: #7fb1ed;
-          border-radius: 5px; }
-      .products .layout .product-block ul li .image-product {
+          border-radius: 5px;
+          font-family: 'Montserrat';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 25px; }
+      .products .layout .product-block ul li .image-product,
+      .products .layout .product-block-two ul li .image-product {
         margin: auto;
         height: 290px; }
-        .products .layout .product-block ul li .image-product img {
+        .products .layout .product-block ul li .image-product img,
+        .products .layout .product-block-two ul li .image-product img {
           width: 100%;
           height: 100%; }
-      .products .layout .product-block ul li span.current-price {
+      .products .layout .product-block ul li span.current-price,
+      .products .layout .product-block-two ul li span.current-price {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex; }
-        .products .layout .product-block ul li span.current-price .new-price {
+        .products .layout .product-block ul li span.current-price .new-price,
+        .products .layout .product-block-two ul li span.current-price .new-price {
           font-weight: 600;
           font-size: 20px;
           line-height: 25px;
           color: #404040; }
-        .products .layout .product-block ul li span.current-price .old-price {
+        .products .layout .product-block ul li span.current-price .old-price,
+        .products .layout .product-block-two ul li span.current-price .old-price {
           margin-left: 25px;
           font-weight: 600;
           font-size: 14px;
           line-height: 25px;
           text-decoration: line-through;
           color: #6E6E6E; }
-      .products .layout .product-block ul li h4.nameProduct {
+      .products .layout .product-block ul li h4.nameProduct,
+      .products .layout .product-block-two ul li h4.nameProduct {
         font-weight: 400;
         font-size: 16px;
         line-height: 22px; }
-      .products .layout .product-block ul li .grade-and-review {
+      .products .layout .product-block ul li .grade-and-review,
+      .products .layout .product-block-two ul li .grade-and-review {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center; }
-        .products .layout .product-block ul li .grade-and-review .grade .raiting {
+        .products .layout .product-block ul li .grade-and-review .grade .raiting,
+        .products .layout .product-block-two ul li .grade-and-review .grade .raiting {
           margin: 0 0 16px 0;
           padding: 0;
           border: none; }
-        .products .layout .product-block ul li .grade-and-review .grade .raiting__caption {
+        .products .layout .product-block ul li .grade-and-review .grade .raiting__caption,
+        .products .layout .product-block-two ul li .grade-and-review .grade .raiting__caption {
           padding: 0;
           margin-bottom: 8px; }
-        .products .layout .product-block ul li .grade-and-review .grade .raiting__group {
+        .products .layout .product-block ul li .grade-and-review .grade .raiting__group,
+        .products .layout .product-block-two ul li .grade-and-review .grade .raiting__group {
           position: relative;
           width: 75px;
           height: 15px;
           background-image: url(/images/icons/star-null.png);
           background-size: 15px 15px; }
-        .products .layout .product-block ul li .grade-and-review .grade .raiting__group:focus-within {
+        .products .layout .product-block ul li .grade-and-review .grade .raiting__group:focus-within,
+        .products .layout .product-block-two ul li .grade-and-review .grade .raiting__group:focus-within {
           outline: solid 1px #64686d0c;
           outline-offset: 0.1px; }
-        .products .layout .product-block ul li .grade-and-review .grade .raiting__star {
+        .products .layout .product-block ul li .grade-and-review .grade .raiting__star,
+        .products .layout .product-block-two ul li .grade-and-review .grade .raiting__star {
           font-size: inherit;
           margin: 0;
           position: absolute;
@@ -1736,43 +1782,57 @@ a img {
           appearance: none;
           background-size: 15px 15px;
           background-repeat: repeat-x; }
-        .products .layout .product-block ul li .grade-and-review .grade .raiting__star:focus {
+        .products .layout .product-block ul li .grade-and-review .grade .raiting__star:focus,
+        .products .layout .product-block-two ul li .grade-and-review .grade .raiting__star:focus {
           outline: none; }
-        .products .layout .product-block ul li .grade-and-review .grade .raiting__star:hover, .products .layout .product-block ul li .grade-and-review .grade .raiting__star:checked {
+        .products .layout .product-block ul li .grade-and-review .grade .raiting__star:hover, .products .layout .product-block ul li .grade-and-review .grade .raiting__star:checked,
+        .products .layout .product-block-two ul li .grade-and-review .grade .raiting__star:hover,
+        .products .layout .product-block-two ul li .grade-and-review .grade .raiting__star:checked {
           background-image: url(../images/icons/star.png); }
-        .products .layout .product-block ul li .grade-and-review .grade .raiting__star:hover ~ .raiting__star {
+        .products .layout .product-block ul li .grade-and-review .grade .raiting__star:hover ~ .raiting__star,
+        .products .layout .product-block-two ul li .grade-and-review .grade .raiting__star:hover ~ .raiting__star {
           background-image: url(https://cdn.glitch.com/be154eac-f8a7-4b55-9350-27cb2d6ff6c0%2Foff.svg); }
-        .products .layout .product-block ul li .grade-and-review .grade .raiting__star:nth-of-type(1) {
+        .products .layout .product-block ul li .grade-and-review .grade .raiting__star:nth-of-type(1),
+        .products .layout .product-block-two ul li .grade-and-review .grade .raiting__star:nth-of-type(1) {
           z-index: 5;
           width: 4px; }
-        .products .layout .product-block ul li .grade-and-review .grade .raiting__star:nth-of-type(2) {
+        .products .layout .product-block ul li .grade-and-review .grade .raiting__star:nth-of-type(2),
+        .products .layout .product-block-two ul li .grade-and-review .grade .raiting__star:nth-of-type(2) {
           z-index: 4;
           width: 18px; }
-        .products .layout .product-block ul li .grade-and-review .grade .raiting__star:nth-of-type(3) {
+        .products .layout .product-block ul li .grade-and-review .grade .raiting__star:nth-of-type(3),
+        .products .layout .product-block-two ul li .grade-and-review .grade .raiting__star:nth-of-type(3) {
           z-index: 3;
           width: 32px; }
-        .products .layout .product-block ul li .grade-and-review .grade .raiting__star:nth-of-type(4) {
+        .products .layout .product-block ul li .grade-and-review .grade .raiting__star:nth-of-type(4),
+        .products .layout .product-block-two ul li .grade-and-review .grade .raiting__star:nth-of-type(4) {
           z-index: 2;
           width: 46px; }
-        .products .layout .product-block ul li .grade-and-review .grade .raiting__star:nth-of-type(5) {
+        .products .layout .product-block ul li .grade-and-review .grade .raiting__star:nth-of-type(5),
+        .products .layout .product-block-two ul li .grade-and-review .grade .raiting__star:nth-of-type(5) {
           z-index: 1;
           width: 58px; }
-        .products .layout .product-block ul li .grade-and-review .review {
+        .products .layout .product-block ul li .grade-and-review .review,
+        .products .layout .product-block-two ul li .grade-and-review .review {
           margin-left: 20px; }
-          .products .layout .product-block ul li .grade-and-review .review a {
+          .products .layout .product-block ul li .grade-and-review .review a,
+          .products .layout .product-block-two ul li .grade-and-review .review a {
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex; }
-            .products .layout .product-block ul li .grade-and-review .review a img {
+            .products .layout .product-block ul li .grade-and-review .review a img,
+            .products .layout .product-block-two ul li .grade-and-review .review a img {
               display: block;
               width: 20px;
               height: 20px; }
-            .products .layout .product-block ul li .grade-and-review .review a .amount-review {
+            .products .layout .product-block ul li .grade-and-review .review a .amount-review,
+            .products .layout .product-block-two ul li .grade-and-review .review a .amount-review {
               margin-left: 10px;
               font-size: 14px;
               line-height: 25px;
               color: #6E6E6E; }
-      .products .layout .product-block ul li button.btn-buy {
+      .products .layout .product-block ul li button.btn-buy,
+      .products .layout .product-block-two ul li button.btn-buy {
         width: 115px;
         height: 40px;
         background: #437fc8;
@@ -1788,9 +1848,11 @@ a img {
         -o-transition-duration: 0.7s;
         transition-duration: 0.7s;
         white-space: nowrap; }
-        .products .layout .product-block ul li button.btn-buy:hover {
+        .products .layout .product-block ul li button.btn-buy:hover,
+        .products .layout .product-block-two ul li button.btn-buy:hover {
           background-color: #2f69b1; }
-      .products .layout .product-block ul li button.not-availability {
+      .products .layout .product-block ul li button.not-availability,
+      .products .layout .product-block-two ul li button.not-availability {
         width: 156px;
         height: 40px;
         background-color: #999999;
@@ -1922,6 +1984,11 @@ a img {
             color: #404040;
             width: 305px;
             border: none; }
+            .personal-account .layout .user-data .data .data-settings ul li input.active-edit {
+              margin-left: 5px;
+              padding-left: 5px;
+              -webkit-box-shadow: 0px 2px 5px #1e1e1e54;
+              box-shadow: 0px 2px 5px #1e1e1e54; }
           .personal-account .layout .user-data .data .data-settings ul li .edit {
             display: -webkit-box;
             display: -ms-flexbox;

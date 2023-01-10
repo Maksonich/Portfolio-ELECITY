@@ -10,13 +10,14 @@
   width: 48.51px;
   height: 29.72px;
   font-family: 'Montserrat';
-  font-weight: 600;
-  font-size: 13px;
-  line-height: 17px;
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 25px;
   color: #FFFFFF;
   background: #FC443B;
   border-radius: 5px;
-  padding: 7px 7px;
+  padding: 4px 7px;
   text-align: center;
 }
 @mixin badgeNovelty{
@@ -25,9 +26,14 @@
   border-radius: 5px;
   text-align: center;
   color: #fff;
-  padding: 7px 7px;
+  padding: 4px 7px;
   background-color: $colorNovelty;
   border-radius: 5px;
+  font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 25px;
 
 }
 @mixin badgeBonus {
@@ -36,10 +42,14 @@
   border-radius: 5px;
   text-align: center;
   color: #fff;
-  padding: 7px 7px;
+  padding: 4px 7px;
   background: $colorBonus;
   border-radius: 5px;
-
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 25px;
 }
 @mixin btnBuy {
   width: 115px;

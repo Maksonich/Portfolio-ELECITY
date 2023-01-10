@@ -10,7 +10,6 @@
 	<script type="text/javascript" src="js/main.js"></script>
 	<title>ELECITY</title>
 </head>
-
 <body>
 	<!-- <div class="popup_catalog popup">
 		<div class="blocker"></div>
@@ -70,9 +69,10 @@
 				<h3>Введите код из смс</h3>
 				<span class="subtitle">Мы отправили код на телефон с номером<br><b id="your-number"></b></span>
 				<form >
-					<input type="text" name="" id="verification" min="4" max="4" placeholder="__ __ __ __" >
+					
+					<label for="verification"><input type="text" name="verification" id="verification" min="4" max="4" placeholder="_ _ _ _" ><span id="info-verify"></span></label>
 					<span >Отправить код повторно через  <b id="timerNextStep"></b></span>
-					<a id="enter">Войти</a>
+					<a id="enter-verify">Войти</a>
 				</form>
 			</div>
 		</div>
@@ -107,1830 +107,1831 @@
 		</div>
 	</div>
 	<div id="wrapper" class="homepage">
-	<header>
-		<div class="layout">
-			<div class="nav-upper">
-				<div class="location" id="selectSity">
-					<div class="icon-location ">
-						<img src="./images/icons/geolocation.png" alt="geolocation">
+		<header>
+			<div class="layout">
+				<div class="nav-upper">
+					<div class="location" id="selectSity">
+						<div class="icon-location ">
+							<img src="./images/icons/geolocation.png" alt="geolocation">
+						</div>
+						<a href="#">Москва</a>
 					</div>
-					<a href="#">Москва</a>
-				</div>
-				<ul>
-					<li><a href="#">Отзывы</a></li>
-					<li><a href="#"> О нас</a></li>
-					<li><a href="#">Доставка</a></li>
-					<li><a href="#">Оплата</a></li>
-					<li><a href="./connection-household.html">Подключение техники</a></li>
-					<li><a href="#">Доп. сервис</a></li>
-					<li><a href="#">Наши гарантии</a></li>
-					<li><a href="#">Почему мы?</a></li>
-					<li><a href="./contacts.html">Контакты</a></li>
-					<li><a href="#">Оставить обращение</a></li>
-				</ul>
-				<div class="authorization" id="authorization">
-					<a href="#"><img src="./images/icons/autorization.png" alt="autorization"></a>
-					<a href="#">Личный кабинет</a>
-					<ul class="pop-up_input">
-						<li><a href="#" id="loginAccount">Личный кабинет</a></li>
-						<li><a href="./personal-account.html">Настройки</a></li>
-						<li><a href="#">Сообщения </a><span class="notice"></span></li>
-						<li><a href="#">Избранное</a><span class="notice"></span></li>
-						<li><a href="#">Мои заказы</a><span class="notice"></span></li>
-						<li class="exit"><a href="#">Выйти</a></li>
+					<ul>
+						<li><a href="#">Отзывы</a></li>
+						<li><a href="#"> О нас</a></li>
+						<li><a href="#">Доставка</a></li>
+						<li><a href="#">Оплата</a></li>
+						<li><a href="./connection-household.html">Подключение техники</a></li>
+						<li><a href="#">Доп. сервис</a></li>
+						<li><a href="#">Наши гарантии</a></li>
+						<li><a href="#">Почему мы?</a></li>
+						<li><a href="./contacts.html">Контакты</a></li>
+						<li><a href="#">Оставить обращение</a></li>
 					</ul>
+					<div class="authorization" id="authorization">
+						<a href="#"><img src="./images/icons/autorization.png" alt="autorization"></a>
+						<a href="#">Личный кабинет</a>
+						<ul class="pop-up_input">
+							<li><a href="#" id="loginAccount">Личный кабинет</a></li>
+							<li><a href="./personal-account.html">Настройки</a></li>
+							<li><a href="#">Сообщения </a><span class="notice"></span></li>
+							<li><a href="#">Избранное</a><span class="notice"></span></li>
+							<li><a href="#">Мои заказы</a><span class="notice"></span></li>
+							<li class="exit"><a href="#">Выйти</a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
-		</div>
-		<span></span>
-		<div class="layout">
-			<nav>
-				<div class="nav-search">
-					<div class="logotype">
-						<a href="./index.html"><img src="./images/icons/logotype.png" alt="logotype"></a>
-					</div>
-					<ul >
-						<li><a href="#">Техника</a></li>
-						<li><a href="#">Мебель</a></li>
-						<li><a href="#">Инструменты</a></li>
-					</ul>
-					<label for="search">
-						<input type="search" name="" id="" placeholder="Что будем искать?">
-						<img src="./images/icons/search.png" alt="search">
-					</label>
-					<div class="contacts">
-						<div class="viber-icon">
-							<a href="#"><img src="./images/icons/viber.png" alt="viber"></a>
+			<span></span>
+			<div class="layout">
+				<nav>
+					<div class="nav-search">
+						<div class="logotype">
+							<a href="./index.html"><img src="./images/icons/logotype.png" alt="logotype"></a>
 						</div>
-						<div class="telegram">
-							<a href="#"><img src="./images/icons/telegram.png" alt="telegram"></a>
-						</div>
-						<div class="call">
-							<a href="tel:+7(495)150-95-55">+7(495)150-95-55</a>
-							<div class="everyday">
-								9:00 - 22:00 без выходных
+						<ul >
+							<li><a href="#">Техника</a></li>
+							<li><a href="#">Мебель</a></li>
+							<li><a href="#">Инструменты</a></li>
+						</ul>
+						<label for="search">
+							<input type="search" name="" id="" placeholder="Что будем искать?">
+							<img src="./images/icons/search.png" alt="search">
+						</label>
+						<div class="contacts">
+							<div class="viber-icon">
+								<a href="#"><img src="./images/icons/viber.png" alt="viber"></a>
+							</div>
+							<div class="telegram">
+								<a href="#"><img src="./images/icons/telegram.png" alt="telegram"></a>
+							</div>
+							<div class="call">
+								<a href="tel:+7(495)150-95-55">+7(495)150-95-55</a>
+								<div class="everyday">
+									9:00 - 22:00 без выходных
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="buy-list">
-						<div class="cart">
-						<a href="#"><img src="./images/icons/shoping-cart.png" alt="shoping-cart"></a>	
-						</div>
-						<div class="amount-block">
-							<div class="name-block">Корзина</div>
-							<div class="amount">0 ₽</div>
+						<div class="buy-list">
+							<div class="cart">
+							<a href="#"><img src="./images/icons/shoping-cart.png" alt="shoping-cart"></a>	
+							</div>
+							<div class="amount-block">
+								<div class="name-block">Корзина</div>
+								<div class="amount">0 ₽</div>
+							</div>
+							
 						</div>
 						
 					</div>
-					
-				</div>
-				<div class="nav-filter">
-					<div class="all-category" >
-						<a href="#"><span></span> Все категории </a>	 
-					</div>
-					<ul class="all-category-menu ">
-						<li >
-							<div class="name-category">
-								<a href="#">Аудио/Видео</a>
-							</div>
-							<div class="category-info ">
-								<div class="category-menu">
-									<div class="top">
-										<a href="#">Samsung Photo </a>
-										<a href="#">Samsung Video</a>
-										<a href="#">Xiaomi photo </a>
-										<a href="#">OnePlus </a>
-									</div>
-									<div class="list-category">
-										<div class="left">
-											<div class="sub-category-block">
-												<h4>Колонки</h4>
-												<ul class="sub-category">
-													<li><a href="#">Саббуфер </a></li>
-													<li><a href="#">Аксесуары</a></li>
-													<li><a href="#">Инвентарь </a></li>
-													<li><a href="#">Зарядки</a></li>
-													<li><a href="#">Домашний кинотеатр</a></li>
-													<li><a href="#">Колонки  </a></li>
-													<li><a href="#">Зарядки</a></li>
-													<li><a href="#">Аксесуары </a></li>
-												</ul>
-											</div>
-											<div class="sub-category-block">
-												<h4>Фотоапараты</h4>
-												<ul class="sub-category">
-													<li><a href="#">Фотоапараты</a></li>
-													<li><a href="#">Соник </a></li>
-													<li><a href="#">Аксесуары</a></li>
-													<li><a href="#">Зарядки</a></li>
-													<li><a href="#">Фотоапараты</a></li>
-													<li><a href="#">Соник </a></li>
-													<li><a href="#">Аксесуары</a></li>
-													<li><a href="#">Зарядки</a></li>
-												</ul>
-											</div>
-										</div>
-										<div class="right">
-											<div class="sub-category-block">
-											<h4>Видеокамеры</h4>
-											<ul class="sub-category">
-												<li><a href="#">Видеокамеры </a></li>
-												<li><a href="#">Зарядки </a></li>
-												<li><a href="#">Аксесуары </a></li>
-												<li><a href="#">Фотоапараты</a></li>
-												<li><a href="#">Видеокамеры</a></li>
-												<li><a href="#">Зарядки</a></li>
-												<li><a href="#">Видеокамеры </a></li>
-												<li><a href="#">Зарядки </a></li>
-												<li><a href="#">Аксесуары </a></li>
-												<li><a href="#">Фотоапараты</a></li>
-												<li><a href="#">Видеокамеры</a></li>
-												<li><a href="#">Зарядки</a></li>
-											</ul>
-										</div>
-										</div>
-										
-									</div>
+					<div class="nav-filter">
+						<div class="all-category" >
+							<a href="#"><span></span> Все категории </a>	 
+						</div>
+						<ul class="all-category-menu ">
+							<li data-filter-product="0">
+								<div class="name-category" >
+									<a href="#">Аудио/Видео</a>
 								</div>
-								<div class="categori-banner" >
-									<div class="title-discount">Телефизор BLACKTON 2402B</div>
-									<span>Забери со скидкой до 11.02.21</span>
-									<img src="./images/product/tv-BLACKTON.png"  alt="">
-									<a href="#">Купить</a>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="name-category">
-								<a href="#">Крупная бытовая техника</a>
-							</div>
-							<div class="category-info ">
-								<div class="category-menu">
-									<div class="top">
-										<a href="#">Холодильник  BEKO</a>
-										<a href="#">Стиральная машина Elenberg</a>
-										<a href="#">Газовая плита WHIRLPOOL</a>
-										<a href="#">Бойлер Electrolux</a>
-									</div>
-									<div class="list-category">
-										<div class="left">
-											<div class="sub-category-block">
-												<h4>Холодильники</h4>
-												<ul class="sub-category">
-													<li><a href="#">Холодильники LG</a></li>
-													<li><a href="#">Морозилки</a></li>
-													<li><a href="#">Горизонтальные морозилки</a></li>
-													<li><a href="#">Морозильные камеры </a></li>
-													<li><a href="#">Горизонтальные холодильники</a></li>
-													<li><a href="#">Минибар</a></li>
-													<li><a href="#">Морозильная камера</a></li>
-													<li><a href="#">Двухдверные холодильники</a></li>
-												</ul>
-											</div>
-											<div class="sub-category-block">
-												<h4>Бойлеры</h4>
-												<ul class="sub-category">
-													<li><a href="#">Бойлеры</a></li>
-													<li><a href="#">Горизонтальные бойлеры </a></li>
-													<li><a href="#">Вертикальные бойлеры</a></li>
-													<li><a href="#">Газовые бойлеры </a></li>
-													<li><a href="#">Электрические бойлеры</a></li>
-													<li><a href="#">Бойлеры на 80 литров </a></li>
-													<li><a href="#">Бойлеры на 50 литров </a></li>
-													<li><a href="#">Газовые бойлеры </a></li>
-												</ul>
-											</div>
+								<div class="category-info " data-fil-prod="0" >
+									<div class="category-menu">
+										<div class="top">
+											<a href="#">Samsung Photo </a>
+											<a href="#">Samsung Video</a>
+											<a href="#">Xiaomi photo </a>
+											<a href="#">OnePlus </a>
 										</div>
-										<div class="right">
-											<div class="sub-category-block">
-											<h4>Стиральные</h4>
-											<ul class="sub-category">
-												<li><a href="#">Стиральные машины</a></li>
-												<li><a href="#">Сушильные машины</a></li>
-												<li><a href="#">Стиральные машины LG</a></li>
-												<li><a href="#">Стиральные машины Elenberg </a></li>
-												<li><a href="#">Сушильные машины LG</a></li>
-												<li><a href="#">Стиральные машины с сушкой</a></li>
-												<li><a href="#">Стиральные машины</a></li>
-												<li><a href="#">Сушильные машины</a></li>
-												<li><a href="#">Стиральные машины LG</a></li>
-												
-											</ul>
-											</div>
-											<div class="sub-category-block">
-												<h4>Микроволновки</h4>
-												<ul class="sub-category">
-													<li><a href="#">Микроволновки</a></li>
-													<li><a href="#">Индукционные плиты </a></li>
-													<li><a href="#">Газовые плиты</a></li>
-													<li><a href="#">Духовые шкафы</a></li>
-													<li><a href="#">Электрические Плиты</a></li>
-													<li><a href="#">Газовые духовки</a></li>
-													<li><a href="#">Микроволновки</a></li>
-													<li><a href="#">Индукционные плиты </a></li>
-													<li><a href="#">Газовые плиты</a></li>
-													<li><a href="#">Духовые шкафы</a></li>
-													<li><a href="#">Электрические Плиты</a></li>
-												
-												</ul>
-											</div>
-										</div>
-										
-									</div>
-								</div>
-								<div class="categori-banner">
-									<div class="title-discount">Стиральная машина LG F-1096TD3</div>
-									<span>Забери со скидкой до 11.02.21</span>
-									<img src="./images/banner/washing_machine.png" alt="">
-									<a href="#">Купить</a>
-									
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="name-category">
-								<a href="#">Техника для кухни</a>
-							</div>
-							<div class="category-info ">
-								<div class="category-menu">
-									<div class="top">
-										<a href="#">Холодильники  BEKO</a>
-										<a href="#">Микроволновка Elenberg</a>
-										<a href="#">Газовая плита WHIRLPOOL</a>
-										<a href="#">Плита Electrolux</a>
-									</div>
-									<div class="list-category">
-										<div class="left">
-											<div class="sub-category-block">
-												<h4>Микроволновки</h4>
-												<ul class="sub-category">
-													<li><a href="#">Микроволновки</a></li>
-													<li><a href="#">Индукционные плиты </a></li>
-													<li><a href="#">Газовые плиты</a></li>
-													<li><a href="#">Духовые шкафы</a></li>
-													<li><a href="#">Электрические Плиты</a></li>
-													<li><a href="#">Газовые духовки</a></li>
-													<li><a href="#">Микроволновки</a></li>
-													<li><a href="#">Индукционные плиты </a></li>
-													<li><a href="#">Электрические Плиты</a></li>
-													<li><a href="#">Газовые духовки</a></li>
-												</ul>
-											</div>
-											<div class="sub-category-block">
-												<h4>Холодильник</h4>
-												<ul class="sub-category">
-													<li><a href="#">Холодильники LG</a></li>
-													<li><a href="#">Морозилки</a></li>
-													<li><a href="#">Горизонтальные морозилки</a></li>
-													<li><a href="#">Морозильные камеры </a></li>
-													<li><a href="#">Горизонтальные холодильники</a></li>
-													<li><a href="#">Минибар</a></li>
-													<li><a href="#">Морозильная камера</a></li>
-													<li><a href="#">Двухдверные холодильники</a></li>
-												</ul>
-											</div>
-										</div>
-										<div class="right">
-											<div class="sub-category-block">
-											<h4>Плиты</h4>
-											<ul class="sub-category">
-												<li><a href="#">Микроволновки</a></li>
-												<li><a href="#">Индукционные плиты </a></li>
-												<li><a href="#">Газовые плиты</a></li>
-												<li><a href="#">Духовые шкафы</a></li>
-												<li><a href="#">Электрические Плиты</a></li>
-												<li><a href="#">Газовые духовки</a></li>
-												<li><a href="#">Микроволновки</a></li>
-												<li><a href="#">Индукционные плиты </a></li>
-												<li><a href="#">Газовые плиты</a></li>
-												<li><a href="#">Духовые шкафы</a></li>
-												<li><a href="#">Электрические Плиты</a></li>
-												<li><a href="#">Газовые духовки</a></li>
-												<li><a href="#">Микроволновки</a></li>
-											</ul>
-										</div>
-										</div>
-										
-									</div>
-								</div>
-								<div class="categori-banner">
-									
-									<div class="title-discount">Стиральная машина LG F-1096TD3</div>
-									<span>Забери со скидкой до 11.02.21</span>
-									<img src="./images/product/microvawe_whirlpool.png" alt="">
-									<a href="#">Купить</a>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="name-category">
-								<a href="#">Встраиваемая бытовая техника</a>
-							</div>
-							<div class="category-info ">
-								<div class="category-menu">
-									<div class="top">
-										<a href="#">Встраивая газовая плита WHIRLPOOL</a>
-										<a href="#">Встраиваемая Миикроволновка ELECTROLUX</a>
-										<a href="#">Встраиваемая индукционная плита BEKO</a>
-									</div>
-									<div class="list-category">
-										<div class="left">
-											<div class="sub-category-block">
-												<h4>Встраиваимая плита</h4>
-												<ul class="sub-category">
-													<li><a href="#">Микроволновки</a></li>
-													<li><a href="#">Индукционные плиты </a></li>
-													<li><a href="#">Газовые плиты</a></li>
-													<li><a href="#">Духовые шкафы</a></li>
-													<li><a href="#">Электрические Плиты</a></li>
-													<li><a href="#">Газовые духовки</a></li>
-													<li><a href="#">Микроволновки</a></li>
-													<li><a href="#">Индукционные плиты </a></li>
-													<li><a href="#">Газовые плиты</a></li>
-													<li><a href="#">Микроволновки</a></li>
-												</ul>
-											</div>
-											<div class="sub-category-block">
-												<h4>Встраиваемые Холодильники</h4>
-												<ul class="sub-category">
-													<li><a href="#">Холодильники LG</a></li>
-													<li><a href="#">Морозилки</a></li>
-													<li><a href="#">Горизонтальные морозилки</a></li>
-													<li><a href="#">Морозильные камеры </a></li>
-													<li><a href="#">Горизонтальные холодильники</a></li>
-													<li><a href="#">Минибар</a></li>
-													<li><a href="#">Морозильная камера</a></li>
-													<li><a href="#">Двухдверные холодильники</a></li>
-												</ul>
-											</div>
-										</div>
-										<div class="right">
-											<div class="sub-category-block">
-											<h4>Встраиваемая Микроволновки</h4>
-											<ul class="sub-category">
-												<li><a href="#">Микроволновки</a></li>
-												<li><a href="#">Индукционные плиты </a></li>
-												<li><a href="#">Газовые плиты</a></li>
-												<li><a href="#">Духовые шкафы</a></li>
-												<li><a href="#">Электрические Плиты</a></li>
-												<li><a href="#">Газовые духовки</a></li>
-												<li><a href="#">Микроволновки</a></li>
-												<li><a href="#">Индукционные плиты </a></li>
-												<li><a href="#">Газовые плиты</a></li>
-												<li><a href="#">Духовые шкафы</a></li>
-												<li><a href="#">Электрические Плиты</a></li>
-												<li><a href="#">Газовые духовки</a></li>
-												<li><a href="#">Микроволновки</a></li>
-											</ul>
-										</div>
-										</div>
-										
-									</div>
-								</div>
-								<div class="categori-banner">
-									
-									<div class="title-discount">Стиральная машина LG F-1096TD3</div>
-									<span>Забери со скидкой до 11.02.21</span>
-									<img src="./images/product/microvawe_whirlpool.png" alt="">
-									<a href="#">Купить</a>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="name-category">
-								<a href="#">Компьютерная техника</a>
-							</div>
-							<div class="category-info ">
-								<div class="category-menu">
-									<div class="top">
-										<a href="#">планшет Samsung Galaxy </a>
-										<a href="#">ноутбук Samsung </a>
-										<a href="#">чехол на Xiaomi Redmi Note 9S</a>
-										<a href="#"> Ipad</a>
-									</div>
-									<div class="list-category">
-										<div class="left">
-											<div class="sub-category-block">
-												<h4>Планшеты</h4>
-												<ul class="sub-category">
-													<li><a href="#">Планшеты на 7 дюйм</a></li>
-													<li><a href="#">Ipad</a></li>
-													<li><a href="#">Samsung Galaxy</a></li>
-													<li><a href="#">Планшеты со стилусом</a></li>
-													<li><a href="#">Планшеты на 7 дюйм</a></li>
-													<li><a href="#">Ipad</a></li>
-													<li><a href="#">Samsung Galaxy</a></li>
-													<li><a href="#">Планшеты со стилусом</a></li>
-												</ul>
-											</div>
-											<div class="sub-category-block">
-												<h4>Телефоны</h4>
-												<ul class="sub-category">
-													<li><a href="#">Iphone</a></li>
-													<li><a href="#">Samsung Galaxy</a></li>
-													<li><a href="#">Кнопочные</a></li>
-													<li><a href="#">Водонепринацаемые</a></li>
-													<li><a href="#">Противоударные</a></li>
-													<li><a href="#">Iphone</a></li>
-													<li><a href="#">Samsung Galaxy</a></li>
-													<li><a href="#">Кнопочные</a></li>
-												</ul>
-											</div>
-										</div>
-										<div class="right">
-											<div class="sub-category-block">
-											<h4>Компьютеры</h4>
-											<ul class="sub-category">
-												<li><a href="#">Игровые</a></li>
-												<li><a href="#"><i>Hp</i></a></li>
-												<li><a href="#">Macbook </a></li>
-												<li><a href="#">C сенсорным экраном </a></li>
-												<li><a href="#">LG</a></li>
-												<li><a href="#">Экраны</a></li>
-												<li><a href="#">Процессоры</a></li>
-												<li><a href="#">Ноутбуки</a></li>
-												<li><a href="#">Наушники</a></li>
-												<li><a href="#">Видеокарты</a></li>
-												<li><a href="#">Принтеры </a></li>
-												<li><a href="#">Аксесуары</a></li>
-											</ul>
-											</div>
-											<div class="sub-category-block">
-												<h4>Аксесуары</h4>
-												<ul class="sub-category">
-													<li><a href="#">Наушники </a></li>
-													<li><a href="#">Оперативная память </a></li>
-													<li><a href="#">Зарядки </a></li>
-													<li><a href="#">Офисная техника</a></li>
-													<li><a href="#">Комплектующие</a></li>
-													<li><a href="#">Кабели и переходники </a></li>
-													<li><a href="#">Оперативная память </a></li>
-													<li><a href="#">Комплектующие</a></li>
-													<li><a href="#">Кабели и переходники </a></li>
-												</ul>
+										<div class="list-category">
+											<div class="left">
+												<div class="sub-category-block">
+													<h4>Колонки</h4>
+													<ul class="sub-category">
+														<li><a href="#">Саббуфер </a></li>
+														<li><a href="#">Аксесуары</a></li>
+														<li><a href="#">Инвентарь </a></li>
+														<li><a href="#">Зарядки</a></li>
+														<li><a href="#">Домашний кинотеатр</a></li>
+														<li><a href="#">Колонки  </a></li>
+														<li><a href="#">Зарядки</a></li>
+														<li><a href="#">Аксесуары </a></li>
+													</ul>
 												</div>
-										</div>
-										
-									</div>
-								</div>
-								<div class="categori-banner">
-									
-									<div class="title-discount">Ноутбук HP</div>
-									<span>Забери со скидкой до 11.02.21</span>
-									<img src="./images/product/Notebook.png" alt="">
-									<a href="#">Купить</a>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="name-category">
-								<a href="#">Дом и дача</a>
-							</div>
-							<div class="category-info ">
-								<div class="category-menu">
-									<div class="top">
-										<a href="#">Samsung Galaxy A51</a>
-										<a href="#">Samsung Galaxy A30S</a>
-										<a href="#">Xiaomi Redmi Note 9S</a>
-										<a href="#">OnePlus 8</a>
-									</div>
-									<div class="list-category">
-										<div class="left">
-											<div class="sub-category-block">
-												<h4>Хозяйственные товары</h4>
-												<ul class="sub-category">
-													<li><a href="#">Стремянки </a></li>
-													<li><a href="#">Газонокосилки</a></li>
-													<li><a href="#">Инвентарь для уборки </a></li>
-													<li><a href="#">Мусорные ведра и баки </a></li>
-													<li><a href="#">Стремянки </a></li>
-													<li><a href="#">Газонокосилки  </a></li>
-													<li><a href="#">Инвентарь для уборки </a></li>
-													<li><a href="#">Мусорные ведра и баки </a></li>
-												</ul>
-											</div>
-											<div class="sub-category-block">
-												<h4>Текстиль</h4>
-												<ul class="sub-category">
-													<li><a href="#">Стремянки </a></li>
-													<li><a href="#">Газонокосилки </a></li>
-													<li><a href="#">Инвентарь для уборки </a></li>
-													<li><a href="#">Мусорные ведра и баки </a></li>
-													<li><a href="#">Стремянки </a></li>
-													<li><a href="#">Газонокосилки </a></li>
-													<li><a href="#">Инвентарь для уборки </a></li>
-													<li><a href="#">Мусорные ведра и баки </a></li>
-												</ul>
-											</div>
-										</div>
-										<div class="right">
-											<div class="sub-category-block">
-											<h4>Хранение вещей</h4>
-											<ul class="sub-category">
-												<li><a href="#">Стремянки </a></li>
-												<li><a href="#">Газонокосилки  </a></li>
-												<li><a href="#">Инвентарь для уборки  </a></li>
-												<li><a href="#">Мусорные ведра и баки </a></li>
-												<li><a href="#">Стремянки </a></li>
-												<li><a href="#">Газонокосилки </a></li>
-												<li><a href="#">Инвентарь для уборки </a></li>
-												<li><a href="#">Мусорные ведра и баки </a></li>
-												<li><a href="#">Стремянки  </a></li>
-												<li><a href="#">Газонокосилки  </a></li>
-												<li><a href="#">Инвентарь для уборки </a></li>
-												<li><a href="#">Мусорные ведра и баки </a></li>
-											</ul>
-										</div>
-										</div>
-										
-									</div>
-								</div>
-								<div class="categori-banner">
-									<div class="title-discount">Водонагреватель Electrolux EWH 80 Formax</div>
-									<span>Забери со скидкой до 11.02.21</span>
-									<img src="./images/product/boiler-ELECTROLUX.png" alt="">
-									<a href="#">Купить</a>
-								</div>
-							</div>
-							
-							
-						</li>
-						<li>
-							<div class="name-category">
-								<a href="#">Аудио/Видео</a>
-							</div>
-							<div class="category-info">
-								<div class="category-menu">
-									<div class="top">
-										<a href="#">Samsung Photo </a>
-										<a href="#">Samsung Video</a>
-										<a href="#">Xiaomi photo </a>
-										<a href="#">OnePlus </a>
-									</div>
-									<div class="list-category">
-										<div class="left">
-											<div class="sub-category-block">
-												<h4>Колонки</h4>
-												<ul class="sub-category">
-													<li><a href="#">Саббуфер </a></li>
-													<li><a href="#">Аксесуары</a></li>
-													<li><a href="#">Инвентарь </a></li>
-													<li><a href="#">Зарядки</a></li>
-													<li><a href="#">Домашний кинотеатр</a></li>
-													<li><a href="#">Колонки  </a></li>
-													<li><a href="#">Зарядки</a></li>
-													<li><a href="#">Аксесуары </a></li>
-												</ul>
-											</div>
-											<div class="sub-category-block">
-												<h4>Фотоапараты</h4>
-												<ul class="sub-category">
-													<li><a href="#">Фотоапараты</a></li>
-													<li><a href="#">Соник </a></li>
-													<li><a href="#">Аксесуары</a></li>
-													<li><a href="#">Зарядки</a></li>
-													<li><a href="#">Фотоапараты</a></li>
-													<li><a href="#">Соник </a></li>
-													<li><a href="#">Аксесуары</a></li>
-													<li><a href="#">Зарядки</a></li>
-												</ul>
-											</div>
-										</div>
-										<div class="right">
-											<div class="sub-category-block">
-											<h4>Видеокамеры</h4>
-											<ul class="sub-category">
-												<li><a href="#">Видеокамеры </a></li>
-												<li><a href="#">Зарядки </a></li>
-												<li><a href="#">Аксесуары </a></li>
-												<li><a href="#">Фотоапараты</a></li>
-												<li><a href="#">Видеокамеры</a></li>
-												<li><a href="#">Зарядки</a></li>
-												<li><a href="#">Видеокамеры </a></li>
-												<li><a href="#">Зарядки </a></li>
-												<li><a href="#">Аксесуары </a></li>
-												<li><a href="#">Фотоапараты</a></li>
-												<li><a href="#">Видеокамеры</a></li>
-												<li><a href="#">Зарядки</a></li>
-											</ul>
-										</div>
-										</div>
-										
-									</div>
-								</div>
-								<div class="categori-banner">
-									<div class="title-discount">Телефизор BLACKTON 2402B</div>
-									<span>Забери со скидкой до 11.02.21</span>
-									<img src="./images/product/tv-BLACKTON.png" alt="">
-									<a href="#">Купить</a>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="name-category">
-								<a href="#">Крупная бытовая техника</a>
-							</div>
-							<div class="category-info ">
-								<div class="category-menu">
-									<div class="top">
-										<a href="#">Холодильник  BEKO</a>
-										<a href="#">Стиральная машина Elenberg</a>
-										<a href="#">Газовая плита WHIRLPOOL</a>
-										<a href="#">Бойлер Electrolux</a>
-									</div>
-									<div class="list-category">
-										<div class="left">
-											<div class="sub-category-block">
-												<h4>Холодильники</h4>
-												<ul class="sub-category">
-													<li><a href="#">Холодильники LG</a></li>
-													<li><a href="#">Морозилки</a></li>
-													<li><a href="#">Горизонтальные морозилки</a></li>
-													<li><a href="#">Морозильные камеры </a></li>
-													<li><a href="#">Горизонтальные холодильники</a></li>
-													<li><a href="#">Минибар</a></li>
-													<li><a href="#">Морозильная камера</a></li>
-													<li><a href="#">Двухдверные холодильники</a></li>
-												</ul>
-											</div>
-											<div class="sub-category-block">
-												<h4>Бойлеры</h4>
-												<ul class="sub-category">
-													<li><a href="#">Бойлеры</a></li>
-													<li><a href="#">Горизонтальные бойлеры </a></li>
-													<li><a href="#">Вертикальные бойлеры</a></li>
-													<li><a href="#">Газовые бойлеры </a></li>
-													<li><a href="#">Электрические бойлеры</a></li>
-													<li><a href="#">Бойлеры на 80 литров </a></li>
-													<li><a href="#">Бойлеры на 50 литров </a></li>
-													<li><a href="#">Газовые бойлеры </a></li>
-												</ul>
-											</div>
-										</div>
-										<div class="right">
-											<div class="sub-category-block">
-											<h4>Стиральные</h4>
-											<ul class="sub-category">
-												<li><a href="#">Стиральные машины</a></li>
-												<li><a href="#">Сушильные машины</a></li>
-												<li><a href="#">Стиральные машины LG</a></li>
-												<li><a href="#">Стиральные машины Elenberg </a></li>
-												<li><a href="#">Сушильные машины LG</a></li>
-												<li><a href="#">Стиральные машины с сушкой</a></li>
-												<li><a href="#">Стиральные машины</a></li>
-												<li><a href="#">Сушильные машины</a></li>
-												<li><a href="#">Стиральные машины Elenberg </a></li>
-												<li><a href="#">Стиральные машины с сушкой</a></li>
-											</ul>
-											</div>
-											<div class="sub-category-block">
-												<h4>Микроволновки</h4>
-												<ul class="sub-category">
-													<li><a href="#">Микроволновки</a></li>
-													<li><a href="#">Индукционные плиты </a></li>
-													<li><a href="#">Газовые плиты</a></li>
-													<li><a href="#">Духовые шкафы</a></li>
-													<li><a href="#">Электрические Плиты</a></li>
-													<li><a href="#">Газовые духовки</a></li>
-													<li><a href="#">Микроволновки</a></li>
-													<li><a href="#">Индукционные плиты </a></li>
-													<li><a href="#">Газовые плиты</a></li>
-													<li><a href="#">Духовые шкафы</a></li>
-													<li><a href="#">Электрические Плиты</a></li>
-												</ul>
-											</div>
-										</div>
-										
-									</div>
-								</div>
-								<div class="categori-banner">
-									<div class="title-discount">Стиральная машина LG F-1096TD3</div>
-									<span>Забери со скидкой до 11.02.21</span>
-									<img src="./images/product/microvawe_whirlpool.png" alt="">
-									<a href="#">Купить</a>						
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="name-category">
-								<a href="#">Техника для кухни</a>
-							</div>
-							<div class="category-info ">
-								<div class="category-menu">
-									<div class="top">
-										<a href="#">Холодильники  BEKO</a>
-										<a href="#">Микроволновка Elenberg</a>
-										<a href="#">Газовая плита WHIRLPOOL</a>
-										<a href="#">Плита Electrolux</a>
-									</div>
-									<div class="list-category">
-										<div class="left">
-											<div class="sub-category-block">
-												<h4>Микроволновки</h4>
-												<ul class="sub-category">
-													<li><a href="#">Микроволновки</a></li>
-													<li><a href="#">Индукционные плиты </a></li>
-													<li><a href="#">Газовые плиты</a></li>
-													<li><a href="#">Духовые шкафы</a></li>
-													<li><a href="#">Электрические Плиты</a></li>
-													<li><a href="#">Газовые духовки</a></li>
-													<li><a href="#">Духовые шкафы</a></li>
-													<li><a href="#">Электрические Плиты</a></li>
-													<li><a href="#">Газовые духовки</a></li>
-													<li><a href="#">Микроволновки</a></li>
-												</ul>
-											</div>
-											<div class="sub-category-block">
-												<h4>Холодильник</h4>
-												<ul class="sub-category">
-													<li><a href="#">Холодильники LG</a></li>
-													<li><a href="#">Морозилки</a></li>
-													<li><a href="#">Горизонтальные морозилки</a></li>
-													<li><a href="#">Морозильные камеры </a></li>
-													<li><a href="#">Горизонтальные холодильники</a></li>
-													<li><a href="#">Минибар</a></li>
-													<li><a href="#">Морозильная камера</a></li>
-													<li><a href="#">Двухдверные холодильники</a></li>
-												</ul>
-											</div>
-										</div>
-										<div class="right">
-											<div class="sub-category-block">
-											<h4>Плиты</h4>
-											<ul class="sub-category">
-												<li><a href="#">Микроволновки</a></li>
-												<li><a href="#">Индукционные плиты </a></li>
-												<li><a href="#">Газовые плиты</a></li>
-												<li><a href="#">Духовые шкафы</a></li>
-												<li><a href="#">Электрические Плиты</a></li>
-												<li><a href="#">Газовые духовки</a></li>
-												<li><a href="#">Микроволновки</a></li>
-												<li><a href="#">Индукционные плиты </a></li>
-												<li><a href="#">Газовые плиты</a></li>
-												<li><a href="#">Духовые шкафы</a></li>
-												<li><a href="#">Электрические Плиты</a></li>
-												<li><a href="#">Газовые духовки</a></li>
-												<li><a href="#">Микроволновки</a></li>
-											</ul>
-										</div>
-										</div>
-										
-									</div>
-								</div>
-								<div class="categori-banner">
-									<div class="title-discount">Стиральная машина LG F-1096TD3</div>
-									<span>Забери со скидкой до 11.02.21</span>
-									<img src="./images/product/microvawe_whirlpool.png" alt="">
-									<a href="#">Купить</a>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="name-category">
-								<a href="#">Встраиваемая бытовая техника</a>
-							</div>
-							<div class="category-info ">
-								<div class="category-menu">
-									<div class="top">
-										<a href="#">Встраивая газовая плита WHIRLPOOL</a>
-										<a href="#">Встраиваемая Миикроволновка ELECTROLUX</a>
-										<a href="#">Встраиваемая индукционная плита BEKO</a>
-									</div>
-									<div class="list-category">
-										<div class="left">
-											<div class="sub-category-block">
-												<h4>Встраиваимая плита</h4>
-												<ul class="sub-category">
-													<li><a href="#">Микроволновки</a></li>
-													<li><a href="#">Индукционные плиты </a></li>
-													<li><a href="#">Газовые плиты</a></li>
-													<li><a href="#">Духовые шкафы</a></li>
-													<li><a href="#">Электрические Плиты</a></li>
-													<li><a href="#">Газовые духовки</a></li>
-													<li><a href="#">Микроволновки</a></li>
-													<li><a href="#">Индукционные плиты </a></li>
-													<li><a href="#">Газовые плиты</a></li>
-													<li><a href="#">Духовые шкафы</a></li>
-												</ul>
-											</div>
-											<div class="sub-category-block">
-												<h4>Встраиваемые Холодильники</h4>
-												<ul class="sub-category">
-													<li><a href="#">Холодильники LG</a></li>
-													<li><a href="#">Морозилки</a></li>
-													<li><a href="#">Горизонтальные морозилки</a></li>
-													<li><a href="#">Морозильные камеры </a></li>
-													<li><a href="#">Горизонтальные холодильники</a></li>
-													<li><a href="#">Минибар</a></li>
-													<li><a href="#">Морозильная камера</a></li>
-													<li><a href="#">Двухдверные холодильники</a></li>
-												</ul>
-											</div>
-										</div>
-										<div class="right">
-											<div class="sub-category-block">
-											<h4>Встраиваемая Микроволновки</h4>
-											<ul class="sub-category">
-												<li><a href="#">Микроволновки</a></li>
-												<li><a href="#">Индукционные плиты </a></li>
-												<li><a href="#">Газовые плиты</a></li>
-												<li><a href="#">Духовые шкафы</a></li>
-												<li><a href="#">Электрические Плиты</a></li>
-												<li><a href="#">Газовые духовки</a></li>
-												<li><a href="#">Микроволновки</a></li>
-												<li><a href="#">Индукционные плиты </a></li>
-												<li><a href="#">Газовые плиты</a></li>
-												<li><a href="#">Духовые шкафы</a></li>
-												<li><a href="#">Электрические Плиты</a></li>
-												<li><a href="#">Газовые духовки</a></li>
-												<li><a href="#">Микроволновки</a></li>
-											</ul>
-										</div>
-										</div>
-										
-									</div>
-								</div>
-								<div class="categori-banner">
-									<div class="title-discount">Стиральная машина LG F-1096TD3</div>
-									<span>Забери со скидкой до 11.02.21</span>
-									<img src="./images/product/microvawe_whirlpool.png" alt="">
-									<a href="#">Купить</a>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="name-category">
-								<a href="#">Компьютерная техника</a>
-							</div>
-							<div class="category-info ">
-								<div class="category-menu">
-									<div class="top">
-										<a href="#">планшет Samsung Galaxy </a>
-										<a href="#">ноутбук Samsung </a>
-										<a href="#">чехол на Xiaomi Redmi Note 9S</a>
-										<a href="#"> Ipad</a>
-									</div>
-									<div class="list-category">
-										<div class="left">
-											<div class="sub-category-block">
-												<h4>Планшеты</h4>
-												<ul class="sub-category">
-													<li><a href="#">Планшеты на 7 дюйм</a></li>
-													<li><a href="#">Ipad</a></li>
-													<li><a href="#">Samsung Galaxy</a></li>
-													<li><a href="#">Планшеты со стилусом</a></li>
-													<li><a href="#">Планшеты на 7 дюйм</a></li>
-													<li><a href="#">Ipad</a></li>
-													<li><a href="#">Samsung Galaxy</a></li>
-													<li><a href="#">Планшеты со стилусом</a></li>
-												</ul>
-											</div>
-											<div class="sub-category-block">
-												<h4>Телефоны</h4>
-												<ul class="sub-category">
-													<li><a href="#">Iphone</a></li>
-													<li><a href="#">Samsung Galaxy</a></li>
-													<li><a href="#">Кнопочные</a></li>
-													<li><a href="#">Водонепринацаемые</a></li>
-													<li><a href="#">Противоударные</a></li>
-													<li><a href="#">Iphone</a></li>
-													<li><a href="#">Samsung Galaxy</a></li>
-													<li><a href="#">Кнопочные</a></li>
-												</ul>
-											</div>
-										</div>
-										<div class="right">
-											<div class="sub-category-block">
-											<h4>Компьютеры</h4>
-											<ul class="sub-category">
-												<li><a href="#">Игровые</a></li>
-												<li><a href="#"><i>Hp</i></a></li>
-												<li><a href="#">Macbook </a></li>
-												<li><a href="#">C сенсорным экраном </a></li>
-												<li><a href="#">LG</a></li>
-												<li><a href="#">Экраны</a></li>
-												<li><a href="#">Процессоры</a></li>
-												<li><a href="#">Ноутбуки</a></li>
-												<li><a href="#">Наушники</a></li>
-												<li><a href="#">Видеокарты</a></li>
-												<li><a href="#">Принтеры </a></li>
-												<li><a href="#">Аксесуары</a></li>
-											</ul>
-											</div>
-											<div class="sub-category-block">
-												<h4>Аксесуары</h4>
-												<ul class="sub-category">
-													<li><a href="#">Наушники </a></li>
-													<li><a href="#">Оперативная память </a></li>
-													<li><a href="#">Зарядки </a></li>
-													<li><a href="#">Офисная техника</a></li>
-													<li><a href="#">Комплектующие</a></li>
-													<li><a href="#">Кабели и переходники </a></li>
-													<li><a href="#">Наушники </a></li>
-													<li><a href="#">Кабели и переходники </a></li>
-												</ul>
+												<div class="sub-category-block">
+													<h4>Фотоапараты</h4>
+													<ul class="sub-category">
+														<li><a href="#">Фотоапараты</a></li>
+														<li><a href="#">Соник </a></li>
+														<li><a href="#">Аксесуары</a></li>
+														<li><a href="#">Зарядки</a></li>
+														<li><a href="#">Фотоапараты</a></li>
+														<li><a href="#">Соник </a></li>
+														<li><a href="#">Аксесуары</a></li>
+														<li><a href="#">Зарядки</a></li>
+													</ul>
 												</div>
-										</div>
-										
-									</div>
-								</div>
-								<div class="categori-banner">
-									<div class="title-discount">Ноутбук HP</div>
-									<span>Забери со скидкой до 11.02.21</span>
-									<img src="./images/product/Notebook.png" alt="">
-									<a href="#">Купить</a>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="name-category">
-								<a href="#">Дом и дача</a>
-							</div>
-							<div class="category-info ">
-								<div class="category-menu">
-									<div class="top">
-										<a href="#">Samsung Galaxy A51</a>
-										<a href="#">Samsung Galaxy A30S</a>
-										<a href="#">Xiaomi Redmi Note 9S</a>
-										<a href="#">OnePlus 8</a>
-									</div>
-									<div class="list-category">
-										<div class="left">
-											<div class="sub-category-block">
-												<h4>Хозяйственные товары</h4>
-												<ul class="sub-category">
-													<li><a href="#">Стремянки </a></li>
-													<li><a href="#">Газонокосилки</a></li>
-													<li><a href="#">Инвентарь для уборки </a></li>
-													<li><a href="#">Мусорные ведра и баки </a></li>
-													<li><a href="#">Стремянки </a></li>
-													<li><a href="#">Газонокосилки  </a></li>
-													<li><a href="#">Инвентарь для уборки </a></li>
-													<li><a href="#">Мусорные ведра и баки </a></li>
-												</ul>
 											</div>
-											<div class="sub-category-block">
-												<h4>Текстиль</h4>
+											<div class="right">
+												<div class="sub-category-block">
+												<h4>Видеокамеры</h4>
 												<ul class="sub-category">
-													<li><a href="#">Стремянки </a></li>
-													<li><a href="#">Газонокосилки </a></li>
-													<li><a href="#">Инвентарь для уборки </a></li>
-													<li><a href="#">Мусорные ведра и баки </a></li>
-													<li><a href="#">Стремянки </a></li>
-													<li><a href="#">Газонокосилки </a></li>
-													<li><a href="#">Инвентарь для уборки </a></li>
-													<li><a href="#">Мусорные ведра и баки </a></li>
-												</ul>
-											</div>
-										</div>
-										<div class="right">
-											<div class="sub-category-block">
-											<h4>Хранение вещей</h4>
-											<ul class="sub-category">
-												<li><a href="#">Стремянки </a></li>
-												<li><a href="#">Газонокосилки  </a></li>
-												<li><a href="#">Инвентарь для уборки  </a></li>
-												<li><a href="#">Мусорные ведра и баки </a></li>
-												<li><a href="#">Стремянки </a></li>
-												<li><a href="#">Газонокосилки </a></li>
-												<li><a href="#">Инвентарь для уборки </a></li>
-												<li><a href="#">Мусорные ведра и баки </a></li>
-												<li><a href="#">Стремянки  </a></li>
-												<li><a href="#">Газонокосилки  </a></li>
-												<li><a href="#">Инвентарь для уборки </a></li>
-												<li><a href="#">Мусорные ведра и баки </a></li>
-											</ul>
-										</div>
-										</div>
-										
-									</div>
-								</div>
-								<div class="categori-banner">
-									<div class="title-discount">Водонагреватель Electrolux EWH 80 Formax</div>
-									<span>Забери со скидкой до 11.02.21</span>
-									<img src="./images/product/boiler-ELECTROLUX.png" alt="">
-									<a href="#">Купить</a>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="name-category">
-								<a href="#">Аудио/Видео</a>
-							</div>
-							<div class="category-info ">
-								<div class="category-menu">
-									<div class="top">
-										<a href="#">Samsung Photo </a>
-										<a href="#">Samsung Video</a>
-										<a href="#">Xiaomi photo </a>
-										<a href="#">OnePlus </a>
-									</div>
-									<div class="list-category">
-										<div class="left">
-											<div class="sub-category-block">
-												<h4>Колонки</h4>
-												<ul class="sub-category">
-													<li><a href="#">Саббуфер </a></li>
-													<li><a href="#">Аксесуары</a></li>
-													<li><a href="#">Инвентарь </a></li>
-													<li><a href="#">Зарядки</a></li>
-													<li><a href="#">Домашний кинотеатр</a></li>
-													<li><a href="#">Колонки  </a></li>
-													<li><a href="#">Зарядки</a></li>
+													<li><a href="#">Видеокамеры </a></li>
+													<li><a href="#">Зарядки </a></li>
 													<li><a href="#">Аксесуары </a></li>
-												</ul>
-											</div>
-											<div class="sub-category-block">
-												<h4>Фотоапараты</h4>
-												<ul class="sub-category">
 													<li><a href="#">Фотоапараты</a></li>
-													<li><a href="#">Соник </a></li>
-													<li><a href="#">Аксесуары</a></li>
+													<li><a href="#">Видеокамеры</a></li>
 													<li><a href="#">Зарядки</a></li>
+													<li><a href="#">Видеокамеры </a></li>
+													<li><a href="#">Зарядки </a></li>
+													<li><a href="#">Аксесуары </a></li>
 													<li><a href="#">Фотоапараты</a></li>
-													<li><a href="#">Соник </a></li>
-													<li><a href="#">Аксесуары</a></li>
+													<li><a href="#">Видеокамеры</a></li>
 													<li><a href="#">Зарядки</a></li>
 												</ul>
 											</div>
+											</div>
+											
 										</div>
-										<div class="right">
-											<div class="sub-category-block">
-											<h4>Видеокамеры</h4>
-											<ul class="sub-category">
-												<li><a href="#">Видеокамеры </a></li>
-												<li><a href="#">Зарядки </a></li>
-												<li><a href="#">Аксесуары </a></li>
-												<li><a href="#">Фотоапараты</a></li>
-												<li><a href="#">Видеокамеры</a></li>
-												<li><a href="#">Зарядки</a></li>
-												<li><a href="#">Видеокамеры </a></li>
-												<li><a href="#">Зарядки </a></li>
-												<li><a href="#">Аксесуары </a></li>
-												<li><a href="#">Фотоапараты</a></li>
-												<li><a href="#">Видеокамеры</a></li>
-												<li><a href="#">Зарядки</a></li>
-											</ul>
-										</div>
-										</div>
-										
 									</div>
-								</div>
-								<div class="categori-banner">
 									<div class="categori-banner" >
+										<div class="title-discount">Телефизор BLACKTON 2402B</div>
+										<span>Забери со скидкой до 11.02.21</span>
+										<img src="./images/product/tv-BLACKTON.png"  alt="">
+										<a href="#">Купить</a>
+									</div>
+								</div>
+							</li>
+							<li  data-filter-product="1">
+								<div class="name-category">
+									<a href="#">Крупная бытовая техника</a>
+								</div>
+								<div class="category-info " data-fil-prod="1">
+									<div class="category-menu">
+										<div class="top">
+											<a href="#">Холодильник  BEKO</a>
+											<a href="#">Стиральная машина Elenberg</a>
+											<a href="#">Газовая плита WHIRLPOOL</a>
+											<a href="#">Бойлер Electrolux</a>
+										</div>
+										<div class="list-category">
+											<div class="left">
+												<div class="sub-category-block">
+													<h4>Холодильники</h4>
+													<ul class="sub-category">
+														<li><a href="#">Холодильники LG</a></li>
+														<li><a href="#">Морозилки</a></li>
+														<li><a href="#">Горизонтальные морозилки</a></li>
+														<li><a href="#">Морозильные камеры </a></li>
+														<li><a href="#">Горизонтальные холодильники</a></li>
+														<li><a href="#">Минибар</a></li>
+														<li><a href="#">Морозильная камера</a></li>
+														<li><a href="#">Двухдверные холодильники</a></li>
+													</ul>
+												</div>
+												<div class="sub-category-block">
+													<h4>Бойлеры</h4>
+													<ul class="sub-category">
+														<li><a href="#">Бойлеры</a></li>
+														<li><a href="#">Горизонтальные бойлеры </a></li>
+														<li><a href="#">Вертикальные бойлеры</a></li>
+														<li><a href="#">Газовые бойлеры </a></li>
+														<li><a href="#">Электрические бойлеры</a></li>
+														<li><a href="#">Бойлеры на 80 литров </a></li>
+														<li><a href="#">Бойлеры на 50 литров </a></li>
+														<li><a href="#">Газовые бойлеры </a></li>
+													</ul>
+												</div>
+											</div>
+											<div class="right">
+												<div class="sub-category-block">
+												<h4>Стиральные</h4>
+												<ul class="sub-category">
+													<li><a href="#">Стиральные машины</a></li>
+													<li><a href="#">Сушильные машины</a></li>
+													<li><a href="#">Стиральные машины LG</a></li>
+													<li><a href="#">Стиральные машины Elenberg </a></li>
+													<li><a href="#">Сушильные машины LG</a></li>
+													<li><a href="#">Стиральные машины с сушкой</a></li>
+													<li><a href="#">Стиральные машины</a></li>
+													<li><a href="#">Сушильные машины</a></li>
+													<li><a href="#">Стиральные машины LG</a></li>
+													
+												</ul>
+												</div>
+												<div class="sub-category-block">
+													<h4>Микроволновки</h4>
+													<ul class="sub-category">
+														<li><a href="#">Микроволновки</a></li>
+														<li><a href="#">Индукционные плиты </a></li>
+														<li><a href="#">Газовые плиты</a></li>
+														<li><a href="#">Духовые шкафы</a></li>
+														<li><a href="#">Электрические Плиты</a></li>
+														<li><a href="#">Газовые духовки</a></li>
+														<li><a href="#">Микроволновки</a></li>
+														<li><a href="#">Индукционные плиты </a></li>
+														<li><a href="#">Газовые плиты</a></li>
+														<li><a href="#">Духовые шкафы</a></li>
+														<li><a href="#">Электрические Плиты</a></li>
+													
+													</ul>
+												</div>
+											</div>
+											
+										</div>
+									</div>
+									<div class="categori-banner">
+										<div class="title-discount">Стиральная машина LG F-1096TD3</div>
+										<span>Забери со скидкой до 11.02.21</span>
+										<img src="./images/banner/washing_machine.png" alt="">
+										<a href="#">Купить</a>
+										
+									</div>
+								</div>
+							</li>
+							<li  data-filter-product="2">
+								<div class="name-category">
+									<a href="#">Техника для кухни</a>
+								</div>
+								<div class="category-info " data-fil-prod="2">
+									<div class="category-menu">
+										<div class="top">
+											<a href="#">Холодильники  BEKO</a>
+											<a href="#">Микроволновка Elenberg</a>
+											<a href="#">Газовая плита WHIRLPOOL</a>
+											<a href="#">Плита Electrolux</a>
+										</div>
+										<div class="list-category">
+											<div class="left">
+												<div class="sub-category-block">
+													<h4>Микроволновки</h4>
+													<ul class="sub-category">
+														<li><a href="#">Микроволновки</a></li>
+														<li><a href="#">Индукционные плиты </a></li>
+														<li><a href="#">Газовые плиты</a></li>
+														<li><a href="#">Духовые шкафы</a></li>
+														<li><a href="#">Электрические Плиты</a></li>
+														<li><a href="#">Газовые духовки</a></li>
+														<li><a href="#">Микроволновки</a></li>
+														<li><a href="#">Индукционные плиты </a></li>
+														<li><a href="#">Электрические Плиты</a></li>
+														<li><a href="#">Газовые духовки</a></li>
+													</ul>
+												</div>
+												<div class="sub-category-block">
+													<h4>Холодильник</h4>
+													<ul class="sub-category">
+														<li><a href="#">Холодильники LG</a></li>
+														<li><a href="#">Морозилки</a></li>
+														<li><a href="#">Горизонтальные морозилки</a></li>
+														<li><a href="#">Морозильные камеры </a></li>
+														<li><a href="#">Горизонтальные холодильники</a></li>
+														<li><a href="#">Минибар</a></li>
+														<li><a href="#">Морозильная камера</a></li>
+														<li><a href="#">Двухдверные холодильники</a></li>
+													</ul>
+												</div>
+											</div>
+											<div class="right">
+												<div class="sub-category-block">
+												<h4>Плиты</h4>
+												<ul class="sub-category">
+													<li><a href="#">Микроволновки</a></li>
+													<li><a href="#">Индукционные плиты </a></li>
+													<li><a href="#">Газовые плиты</a></li>
+													<li><a href="#">Духовые шкафы</a></li>
+													<li><a href="#">Электрические Плиты</a></li>
+													<li><a href="#">Газовые духовки</a></li>
+													<li><a href="#">Микроволновки</a></li>
+													<li><a href="#">Индукционные плиты </a></li>
+													<li><a href="#">Газовые плиты</a></li>
+													<li><a href="#">Духовые шкафы</a></li>
+													<li><a href="#">Электрические Плиты</a></li>
+													<li><a href="#">Газовые духовки</a></li>
+													<li><a href="#">Микроволновки</a></li>
+												</ul>
+											</div>
+											</div>
+											
+										</div>
+									</div>
+									<div class="categori-banner">
+										
+										<div class="title-discount">Стиральная машина LG F-1096TD3</div>
+										<span>Забери со скидкой до 11.02.21</span>
+										<img src="./images/product/microvawe_whirlpool.png" alt="">
+										<a href="#">Купить</a>
+									</div>
+								</div>
+							</li>
+							<li  data-filter-product="3">
+								<div class="name-category">
+									<a href="#">Встраиваемая бытовая техника</a>
+								</div>
+								<div class="category-info " data-fil-prod="3">
+									<div class="category-menu">
+										<div class="top">
+											<a href="#">Встраивая газовая плита WHIRLPOOL</a>
+											<a href="#">Встраиваемая Миикроволновка ELECTROLUX</a>
+											<a href="#">Встраиваемая индукционная плита BEKO</a>
+										</div>
+										<div class="list-category">
+											<div class="left">
+												<div class="sub-category-block">
+													<h4>Встраиваимая плита</h4>
+													<ul class="sub-category">
+														<li><a href="#">Микроволновки</a></li>
+														<li><a href="#">Индукционные плиты </a></li>
+														<li><a href="#">Газовые плиты</a></li>
+														<li><a href="#">Духовые шкафы</a></li>
+														<li><a href="#">Электрические Плиты</a></li>
+														<li><a href="#">Газовые духовки</a></li>
+														<li><a href="#">Микроволновки</a></li>
+														<li><a href="#">Индукционные плиты </a></li>
+														<li><a href="#">Газовые плиты</a></li>
+														<li><a href="#">Микроволновки</a></li>
+													</ul>
+												</div>
+												<div class="sub-category-block">
+													<h4>Встраиваемые Холодильники</h4>
+													<ul class="sub-category">
+														<li><a href="#">Холодильники LG</a></li>
+														<li><a href="#">Морозилки</a></li>
+														<li><a href="#">Горизонтальные морозилки</a></li>
+														<li><a href="#">Морозильные камеры </a></li>
+														<li><a href="#">Горизонтальные холодильники</a></li>
+														<li><a href="#">Минибар</a></li>
+														<li><a href="#">Морозильная камера</a></li>
+														<li><a href="#">Двухдверные холодильники</a></li>
+													</ul>
+												</div>
+											</div>
+											<div class="right">
+												<div class="sub-category-block">
+												<h4>Встраиваемая Микроволновки</h4>
+												<ul class="sub-category">
+													<li><a href="#">Микроволновки</a></li>
+													<li><a href="#">Индукционные плиты </a></li>
+													<li><a href="#">Газовые плиты</a></li>
+													<li><a href="#">Духовые шкафы</a></li>
+													<li><a href="#">Электрические Плиты</a></li>
+													<li><a href="#">Газовые духовки</a></li>
+													<li><a href="#">Микроволновки</a></li>
+													<li><a href="#">Индукционные плиты </a></li>
+													<li><a href="#">Газовые плиты</a></li>
+													<li><a href="#">Духовые шкафы</a></li>
+													<li><a href="#">Электрические Плиты</a></li>
+													<li><a href="#">Газовые духовки</a></li>
+													<li><a href="#">Микроволновки</a></li>
+												</ul>
+											</div>
+											</div>
+											
+										</div>
+									</div>
+									<div class="categori-banner">
+										
+										<div class="title-discount">Стиральная машина LG F-1096TD3</div>
+										<span>Забери со скидкой до 11.02.21</span>
+										<img src="./images/product/microvawe_whirlpool.png" alt="">
+										<a href="#">Купить</a>
+									</div>
+								</div>
+							</li>
+							<li  data-filter-product="4">
+								<div class="name-category">
+									<a href="#">Компьютерная техника</a>
+								</div>
+								<div class="category-info " data-fil-prod="4">
+									<div class="category-menu">
+										<div class="top">
+											<a href="#">планшет Samsung Galaxy </a>
+											<a href="#">ноутбук Samsung </a>
+											<a href="#">чехол на Xiaomi Redmi Note 9S</a>
+											<a href="#"> Ipad</a>
+										</div>
+										<div class="list-category">
+											<div class="left">
+												<div class="sub-category-block">
+													<h4>Планшеты</h4>
+													<ul class="sub-category">
+														<li><a href="#">Планшеты на 7 дюйм</a></li>
+														<li><a href="#">Ipad</a></li>
+														<li><a href="#">Samsung Galaxy</a></li>
+														<li><a href="#">Планшеты со стилусом</a></li>
+														<li><a href="#">Планшеты на 7 дюйм</a></li>
+														<li><a href="#">Ipad</a></li>
+														<li><a href="#">Samsung Galaxy</a></li>
+														<li><a href="#">Планшеты со стилусом</a></li>
+													</ul>
+												</div>
+												<div class="sub-category-block">
+													<h4>Телефоны</h4>
+													<ul class="sub-category">
+														<li><a href="#">Iphone</a></li>
+														<li><a href="#">Samsung Galaxy</a></li>
+														<li><a href="#">Кнопочные</a></li>
+														<li><a href="#">Водонепринацаемые</a></li>
+														<li><a href="#">Противоударные</a></li>
+														<li><a href="#">Iphone</a></li>
+														<li><a href="#">Samsung Galaxy</a></li>
+														<li><a href="#">Кнопочные</a></li>
+													</ul>
+												</div>
+											</div>
+											<div class="right">
+												<div class="sub-category-block">
+												<h4>Компьютеры</h4>
+												<ul class="sub-category">
+													<li><a href="#">Игровые</a></li>
+													<li><a href="#"><i>Hp</i></a></li>
+													<li><a href="#">Macbook </a></li>
+													<li><a href="#">C сенсорным экраном </a></li>
+													<li><a href="#">LG</a></li>
+													<li><a href="#">Экраны</a></li>
+													<li><a href="#">Процессоры</a></li>
+													<li><a href="#">Ноутбуки</a></li>
+													<li><a href="#">Наушники</a></li>
+													<li><a href="#">Видеокарты</a></li>
+													<li><a href="#">Принтеры </a></li>
+													<li><a href="#">Аксесуары</a></li>
+												</ul>
+												</div>
+												<div class="sub-category-block">
+													<h4>Аксесуары</h4>
+													<ul class="sub-category">
+														<li><a href="#">Наушники </a></li>
+														<li><a href="#">Оперативная память </a></li>
+														<li><a href="#">Зарядки </a></li>
+														<li><a href="#">Офисная техника</a></li>
+														<li><a href="#">Комплектующие</a></li>
+														<li><a href="#">Кабели и переходники </a></li>
+														<li><a href="#">Оперативная память </a></li>
+														<li><a href="#">Комплектующие</a></li>
+														<li><a href="#">Кабели и переходники </a></li>
+													</ul>
+													</div>
+											</div>
+											
+										</div>
+									</div>
+									<div class="categori-banner">
+										
+										<div class="title-discount">Ноутбук HP</div>
+										<span>Забери со скидкой до 11.02.21</span>
+										<img src="./images/product/Notebook.png" alt="">
+										<a href="#">Купить</a>
+									</div>
+								</div>
+							</li>
+							<li  data-filter-product="5">
+								<div class="name-category">
+									<a href="#">Дом и дача</a>
+								</div>
+								<div class="category-info " data-fil-prod="5">
+									<div class="category-menu">
+										<div class="top">
+											<a href="#">Samsung Galaxy A51</a>
+											<a href="#">Samsung Galaxy A30S</a>
+											<a href="#">Xiaomi Redmi Note 9S</a>
+											<a href="#">OnePlus 8</a>
+										</div>
+										<div class="list-category">
+											<div class="left">
+												<div class="sub-category-block">
+													<h4>Хозяйственные товары</h4>
+													<ul class="sub-category">
+														<li><a href="#">Стремянки </a></li>
+														<li><a href="#">Газонокосилки</a></li>
+														<li><a href="#">Инвентарь для уборки </a></li>
+														<li><a href="#">Мусорные ведра и баки </a></li>
+														<li><a href="#">Стремянки </a></li>
+														<li><a href="#">Газонокосилки  </a></li>
+														<li><a href="#">Инвентарь для уборки </a></li>
+														<li><a href="#">Мусорные ведра и баки </a></li>
+													</ul>
+												</div>
+												<div class="sub-category-block">
+													<h4>Текстиль</h4>
+													<ul class="sub-category">
+														<li><a href="#">Стремянки </a></li>
+														<li><a href="#">Газонокосилки </a></li>
+														<li><a href="#">Инвентарь для уборки </a></li>
+														<li><a href="#">Мусорные ведра и баки </a></li>
+														<li><a href="#">Стремянки </a></li>
+														<li><a href="#">Газонокосилки </a></li>
+														<li><a href="#">Инвентарь для уборки </a></li>
+														<li><a href="#">Мусорные ведра и баки </a></li>
+													</ul>
+												</div>
+											</div>
+											<div class="right">
+												<div class="sub-category-block">
+												<h4>Хранение вещей</h4>
+												<ul class="sub-category">
+													<li><a href="#">Стремянки </a></li>
+													<li><a href="#">Газонокосилки  </a></li>
+													<li><a href="#">Инвентарь для уборки  </a></li>
+													<li><a href="#">Мусорные ведра и баки </a></li>
+													<li><a href="#">Стремянки </a></li>
+													<li><a href="#">Газонокосилки </a></li>
+													<li><a href="#">Инвентарь для уборки </a></li>
+													<li><a href="#">Мусорные ведра и баки </a></li>
+													<li><a href="#">Стремянки  </a></li>
+													<li><a href="#">Газонокосилки  </a></li>
+													<li><a href="#">Инвентарь для уборки </a></li>
+													<li><a href="#">Мусорные ведра и баки </a></li>
+												</ul>
+											</div>
+											</div>
+											
+										</div>
+									</div>
+									<div class="categori-banner">
+										<div class="title-discount">Водонагреватель Electrolux EWH 80 Formax</div>
+										<span>Забери со скидкой до 11.02.21</span>
+										<img src="./images/product/boiler-ELECTROLUX.png" alt="">
+										<a href="#">Купить</a>
+									</div>
+								</div>
+								
+								
+							</li>
+							<li  data-filter-product="6">
+								<div class="name-category">
+									<a href="#">Аудио/Видео</a>
+								</div>
+								<div class="category-info" data-fil-prod="6">
+									<div class="category-menu">
+										<div class="top">
+											<a href="#">Samsung Photo </a>
+											<a href="#">Samsung Video</a>
+											<a href="#">Xiaomi photo </a>
+											<a href="#">OnePlus </a>
+										</div>
+										<div class="list-category">
+											<div class="left">
+												<div class="sub-category-block">
+													<h4>Колонки</h4>
+													<ul class="sub-category">
+														<li><a href="#">Саббуфер </a></li>
+														<li><a href="#">Аксесуары</a></li>
+														<li><a href="#">Инвентарь </a></li>
+														<li><a href="#">Зарядки</a></li>
+														<li><a href="#">Домашний кинотеатр</a></li>
+														<li><a href="#">Колонки  </a></li>
+														<li><a href="#">Зарядки</a></li>
+														<li><a href="#">Аксесуары </a></li>
+													</ul>
+												</div>
+												<div class="sub-category-block">
+													<h4>Фотоапараты</h4>
+													<ul class="sub-category">
+														<li><a href="#">Фотоапараты</a></li>
+														<li><a href="#">Соник </a></li>
+														<li><a href="#">Аксесуары</a></li>
+														<li><a href="#">Зарядки</a></li>
+														<li><a href="#">Фотоапараты</a></li>
+														<li><a href="#">Соник </a></li>
+														<li><a href="#">Аксесуары</a></li>
+														<li><a href="#">Зарядки</a></li>
+													</ul>
+												</div>
+											</div>
+											<div class="right">
+												<div class="sub-category-block">
+												<h4>Видеокамеры</h4>
+												<ul class="sub-category">
+													<li><a href="#">Видеокамеры </a></li>
+													<li><a href="#">Зарядки </a></li>
+													<li><a href="#">Аксесуары </a></li>
+													<li><a href="#">Фотоапараты</a></li>
+													<li><a href="#">Видеокамеры</a></li>
+													<li><a href="#">Зарядки</a></li>
+													<li><a href="#">Видеокамеры </a></li>
+													<li><a href="#">Зарядки </a></li>
+													<li><a href="#">Аксесуары </a></li>
+													<li><a href="#">Фотоапараты</a></li>
+													<li><a href="#">Видеокамеры</a></li>
+													<li><a href="#">Зарядки</a></li>
+												</ul>
+											</div>
+											</div>
+											
+										</div>
+									</div>
+									<div class="categori-banner">
 										<div class="title-discount">Телефизор BLACKTON 2402B</div>
 										<span>Забери со скидкой до 11.02.21</span>
 										<img src="./images/product/tv-BLACKTON.png" alt="">
 										<a href="#">Купить</a>
 									</div>
 								</div>
-							</div>
-						</li>
-						<li>
-							<div class="name-category">
-								<a href="#">Крупная бытовая техника</a>
-							</div>
-							<div class="category-info ">
-								<div class="category-menu">
-									<div class="top">
-										<a href="#">Холодильник  BEKO</a>
-										<a href="#">Стиральная машина Elenberg</a>
-										<a href="#">Газовая плита WHIRLPOOL</a>
-										<a href="#">Бойлер Electrolux</a>
-									</div>
-									<div class="list-category">
-										<div class="left">
-											<div class="sub-category-block">
-												<h4>Холодильники</h4>
-												<ul class="sub-category">
-													<li><a href="#">Холодильники LG</a></li>
-													<li><a href="#">Морозилки</a></li>
-													<li><a href="#">Горизонтальные морозилки</a></li>
-													<li><a href="#">Морозильные камеры </a></li>
-													<li><a href="#">Горизонтальные холодильники</a></li>
-													<li><a href="#">Минибар</a></li>
-													<li><a href="#">Морозильная камера</a></li>
-													<li><a href="#">Двухдверные холодильники</a></li>
-												</ul>
-											</div>
-											<div class="sub-category-block">
-												<h4>Бойлеры</h4>
-												<ul class="sub-category">
-													<li><a href="#">Бойлеры</a></li>
-													<li><a href="#">Горизонтальные бойлеры </a></li>
-													<li><a href="#">Вертикальные бойлеры</a></li>
-													<li><a href="#">Газовые бойлеры </a></li>
-													<li><a href="#">Электрические бойлеры</a></li>
-													<li><a href="#">Бойлеры на 80 литров </a></li>
-													<li><a href="#">Бойлеры на 50 литров </a></li>
-													<li><a href="#">Газовые бойлеры </a></li>
-												</ul>
-											</div>
-										</div>
-										<div class="right">
-											<div class="sub-category-block">
-											<h4>Стиральные</h4>
-											<ul class="sub-category">
-												<li><a href="#">Стиральные машины</a></li>
-												<li><a href="#">Сушильные машины</a></li>
-												<li><a href="#">Стиральные машины LG</a></li>
-												<li><a href="#">Стиральные машины Elenberg </a></li>
-												<li><a href="#">Сушильные машины LG</a></li>
-												<li><a href="#">Стиральные машины с сушкой</a></li>
-												<li><a href="#">Стиральные машины</a></li>
-												<li><a href="#">Сушильные машины</a></li>
-												<li><a href="#">Стиральные машины LG</a></li>
-												<li><a href="#">Стиральные машины Elenberg </a></li>
-												<li><a href="#">Сушильные машины LG</a></li>
-												<li><a href="#">Стиральные машины с сушкой</a></li>
-											</ul>
-											</div>
-											<div class="sub-category-block">
-												<h4>Микроволновки</h4>
-												<ul class="sub-category">
-													<li><a href="#">Микроволновки</a></li>
-													<li><a href="#">Индукционные плиты </a></li>
-													<li><a href="#">Газовые плиты</a></li>
-													<li><a href="#">Духовые шкафы</a></li>
-													<li><a href="#">Электрические Плиты</a></li>
-													<li><a href="#">Духовые шкафы</a></li>
-													<li><a href="#">Электрические Плиты</a></li>
-													<li><a href="#">Газовые духовки</a></li>
-													<li><a href="#">Микроволновки</a></li>
-												</ul>
-											</div>
-										</div>
-										
-									</div>
+							</li>
+							<li  data-filter-product="7">
+								<div class="name-category">
+									<a href="#">Крупная бытовая техника</a>
 								</div>
-								<div class="categori-banner">
-									<div class="title-discount">Стиральная машина LG F-1096TD3</div>
-									<span>Забери со скидкой до 11.02.21</span>
-									<img src="./images/banner/washing_machine.png" alt="">
-									<a href="#">Купить</a>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="name-category">
-								<a href="#">Техника для кухни</a>
-							</div>
-							<div class="category-info ">
-								<div class="category-menu">
-									<div class="top">
-										<a href="#">Холодильники  BEKO</a>
-										<a href="#">Микроволновка Elenberg</a>
-										<a href="#">Газовая плита WHIRLPOOL</a>
-										<a href="#">Плита Electrolux</a>
-									</div>
-									<div class="list-category">
-										<div class="left">
-											<div class="sub-category-block">
-												<h4>Микроволновки</h4>
-												<ul class="sub-category">
-													<li><a href="#">Микроволновки</a></li>
-													<li><a href="#">Индукционные плиты </a></li>
-													<li><a href="#">Газовые плиты</a></li>
-													<li><a href="#">Духовые шкафы</a></li>
-													<li><a href="#">Электрические Плиты</a></li>
-													<li><a href="#">Газовые духовки</a></li>
-													<li><a href="#">Электрические Плиты</a></li>
-													<li><a href="#">Газовые духовки</a></li>
-													<li><a href="#">Микроволновки</a></li>
-												</ul>
-											</div>
-											<div class="sub-category-block">
-												<h4>Холодильник</h4>
-												<ul class="sub-category">
-													<li><a href="#">Холодильники LG</a></li>
-													<li><a href="#">Морозилки</a></li>
-													<li><a href="#">Горизонтальные морозилки</a></li>
-													<li><a href="#">Морозильные камеры </a></li>
-													<li><a href="#">Горизонтальные холодильники</a></li>
-													<li><a href="#">Минибар</a></li>
-													<li><a href="#">Морозильная камера</a></li>
-													<li><a href="#">Двухдверные холодильники</a></li>
-												</ul>
-											</div>
+								<div class="category-info " data-fil-prod="7">
+									<div class="category-menu">
+										<div class="top">
+											<a href="#">Холодильник  BEKO</a>
+											<a href="#">Стиральная машина Elenberg</a>
+											<a href="#">Газовая плита WHIRLPOOL</a>
+											<a href="#">Бойлер Electrolux</a>
 										</div>
-										<div class="right">
-											<div class="sub-category-block">
-											<h4>Плиты</h4>
-											<ul class="sub-category">
-												<li><a href="#">Микроволновки</a></li>
-												<li><a href="#">Индукционные плиты </a></li>
-												<li><a href="#">Газовые плиты</a></li>
-												<li><a href="#">Духовые шкафы</a></li>
-												<li><a href="#">Электрические Плиты</a></li>
-												<li><a href="#">Газовые духовки</a></li>
-												<li><a href="#">Микроволновки</a></li>
-												<li><a href="#">Индукционные плиты </a></li>
-												<li><a href="#">Газовые плиты</a></li>
-												<li><a href="#">Духовые шкафы</a></li>
-												<li><a href="#">Электрические Плиты</a></li>
-												<li><a href="#">Газовые духовки</a></li>
-												<li><a href="#">Микроволновки</a></li>
-											</ul>
-										</div>
-										</div>
-										
-									</div>
-								</div>
-								<div class="categori-banner">
-									<div class="title-discount">Стиральная машина LG F-1096TD3</div>
-									<span>Забери со скидкой до 11.02.21</span>
-									<img src="./images/product/microvawe_whirlpool.png" alt="">
-									<a href="#">Купить</a>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="name-category">
-								<a href="#">Встраиваемая бытовая техника</a>
-							</div>
-							<div class="category-info ">
-								<div class="category-menu">
-									<div class="top">
-										<a href="#">Встраивая газовая плита WHIRLPOOL</a>
-										<a href="#">Встраиваемая Миикроволновка ELECTROLUX</a>
-										<a href="#">Встраиваемая индукционная плита BEKO</a>
-									</div>
-									<div class="list-category">
-										<div class="left">
-											<div class="sub-category-block">
-												<h4>Встраиваимая плита</h4>
-												<ul class="sub-category">
-													<li><a href="#">Микроволновки</a></li>
-													<li><a href="#">Индукционные плиты </a></li>
-													<li><a href="#">Газовые плиты</a></li>
-													<li><a href="#">Духовые шкафы</a></li>
-													<li><a href="#">Индукционные плиты </a></li>
-													<li><a href="#">Газовые плиты</a></li>
-													<li><a href="#">Духовые шкафы</a></li>
-													<li><a href="#">Электрические Плиты</a></li>
-													<li><a href="#">Газовые духовки</a></li>
-													<li><a href="#">Микроволновки</a></li>
-												</ul>
+										<div class="list-category">
+											<div class="left">
+												<div class="sub-category-block">
+													<h4>Холодильники</h4>
+													<ul class="sub-category">
+														<li><a href="#">Холодильники LG</a></li>
+														<li><a href="#">Морозилки</a></li>
+														<li><a href="#">Горизонтальные морозилки</a></li>
+														<li><a href="#">Морозильные камеры </a></li>
+														<li><a href="#">Горизонтальные холодильники</a></li>
+														<li><a href="#">Минибар</a></li>
+														<li><a href="#">Морозильная камера</a></li>
+														<li><a href="#">Двухдверные холодильники</a></li>
+													</ul>
+												</div>
+												<div class="sub-category-block">
+													<h4>Бойлеры</h4>
+													<ul class="sub-category">
+														<li><a href="#">Бойлеры</a></li>
+														<li><a href="#">Горизонтальные бойлеры </a></li>
+														<li><a href="#">Вертикальные бойлеры</a></li>
+														<li><a href="#">Газовые бойлеры </a></li>
+														<li><a href="#">Электрические бойлеры</a></li>
+														<li><a href="#">Бойлеры на 80 литров </a></li>
+														<li><a href="#">Бойлеры на 50 литров </a></li>
+														<li><a href="#">Газовые бойлеры </a></li>
+													</ul>
+												</div>
 											</div>
-											<div class="sub-category-block">
-												<h4>Встраиваемые Холодильники</h4>
+											<div class="right">
+												<div class="sub-category-block">
+												<h4>Стиральные</h4>
 												<ul class="sub-category">
-													<li><a href="#">Холодильники LG</a></li>
-													<li><a href="#">Морозилки</a></li>
-													<li><a href="#">Горизонтальные морозилки</a></li>
-													<li><a href="#">Морозильные камеры </a></li>
-													<li><a href="#">Горизонтальные холодильники</a></li>
-													<li><a href="#">Минибар</a></li>
-													<li><a href="#">Морозильная камера</a></li>
-													<li><a href="#">Двухдверные холодильники</a></li>
-												</ul>
-											</div>
-										</div>
-										<div class="right">
-											<div class="sub-category-block">
-											<h4>Встраиваемая Микроволновки</h4>
-											<ul class="sub-category">
-												<li><a href="#">Микроволновки</a></li>
-												<li><a href="#">Индукционные плиты </a></li>
-												<li><a href="#">Газовые плиты</a></li>
-												<li><a href="#">Духовые шкафы</a></li>
-												<li><a href="#">Электрические Плиты</a></li>
-												<li><a href="#">Газовые духовки</a></li>
-												<li><a href="#">Микроволновки</a></li>
-												<li><a href="#">Индукционные плиты </a></li>
-												<li><a href="#">Газовые плиты</a></li>
-												<li><a href="#">Духовые шкафы</a></li>
-												<li><a href="#">Электрические Плиты</a></li>
-												<li><a href="#">Газовые духовки</a></li>
-												<li><a href="#">Микроволновки</a></li>
-											</ul>
-										</div>
-										</div>
-										
-									</div>
-								</div>
-								<div class="categori-banner">
-									<div class="title-discount">Стиральная машина LG F-1096TD3</div>
-									<span>Забери со скидкой до 11.02.21</span>
-									<img src="./images/product/microvawe_whirlpool.png" alt="">
-									<a href="#">Купить</a>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="name-category">
-								<a href="#">Компьютерная техника</a>
-							</div>
-							<div class="category-info ">
-								<div class="category-menu">
-									<div class="top">
-										<a href="#">планшет Samsung Galaxy </a>
-										<a href="#">ноутбук Samsung </a>
-										<a href="#">чехол на Xiaomi Redmi Note 9S</a>
-										<a href="#"> Ipad</a>
-									</div>
-									<div class="list-category">
-										<div class="left">
-											<div class="sub-category-block">
-												<h4>Планшеты</h4>
-												<ul class="sub-category">
-													<li><a href="#">Планшеты на 7 дюйм</a></li>
-													<li><a href="#">Ipad</a></li>
-													<li><a href="#">Samsung Galaxy</a></li>
-													<li><a href="#">Планшеты со стилусом</a></li>
-													<li><a href="#">Планшеты на 7 дюйм</a></li>
-													<li><a href="#">Ipad</a></li>
-													<li><a href="#">Samsung Galaxy</a></li>
-													<li><a href="#">Планшеты со стилусом</a></li>
-												</ul>
-											</div>
-											<div class="sub-category-block">
-												<h4>Телефоны</h4>
-												<ul class="sub-category">
-													<li><a href="#">Iphone</a></li>
-													<li><a href="#">Samsung Galaxy</a></li>
-													<li><a href="#">Кнопочные</a></li>
-													<li><a href="#">Водонепринацаемые</a></li>
-													<li><a href="#">Противоударные</a></li>
-													<li><a href="#">Iphone</a></li>
-													<li><a href="#">Samsung Galaxy</a></li>
-													<li><a href="#">Кнопочные</a></li>
-												</ul>
-											</div>
-										</div>
-										<div class="right">
-											<div class="sub-category-block">
-											<h4>Компьютеры</h4>
-											<ul class="sub-category">
-												<li><a href="#">Игровые</a></li>
-												<li><a href="#"><i>Hp</i></a></li>
-												<li><a href="#">Macbook </a></li>
-												<li><a href="#">C сенсорным экраном </a></li>
-												<li><a href="#">LG</a></li>
-												<li><a href="#">Экраны</a></li>
-												<li><a href="#">Процессоры</a></li>
-												<li><a href="#">Ноутбуки</a></li>
-												<li><a href="#">Наушники</a></li>
-												<li><a href="#">Видеокарты</a></li>
-												<li><a href="#">Принтеры </a></li>
-												<li><a href="#">Аксесуары</a></li>
-											</ul>
-											</div>
-											<div class="sub-category-block">
-												<h4>Аксесуары</h4>
-												<ul class="sub-category">
-													<li><a href="#">Наушники </a></li>
-													<li><a href="#">Оперативная память </a></li>
-													<li><a href="#">Зарядки </a></li>
-													<li><a href="#">Офисная техника</a></li>
-													<li><a href="#">Комплектующие</a></li>
-													<li><a href="#">Кабели и переходники </a></li>
-													<li><a href="#">Наушники </a></li>
-													<li><a href="#">Комплектующие</a></li>
-													<li><a href="#">Кабели и переходники </a></li>
+													<li><a href="#">Стиральные машины</a></li>
+													<li><a href="#">Сушильные машины</a></li>
+													<li><a href="#">Стиральные машины LG</a></li>
+													<li><a href="#">Стиральные машины Elenberg </a></li>
+													<li><a href="#">Сушильные машины LG</a></li>
+													<li><a href="#">Стиральные машины с сушкой</a></li>
+													<li><a href="#">Стиральные машины</a></li>
+													<li><a href="#">Сушильные машины</a></li>
+													<li><a href="#">Стиральные машины Elenberg </a></li>
+													<li><a href="#">Стиральные машины с сушкой</a></li>
 												</ul>
 												</div>
+												<div class="sub-category-block">
+													<h4>Микроволновки</h4>
+													<ul class="sub-category">
+														<li><a href="#">Микроволновки</a></li>
+														<li><a href="#">Индукционные плиты </a></li>
+														<li><a href="#">Газовые плиты</a></li>
+														<li><a href="#">Духовые шкафы</a></li>
+														<li><a href="#">Электрические Плиты</a></li>
+														<li><a href="#">Газовые духовки</a></li>
+														<li><a href="#">Микроволновки</a></li>
+														<li><a href="#">Индукционные плиты </a></li>
+														<li><a href="#">Газовые плиты</a></li>
+														<li><a href="#">Духовые шкафы</a></li>
+														<li><a href="#">Электрические Плиты</a></li>
+													</ul>
+												</div>
+											</div>
+											
 										</div>
-										
+									</div>
+									<div class="categori-banner">
+										<div class="title-discount">Стиральная машина LG F-1096TD3</div>
+										<span>Забери со скидкой до 11.02.21</span>
+										<img src="./images/product/microvawe_whirlpool.png" alt="">
+										<a href="#">Купить</a>						
 									</div>
 								</div>
-								<div class="categori-banner">
-									<div class="title-discount">Ноутбук HP</div>
-									<span>Забери со скидкой до 11.02.21</span>
-									<img src="./images/product/Notebook.png" alt="">
-									<a href="#">Купить</a>
+							</li>
+							<li  data-filter-product="8">
+								<div class="name-category">
+									<a href="#">Техника для кухни</a>
 								</div>
-							</div>
-						</li>
-						<li>
-							<div class="name-category">
-								<a href="#">Дом и дача</a>
-							</div>
-							<div class="category-info">
-								<div class="category-menu">
-									<div class="top">
-										<a href="#">Samsung Galaxy A51</a>
-										<a href="#">Samsung Galaxy A30S</a>
-										<a href="#">Xiaomi Redmi Note 9S</a>
-										<a href="#">OnePlus 8</a>
+								<div class="category-info " data-fil-prod="8">
+									<div class="category-menu">
+										<div class="top">
+											<a href="#">Холодильники  BEKO</a>
+											<a href="#">Микроволновка Elenberg</a>
+											<a href="#">Газовая плита WHIRLPOOL</a>
+											<a href="#">Плита Electrolux</a>
+										</div>
+										<div class="list-category">
+											<div class="left">
+												<div class="sub-category-block">
+													<h4>Микроволновки</h4>
+													<ul class="sub-category">
+														<li><a href="#">Микроволновки</a></li>
+														<li><a href="#">Индукционные плиты </a></li>
+														<li><a href="#">Газовые плиты</a></li>
+														<li><a href="#">Духовые шкафы</a></li>
+														<li><a href="#">Электрические Плиты</a></li>
+														<li><a href="#">Газовые духовки</a></li>
+														<li><a href="#">Духовые шкафы</a></li>
+														<li><a href="#">Электрические Плиты</a></li>
+														<li><a href="#">Газовые духовки</a></li>
+														<li><a href="#">Микроволновки</a></li>
+													</ul>
+												</div>
+												<div class="sub-category-block">
+													<h4>Холодильник</h4>
+													<ul class="sub-category">
+														<li><a href="#">Холодильники LG</a></li>
+														<li><a href="#">Морозилки</a></li>
+														<li><a href="#">Горизонтальные морозилки</a></li>
+														<li><a href="#">Морозильные камеры </a></li>
+														<li><a href="#">Горизонтальные холодильники</a></li>
+														<li><a href="#">Минибар</a></li>
+														<li><a href="#">Морозильная камера</a></li>
+														<li><a href="#">Двухдверные холодильники</a></li>
+													</ul>
+												</div>
+											</div>
+											<div class="right">
+												<div class="sub-category-block">
+												<h4>Плиты</h4>
+												<ul class="sub-category">
+													<li><a href="#">Микроволновки</a></li>
+													<li><a href="#">Индукционные плиты </a></li>
+													<li><a href="#">Газовые плиты</a></li>
+													<li><a href="#">Духовые шкафы</a></li>
+													<li><a href="#">Электрические Плиты</a></li>
+													<li><a href="#">Газовые духовки</a></li>
+													<li><a href="#">Микроволновки</a></li>
+													<li><a href="#">Индукционные плиты </a></li>
+													<li><a href="#">Газовые плиты</a></li>
+													<li><a href="#">Духовые шкафы</a></li>
+													<li><a href="#">Электрические Плиты</a></li>
+													<li><a href="#">Газовые духовки</a></li>
+													<li><a href="#">Микроволновки</a></li>
+												</ul>
+											</div>
+											</div>
+											
+										</div>
 									</div>
-									<div class="list-category">
-										<div class="left">
-											<div class="sub-category-block">
-												<h4>Хозяйственные товары</h4>
+									<div class="categori-banner">
+										<div class="title-discount">Стиральная машина LG F-1096TD3</div>
+										<span>Забери со скидкой до 11.02.21</span>
+										<img src="./images/product/microvawe_whirlpool.png" alt="">
+										<a href="#">Купить</a>
+									</div>
+								</div>
+							</li>
+							<li  data-filter-product="9">
+								<div class="name-category">
+									<a href="#">Встраиваемая бытовая техника</a>
+								</div>
+								<div class="category-info " data-fil-prod="9">
+									<div class="category-menu">
+										<div class="top">
+											<a href="#">Встраивая газовая плита WHIRLPOOL</a>
+											<a href="#">Встраиваемая Миикроволновка ELECTROLUX</a>
+											<a href="#">Встраиваемая индукционная плита BEKO</a>
+										</div>
+										<div class="list-category">
+											<div class="left">
+												<div class="sub-category-block">
+													<h4>Встраиваимая плита</h4>
+													<ul class="sub-category">
+														<li><a href="#">Микроволновки</a></li>
+														<li><a href="#">Индукционные плиты </a></li>
+														<li><a href="#">Газовые плиты</a></li>
+														<li><a href="#">Духовые шкафы</a></li>
+														<li><a href="#">Электрические Плиты</a></li>
+														<li><a href="#">Газовые духовки</a></li>
+														<li><a href="#">Микроволновки</a></li>
+														<li><a href="#">Индукционные плиты </a></li>
+														<li><a href="#">Газовые плиты</a></li>
+														<li><a href="#">Духовые шкафы</a></li>
+													</ul>
+												</div>
+												<div class="sub-category-block">
+													<h4>Встраиваемые Холодильники</h4>
+													<ul class="sub-category">
+														<li><a href="#">Холодильники LG</a></li>
+														<li><a href="#">Морозилки</a></li>
+														<li><a href="#">Горизонтальные морозилки</a></li>
+														<li><a href="#">Морозильные камеры </a></li>
+														<li><a href="#">Горизонтальные холодильники</a></li>
+														<li><a href="#">Минибар</a></li>
+														<li><a href="#">Морозильная камера</a></li>
+														<li><a href="#">Двухдверные холодильники</a></li>
+													</ul>
+												</div>
+											</div>
+											<div class="right">
+												<div class="sub-category-block">
+												<h4>Встраиваемая Микроволновки</h4>
+												<ul class="sub-category">
+													<li><a href="#">Микроволновки</a></li>
+													<li><a href="#">Индукционные плиты </a></li>
+													<li><a href="#">Газовые плиты</a></li>
+													<li><a href="#">Духовые шкафы</a></li>
+													<li><a href="#">Электрические Плиты</a></li>
+													<li><a href="#">Газовые духовки</a></li>
+													<li><a href="#">Микроволновки</a></li>
+													<li><a href="#">Индукционные плиты </a></li>
+													<li><a href="#">Газовые плиты</a></li>
+													<li><a href="#">Духовые шкафы</a></li>
+													<li><a href="#">Электрические Плиты</a></li>
+													<li><a href="#">Газовые духовки</a></li>
+													<li><a href="#">Микроволновки</a></li>
+												</ul>
+											</div>
+											</div>
+											
+										</div>
+									</div>
+									<div class="categori-banner">
+										<div class="title-discount">Стиральная машина LG F-1096TD3</div>
+										<span>Забери со скидкой до 11.02.21</span>
+										<img src="./images/product/microvawe_whirlpool.png" alt="">
+										<a href="#">Купить</a>
+									</div>
+								</div>
+							</li>
+							<li  data-filter-product="10">
+								<div class="name-category">
+									<a href="#">Компьютерная техника</a>
+								</div>
+								<div class="category-info " data-fil-prod="10">
+									<div class="category-menu">
+										<div class="top">
+											<a href="#">планшет Samsung Galaxy </a>
+											<a href="#">ноутбук Samsung </a>
+											<a href="#">чехол на Xiaomi Redmi Note 9S</a>
+											<a href="#"> Ipad</a>
+										</div>
+										<div class="list-category">
+											<div class="left">
+												<div class="sub-category-block">
+													<h4>Планшеты</h4>
+													<ul class="sub-category">
+														<li><a href="#">Планшеты на 7 дюйм</a></li>
+														<li><a href="#">Ipad</a></li>
+														<li><a href="#">Samsung Galaxy</a></li>
+														<li><a href="#">Планшеты со стилусом</a></li>
+														<li><a href="#">Планшеты на 7 дюйм</a></li>
+														<li><a href="#">Ipad</a></li>
+														<li><a href="#">Samsung Galaxy</a></li>
+														<li><a href="#">Планшеты со стилусом</a></li>
+													</ul>
+												</div>
+												<div class="sub-category-block">
+													<h4>Телефоны</h4>
+													<ul class="sub-category">
+														<li><a href="#">Iphone</a></li>
+														<li><a href="#">Samsung Galaxy</a></li>
+														<li><a href="#">Кнопочные</a></li>
+														<li><a href="#">Водонепринацаемые</a></li>
+														<li><a href="#">Противоударные</a></li>
+														<li><a href="#">Iphone</a></li>
+														<li><a href="#">Samsung Galaxy</a></li>
+														<li><a href="#">Кнопочные</a></li>
+													</ul>
+												</div>
+											</div>
+											<div class="right">
+												<div class="sub-category-block">
+												<h4>Компьютеры</h4>
+												<ul class="sub-category">
+													<li><a href="#">Игровые</a></li>
+													<li><a href="#"><i>Hp</i></a></li>
+													<li><a href="#">Macbook </a></li>
+													<li><a href="#">C сенсорным экраном </a></li>
+													<li><a href="#">LG</a></li>
+													<li><a href="#">Экраны</a></li>
+													<li><a href="#">Процессоры</a></li>
+													<li><a href="#">Ноутбуки</a></li>
+													<li><a href="#">Наушники</a></li>
+													<li><a href="#">Видеокарты</a></li>
+													<li><a href="#">Принтеры </a></li>
+													<li><a href="#">Аксесуары</a></li>
+												</ul>
+												</div>
+												<div class="sub-category-block">
+													<h4>Аксесуары</h4>
+													<ul class="sub-category">
+														<li><a href="#">Наушники </a></li>
+														<li><a href="#">Оперативная память </a></li>
+														<li><a href="#">Зарядки </a></li>
+														<li><a href="#">Офисная техника</a></li>
+														<li><a href="#">Комплектующие</a></li>
+														<li><a href="#">Кабели и переходники </a></li>
+														<li><a href="#">Наушники </a></li>
+														<li><a href="#">Кабели и переходники </a></li>
+													</ul>
+													</div>
+											</div>
+											
+										</div>
+									</div>
+									<div class="categori-banner">
+										<div class="title-discount">Ноутбук HP</div>
+										<span>Забери со скидкой до 11.02.21</span>
+										<img src="./images/product/Notebook.png" alt="">
+										<a href="#">Купить</a>
+									</div>
+								</div>
+							</li>
+							<li  data-filter-product="11">
+								<div class="name-category">
+									<a href="#">Дом и дача</a>
+								</div>
+								<div class="category-info " data-fil-prod="11">
+									<div class="category-menu">
+										<div class="top">
+											<a href="#">Samsung Galaxy A51</a>
+											<a href="#">Samsung Galaxy A30S</a>
+											<a href="#">Xiaomi Redmi Note 9S</a>
+											<a href="#">OnePlus 8</a>
+										</div>
+										<div class="list-category">
+											<div class="left">
+												<div class="sub-category-block">
+													<h4>Хозяйственные товары</h4>
+													<ul class="sub-category">
+														<li><a href="#">Стремянки </a></li>
+														<li><a href="#">Газонокосилки</a></li>
+														<li><a href="#">Инвентарь для уборки </a></li>
+														<li><a href="#">Мусорные ведра и баки </a></li>
+														<li><a href="#">Стремянки </a></li>
+														<li><a href="#">Газонокосилки  </a></li>
+														<li><a href="#">Инвентарь для уборки </a></li>
+														<li><a href="#">Мусорные ведра и баки </a></li>
+													</ul>
+												</div>
+												<div class="sub-category-block">
+													<h4>Текстиль</h4>
+													<ul class="sub-category">
+														<li><a href="#">Стремянки </a></li>
+														<li><a href="#">Газонокосилки </a></li>
+														<li><a href="#">Инвентарь для уборки </a></li>
+														<li><a href="#">Мусорные ведра и баки </a></li>
+														<li><a href="#">Стремянки </a></li>
+														<li><a href="#">Газонокосилки </a></li>
+														<li><a href="#">Инвентарь для уборки </a></li>
+														<li><a href="#">Мусорные ведра и баки </a></li>
+													</ul>
+												</div>
+											</div>
+											<div class="right">
+												<div class="sub-category-block">
+												<h4>Хранение вещей</h4>
 												<ul class="sub-category">
 													<li><a href="#">Стремянки </a></li>
-													<li><a href="#">Газонокосилки</a></li>
-													<li><a href="#">Инвентарь для уборки </a></li>
+													<li><a href="#">Газонокосилки  </a></li>
+													<li><a href="#">Инвентарь для уборки  </a></li>
 													<li><a href="#">Мусорные ведра и баки </a></li>
 													<li><a href="#">Стремянки </a></li>
+													<li><a href="#">Газонокосилки </a></li>
+													<li><a href="#">Инвентарь для уборки </a></li>
+													<li><a href="#">Мусорные ведра и баки </a></li>
+													<li><a href="#">Стремянки  </a></li>
 													<li><a href="#">Газонокосилки  </a></li>
 													<li><a href="#">Инвентарь для уборки </a></li>
 													<li><a href="#">Мусорные ведра и баки </a></li>
 												</ul>
 											</div>
-											<div class="sub-category-block">
-												<h4>Текстиль</h4>
+											</div>
+											
+										</div>
+									</div>
+									<div class="categori-banner">
+										<div class="title-discount">Водонагреватель Electrolux EWH 80 Formax</div>
+										<span>Забери со скидкой до 11.02.21</span>
+										<img src="./images/product/boiler-ELECTROLUX.png" alt="">
+										<a href="#">Купить</a>
+									</div>
+								</div>
+							</li>
+							<li  data-filter-product="12">
+								<div class="name-category">
+									<a href="#">Аудио/Видео</a>
+								</div>
+								<div class="category-info " data-fil-prod="12">
+									<div class="category-menu">
+										<div class="top">
+											<a href="#">Samsung Photo </a>
+											<a href="#">Samsung Video</a>
+											<a href="#">Xiaomi photo </a>
+											<a href="#">OnePlus </a>
+										</div>
+										<div class="list-category">
+											<div class="left">
+												<div class="sub-category-block">
+													<h4>Колонки</h4>
+													<ul class="sub-category">
+														<li><a href="#">Саббуфер </a></li>
+														<li><a href="#">Аксесуары</a></li>
+														<li><a href="#">Инвентарь </a></li>
+														<li><a href="#">Зарядки</a></li>
+														<li><a href="#">Домашний кинотеатр</a></li>
+														<li><a href="#">Колонки  </a></li>
+														<li><a href="#">Зарядки</a></li>
+														<li><a href="#">Аксесуары </a></li>
+													</ul>
+												</div>
+												<div class="sub-category-block">
+													<h4>Фотоапараты</h4>
+													<ul class="sub-category">
+														<li><a href="#">Фотоапараты</a></li>
+														<li><a href="#">Соник </a></li>
+														<li><a href="#">Аксесуары</a></li>
+														<li><a href="#">Зарядки</a></li>
+														<li><a href="#">Фотоапараты</a></li>
+														<li><a href="#">Соник </a></li>
+														<li><a href="#">Аксесуары</a></li>
+														<li><a href="#">Зарядки</a></li>
+													</ul>
+												</div>
+											</div>
+											<div class="right">
+												<div class="sub-category-block">
+												<h4>Видеокамеры</h4>
 												<ul class="sub-category">
+													<li><a href="#">Видеокамеры </a></li>
+													<li><a href="#">Зарядки </a></li>
+													<li><a href="#">Аксесуары </a></li>
+													<li><a href="#">Фотоапараты</a></li>
+													<li><a href="#">Видеокамеры</a></li>
+													<li><a href="#">Зарядки</a></li>
+													<li><a href="#">Видеокамеры </a></li>
+													<li><a href="#">Зарядки </a></li>
+													<li><a href="#">Аксесуары </a></li>
+													<li><a href="#">Фотоапараты</a></li>
+													<li><a href="#">Видеокамеры</a></li>
+													<li><a href="#">Зарядки</a></li>
+												</ul>
+											</div>
+											</div>
+											
+										</div>
+									</div>
+									<div class="categori-banner">
+										<div class="categori-banner" >
+											<div class="title-discount">Телефизор BLACKTON 2402B</div>
+											<span>Забери со скидкой до 11.02.21</span>
+											<img src="./images/product/tv-BLACKTON.png" alt="">
+											<a href="#">Купить</a>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li  data-filter-product="13">
+								<div class="name-category">
+									<a href="#">Крупная бытовая техника</a>
+								</div>
+								<div class="category-info " data-fil-prod="13">
+									<div class="category-menu">
+										<div class="top">
+											<a href="#">Холодильник  BEKO</a>
+											<a href="#">Стиральная машина Elenberg</a>
+											<a href="#">Газовая плита WHIRLPOOL</a>
+											<a href="#">Бойлер Electrolux</a>
+										</div>
+										<div class="list-category">
+											<div class="left">
+												<div class="sub-category-block">
+													<h4>Холодильники</h4>
+													<ul class="sub-category">
+														<li><a href="#">Холодильники LG</a></li>
+														<li><a href="#">Морозилки</a></li>
+														<li><a href="#">Горизонтальные морозилки</a></li>
+														<li><a href="#">Морозильные камеры </a></li>
+														<li><a href="#">Горизонтальные холодильники</a></li>
+														<li><a href="#">Минибар</a></li>
+														<li><a href="#">Морозильная камера</a></li>
+														<li><a href="#">Двухдверные холодильники</a></li>
+													</ul>
+												</div>
+												<div class="sub-category-block">
+													<h4>Бойлеры</h4>
+													<ul class="sub-category">
+														<li><a href="#">Бойлеры</a></li>
+														<li><a href="#">Горизонтальные бойлеры </a></li>
+														<li><a href="#">Вертикальные бойлеры</a></li>
+														<li><a href="#">Газовые бойлеры </a></li>
+														<li><a href="#">Электрические бойлеры</a></li>
+														<li><a href="#">Бойлеры на 80 литров </a></li>
+														<li><a href="#">Бойлеры на 50 литров </a></li>
+														<li><a href="#">Газовые бойлеры </a></li>
+													</ul>
+												</div>
+											</div>
+											<div class="right">
+												<div class="sub-category-block">
+												<h4>Стиральные</h4>
+												<ul class="sub-category">
+													<li><a href="#">Стиральные машины</a></li>
+													<li><a href="#">Сушильные машины</a></li>
+													<li><a href="#">Стиральные машины LG</a></li>
+													<li><a href="#">Стиральные машины Elenberg </a></li>
+													<li><a href="#">Сушильные машины LG</a></li>
+													<li><a href="#">Стиральные машины с сушкой</a></li>
+													<li><a href="#">Стиральные машины</a></li>
+													<li><a href="#">Сушильные машины</a></li>
+													<li><a href="#">Стиральные машины LG</a></li>
+													<li><a href="#">Стиральные машины Elenberg </a></li>
+													<li><a href="#">Сушильные машины LG</a></li>
+													<li><a href="#">Стиральные машины с сушкой</a></li>
+												</ul>
+												</div>
+												<div class="sub-category-block">
+													<h4>Микроволновки</h4>
+													<ul class="sub-category">
+														<li><a href="#">Микроволновки</a></li>
+														<li><a href="#">Индукционные плиты </a></li>
+														<li><a href="#">Газовые плиты</a></li>
+														<li><a href="#">Духовые шкафы</a></li>
+														<li><a href="#">Электрические Плиты</a></li>
+														<li><a href="#">Духовые шкафы</a></li>
+														<li><a href="#">Электрические Плиты</a></li>
+														<li><a href="#">Газовые духовки</a></li>
+														<li><a href="#">Микроволновки</a></li>
+													</ul>
+												</div>
+											</div>
+											
+										</div>
+									</div>
+									<div class="categori-banner">
+										<div class="title-discount">Стиральная машина LG F-1096TD3</div>
+										<span>Забери со скидкой до 11.02.21</span>
+										<img src="./images/banner/washing_machine.png" alt="">
+										<a href="#">Купить</a>
+									</div>
+								</div>
+							</li>
+							<li  data-filter-product="14">
+								<div class="name-category">
+									<a href="#">Техника для кухни</a>
+								</div>
+								<div class="category-info " data-fil-prod="14">
+									<div class="category-menu">
+										<div class="top">
+											<a href="#">Холодильники  BEKO</a>
+											<a href="#">Микроволновка Elenberg</a>
+											<a href="#">Газовая плита WHIRLPOOL</a>
+											<a href="#">Плита Electrolux</a>
+										</div>
+										<div class="list-category">
+											<div class="left">
+												<div class="sub-category-block">
+													<h4>Микроволновки</h4>
+													<ul class="sub-category">
+														<li><a href="#">Микроволновки</a></li>
+														<li><a href="#">Индукционные плиты </a></li>
+														<li><a href="#">Газовые плиты</a></li>
+														<li><a href="#">Духовые шкафы</a></li>
+														<li><a href="#">Электрические Плиты</a></li>
+														<li><a href="#">Газовые духовки</a></li>
+														<li><a href="#">Электрические Плиты</a></li>
+														<li><a href="#">Газовые духовки</a></li>
+														<li><a href="#">Микроволновки</a></li>
+													</ul>
+												</div>
+												<div class="sub-category-block">
+													<h4>Холодильник</h4>
+													<ul class="sub-category">
+														<li><a href="#">Холодильники LG</a></li>
+														<li><a href="#">Морозилки</a></li>
+														<li><a href="#">Горизонтальные морозилки</a></li>
+														<li><a href="#">Морозильные камеры </a></li>
+														<li><a href="#">Горизонтальные холодильники</a></li>
+														<li><a href="#">Минибар</a></li>
+														<li><a href="#">Морозильная камера</a></li>
+														<li><a href="#">Двухдверные холодильники</a></li>
+													</ul>
+												</div>
+											</div>
+											<div class="right">
+												<div class="sub-category-block">
+												<h4>Плиты</h4>
+												<ul class="sub-category">
+													<li><a href="#">Микроволновки</a></li>
+													<li><a href="#">Индукционные плиты </a></li>
+													<li><a href="#">Газовые плиты</a></li>
+													<li><a href="#">Духовые шкафы</a></li>
+													<li><a href="#">Электрические Плиты</a></li>
+													<li><a href="#">Газовые духовки</a></li>
+													<li><a href="#">Микроволновки</a></li>
+													<li><a href="#">Индукционные плиты </a></li>
+													<li><a href="#">Газовые плиты</a></li>
+													<li><a href="#">Духовые шкафы</a></li>
+													<li><a href="#">Электрические Плиты</a></li>
+													<li><a href="#">Газовые духовки</a></li>
+													<li><a href="#">Микроволновки</a></li>
+												</ul>
+											</div>
+											</div>
+											
+										</div>
+									</div>
+									<div class="categori-banner">
+										<div class="title-discount">Стиральная машина LG F-1096TD3</div>
+										<span>Забери со скидкой до 11.02.21</span>
+										<img src="./images/product/microvawe_whirlpool.png" alt="">
+										<a href="#">Купить</a>
+									</div>
+								</div>
+							</li>
+							<li  data-filter-product="15">
+								<div class="name-category">
+									<a href="#">Встраиваемая бытовая техника</a>
+								</div>
+								<div class="category-info " data-fil-prod="15">
+									<div class="category-menu">
+										<div class="top">
+											<a href="#">Встраивая газовая плита WHIRLPOOL</a>
+											<a href="#">Встраиваемая Миикроволновка ELECTROLUX</a>
+											<a href="#">Встраиваемая индукционная плита BEKO</a>
+										</div>
+										<div class="list-category">
+											<div class="left">
+												<div class="sub-category-block">
+													<h4>Встраиваимая плита</h4>
+													<ul class="sub-category">
+														<li><a href="#">Микроволновки</a></li>
+														<li><a href="#">Индукционные плиты </a></li>
+														<li><a href="#">Газовые плиты</a></li>
+														<li><a href="#">Духовые шкафы</a></li>
+														<li><a href="#">Индукционные плиты </a></li>
+														<li><a href="#">Газовые плиты</a></li>
+														<li><a href="#">Духовые шкафы</a></li>
+														<li><a href="#">Электрические Плиты</a></li>
+														<li><a href="#">Газовые духовки</a></li>
+														<li><a href="#">Микроволновки</a></li>
+													</ul>
+												</div>
+												<div class="sub-category-block">
+													<h4>Встраиваемые Холодильники</h4>
+													<ul class="sub-category">
+														<li><a href="#">Холодильники LG</a></li>
+														<li><a href="#">Морозилки</a></li>
+														<li><a href="#">Горизонтальные морозилки</a></li>
+														<li><a href="#">Морозильные камеры </a></li>
+														<li><a href="#">Горизонтальные холодильники</a></li>
+														<li><a href="#">Минибар</a></li>
+														<li><a href="#">Морозильная камера</a></li>
+														<li><a href="#">Двухдверные холодильники</a></li>
+													</ul>
+												</div>
+											</div>
+											<div class="right">
+												<div class="sub-category-block">
+												<h4>Встраиваемая Микроволновки</h4>
+												<ul class="sub-category">
+													<li><a href="#">Микроволновки</a></li>
+													<li><a href="#">Индукционные плиты </a></li>
+													<li><a href="#">Газовые плиты</a></li>
+													<li><a href="#">Духовые шкафы</a></li>
+													<li><a href="#">Электрические Плиты</a></li>
+													<li><a href="#">Газовые духовки</a></li>
+													<li><a href="#">Микроволновки</a></li>
+													<li><a href="#">Индукционные плиты </a></li>
+													<li><a href="#">Газовые плиты</a></li>
+													<li><a href="#">Духовые шкафы</a></li>
+													<li><a href="#">Электрические Плиты</a></li>
+													<li><a href="#">Газовые духовки</a></li>
+													<li><a href="#">Микроволновки</a></li>
+												</ul>
+											</div>
+											</div>
+											
+										</div>
+									</div>
+									<div class="categori-banner">
+										<div class="title-discount">Стиральная машина LG F-1096TD3</div>
+										<span>Забери со скидкой до 11.02.21</span>
+										<img src="./images/product/microvawe_whirlpool.png" alt="">
+										<a href="#">Купить</a>
+									</div>
+								</div>
+							</li>
+							<li  data-filter-product="16">
+								<div class="name-category">
+									<a href="#">Компьютерная техника</a>
+								</div>
+								<div class="category-info " data-fil-prod="16">
+									<div class="category-menu">
+										<div class="top">
+											<a href="#">планшет Samsung Galaxy </a>
+											<a href="#">ноутбук Samsung </a>
+											<a href="#">чехол на Xiaomi Redmi Note 9S</a>
+											<a href="#"> Ipad</a>
+										</div>
+										<div class="list-category">
+											<div class="left">
+												<div class="sub-category-block">
+													<h4>Планшеты</h4>
+													<ul class="sub-category">
+														<li><a href="#">Планшеты на 7 дюйм</a></li>
+														<li><a href="#">Ipad</a></li>
+														<li><a href="#">Samsung Galaxy</a></li>
+														<li><a href="#">Планшеты со стилусом</a></li>
+														<li><a href="#">Планшеты на 7 дюйм</a></li>
+														<li><a href="#">Ipad</a></li>
+														<li><a href="#">Samsung Galaxy</a></li>
+														<li><a href="#">Планшеты со стилусом</a></li>
+													</ul>
+												</div>
+												<div class="sub-category-block">
+													<h4>Телефоны</h4>
+													<ul class="sub-category">
+														<li><a href="#">Iphone</a></li>
+														<li><a href="#">Samsung Galaxy</a></li>
+														<li><a href="#">Кнопочные</a></li>
+														<li><a href="#">Водонепринацаемые</a></li>
+														<li><a href="#">Противоударные</a></li>
+														<li><a href="#">Iphone</a></li>
+														<li><a href="#">Samsung Galaxy</a></li>
+														<li><a href="#">Кнопочные</a></li>
+													</ul>
+												</div>
+											</div>
+											<div class="right">
+												<div class="sub-category-block">
+												<h4>Компьютеры</h4>
+												<ul class="sub-category">
+													<li><a href="#">Игровые</a></li>
+													<li><a href="#"><i>Hp</i></a></li>
+													<li><a href="#">Macbook </a></li>
+													<li><a href="#">C сенсорным экраном </a></li>
+													<li><a href="#">LG</a></li>
+													<li><a href="#">Экраны</a></li>
+													<li><a href="#">Процессоры</a></li>
+													<li><a href="#">Ноутбуки</a></li>
+													<li><a href="#">Наушники</a></li>
+													<li><a href="#">Видеокарты</a></li>
+													<li><a href="#">Принтеры </a></li>
+													<li><a href="#">Аксесуары</a></li>
+												</ul>
+												</div>
+												<div class="sub-category-block">
+													<h4>Аксесуары</h4>
+													<ul class="sub-category">
+														<li><a href="#">Наушники </a></li>
+														<li><a href="#">Оперативная память </a></li>
+														<li><a href="#">Зарядки </a></li>
+														<li><a href="#">Офисная техника</a></li>
+														<li><a href="#">Комплектующие</a></li>
+														<li><a href="#">Кабели и переходники </a></li>
+														<li><a href="#">Наушники </a></li>
+														<li><a href="#">Комплектующие</a></li>
+														<li><a href="#">Кабели и переходники </a></li>
+													</ul>
+													</div>
+											</div>
+											
+										</div>
+									</div>
+									<div class="categori-banner">
+										<div class="title-discount">Ноутбук HP</div>
+										<span>Забери со скидкой до 11.02.21</span>
+										<img src="./images/product/Notebook.png" alt="">
+										<a href="#">Купить</a>
+									</div>
+								</div>
+							</li>
+							<li  data-filter-product="17">
+								<div class="name-category">
+									<a href="#">Дом и дача</a>
+								</div>
+								<div class="category-info" data-fil-prod="17">
+									<div class="category-menu">
+										<div class="top">
+											<a href="#">Samsung Galaxy A51</a>
+											<a href="#">Samsung Galaxy A30S</a>
+											<a href="#">Xiaomi Redmi Note 9S</a>
+											<a href="#">OnePlus 8</a>
+										</div>
+										<div class="list-category">
+											<div class="left">
+												<div class="sub-category-block">
+													<h4>Хозяйственные товары</h4>
+													<ul class="sub-category">
+														<li><a href="#">Стремянки </a></li>
+														<li><a href="#">Газонокосилки</a></li>
+														<li><a href="#">Инвентарь для уборки </a></li>
+														<li><a href="#">Мусорные ведра и баки </a></li>
+														<li><a href="#">Стремянки </a></li>
+														<li><a href="#">Газонокосилки  </a></li>
+														<li><a href="#">Инвентарь для уборки </a></li>
+														<li><a href="#">Мусорные ведра и баки </a></li>
+													</ul>
+												</div>
+												<div class="sub-category-block">
+													<h4>Текстиль</h4>
+													<ul class="sub-category">
+														<li><a href="#">Стремянки </a></li>
+														<li><a href="#">Газонокосилки </a></li>
+														<li><a href="#">Инвентарь для уборки </a></li>
+														<li><a href="#">Мусорные ведра и баки </a></li>
+														<li><a href="#">Стремянки </a></li>
+														<li><a href="#">Газонокосилки </a></li>
+														<li><a href="#">Инвентарь для уборки </a></li>
+														<li><a href="#">Мусорные ведра и баки </a></li>
+													</ul>
+												</div>
+											</div>
+											<div class="right">
+												<div class="sub-category-block">
+												<h4>Хранение вещей</h4>
+												<ul class="sub-category">
+													<li><a href="#">Стремянки </a></li>
+													<li><a href="#">Газонокосилки  </a></li>
+													<li><a href="#">Инвентарь для уборки  </a></li>
+													<li><a href="#">Мусорные ведра и баки </a></li>
 													<li><a href="#">Стремянки </a></li>
 													<li><a href="#">Газонокосилки </a></li>
 													<li><a href="#">Инвентарь для уборки </a></li>
 													<li><a href="#">Мусорные ведра и баки </a></li>
-													<li><a href="#">Стремянки </a></li>
-													<li><a href="#">Газонокосилки </a></li>
+													<li><a href="#">Стремянки  </a></li>
+													<li><a href="#">Газонокосилки  </a></li>
 													<li><a href="#">Инвентарь для уборки </a></li>
 													<li><a href="#">Мусорные ведра и баки </a></li>
 												</ul>
 											</div>
+											</div>
+											
 										</div>
-										<div class="right">
-											<div class="sub-category-block">
-											<h4>Хранение вещей</h4>
-											<ul class="sub-category">
-												<li><a href="#">Стремянки </a></li>
-												<li><a href="#">Газонокосилки  </a></li>
-												<li><a href="#">Инвентарь для уборки  </a></li>
-												<li><a href="#">Мусорные ведра и баки </a></li>
-												<li><a href="#">Стремянки </a></li>
-												<li><a href="#">Газонокосилки </a></li>
-												<li><a href="#">Инвентарь для уборки </a></li>
-												<li><a href="#">Мусорные ведра и баки </a></li>
-												<li><a href="#">Стремянки  </a></li>
-												<li><a href="#">Газонокосилки  </a></li>
-												<li><a href="#">Инвентарь для уборки </a></li>
-												<li><a href="#">Мусорные ведра и баки </a></li>
-											</ul>
-										</div>
-										</div>
-										
+									</div>
+									<div class="categori-banner">
+										<div class="title-discount">Водонагреватель Electrolux EWH 80 Formax</div>
+										<span>Забери со скидкой до 11.02.21</span>
+										<img src="./images/product/boiler-ELECTROLUX.png" alt="">
+										<a href="#">Купить</a>
 									</div>
 								</div>
-								<div class="categori-banner">
-									<div class="title-discount">Водонагреватель Electrolux EWH 80 Formax</div>
-									<span>Забери со скидкой до 11.02.21</span>
-									<img src="./images/product/boiler-ELECTROLUX.png" alt="">
-									<a href="#">Купить</a>
-								</div>
-							</div>
-						</li>
-					</ul>
-					<ul>
-						<li><a href="#">Бытовая техника</a></li>
-						<li><a href="#">Видео и аудио</a></li>
-						<li><a href="#">Климат </a></li>
-						<li><a href="#">Компьютерная техника</a></li>
-						<li><a href="#">Дом и дача</a></li>
-						<li><a href="#">Спорт и отдых </a></li>
-						<li><a href="#">Инструмент </a></li>
-						<li><a href="#">Авто </a></li>
-						<li сlass="sale"><a href="#">% Распродажа</a></li>
-					</ul>
-				</div>
-			</nav>
-		</div>
-	</header>
-	<main>
-		<section class="main-title">
-			<div class="layout">
-				<div class="play-img">
-					<div class="main-background">
-					<img src="./images/banner/Rectangle1.png" alt="main-background">
-					</div>
-					<div class="main-background-white">
-						<img src="./images/banner/MaskGroup.png" alt="main-background">
-					</div>
-					<div class="washing-mashines">
-						<div class="one">
-							<img src="./images/banner/washing_mashine0.png" alt="washing-mashin">
-						</div>
-						<div class="two">
-							<img src="./images/banner/washing_machine.png" alt="washing-mashin">
-						</div>
-						<div class="three">
-							<img src="./images/banner/washing_mashine2.jpeg" alt="washing-mashin">
-						</div>
-					</div>
-					<div class="banner-text">
-						<div class="title">Большой выбор стиральных машин</div>
-						<div class="subtitle">Успей купить по суперцене</div>
-						<a href="#">Подробнее</a>
-					</div>
-				</div>
-				 <!-- <div class="links-slider">
-					<a href="#" class="prev" onclick="plusSliders(-1)">&#10094</a>
-					<a href="#" class="next" onclick="plusSliders(1)">&#10095</a>
-				 </div>
-				 <br>
-				 <div class="dots">
-					<span class="dot" onclick="currentSlide(1)"></span>
-					<span class="dot" onclick="currentSlide(2)"></span>
-					<span class="dot" onclick="currentSlide(3)"></span>
-				 </div> -->
-			</div>
-		</section>
-		<section class="products">
-			<div class="layout">
-				<div class="product-block">
-					<h3>Популярное</h3>
-					<ul>
-					<template id="products">
-							<li class="main-product">
-									<div class="special-offer">
-										<span class="new">Новинка</span><span class="sale-prod"></span>
-										<span class="present">Подарок</span>
-									</div>
-									<div class="image-product">
-										<img src="./images/product/Beko.png" alt="product">
-									</div>
-									<span class="current-price">
-										<div class="new-price"></div>
-										<div class="old-price"></div>
-									</span>
-									<h4 class="nameProduct"></h4>
-									<div class="grade-and-review">
-										<div class="grade">
-											<fieldset class="raiting">
-												
-												<div class="raiting__group">
-												  <input class="raiting__star" aria-label="Ужасно" type="radio" name="health" value="1" checked>
-												  <input class="raiting__star" aria-label="Сносно" type="radio" name="health" value="2">
-												  <input class="raiting__star" aria-label="Нормально" type="radio" name="health" value="3">
-												  <input class="raiting__star" aria-label="Хорошо" type="radio" name="health" value="4">
-												  <input class="raiting__star" aria-label="Отлично" type="radio" name="health" value="5">
-												</div>
-											  </fieldset>
-										</div>
-										<div class="review"><a href="#"><img src="./images/icons/comments.png" alt=""> <span class="amount-review"></span></a></div>
-									</div>
-									<button class="btn-buy"></button>
-								
 							</li>
-					</template>
-					</ul>
-				</div>
-			</div>
-		</section>
-		<section class="sale">
-			<div class="layout">
-				<img src="./images/banner/banner-discount.png" alt="">
-			</div>
-		</section>
-		<section class="products">
-			<div class="layout">
-				<div class="product-block-two">
-					<ul></ul>
-				</div>
-			</div>
-		</section>
-		<section class="catalog">
-			<div class="layout">
-				<h3>Каталог</h3>
-				<div class="content">
-					<ul class="first"> 
-						<li>
-							<div class="category"><a href="#">Крупная бытовая техника</a></div>
-							<ul>
-								<li><a href="#"> Холодильники (<span>135</span>)</a> </li>
-								<li><a href="#">Морозильные камеры (<span>74</span>)</a> </li>
-								<li><a href="#">Стиральные машины (<span>213</span>)</a> </li>
-								<li><a href="#">Посудомоечные машины (<span>98</span>)</a> </li>
-							</ul>
-							<div class="all-products">
-								<a href="#">Все товары</a> <img src="./images/icons/arrow-right.png" alt="arrow-right">
-							</div>
-						</li>
-						<li>
-							<div class="category"><a href="#">Товары для дома</a></div>
-							<ul>
-								<li><a href="#"> Холодильники (<span>135</span>)</a> </li>
-								<li><a href="#">Морозильные камеры (<span>74</span>)</a> </li>
-								<li><a href="#">Стиральные машины (<span>213</span>)</a> </li>
-								<li><a href="#">Посудомоечные машины (<span>98</span>)</a> </li>
-								<li><a href="#">Морозильные камеры (<span>74</span>)</a></li>
-								<li><a href="#">Стиральные машины (<span>213</span>)</a></li>
-								<li><a href="#">Посудомоечные машины (<span>98</span>)</a></li>
-							</ul>
-							<div class="all-products">
-								<a href="#">Все товары</a> <img src="./images/icons/arrow-right.png" alt="arrow-right">
-							</div>
-						</li>
-						<li>
-							<div class="category"><a href="#">Мелкая бытовая техника</a></div>
-							<ul>
-								<li><a href="#"> Крепления и кронштейны для мелкой кухонной техники (<span>135</span>)</a> </li>
-								<li><a href="#">Морозильные камеры (<span>74</span>)</a> </li>
-								<li><a href="#">Стиральные машины (<span>213</span>)</a> </li>
-								<li><a href="#">Посудомоечные машины (<span>98</span>)</a> </li>
-								
-							</ul>
-							<div class="all-products">
-								<a href="#">Все товары</a> <img src="./images/icons/arrow-right.png" alt="arrow-right">
-							</div>
-						</li>
-						<li>
-							<div class="category"><a href="#">Крупная бытовая техника</a></div>
-							<ul>
-								<li><a href="#"> Холодильники (<span>135</span>)</a> </li>
-								<li><a href="#">Морозильные камеры (<span>74</span>)</a> </li>
-								<li><a href="#">Стиральные машины (<span>213</span>)</a> </li>
-								<li><a href="#">Посудомоечные машины (<span>98</span>)</a> </li>
-							</ul>
-							<div class="all-products">
-								<a href="#">Все товары</a> <img src="./images/icons/arrow-right.png" alt="arrow-right">
-							</div>
-						</li>
-					</ul>
-					<ul class="second">
-						<li>
-							<div class="category"><a href="#">Товары для дома</a></div>
-							<ul>
-								<li><a href="#"> Холодильники (<span>135</span>)</a> </li>
-								<li><a href="#">Морозильные камеры (<span>74</span>)</a> </li>
-								<li><a href="#">Стиральные машины (<span>213</span>)</a> </li>
-								<li><a href="#">Посудомоечные машины (<span>98</span>)</a> </li>
-								<li><a href="#">Морозильные камеры (<span>74</span>)</a></li>
-								<li><a href="#">Стиральные машины (<span>213</span>)</a></li>
-								<li><a href="#">Посудомоечные машины (<span>98</span>)</a></li>
-							</ul>
-							<div class="all-products">
-								<a href="#">Все товары</a> <img src="./images/icons/arrow-right.png" alt="arrow-right">
-							</div>
-						</li>
-						<li>
-							<div class="category"><a href="#">Крупная бытовая техника</a></div>
-							<ul>
-								<li><a href="#"> Холодильники (<span>135</span>)</a> </li>
-								<li><a href="#">Морозильные камеры (<span>74</span>)</a> </li>
-								<li><a href="#">Стиральные машины (<span>213</span>)</a> </li>
-								<li><a href="#">Посудомоечные машины (<span>98</span>)</a> </li>
-							</ul>
-							<div class="all-products">
-								<a href="#">Все товары</a> <img src="./images/icons/arrow-right.png" alt="arrow-right">
-							</div>
-						</li>
-						<li>
-							<div class="category"><a href="#">Товары для дома</a></div>
-							<ul>
-								<li><a href="#"> Холодильники (<span>135</span>)</a> </li>
-								<li><a href="#">Морозильные камеры (<span>74</span>)</a> </li>
-								<li><a href="#">Стиральные машины (<span>213</span>)</a> </li>
-								<li><a href="#">Посудомоечные машины (<span>98</span>)</a> </li>
-								<li><a href="#">Морозильные камеры (<span>74</span>)</a></li>
-								<li><a href="#">Стиральные машины (<span>213</span>)</a></li>
-								<li><a href="#">Посудомоечные машины (<span>98</span>)</a></li>
-							</ul>
-							<div class="all-products">
-								<a href="#">Все товары</a> <img src="./images/icons/arrow-right.png" alt="arrow-right">
-							</div>
-						</li>
-						<li>
-							<div class="category"><a href="#">Мелкая бытовая техника</a></div>
-							<ul>
-								<li><a href="#"> Крепления и кронштейны для мелкой кухонной техники (<span>135</span>)</a> </li>
-								<li><a href="#">Морозильные камеры (<span>74</span>)</a> </li>
-								<li><a href="#">Стиральные машины (<span>213</span>)</a> </li>
-								<li><a href="#">Посудомоечные машины (<span>98</span>)</a> </li>
-								
-							</ul>
-							<div class="all-products">
-								<a href="#">Все товары</a> <img src="./images/icons/arrow-right.png" alt="arrow-right">
-							</div>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</section>
-		<section class="news-and-review">
-			<div class="layout">
-				<h3>Новости и обзоры</h3>
-				<div class="content">
-					<div class="left-news">
-						<div class="robot-cleaner">
-							<a href="./robotVacuumCleaner.html"><img src="./images/news/one.png" alt="robot-cleaner"></a>
-						</div>
-						<div class="other-news">
-							<div class="img-block"><a href="#"><img src="./images/news/two.png" alt=""></a></div>
-							<div class="img-block-two"><a href="#"><img src="./images/news/three.png" alt=""></a>	</div>
-							
-						</div>
-					</div>
-					<div class="right-news">
-						<div class="upper-img">
-							<a href="#"><img src="./images/news/four.png" alt=""></a>
-						</div>
-						<div class="lower-block">
-							<div class="left-lower">
-								<a href="#"><img src="./images/news/five.png" alt=""></a>
-							</div>
-							<div class="right-lower">
-								<a href="#"><img src="./images/news/six.png" alt=""></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="technology">
-			<div class="layout">
-				<h3>
-					Техника, которая делает вашу жизнь проще
-				</h3>
-				<div class="content">
-					<p>Порой возникает ситуация, когда в какой-то момент в вашем доме требуется заменить один или несколько бытовых приборов. Возможно также, что вы обустраиваете новый дом или квартиру, начиная с нуля. Это включает в себя покупку крупной бытовой техники, такую ​​как холодильники стиральные и посудомоечные машины, а также более мелкую бытовую технику, которая значительно сокращает время на кухне или при уборке.  Наш интернет-магазин бытовой техники поможет с выбором, гарантируя низкие цены и выгодные покупки на все линейки товаров.
-					</p>
-					<span>Холодильники </span>
-					<p>Подобно автомобилю или другой крупногабаритной технике, стоит знать, на что обращать внимание при выборе холодильника для кухни. Например, при выборе холодильника важно знать, что искать, например, сколько дверей вы хотите, где разместить морозильную камеру, хотите ли вы внешний льдогенератор, диспенсер для воды, предназначенные для сохранения свежести ваших продуктов на более длительные периоды времени. Размер является важным фактором, от небольшие по объему до больших, которые идеально подходят для офисов, комнат общежития и малогабаритных квартир. Также важны другие параметры, такие как цвет, ширина, бренд и рейтинг.
-					</p>
-					<span>Тостеры</span>
-					<p>Такую же внимательность при выборе крупногабаритной техники следует проявлять и в отношении небольших приборов. Учитывайте количество человек в семье, частоту пользования – от этого зависит, какой именно тостер следует рассмотреть: будет ли он на два или четыре ломтика хлеба, имеет он ручное или цифровое управление, и должен ли тостер быть определенного цвета, будет нержавеющая сталь сочетается с вашим декором? Вы даже можете выбрать тостер, который одновременно выполняет несколько функций, что дает ему преимущество на вашей кухне.
-					</p>
-					<span>Микроволновые печи</span>
-					<p>Говоря об универсальных приборах, на кухне нет ничего более универсального, чем микроволновые печи. Эти устройства прошли долгий путь, прежде чем оказаться на нашей кухне. Микроволны не только разогревают пищу и напитки с помощью электромагнитных волн, но многие из них также обладают функцией конвекции. Они больше не предназначены для того, чтобы приготовить попкорн или подогреть еду для небольшого перекуса. Теперь вы можете готовить целые блюда, используя только микроволновую печь, а также выполнять другие задачи, такие как размораживание продуктов и размягчение сливочного масла. Микроволновки обычно доступны в трех видах: на столешнице, подвесные и встраиваемые. Опять же, есть факторы, которые следует учитывать при выборе микроволновой печи, и у нас есть разные модели, из которых вы можете выбрать. В наличии имеются небольшие устройства с объемом для приготовления пищи от 13 литров или меньше до 44 литров или более. Еще одно соображение - мощность, и у нас есть модели, которые варьируются от менее 700 Вт до более 1000 Вт; чем выше мощность - тем быстрее готовятся ваши продукты.
-					</p>
-				</div>
-			</div>
-		</section>
-		<section class="advantages">
-			<div class="layout">
-				<ul>
-					<li><img src="./images/advantages/one.png" 	alt="advantages image"></li>
-					<li><img src="./images/advantages/two.png" 	alt="advantages image"></li>
-					<li><img src="./images/advantages/three.png" 	alt="advantages image"></li>
-					<li><img src="./images/advantages/four.png" alt="advantages image"></li>
-					<li><img src="./images/advantages/five.png" alt="advantages image"></li>
-					<li id="scroll_top"><a href="#"><img src="./images/advantages/arrow.png" alt=""></a></li>
-				</ul>
-			</div>
-		</section>
-	</main>
-	<footer>
-		<div class="layout">
-			<ul>
-				<li>
-					<div class="logo-footer">
-						<img src="./images/icons/logotype.png" alt="">
-					</div>
-					<div class="contacts">
-						<div class="call">
-							<a href="tel:+7(495)150-95-55">+7(495)150-95-55</a>
-						</div>
+						</ul>
 						<ul>
-							<li><a href="#"><img src="./images/icons/footer/telegram.png" alt=""></a></li>
-							<li><a href="#"><img src="./images/icons/footer/vk.png" alt=""></a></li>
-							<li><a href="#"><img src="./images/icons/footer/viber.png" alt=""></a></li>
-							<li><a href="#"><img src="./images/icons/footer/odnoklassniki.png" alt=""></a></li>
+							<li><a href="#">Бытовая техника</a></li>
+							<li><a href="#">Видео и аудио</a></li>
+							<li><a href="#">Климат </a></li>
+							<li><a href="#">Компьютерная техника</a></li>
+							<li><a href="#">Дом и дача</a></li>
+							<li><a href="#">Спорт и отдых </a></li>
+							<li><a href="#">Инструмент </a></li>
+							<li><a href="#">Авто </a></li>
+							<li сlass="sale"><a href="#">% Распродажа</a></li>
 						</ul>
 					</div>
-					<div class="firm">ООО "БТ МАРКЕТ", ИНН7728483067 </div>
-					<div class="address">Москва, пр-д Соловьиный д. 2, ком. 1</div>
-				</li>
-				<li>
-					<ul>
-						<li><a href="#">Как оформить заказ</a></li>
-						<li><a href="#">Доставка</a></li>
-						<li><a href="#">Оплата</a></li>
-						<li><a href="#">Прием товара</a></li>
-						<li><a href="#">Почему покупать у нас</a></li>
-						<li><a href="#">Подключение техники</a></li>
-						<li><a href="#">Отзывы о нас</a></li>
-						<li><a href="#">Пользовательское соглашение</a></li>
-					</ul>
-				</li>
-				<li>
-					<ul>
-						<li><a href="#">Контакты</a></li>
-						<li><a href="#">О компании</a></li>
-						<li><a href="#">Юридическая информация</a></li>
-						<li><a href="#">Для поставщиков</a></li>
-						<li><a href="#">Для оптовых клиентов</a></li>
-						<li><a href="#">Оставить обращение</a></li>
-						<li><a href="#">Политика конфиденциальности</a></li>
-						<li><a href="./news-and-reviews.html">Новости и обзоры</a></li>
-					</ul>
-				</li>
-				<li>
-					<ul>
-						<li><a href="#">Вопрос-ответ</a></li>
-						<li><a href="#">Дополнительный сервис</a></li>
-						<li><a href="#">Проверка на битые пиксели</a></li>
-						<li><a href="#">Утилизация техники</a></li>
-						<li><a href="#">Гарантийное обслуживание</a></li>
-						<li><a href="#">Сервисные центры</a></li>
-						<li><a href="#">Наши гарантии</a></li>
-						<li><a href="./exchange-and-return.html">Обмен и возврат товара</a></li>
-					</ul>
-				</li>
-			</ul>
-		</div>
-			<span></span>
-		<div class="layout">
-			<div class="foot-inf">
-				Обращаем Ваше внимание на то, что данный интернет-сайт носит исключительно информационный характер и ни при каких условиях информационные материалы и цены, размещенные на сайте, не являются публичной офертой, определяемой положениями Статьи 437 Гражданского кодекса РФ.
-				elecity.ru © 2011-2021
+				</nav>
 			</div>
-		</div>
-	</footer>
+		</header>
+		<main>
+			<section class="main-title">
+				<div class="layout">
+					<div class="play-img">
+						<div class="main-background">
+						<img src="./images/banner/Rectangle1.png" alt="main-background">
+						</div>
+						<div class="main-background-white">
+							<img src="./images/banner/MaskGroup.png" alt="main-background">
+						</div>
+						<div class="washing-mashines">
+							<div class="one">
+								<img src="./images/banner/washing_mashine0.png" alt="washing-mashin">
+							</div>
+							<div class="two">
+								<img src="./images/banner/washing_machine.png" alt="washing-mashin">
+							</div>
+							<div class="three">
+								<img src="./images/banner/washing_mashine2.jpeg" alt="washing-mashin">
+							</div>
+						</div>
+						<div class="banner-text">
+							<div class="title">Большой выбор стиральных машин</div>
+							<div class="subtitle">Успей купить по суперцене</div>
+							<a href="#">Подробнее</a>
+						</div>
+					</div>
+					<!-- <div class="links-slider">
+						<a href="#" class="prev" onclick="plusSliders(-1)">&#10094</a>
+						<a href="#" class="next" onclick="plusSliders(1)">&#10095</a>
+					</div>
+					<br>
+					<div class="dots">
+						<span class="dot" onclick="currentSlide(1)"></span>
+						<span class="dot" onclick="currentSlide(2)"></span>
+						<span class="dot" onclick="currentSlide(3)"></span>
+					</div> -->
+				</div>
+			</section>
+			<section class="products">
+				<div class="layout">
+					<div class="product-block">
+						<h3>Популярное</h3>
+						<ul>
+						<template id="products">
+								<li class="main-product">
+										<div class="special-offer">
+											<span class="new">Новинка</span><span class="sale-prod"></span>
+											<span class="present">Подарок</span>
+										</div>
+										<div class="image-product">
+											<img src="./images/product/Beko.png" alt="product">
+										</div>
+										<span class="current-price">
+											<div class="new-price"></div>
+											<div class="old-price"></div>
+										</span>
+										<h4 class="nameProduct"></h4>
+										<div class="grade-and-review">
+											<div class="grade">
+												<fieldset class="raiting">
+													
+													<div class="raiting__group">
+													<input class="raiting__star" aria-label="Ужасно" type="radio" name="health" value="1" checked>
+													<input class="raiting__star" aria-label="Сносно" type="radio" name="health" value="2">
+													<input class="raiting__star" aria-label="Нормально" type="radio" name="health" value="3">
+													<input class="raiting__star" aria-label="Хорошо" type="radio" name="health" value="4">
+													<input class="raiting__star" aria-label="Отлично" type="radio" name="health" value="5">
+													</div>
+												</fieldset>
+											</div>
+											<div class="review"><a href="#"><img src="./images/icons/comments.png" alt=""> <span class="amount-review"></span></a></div>
+										</div>
+										<button class="btn-buy"></button>
+									
+								</li>
+						</template>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section class="sale">
+				<div class="layout">
+					<img src="./images/banner/banner-discount.png" alt="">
+				</div>
+			</section>
+			<section class="products">
+				<div class="layout">
+					<div class="product-block-two">
+						<ul></ul>
+					</div>
+				</div>
+			</section>
+			<section class="catalog">
+				<div class="layout">
+					<h3>Каталог</h3>
+					<div class="content">
+						<ul class="first"> 
+							<li>
+								<div class="category"><a href="#">Крупная бытовая техника</a></div>
+								<ul>
+									<li><a href="#"> Холодильники (<span>135</span>)</a> </li>
+									<li><a href="#">Морозильные камеры (<span>74</span>)</a> </li>
+									<li><a href="#">Стиральные машины (<span>213</span>)</a> </li>
+									<li><a href="#">Посудомоечные машины (<span>98</span>)</a> </li>
+								</ul>
+								<div class="all-products">
+									<a href="#">Все товары</a> <img src="./images/icons/arrow-right.png" alt="arrow-right">
+								</div>
+							</li>
+							<li>
+								<div class="category"><a href="#">Товары для дома</a></div>
+								<ul>
+									<li><a href="#"> Холодильники (<span>135</span>)</a> </li>
+									<li><a href="#">Морозильные камеры (<span>74</span>)</a> </li>
+									<li><a href="#">Стиральные машины (<span>213</span>)</a> </li>
+									<li><a href="#">Посудомоечные машины (<span>98</span>)</a> </li>
+									<li><a href="#">Морозильные камеры (<span>74</span>)</a></li>
+									<li><a href="#">Стиральные машины (<span>213</span>)</a></li>
+									<li><a href="#">Посудомоечные машины (<span>98</span>)</a></li>
+								</ul>
+								<div class="all-products">
+									<a href="#">Все товары</a> <img src="./images/icons/arrow-right.png" alt="arrow-right">
+								</div>
+							</li>
+							<li>
+								<div class="category"><a href="#">Мелкая бытовая техника</a></div>
+								<ul>
+									<li><a href="#"> Крепления и кронштейны для мелкой кухонной техники (<span>135</span>)</a> </li>
+									<li><a href="#">Морозильные камеры (<span>74</span>)</a> </li>
+									<li><a href="#">Стиральные машины (<span>213</span>)</a> </li>
+									<li><a href="#">Посудомоечные машины (<span>98</span>)</a> </li>
+									
+								</ul>
+								<div class="all-products">
+									<a href="#">Все товары</a> <img src="./images/icons/arrow-right.png" alt="arrow-right">
+								</div>
+							</li>
+							<li>
+								<div class="category"><a href="#">Крупная бытовая техника</a></div>
+								<ul>
+									<li><a href="#"> Холодильники (<span>135</span>)</a> </li>
+									<li><a href="#">Морозильные камеры (<span>74</span>)</a> </li>
+									<li><a href="#">Стиральные машины (<span>213</span>)</a> </li>
+									<li><a href="#">Посудомоечные машины (<span>98</span>)</a> </li>
+								</ul>
+								<div class="all-products">
+									<a href="#">Все товары</a> <img src="./images/icons/arrow-right.png" alt="arrow-right">
+								</div>
+							</li>
+						</ul>
+						<ul class="second">
+							<li>
+								<div class="category"><a href="#">Товары для дома</a></div>
+								<ul>
+									<li><a href="#"> Холодильники (<span>135</span>)</a> </li>
+									<li><a href="#">Морозильные камеры (<span>74</span>)</a> </li>
+									<li><a href="#">Стиральные машины (<span>213</span>)</a> </li>
+									<li><a href="#">Посудомоечные машины (<span>98</span>)</a> </li>
+									<li><a href="#">Морозильные камеры (<span>74</span>)</a></li>
+									<li><a href="#">Стиральные машины (<span>213</span>)</a></li>
+									<li><a href="#">Посудомоечные машины (<span>98</span>)</a></li>
+								</ul>
+								<div class="all-products">
+									<a href="#">Все товары</a> <img src="./images/icons/arrow-right.png" alt="arrow-right">
+								</div>
+							</li>
+							<li>
+								<div class="category"><a href="#">Крупная бытовая техника</a></div>
+								<ul>
+									<li><a href="#"> Холодильники (<span>135</span>)</a> </li>
+									<li><a href="#">Морозильные камеры (<span>74</span>)</a> </li>
+									<li><a href="#">Стиральные машины (<span>213</span>)</a> </li>
+									<li><a href="#">Посудомоечные машины (<span>98</span>)</a> </li>
+								</ul>
+								<div class="all-products">
+									<a href="#">Все товары</a> <img src="./images/icons/arrow-right.png" alt="arrow-right">
+								</div>
+							</li>
+							<li>
+								<div class="category"><a href="#">Товары для дома</a></div>
+								<ul>
+									<li><a href="#"> Холодильники (<span>135</span>)</a> </li>
+									<li><a href="#">Морозильные камеры (<span>74</span>)</a> </li>
+									<li><a href="#">Стиральные машины (<span>213</span>)</a> </li>
+									<li><a href="#">Посудомоечные машины (<span>98</span>)</a> </li>
+									<li><a href="#">Морозильные камеры (<span>74</span>)</a></li>
+									<li><a href="#">Стиральные машины (<span>213</span>)</a></li>
+									<li><a href="#">Посудомоечные машины (<span>98</span>)</a></li>
+								</ul>
+								<div class="all-products">
+									<a href="#">Все товары</a> <img src="./images/icons/arrow-right.png" alt="arrow-right">
+								</div>
+							</li>
+							<li>
+								<div class="category"><a href="#">Мелкая бытовая техника</a></div>
+								<ul>
+									<li><a href="#"> Крепления и кронштейны для мелкой кухонной техники (<span>135</span>)</a> </li>
+									<li><a href="#">Морозильные камеры (<span>74</span>)</a> </li>
+									<li><a href="#">Стиральные машины (<span>213</span>)</a> </li>
+									<li><a href="#">Посудомоечные машины (<span>98</span>)</a> </li>
+									
+								</ul>
+								<div class="all-products">
+									<a href="#">Все товары</a> <img src="./images/icons/arrow-right.png" alt="arrow-right">
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section class="news-and-review">
+				<div class="layout">
+					<h3>Новости и обзоры</h3>
+					<div class="content">
+						<div class="left-news">
+							<div class="robot-cleaner">
+								<a href="./robotVacuumCleaner.html"><img src="./images/news/one.png" alt="robot-cleaner"></a>
+							</div>
+							<div class="other-news">
+								<div class="img-block"><a href="#"><img src="./images/news/two.png" alt=""></a></div>
+								<div class="img-block-two"><a href="#"><img src="./images/news/three.png" alt=""></a>	</div>
+								
+							</div>
+						</div>
+						<div class="right-news">
+							<div class="upper-img">
+								<a href="#"><img src="./images/news/four.png" alt=""></a>
+							</div>
+							<div class="lower-block">
+								<div class="left-lower">
+									<a href="#"><img src="./images/news/five.png" alt=""></a>
+								</div>
+								<div class="right-lower">
+									<a href="#"><img src="./images/news/six.png" alt=""></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="technology">
+				<div class="layout">
+					<h3>
+						Техника, которая делает вашу жизнь проще
+					</h3>
+					<div class="content">
+						<p>Порой возникает ситуация, когда в какой-то момент в вашем доме требуется заменить один или несколько бытовых приборов. Возможно также, что вы обустраиваете новый дом или квартиру, начиная с нуля. Это включает в себя покупку крупной бытовой техники, такую ​​как холодильники стиральные и посудомоечные машины, а также более мелкую бытовую технику, которая значительно сокращает время на кухне или при уборке.  Наш интернет-магазин бытовой техники поможет с выбором, гарантируя низкие цены и выгодные покупки на все линейки товаров.
+						</p>
+						<span>Холодильники </span>
+						<p>Подобно автомобилю или другой крупногабаритной технике, стоит знать, на что обращать внимание при выборе холодильника для кухни. Например, при выборе холодильника важно знать, что искать, например, сколько дверей вы хотите, где разместить морозильную камеру, хотите ли вы внешний льдогенератор, диспенсер для воды, предназначенные для сохранения свежести ваших продуктов на более длительные периоды времени. Размер является важным фактором, от небольшие по объему до больших, которые идеально подходят для офисов, комнат общежития и малогабаритных квартир. Также важны другие параметры, такие как цвет, ширина, бренд и рейтинг.
+						</p>
+						<span>Тостеры</span>
+						<p>Такую же внимательность при выборе крупногабаритной техники следует проявлять и в отношении небольших приборов. Учитывайте количество человек в семье, частоту пользования – от этого зависит, какой именно тостер следует рассмотреть: будет ли он на два или четыре ломтика хлеба, имеет он ручное или цифровое управление, и должен ли тостер быть определенного цвета, будет нержавеющая сталь сочетается с вашим декором? Вы даже можете выбрать тостер, который одновременно выполняет несколько функций, что дает ему преимущество на вашей кухне.
+						</p>
+						<span>Микроволновые печи</span>
+						<p>Говоря об универсальных приборах, на кухне нет ничего более универсального, чем микроволновые печи. Эти устройства прошли долгий путь, прежде чем оказаться на нашей кухне. Микроволны не только разогревают пищу и напитки с помощью электромагнитных волн, но многие из них также обладают функцией конвекции. Они больше не предназначены для того, чтобы приготовить попкорн или подогреть еду для небольшого перекуса. Теперь вы можете готовить целые блюда, используя только микроволновую печь, а также выполнять другие задачи, такие как размораживание продуктов и размягчение сливочного масла. Микроволновки обычно доступны в трех видах: на столешнице, подвесные и встраиваемые. Опять же, есть факторы, которые следует учитывать при выборе микроволновой печи, и у нас есть разные модели, из которых вы можете выбрать. В наличии имеются небольшие устройства с объемом для приготовления пищи от 13 литров или меньше до 44 литров или более. Еще одно соображение - мощность, и у нас есть модели, которые варьируются от менее 700 Вт до более 1000 Вт; чем выше мощность - тем быстрее готовятся ваши продукты.
+						</p>
+					</div>
+				</div>
+			</section>
+			<section class="advantages">
+				<div class="layout">
+					<ul>
+						<li><img src="./images/advantages/one.png" 	alt="advantages image"></li>
+						<li><img src="./images/advantages/two.png" 	alt="advantages image"></li>
+						<li><img src="./images/advantages/three.png" 	alt="advantages image"></li>
+						<li><img src="./images/advantages/four.png" alt="advantages image"></li>
+						<li><img src="./images/advantages/five.png" alt="advantages image"></li>
+						<li id="scroll_top"><a href="#"><img src="./images/advantages/arrow.png" alt=""></a></li>
+					</ul>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<div class="layout">
+				<ul>
+					<li>
+						<div class="logo-footer">
+							<img src="./images/icons/logotype.png" alt="">
+						</div>
+						<div class="contacts">
+							<div class="call">
+								<a href="tel:+7(495)150-95-55">+7(495)150-95-55</a>
+							</div>
+							<ul>
+								<li><a href="#"><img src="./images/icons/footer/telegram.png" alt=""></a></li>
+								<li><a href="#"><img src="./images/icons/footer/vk.png" alt=""></a></li>
+								<li><a href="#"><img src="./images/icons/footer/viber.png" alt=""></a></li>
+								<li><a href="#"><img src="./images/icons/footer/odnoklassniki.png" alt=""></a></li>
+							</ul>
+						</div>
+						<div class="firm">ООО "БТ МАРКЕТ", ИНН7728483067 </div>
+						<div class="address">Москва, пр-д Соловьиный д. 2, ком. 1</div>
+					</li>
+					<li>
+						<ul>
+							<li><a href="#">Как оформить заказ</a></li>
+							<li><a href="#">Доставка</a></li>
+							<li><a href="#">Оплата</a></li>
+							<li><a href="#">Прием товара</a></li>
+							<li><a href="#">Почему покупать у нас</a></li>
+							<li><a href="#">Подключение техники</a></li>
+							<li><a href="#">Отзывы о нас</a></li>
+							<li><a href="#">Пользовательское соглашение</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><a href="#">Контакты</a></li>
+							<li><a href="#">О компании</a></li>
+							<li><a href="#">Юридическая информация</a></li>
+							<li><a href="#">Для поставщиков</a></li>
+							<li><a href="#">Для оптовых клиентов</a></li>
+							<li><a href="#">Оставить обращение</a></li>
+							<li><a href="#">Политика конфиденциальности</a></li>
+							<li><a href="./news-and-reviews.html">Новости и обзоры</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><a href="#">Вопрос-ответ</a></li>
+							<li><a href="#">Дополнительный сервис</a></li>
+							<li><a href="#">Проверка на битые пиксели</a></li>
+							<li><a href="#">Утилизация техники</a></li>
+							<li><a href="#">Гарантийное обслуживание</a></li>
+							<li><a href="#">Сервисные центры</a></li>
+							<li><a href="#">Наши гарантии</a></li>
+							<li><a href="./exchange-and-return.html">Обмен и возврат товара</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+				<span></span>
+			<div class="layout">
+				<div class="foot-inf">
+					Обращаем Ваше внимание на то, что данный интернет-сайт носит исключительно информационный характер и ни при каких условиях информационные материалы и цены, размещенные на сайте, не являются публичной офертой, определяемой положениями Статьи 437 Гражданского кодекса РФ.
+					elecity.ru © 2011-2021
+				</div>
+			</div>
+		</footer>
 	</div>
+	<script src="./js/header-script.js"></script>
 	<script src="./js/script.js"></script>
 </body>
 </html>

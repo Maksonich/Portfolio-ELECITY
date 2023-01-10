@@ -220,7 +220,7 @@
 			
 			input{
 				
-					padding-left: 55px;	
+					padding-left: 58px;	
 					width: 454px;
 					height: 46.81px;
 					left: 733px;
@@ -228,10 +228,12 @@
 					margin-bottom: 15px;
 					border: 1px solid #E5E5E5;
 					border-radius: 5px;
-					font-weight: 400;
+					font-family: 'Montserrat';
+					font-weight: 400;		
 					font-size: 16px;
 					line-height: 25px;
 					color: #999999;
+					letter-spacing: 2px;
 					&::placeholder{
 						color: #999999;;
 					}
@@ -243,12 +245,13 @@
 			&:after{
 				content: "+380";
 				position: absolute;
-				top: 10px;
+				top: 9px;
 				left: 10px;
 				font-family: 'Montserrat';
 				font-weight: 400;
 				font-size: 16px;
-				line-height: 25px;
+				line-height: 28px;
+				letter-spacing: 2px;
 				color: #999999;
 			}
 		}
@@ -334,33 +337,50 @@
 			@media (max-width:385px){
 				max-width: 90%;
 			}
-			input{
+			label{
+				position: relative;
+				
+				input{
 					padding-left: 15px;
 					width: 183px;
 					height: 46.81px;
-					left: 733px;
-					top: 353px;
 					margin-bottom: 15px;
 					border: 1px solid #E5E5E5;
 					border-radius: 5px;
-				&::placeholder {
 					font-weight: 400;
 					font-size: 16px;
 					line-height: 25px;
 					color: #999999;
-				  }
+					text-align: center;
+					letter-spacing: 10px;
+					&::placeholder {
+						font-weight: 400;
+						font-size: 16px;
+						line-height: 25px;
+						color: #999999;
+					}
 	
 				@media (max-width:405px){
 					width: 90%;
 				}
+				}
+				span#info-verify{
+					margin-left: 20px;
+					font-weight: 400;
+					font-size: 15px;
+					line-height: 20px;
+					color: #be0404;
+				}
 			}
+			
+			
 			span{
 				font-weight: 400;
 				font-size: 15px;
 				line-height: 20px;
 				color: #1E1E1E;
 			}
-		   
+			
 			a{
 				text-align: center;
 				padding: 13px 0;
@@ -368,7 +388,7 @@
 				font-weight: 600;
 				font-size: 16px;
 				line-height: 25px;
-				
+				cursor: pointer;
 				width: 224.54px;
 				height: 53.46px;
 				background: #437FC8;

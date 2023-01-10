@@ -313,6 +313,7 @@ header {
 						}
 					}
 					&.active{
+						
 						a{
 							background-color:$navHover;
 							color: #fff;
@@ -357,7 +358,6 @@ header {
 						height:755px;
 						background-color: #fff;
 						z-index: 99;
-						
 						box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.1);
 						border-radius: 5px;
 						li{
@@ -365,19 +365,19 @@ header {
 							height: 39px;
 							padding: 0px;
 							margin-right: 0;
-							
+							padding: 0 0  0 27px;
+							line-height: 40px;
+							font-size: 14px;
+							font-weight: 400;
 							&:hover{
 								background-color: #DCE9F8;
 								cursor: pointer;
 							}
 							.name-category{
 								a{
-									font-weight: 400;
-									font-size: 14px;
-									line-height: 40px;
-									padding: 0 0  0 27px;
-									width: 344.29px;
-									height: 26px;
+									display: block;
+									// width: 344.29px;
+									// height: 26px;
 									
 									&:hover{
 										color: $colorText;
