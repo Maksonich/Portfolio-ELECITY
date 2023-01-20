@@ -34,8 +34,8 @@ function loginPersonesAccount (){
     let number = document.querySelector("#enterNumber")
     let buttonError = document.querySelector("#error")
     let yourNumber = document.querySelector("#your-number")
-    let reg = /[0-9]{9}$/;
-    let regVer = /[1]{4}$/
+    let reg = /^[0-9]{9}$/;
+    let regVer = /^[1]{4}$/
     let verification = document.querySelector("#verification");
     let enter = document.querySelector("#enter-verify");
     let timerEnterNumber ;
@@ -149,7 +149,7 @@ function showAllCategory (){
        let elemShow = AllMenuAllCategory[i]
               
           elemli.addEventListener("mouseover", function () {
-                     // console.log(e.target)
+                   
                   AllMenuAllCategory[i].classList.add("active")
                   
            })
@@ -175,3 +175,13 @@ function showAllCategory (){
        // showSubcategory()
 }
 showAllCategory()
+///////////////////////////////////////////////////////////////
+// function shoppingBascet (){
+//        let amountShop = document.querySelector("#amountShoping")
+//        let btnBuy = document.querySelectorAll(".btn-buy")
+//        let btnBuy = document.querySelectorAll(".btn-buy")
+// for (let i = 0; i < btnBuy.length; i++){
+//        let buy = btnBuy[i]
+//        console,log(buy)
+// }
+// }

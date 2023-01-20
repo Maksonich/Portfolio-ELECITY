@@ -202,6 +202,23 @@ header {
 					display: flex;
 					.cart {
 						margin-right: 11px;
+						position: relative;
+						span{
+							position: absolute;
+							background-color: $orangeSaleAndBuylist;
+							color: #fff;
+							// width: 16px;
+							// height: 16px;
+							top: -4px;left: -5px;
+							border-radius: 50%;
+							text-align: center;
+							font-family: 'Montserrat';
+							padding: 1.5px 5px;
+							font-style: normal;
+							font-weight: 700;
+							font-size: 11px;
+							line-height: 13px;
+						}
 						img{
 							width: 39px;
 							height: 42px;
@@ -281,6 +298,7 @@ header {
 							}
 						}
 						span{
+							display: block;
 							width: 18px;
 							height: 2.5px;
 							position:absolute;
@@ -376,8 +394,6 @@ header {
 							.name-category{
 								a{
 									display: block;
-									// width: 344.29px;
-									// height: 26px;
 									
 									&:hover{
 										color: $colorText;
@@ -385,16 +401,17 @@ header {
 								}
 							}
 							.category-info{
-								width: 1350px;
-								display: none;
+								width: 1050px;
+								visibility: hidden;
 								&.active{
 									position: absolute;
-									top: 10px;left: 0;
+									top: 0px;left: 0;
+									visibility:visible;
 									display:flex;
 									justify-content: space-between;
-									padding-left: 30px;
+									margin-left: 290px;
 									.category-menu{
-										margin-left: 300px;
+										margin-left: 20px;
 										display: flex;
 										flex-direction: column;
 										position: relative;
@@ -517,9 +534,7 @@ header {
 										}
 										a{
 											@include  btnBuy;
-											color: #fff;
-											padding: 10px 20px;
-											background-color: $colorBtn;
+											padding: 8px 0;
 										}
 									}
 								}

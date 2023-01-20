@@ -1,8 +1,9 @@
 .products {
-    margin-top: 80px;
+    margin-top: 70px;
     .layout {
         .product-block,
         .product-block-two{
+          padding-top: 10px;
             h3{
                 margin-bottom: 40px;
             }
@@ -23,12 +24,38 @@
                     flex-direction: column;
                     align-items: flex-start;
                     box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+                     .image-product{
+                            margin: auto;
+                            width: 290px;
+                            height: 290px;
+                            position: relative;
+                            z-index: 1;
+                            overflow: hidden;
+                            img{
+                                height: 100%;
+                                display: block;
+                                margin: 0 auto;
+                            }
+                            a#quickView{
+                              @include btnQuickView;
+                              position: absolute;
+                              bottom: -150px;left:50%;
+                              transform: translateX(-50%);
+                              transition-duration: 2s;
+                            }
+                            
+                    }
                     &:hover{
                         box-shadow: 0 0 10px rgba(0, 0, 0, 0.274);
+                        a#quickView{
+                          position: absolute;
+                          bottom: 30px;
+                        }
                     }
                     .special-offer{
                         display: flex;
                         position: absolute;
+                        z-index: 2;
                         top: 10px;
                         left: 10px;
                         span.new{
@@ -44,31 +71,16 @@
                             @include badgeBonus;
                         }
                     }
-                    .image-product{
-                            margin: auto;
-                            height: 290px;
-                            img{
-                                width: 100%;
-                                height: 100%;
-                            }        
-                        
-                    }
+               
                     span.current-price{
                         display: flex;
                         
                         .new-price{
-                            font-weight: 600;
-                            font-size: 20px;
-                            line-height: 25px;
-                            color: #404040;
+                           @include actualPrice;
                         }
                         .old-price{
-                            margin-left: 25px;
-                            font-weight: 600;
-                            font-size: 14px;
-                            line-height: 25px;
-                            text-decoration: line-through;
-                            color: #6E6E6E;
+                          @include oldPrice;
+                          margin-left: 25px;
                         }
                     }
                     h4.nameProduct {
@@ -78,8 +90,8 @@
                     }
                     
                     .grade-and-review {
+                      margin-top: 6px;
                          display: flex;
-                         align-items: center;
                             
                         .grade{
                             .raiting {
@@ -163,6 +175,7 @@
                             margin-left: 20px;
                             
                             a{display: flex;
+                              align-items: flex-start;
                                 img{
                                 display: block;
                                 width: 20px;
@@ -195,5 +208,3 @@
         }
     }
 }
-
-

@@ -1,0 +1,841 @@
+.list-search-products{
+    .layout{
+        overflow: visible;
+        .naming-page{
+            .tegs-serch {
+                h3.search-name{
+                    border: none;
+                    margin-bottom: 15px
+                }
+                ul.tegs{
+                    display: flex;
+                    li{
+                        margin-right: 20px;
+                        background: #EFF3F9;
+                        border-radius: 30px;
+                        padding: 10px 20px;
+                        font-weight: 500;
+                        font-size: 15px;
+                        line-height: 16px;
+                    }
+                }
+            }
+        }
+        .main-filter-product{
+            display: flex;
+            justify-content: space-between;
+            aside{
+                width: 350px;
+                
+                    margin-top: 35px;
+                    .brand-filter {
+                        .brand-name {
+                            
+                            .quantity {
+                            }
+                        }
+                        .brand-list {
+                            margin-top: 20px;
+                            font-weight: 400;
+                            font-size: 15px;
+                            line-height: 35px;
+                            color: #1E1E1E;
+                            .brand-item {
+                                display: flex;
+                                margin: 5px 0;
+                                input[type="checbox"]{
+                                    
+                                }
+                                .name {
+                                    margin-left: 6px;
+                                    .quntity {
+                                        margin-left: 6px;
+                                    }
+                                }
+
+                            }
+
+                        }
+                        .open-rest{
+                            margin-left: 30px;
+                            width: 257px;
+                            height: 30px;
+                            border: 1px solid #CECECE;
+                            border-radius: 3px;
+                            text-align: center;
+                            transition-duration: 1s;
+                            cursor: pointer;
+                            &:hover{
+                                background-color: $colorBonus;
+                            }
+                            a{
+                                font-weight: 400;
+                                font-size: 13px;
+                                line-height: 28px;
+                                color: #404040;
+                            
+                                .quantity-rest{
+                                }
+                                img{
+                                    margin-left: 5px;
+                                }
+                            }
+                            
+                        }
+                    }
+                    .filter-price,
+                    .filter-volume,
+                    .filter-height  {
+                        margin: 23px 0 37px;
+                        .range {
+                            label{
+                                font-weight: 500;
+                                font-size: 16px;
+                                line-height: 35px;
+                                color: #1E1E1E;
+                            }
+                            input[type="range"]{
+                                    -webkit-appearance: none;
+                                    appearance: none;
+                                    width: 320px;
+                                    height: 2px ;
+                                    background-color: rgb(255, 255, 255);
+                                overflow:visible;
+                                &::-webkit-slider-runnable-track{ 
+                                    -webkit-appearance: none;
+                                    width: 319px;
+                                    height: 2px;
+                                    background-color: #E5E5E5;
+                            
+                                color: rgba(127, 177, 237, 1);
+                                margin-top: -1px;
+                                }
+                                &::-moz-range-track{
+                                    width: 319px;
+                                    height: 2px;
+                                    background-color: #E5E5E5;
+                                }
+                                &::-webkit-slider-thumb{
+                                    -webkit-appearance: none;
+                                    appearance: none;
+                                    width: 23px;
+                                    height: 23px;
+                                    background: #FFFFFF;
+                                    border: 3px solid #7FB1ED;
+                                    border-radius: 50%;
+                                    margin-top: -11px;
+                                    cursor: pointer;
+                                    
+
+                                
+                                }
+                                &::-moz-range-thumb{
+                                    margin-top: -11px;
+                                    -webkit-appearance: none;
+                                    appearance: none;
+                                    width: 23px;
+                                    height: 23px;
+                                    border-radius: 50%;
+                                    background: #FFFFFF;
+                                    border: 3px solid #7FB1ED;
+                                    cursor: pointer;
+                                }
+                                
+                            }
+                            input[type="range"]::-moz-range-progress {
+                            background-color: #43e5f7; 
+                            }
+                            input[type="range"]::-moz-range-track {  
+                                background-color: #9a905d;
+                            }
+                            input[type="range"]::-ms-fill-lower {
+                                background-color: #43e5f7; 
+                            }
+                            input[type="range"]::-ms-fill-upper {  
+                                background-color: #9a905d;
+                            }
+                        }
+                        .display-price {
+                            margin-top: 29px;
+                            display: flex;
+                            align-items: center;
+                            font-weight: 400;
+                            font-size: 15px;
+                            line-height: 15px;
+                            color: #6E6E6E;
+                            .ofRangePrice,
+                            .ofRangeValue,
+                            .ofRangeHeight{
+                                display: block;
+                                width: 98px;
+                                height: 34.54px;
+                                padding: 10px;
+                                border: 1px solid #D4D4D4;
+                                border-radius: 5px;
+                                margin:  0 24px 0 10px;
+                            }
+                            .toRangePrice,
+                            .toRangeValue,
+                            .toRangeHeight {
+                                width: 98px;
+                                height: 34.54px;
+                                padding: 10px;
+                                margin-left: 10px;
+                                border: 1px solid #D4D4D4;
+                                border-radius: 5px
+                            }
+                        }
+                    }
+                    .filter-viev {
+                h4.difference-name {
+                        .quantity-dif {
+                        }
+                    }
+                    ul.difference{
+                            margin-top: 20px;
+                            font-weight: 400;
+                            font-size: 15px;
+                            line-height: 35px;
+                            color: #1E1E1E;
+                        li.difference-item{
+                            display: flex;
+                            margin: 5px 0;
+                            input[type="checbox"]{
+                                    
+                            }
+                            .item-difference-name {
+                                margin-left: 6px;
+                            }
+                            .quatity{
+                                margin-left: 6px;
+
+                            }
+
+                        }
+                    }
+                    }
+                    .filter-freezer {
+                    h4.freezer-name {
+                        margin-top: 20px;
+                    }
+                    ul{
+                        margin-top: 20px;
+                        font-weight: 400;
+                        font-size: 15px;
+                        line-height: 35px;
+                        color: #1E1E1E;
+                        .freezer-item {
+                            display: flex;
+                            margin: 5px 0;
+                            input[type="checbox"]{
+                                    
+                            }
+                            .freezer-item-name {
+                                margin-left: 6px;
+                            }
+                            .quatity {
+                            }
+                        }
+                    }
+                        
+                    }
+                    .link-another-suggestion {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        a{
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: 35px;
+                            color:rgba(30, 30, 30, 1);
+                        }
+                        img{
+                                width: 13px;
+                                height: 9px;
+                            }
+                    }
+                    .more-options{
+                        margin-top: 30px;
+                        text-align: center;
+                        a{
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: 35px;
+                            color: rgba(67, 127, 200, 1);
+                        }
+                    }
+                    .open-another {
+                        margin-top: 40px;
+                        width: 335px;
+                        height: 62.86px;
+                        background: #E5E5E5;
+                        border-radius: 5px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-end;
+                        cursor: pointer;
+                        .quntity-suggestion {
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: 35px;
+                        }
+                        .block-img-rubbish {
+                            
+                            padding: 19px 22px 19px 25px;
+                            margin-left: 40px;
+                            border-left: 1px solid #999999;
+                            img{
+                                display: block;
+                            }
+                        }
+                    }
+                
+                
+            }
+            article{
+                width: 70%;
+                .view-panel {
+                    margin-top: 35px;
+                    display: flex;
+                    align-items:flex-start;
+                    justify-content: space-between;
+                    .you-choice {
+                        width: 50%;
+                        display: flex;
+                        flex-wrap: wrap;
+                        opacity: 0;
+                        li{
+                            display: flex;
+                            align-items: center;
+                            background: #7FB1ED;
+                            border-radius: 30px;
+                            padding: 10px 20px;
+                            margin:  0 20px 10px 0;
+                            .you-choice-item {
+                            font-weight: 500;
+                            font-size: 15px;
+                            line-height: 16px;
+                            color: #FFFFFF;
+                           
+                            }
+                            .delete {
+                                margin-left: 10px;
+                                padding: 5px;
+                                cursor: pointer;
+                                img{
+                                    display: block;
+                                }
+                            }
+                        }
+                        
+                    }
+                    .filter-view {
+                        display: flex;
+                        float: inline-end;
+                        .select-popular {
+                            margin-right: 40px;
+                            position: relative;
+                            &::after{
+                                content: url(../images/icons/Polygon.png);
+                                position:absolute;
+                                top: 10px;right: -20px;
+                                
+                            }
+                            label{
+                                
+                            }
+                            select{
+                                border:none;
+                                -webkit-appearance: none;
+                                -moz-appearance: none;
+                                appearance: none;
+                                font-weight: 500;
+                                font-size: 16px;
+                                line-height: 35px;
+                                option{
+                                    padding: 10px;
+                                }
+                               
+                            }
+                        }
+                        .quantity-to-the-page {
+                            margin-right: 40px;
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: 35px;
+                            label{
+
+                            }
+                            select{
+                                border:none;
+                                -webkit-appearance: none;
+                                -moz-appearance: none;
+                                appearance: none;
+                            }
+                        }
+                        .view-page {
+                            display: flex;
+                            align-items: center;
+                            .row-view {
+                                margin-right: 20px;
+                                cursor: pointer;
+                                border:1px solid rgba(66, 51, 51, 0.473);
+                                padding: 2px;
+                                img{
+                                    display: block;
+                                    filter: contrast(0);
+                                }
+                            }
+                            .table-view {
+                                cursor: pointer;
+                                img{
+                                    display: block;
+                                }
+                            }
+                            &.table-active{
+                                .row-view {
+                                    margin-right: 20px;
+                                    cursor: pointer;
+                                    border: none;
+                                    padding: 0;
+                                    img{
+                                        display: block;
+                                        filter: contrast(0);
+                                    }
+                                }
+                                .table-view {
+                                    cursor: pointer;
+                                    border:1px solid rgba(66, 51, 51, 0.473);
+                                    padding: 2px;
+                                    img{
+                                        
+                                        display: block;
+                                        filter: contrast(0)
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                ul.filter-product-list{
+                   margin-top: 30px;
+                    li{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin: 50px 0;
+                        padding: 10px;
+                        border-radius: 5px;
+                        &:hover{
+                            box-shadow: 0 0 10px rgba(0, 0, 0, 0.274);
+                        }
+                        .img-and-name-block {
+                            display: flex;
+                            align-items: center;
+                            .image-product {
+                                width: 185.97px;
+                                height: 185.97px;
+                               
+                                img{
+                                    display: block;
+                                    margin: auto;
+                                    height: 100%;
+                                }
+                            }
+                            .name-block {
+                                margin-left: 30px;
+                                .special-offer {
+                                        margin-top: 30px;
+                                    .new {
+                                        @include badgeNovelty;
+                                        margin-right: 20px;
+                                    }
+                                    .sale-prod {
+                                        @include badgeSale;
+                                        margin-right: 20px;
+                                    }
+                                    .present {
+                                        @include badgeBonus;
+                                    }
+                                }
+                                .nameProduct {
+                                    margin: 20px 0;
+                                    font-weight: 400;
+                                    font-size: 18px;
+                                    line-height: 22px;
+                                }
+                                .grade-and-review {
+                                    display: flex;
+                                    margin-top: 25px;
+                                   .grade{
+                                       .raiting {
+                                           margin: 0 0 16px 0;
+                                           padding: 0;
+                                           border: none;
+                                         }
+                                         
+                                         .raiting__caption {
+                                           padding: 0;
+                                           margin-bottom: 8px;
+                                         }
+                                         
+                                         .raiting__group {
+                                           position: relative;
+                                           width:75px;
+                                           height: 15px;
+                                           background-image: url(/images/icons/star-null.png);
+                                           background-size: 15px 15px;
+                                         }
+                                         
+                                         .raiting__group:focus-within { 
+                                           outline: solid 1px #64686d0c;
+                                           outline-offset: 0.1px;
+                                         }
+                                         
+                                         .raiting__star {
+                                           font-size: inherit;
+                                           margin: 0;
+                                           position: absolute;
+                                           top: 0;
+                                           left: 0;
+                                           width:75px;
+                                           height: 15px;
+                                           -webkit-appearance: none;
+                                           -moz-appearance: none;
+                                           appearance: none;
+                                           background-size: 15px 15px;
+                                           background-repeat: repeat-x;
+                                         }
+                                         
+                                         .raiting__star:focus {
+                                           outline: none;
+                                         }
+                                         
+                                         .raiting__star:hover, .raiting__star:checked {
+                                           background-image: url(../images/icons/star.png);
+                                         }
+                                         
+                                         .raiting__star:hover ~ .raiting__star {
+                                           background-image: url(https://cdn.glitch.com/be154eac-f8a7-4b55-9350-27cb2d6ff6c0%2Foff.svg);
+                                         }
+                                         
+                                         .raiting__star:nth-of-type(1) {
+                                           z-index: 5;
+                                           width: 4px;
+                                         }
+                                         
+                                         .raiting__star:nth-of-type(2) {
+                                           z-index: 4;
+                                           width: 18px;
+                                         }
+                                         
+                                         .raiting__star:nth-of-type(3) {
+                                           z-index: 3;
+                                           width: 32px;
+                                         }
+                                         
+                                         .raiting__star:nth-of-type(4) {
+                                           z-index: 2;
+                                           width: 46px;
+                                         }
+                                         
+                                         .raiting__star:nth-of-type(5) {
+                                           z-index: 1;
+                                           width: 58px;
+                                         }
+                                         
+                                   }
+                                   .review {
+                                       margin-left: 20px;
+                                       
+                                       a{display: flex;
+                                        align-items: flex-start;
+                                           img{
+                                           display: block;
+                                           width: 20px;
+                                           height: 20px;
+           
+                                           }
+                                           .amount-review {
+                                               margin-left: 10px;
+                                               font-size: 14px;
+                                               line-height: 25px;
+                                               color: #6E6E6E;
+                                           }
+                                       }
+                                       
+                                   }
+                               }
+                            }
+                        }
+                        .current-price-block{
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-end;
+                            .current-price {
+                                display: flex;
+                                justify-content: flex-end;
+
+                                margin-bottom: 22px;
+                                .new-price {
+                                    @include actualPrice;
+                                }
+                                .old-price {
+                                    @include oldPrice;
+                                    margin-right: 15px;
+                                }
+                            }
+                            .buttons-buy-favirites{
+                                display: flex;
+                                align-items: center;
+                                .btn-favorites {
+                                    margin-right: 21px;
+                                    cursor: pointer;
+                                    img{
+                                        display: block;
+                                    }
+                                    
+                                }
+                                .btn-reit {
+                                    margin-right: 24px;
+                                    cursor: pointer;
+                                    img{
+                                        display: block
+                                    }
+                                    
+                                }
+                                button.btn-buy{
+                                    @include btnBuy;
+                                    
+                                }
+                                button.not-availability{
+                      
+                                    @include notAvailable;
+                                  
+                                }
+                            }
+                        }
+
+                    }
+                    &.table{
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin: 0 0;
+                    justify-content: space-between;
+                        li{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            width: 33%;
+                            position: relative;
+                            height: 520px;
+                            .img-and-name-block {
+                                display: flex;
+                                flex-direction: column;
+                                .image-product {
+                                    width: 303.18px;
+                                    height: 303.18px;
+                                   
+                                    img{
+                                        display: block;
+                                        margin: auto;
+                                        height: 100%;
+                                    }
+                                }
+                                .name-block {
+                                    align-self: flex-start;
+                                    margin:40px 0 0 0px;
+                                    .special-offer {
+                                        position: absolute;
+                                        top: 0;left: 20px;
+                                        .new {
+                                            @include badgeNovelty;
+                                            margin-right: 20px;
+                                        }
+                                        .sale-prod {
+                                            
+                                            @include badgeSale;
+                                            margin-right: 20px;
+                                        }
+                                        .present {
+                                            @include badgeBonus;
+                                        }
+                                    }
+                                    .nameProduct {
+                                        margin: 20px 0;
+                                        font-weight: 400;
+                                        font-size: 18px;
+                                        line-height: 22px;
+                                    }
+                                    .grade-and-review {
+                                        display: flex;
+                                        align-items: center;
+                                        margin-top: 25px;
+                                       .grade{
+                                           .raiting {
+                                               margin: 0 0 16px 0;
+                                               padding: 0;
+                                               border: none;
+                                             }
+                                             
+                                             .raiting__caption {
+                                               padding: 0;
+                                               margin-bottom: 8px;
+                                             }
+                                             
+                                             .raiting__group {
+                                               position: relative;
+                                               width:75px;
+                                               height: 15px;
+                                               background-image: url(/images/icons/star-null.png);
+                                               background-size: 15px 15px;
+                                             }
+                                             
+                                             .raiting__group:focus-within { 
+                                               outline: solid 1px #64686d0c;
+                                               outline-offset: 0.1px;
+                                             }
+                                             
+                                             .raiting__star {
+                                               font-size: inherit;
+                                               margin: 0;
+                                               position: absolute;
+                                               top: 0;
+                                               left: 0;
+                                               width:75px;
+                                               height: 15px;
+                                               -webkit-appearance: none;
+                                               -moz-appearance: none;
+                                               appearance: none;
+                                               background-size: 15px 15px;
+                                               background-repeat: repeat-x;
+                                             }
+                                             
+                                             .raiting__star:focus {
+                                               outline: none;
+                                             }
+                                             
+                                             .raiting__star:hover, .raiting__star:checked {
+                                               background-image: url(../images/icons/star.png);
+                                             }
+                                             
+                                             .raiting__star:hover ~ .raiting__star {
+                                               background-image: url(https://cdn.glitch.com/be154eac-f8a7-4b55-9350-27cb2d6ff6c0%2Foff.svg);
+                                             }
+                                             
+                                             .raiting__star:nth-of-type(1) {
+                                               z-index: 5;
+                                               width: 4px;
+                                             }
+                                             
+                                             .raiting__star:nth-of-type(2) {
+                                               z-index: 4;
+                                               width: 18px;
+                                             }
+                                             
+                                             .raiting__star:nth-of-type(3) {
+                                               z-index: 3;
+                                               width: 32px;
+                                             }
+                                             
+                                             .raiting__star:nth-of-type(4) {
+                                               z-index: 2;
+                                               width: 46px;
+                                             }
+                                             
+                                             .raiting__star:nth-of-type(5) {
+                                               z-index: 1;
+                                               width: 58px;
+                                             }
+                                             
+                                       }
+                                       .review {
+                                           margin-left: 20px;
+                                           
+                                           a{display: flex;
+                                               img{
+                                               display: block;
+                                               width: 20px;
+                                               height: 20px;
+               
+                                               }
+                                               .amount-review {
+                                                   margin-left: 10px;
+                                                   font-size: 14px;
+                                                   line-height: 25px;
+                                                   color: #6E6E6E;
+                                               }
+                                           }
+                                           
+                                       }
+                                   }
+                                }
+                            }
+                             .current-price-block{
+                            display: flex;
+                            flex-direction: column;
+                            .current-price {
+                                display: flex;
+                                flex-direction: row-reverse;
+                                margin-bottom: 22px;
+                                position: absolute;
+                                bottom: 140px; left: 10px;
+                                .new-price {
+                                    @include actualPrice;
+                                    margin-right: 15px;
+                                }
+                                .old-price {
+                                    @include oldPrice;
+                                   
+                                }
+                            }
+                            .buttons-buy-favirites{
+                                display: flex;
+                                align-items: flex-start;
+                                .btn-favorites {
+                                    display: none;
+                                    margin-right: 21px;
+                                    cursor: pointer;
+                                    img{
+                                        display: block;
+                                    }
+                                    
+                                }
+                                .btn-reit {
+                                    display: none;
+                                    margin-right: 24px;
+                                    cursor: pointer;
+                                    img{
+                                        display: block
+                                    }
+                                    
+                                }
+                                button.btn-buy{
+                                    @include btnBuy;
+                                    
+                                }
+                                button.not-availability{
+                      
+                                    @include notAvailable;
+                                  
+                                }
+                            }
+                            }
+                        }
+                    }
+                }
+               
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,73 @@
+.data-contacts {
+    margin-bottom: 82px;
+    .layout {
+        border:none;
+        h3{
+            border:none;
+        }
+        form{
+            width: 690px;
+            .main-info {
+                display: flex;
+                justify-content: space-between;
+               
+                fieldset{
+                    display: flex;
+                    flex-direction: column;
+
+                 
+                    input{
+                        width: 332.49px;
+                        height: 45.82px;
+                        border: 1px solid #C4C4C4;
+                        border-radius: 5px;
+                        padding: 10px;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 35px;
+                        color: #404040;
+                    }
+                }
+            }
+            .radiobtn{
+                margin: 22px 0 25px 0;
+                display: flex;
+                label{
+                    margin-right: 25px;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 35px;
+                    color: #1E1E1E;
+                    input{
+                        cursor:pointer;
+                        width: 24px;
+                        height: 24px;
+                        border: 1px solid #C4C4C4;
+                    }
+                }
+            }
+            .user-comment{
+                display: flex;
+                flex-direction: column;
+                
+                textarea{
+                    resize: none;
+                    width: 688.6px;
+                    height: 103.87px;
+                    border: 1px solid #C4C4C4;
+                    border-radius: 5px;
+                    padding: 5px 10px;
+                }
+            }
+            label{
+                margin-left: 18px;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 35px;
+                color: #999999;
+            }
+        }
+    }
+}
+
+

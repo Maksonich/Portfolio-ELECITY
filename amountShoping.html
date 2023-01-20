@@ -6,147 +6,53 @@
 	<meta name="viewport" content="width=device-width; initial-scale=1">
 	<link rel="stylesheet" href="css/all.css" type="text/css"/>
 	<link rel="stylesheet" href="sass/fonts.css" type="text/css"/>
-	<!-- <script type="text/javascript" src="js/jquery-3.2.0.js"></script>
-	<script type="text/javascript" src="js/main.js"></script> -->
-	<script type="text/javascript" src="js/products.js"></script>
+	<script type="text/javascript" src="js/jquery-3.2.0.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
 	<title>ELECITY</title>
 </head>
 <body>
-	<div class="popup_catalog-quick-view popup">
+	<!-- <div class="popup_catalog popup">
 		<div class="blocker"></div>
 		<div class="flex">
 			<div class="box">
-				<div class="head-product">
-					<div class="special-offer">
-						<span class="new">Новинка</span><span class="sale-prod">20%</span>
-						<span class="present">подарок</span>
-					</div>
-					<div class="add-comparison">
-						<div class="add">
-							<input type="checkbox" name="addComprasion" id=""><label for="addComprassion">Добавить к сравнению</label>
-						</div>
-						<div class="code-products">
-							Код товара:<span class="code"> 54567474</span>
-						</div>
-					</div>
+				<span class="close">
+					<img src="./images/icons/cross.png" alt="close">
+				</span>
+				<h3>Выберите город</h3>
+				<div class="successfully">
+					<img src="./images/icons/successfully.png" alt="successfully">
 				</div>
-				<h3 class="naming-product">
-					Холодильник BEKO RCSK 250M00 W
-				</h3>
-				<div class="additional-info">
-					<div class="grade-and-review">
-						<div class="grade">
-							<fieldset class="raiting">
-								
-								<div class="raiting__group">
-								<input class="raiting__star" aria-label="Ужасно" type="radio" name="health" value="1" checked>
-								<input class="raiting__star" aria-label="Сносно" type="radio" name="health" value="2">
-								<input class="raiting__star" aria-label="Нормально" type="radio" name="health" value="3">
-								<input class="raiting__star" aria-label="Хорошо" type="radio" name="health" value="4">
-								<input class="raiting__star" aria-label="Отлично" type="radio" name="health" value="5">
-								</div>
-							</fieldset>
-						</div>
-						<div class="review"><a href="#"><img src="./images/icons/comments.png" alt=""> <span class="amount-review"></span></a></div>
-					</div>
-					<div class="quantity-sale">
-						Купили более <span>100</span>  раз
-					</div>
-					<div class="availability">
-						<img src="./images/icons/mark.png" alt=""><span>В наличие</span>
-					</div>
+				<form >
+					<input type="text" id="name" placeholder="Ваше имя">
+					<input type="text" id="mail" placeholder="Почта">
 					
-				</div>
-				<div class="img-and-info">
-					<div class="img-block">
-						<ul class="little-photo">
-							<li class="photo-ptoducts">
-								<img src="./images/product/microvave.png" alt="">
-							</li>
-							<li class="photo-ptoducts">
-								<img src="./images/product/vacuumCleaner.png" alt="">
-							</li>
-							<li class="photo-ptoducts">
-								<img src="./images/product/Beko.png" alt="">
-							</li>
-						</ul>
-						<div class="big-photo-product">
-							<img src="./images/product/Beko.png" alt="">
-						</div>
-					</div>
-					<div class="additional-info-product">
-						<ul>
-							<li class="info-about-product">
-								<p>Бренд</p><span></span>
-							</li>
-							<li class="info-about-product">
-								<p>Морозильная камера</p><span></span>
-							</li>
-							<li class="info-about-product">
-								<p>Цвет / Материал покрытия</p><span></span>
-							</li>
-							<li class="info-about-product">
-								<p>Габариты</p><span></span>
-							</li>
-							<li class="info-about-product">
-								<p>Энергопотребление</p><span></span>
-							</li>
-							<li class="info-about-product">
-								<p>Количество камер</p><span></span>
-							</li>
-							<li class="info-about-product">
-								<p>Количество дверей</p><span></span>
-							</li>
-							<li class="info-about-product">
-								<p>Индикация</p><span></span>
-							</li>
-							<li class="info-about-product">
-								<p></p><span></span>
-							</li>
-							<li class="view-all">
-							<a href="#">Все характеристики</a> 
-							</li>
-							<li class="info-about-product none">
-								<p>one</p><span></span>
-							</li>
-							<li class="info-about-product none">
-								<p>two</p><span></span>
-							</li>
-							<li class="info-about-product none">
-								<p>three</p><span></span>
-							</li>
-							<li class="info-about-product none">
-								<p>four</p><span></span>
-							</li>
-						</ul>
-						<div class="payment-method">
-							<span>Способ оплаты: </span>
-							<p>Уточняйте у менеджера</p>
-							
-						</div>
-						<div class="img-brand">
-							<img src="./images/icons/brand/Beko.png" alt="">
-						</div>
-						<span class="current-price">
-							<div class="new-price">14 300 ₽</div>
-							<div class="old-price">18 000 ₽</div>
-						</span>
-						<div class="buttons-buy">
-							<div class="buy-one-click">
-								<a href="#">Купить в 1 клик</a>
-							</div>
-							<button  class="btn-buy">Купить</button>
-						</div>
-
-					</div>
-					
-				</div>
-				<div class="more-info-about-product">
-					<a href="#">Больше информации о товаре</a>
-				</div>
+					<label for="" class="not-necessarily" id="tell"><input type="text" placeholder="Телефон"></label>
+					<button class="button-form"> Отправить</button>
+				</form>
 			</div>
 		</div>
-	</div>
+	</div> -->
+	<!-- <div class="popup_catalog popup">
+		<div class="blocker"></div>
+		<div class="flex">
+			<div class="box">
+				<span class="close">
+					<img src="./images/icons/cross.png" alt="close">
+				</span>
+				<h3>Обратный звонок</h3>
+				<div class="successfully">
+					<img src="./images/icons/successfully.png" alt="successfully">
+				</div>
+				<form >
+					<input type="text" id="name" placeholder="Ваше имя">
+					<input type="text" id="mail" placeholder="Почта">
+					
+					<label for="" class="not-necessarily" id="tell"><input type="text" placeholder="Телефон"></label>
+					<button class="button-form"> Отправить</button>
+				</form>
+			</div>
+		</div>
+	</div> -->
 	<div class="popup_catalog-loginAccount popup">
 		<div class="blocker"></div>
 		<div class="flex">
@@ -200,7 +106,7 @@
 			</div>
 		</div>
 	</div>
-	<div id="wrapper" class="homepage ">
+	<div id="wrapper" class="amount-shoping">
 		<header>
 			<div class="layout">
 				<div class="nav-upper">
@@ -269,15 +175,12 @@
 						</div>
 						<div class="buy-list">
 							<div class="cart">
-								
-								<span id="amountShoping">0</span>
-								<a href="./amountShoping.html"><img src="./images/icons/shoping-cart.png" alt="shoping-cart"></a>	
+							<span id="amountShoping">0</span>
+							<a href="#"><img src="./images/icons/shoping-cart.png" alt="shoping-cart"></a>	
 							</div>
 							<div class="amount-block">
-								<a href="./amountShoping.html">
-									<div class="name-block">Корзина</div>
-									<div class="amount">0 ₽</div>
-								</a>
+								<div class="name-block">Корзина</div>
+								<div class="amount">0 ₽</div>
 							</div>
 							
 						</div>
@@ -290,7 +193,7 @@
 						<ul class="all-category-menu ">
 							<li data-filter-product="0">
 								<div class="name-category" >
-									<a href="./search.html">Аудио/Видео</a>
+									<a href="#">Аудио/Видео</a>
 								</div>
 								<div class="category-info active" data-fil-prod="0" >
 									<div class="category-menu">
@@ -1689,279 +1592,250 @@
 			</div>
 		</header>
 		<main>
-			<section class="main-title">
-				<div class="layout">
-					<div class="play-img">
-						<div class="main-background">
-						<img src="./images/banner/Rectangle1.png" alt="main-background">
-						</div>
-						<div class="main-background-white">
-							<img src="./images/banner/MaskGroup.png" alt="main-background">
-						</div>
-						<div class="washing-mashines">
-							<div class="one">
-								<img src="./images/banner/washing_mashine0.png" alt="washing-mashin">
-							</div>
-							<div class="two">
-								<img src="./images/banner/washing_machine.png" alt="washing-mashin">
-							</div>
-							<div class="three">
-								<img src="./images/banner/washing_mashine2.jpeg" alt="washing-mashin">
-							</div>
-						</div>
-						<div class="banner-text">
-							<div class="title">Большой выбор стиральных машин</div>
-							<div class="subtitle">Успей купить по суперцене</div>
-							<a href="#">Подробнее</a>
-						</div>
-					</div>
-					<!-- <div class="links-slider">
-						<a href="#" class="prev" onclick="plusSliders(-1)">&#10094</a>
-						<a href="#" class="next" onclick="plusSliders(1)">&#10095</a>
-					</div>
-					<br>
-					<div class="dots">
-						<span class="dot" onclick="currentSlide(1)"></span>
-						<span class="dot" onclick="currentSlide(2)"></span>
-						<span class="dot" onclick="currentSlide(3)"></span>
-					</div> -->
-				</div>
-			</section>
-			<section class="products">
-				<div class="layout">
-					<div class="product-block">
-						<h3>Популярное</h3>
-						<ul>
-						<template id="products">
-								<li class="main-product">
-										<div class="special-offer">
-											<span class="new"></span><span class="sale-prod"></span>
-											<span class="present"></span>
-										</div>
-										<div class="image-product">
-											<img src="./images/product/Beko.png" alt="product">
-											<a href="javascript:openQuickView();" id="quickView">Быстрый просмотр</a>
-										</div>
-										<span class="current-price">
-											<div class="new-price"></div>
-											<div class="old-price"></div>
-										</span>
-										<h4 class="nameProduct"></h4>
-										<div class="grade-and-review">
-											<div class="grade">
-												<fieldset class="raiting">
-													
-													<div class="raiting__group">
-													<input class="raiting__star" aria-label="Ужасно" type="radio" name="health" value="1" checked>
-													<input class="raiting__star" aria-label="Сносно" type="radio" name="health" value="2">
-													<input class="raiting__star" aria-label="Нормально" type="radio" name="health" value="3">
-													<input class="raiting__star" aria-label="Хорошо" type="radio" name="health" value="4">
-													<input class="raiting__star" aria-label="Отлично" type="radio" name="health" value="5">
-													</div>
-												</fieldset>
-											</div>
-											<div class="review"><a href="#"><img src="./images/icons/comments.png" alt=""> <span class="amount-review"></span></a></div>
-										</div>
-										<button class="btn-buy"></button>
-									
-								</li>
-						</template>
-						</ul>
-					</div>
-				</div>
-			</section>
-			<section class="sale">
-				<div class="layout">
-					<img src="./images/banner/banner-discount.png" alt="">
-				</div>
-			</section>
-			<section class="products">
-				<div class="layout">
-					<div class="product-block-two">
-						<ul></ul>
-					</div>
-				</div>
-			</section>
-			<section class="catalog">
-				<div class="layout">
-					<h3>Каталог</h3>
-					<div class="content">
-						<ul class="first"> 
-							<li>
-								<div class="category"><a href="#">Крупная бытовая техника</a></div>
-								<ul>
-									<li><a href="#"> Холодильники (<span>135</span>)</a> </li>
-									<li><a href="#">Морозильные камеры (<span>74</span>)</a> </li>
-									<li><a href="#">Стиральные машины (<span>213</span>)</a> </li>
-									<li><a href="#">Посудомоечные машины (<span>98</span>)</a> </li>
-								</ul>
-								<div class="all-products">
-									<a href="#">Все товары</a> <img src="./images/icons/arrow-right.png" alt="arrow-right">
-								</div>
-							</li>
-							<li>
-								<div class="category"><a href="#">Товары для дома</a></div>
-								<ul>
-									<li><a href="#"> Холодильники (<span>135</span>)</a> </li>
-									<li><a href="#">Морозильные камеры (<span>74</span>)</a> </li>
-									<li><a href="#">Стиральные машины (<span>213</span>)</a> </li>
-									<li><a href="#">Посудомоечные машины (<span>98</span>)</a> </li>
-									<li><a href="#">Морозильные камеры (<span>74</span>)</a></li>
-									<li><a href="#">Стиральные машины (<span>213</span>)</a></li>
-									<li><a href="#">Посудомоечные машины (<span>98</span>)</a></li>
-								</ul>
-								<div class="all-products">
-									<a href="#">Все товары</a> <img src="./images/icons/arrow-right.png" alt="arrow-right">
-								</div>
-							</li>
-							<li>
-								<div class="category"><a href="#">Мелкая бытовая техника</a></div>
-								<ul>
-									<li><a href="#"> Крепления и кронштейны для мелкой кухонной техники (<span>135</span>)</a> </li>
-									<li><a href="#">Морозильные камеры (<span>74</span>)</a> </li>
-									<li><a href="#">Стиральные машины (<span>213</span>)</a> </li>
-									<li><a href="#">Посудомоечные машины (<span>98</span>)</a> </li>
-									
-								</ul>
-								<div class="all-products">
-									<a href="#">Все товары</a> <img src="./images/icons/arrow-right.png" alt="arrow-right">
-								</div>
-							</li>
-							<li>
-								<div class="category"><a href="#">Крупная бытовая техника</a></div>
-								<ul>
-									<li><a href="#"> Холодильники (<span>135</span>)</a> </li>
-									<li><a href="#">Морозильные камеры (<span>74</span>)</a> </li>
-									<li><a href="#">Стиральные машины (<span>213</span>)</a> </li>
-									<li><a href="#">Посудомоечные машины (<span>98</span>)</a> </li>
-								</ul>
-								<div class="all-products">
-									<a href="#">Все товары</a> <img src="./images/icons/arrow-right.png" alt="arrow-right">
-								</div>
-							</li>
-						</ul>
-						<ul class="second">
-							<li>
-								<div class="category"><a href="#">Товары для дома</a></div>
-								<ul>
-									<li><a href="#"> Холодильники (<span>135</span>)</a> </li>
-									<li><a href="#">Морозильные камеры (<span>74</span>)</a> </li>
-									<li><a href="#">Стиральные машины (<span>213</span>)</a> </li>
-									<li><a href="#">Посудомоечные машины (<span>98</span>)</a> </li>
-									<li><a href="#">Морозильные камеры (<span>74</span>)</a></li>
-									<li><a href="#">Стиральные машины (<span>213</span>)</a></li>
-									<li><a href="#">Посудомоечные машины (<span>98</span>)</a></li>
-								</ul>
-								<div class="all-products">
-									<a href="#">Все товары</a> <img src="./images/icons/arrow-right.png" alt="arrow-right">
-								</div>
-							</li>
-							<li>
-								<div class="category"><a href="#">Крупная бытовая техника</a></div>
-								<ul>
-									<li><a href="#"> Холодильники (<span>135</span>)</a> </li>
-									<li><a href="#">Морозильные камеры (<span>74</span>)</a> </li>
-									<li><a href="#">Стиральные машины (<span>213</span>)</a> </li>
-									<li><a href="#">Посудомоечные машины (<span>98</span>)</a> </li>
-								</ul>
-								<div class="all-products">
-									<a href="#">Все товары</a> <img src="./images/icons/arrow-right.png" alt="arrow-right">
-								</div>
-							</li>
-							<li>
-								<div class="category"><a href="#">Товары для дома</a></div>
-								<ul>
-									<li><a href="#"> Холодильники (<span>135</span>)</a> </li>
-									<li><a href="#">Морозильные камеры (<span>74</span>)</a> </li>
-									<li><a href="#">Стиральные машины (<span>213</span>)</a> </li>
-									<li><a href="#">Посудомоечные машины (<span>98</span>)</a> </li>
-									<li><a href="#">Морозильные камеры (<span>74</span>)</a></li>
-									<li><a href="#">Стиральные машины (<span>213</span>)</a></li>
-									<li><a href="#">Посудомоечные машины (<span>98</span>)</a></li>
-								</ul>
-								<div class="all-products">
-									<a href="#">Все товары</a> <img src="./images/icons/arrow-right.png" alt="arrow-right">
-								</div>
-							</li>
-							<li>
-								<div class="category"><a href="#">Мелкая бытовая техника</a></div>
-								<ul>
-									<li><a href="#"> Крепления и кронштейны для мелкой кухонной техники (<span>135</span>)</a> </li>
-									<li><a href="#">Морозильные камеры (<span>74</span>)</a> </li>
-									<li><a href="#">Стиральные машины (<span>213</span>)</a> </li>
-									<li><a href="#">Посудомоечные машины (<span>98</span>)</a> </li>
-									
-								</ul>
-								<div class="all-products">
-									<a href="#">Все товары</a> <img src="./images/icons/arrow-right.png" alt="arrow-right">
-								</div>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</section>
-			<section class="news-and-review">
-				<div class="layout">
-					<h3>Новости и обзоры</h3>
-					<div class="content">
-						<div class="left-news">
-							<div class="robot-cleaner">
-								<a href="./robotVacuumCleaner.html"><img src="./images/news/one.png" alt="robot-cleaner"></a>
-							</div>
-							<div class="other-news">
-								<div class="img-block"><a href="#"><img src="./images/news/two.png" alt=""></a></div>
-								<div class="img-block-two"><a href="#"><img src="./images/news/three.png" alt=""></a>	</div>
-								
-							</div>
-						</div>
-						<div class="right-news">
-							<div class="upper-img">
-								<a href="#"><img src="./images/news/four.png" alt=""></a>
-							</div>
-							<div class="lower-block">
-								<div class="left-lower">
-									<a href="#"><img src="./images/news/five.png" alt=""></a>
-								</div>
-								<div class="right-lower">
-									<a href="#"><img src="./images/news/six.png" alt=""></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="technology">
-				<div class="layout">
-					<h3>
-						Техника, которая делает вашу жизнь проще
-					</h3>
-					<div class="content">
-						<p>Порой возникает ситуация, когда в какой-то момент в вашем доме требуется заменить один или несколько бытовых приборов. Возможно также, что вы обустраиваете новый дом или квартиру, начиная с нуля. Это включает в себя покупку крупной бытовой техники, такую ​​как холодильники стиральные и посудомоечные машины, а также более мелкую бытовую технику, которая значительно сокращает время на кухне или при уборке.  Наш интернет-магазин бытовой техники поможет с выбором, гарантируя низкие цены и выгодные покупки на все линейки товаров.
-						</p>
-						<span>Холодильники </span>
-						<p>Подобно автомобилю или другой крупногабаритной технике, стоит знать, на что обращать внимание при выборе холодильника для кухни. Например, при выборе холодильника важно знать, что искать, например, сколько дверей вы хотите, где разместить морозильную камеру, хотите ли вы внешний льдогенератор, диспенсер для воды, предназначенные для сохранения свежести ваших продуктов на более длительные периоды времени. Размер является важным фактором, от небольшие по объему до больших, которые идеально подходят для офисов, комнат общежития и малогабаритных квартир. Также важны другие параметры, такие как цвет, ширина, бренд и рейтинг.
-						</p>
-						<span>Тостеры</span>
-						<p>Такую же внимательность при выборе крупногабаритной техники следует проявлять и в отношении небольших приборов. Учитывайте количество человек в семье, частоту пользования – от этого зависит, какой именно тостер следует рассмотреть: будет ли он на два или четыре ломтика хлеба, имеет он ручное или цифровое управление, и должен ли тостер быть определенного цвета, будет нержавеющая сталь сочетается с вашим декором? Вы даже можете выбрать тостер, который одновременно выполняет несколько функций, что дает ему преимущество на вашей кухне.
-						</p>
-						<span>Микроволновые печи</span>
-						<p>Говоря об универсальных приборах, на кухне нет ничего более универсального, чем микроволновые печи. Эти устройства прошли долгий путь, прежде чем оказаться на нашей кухне. Микроволны не только разогревают пищу и напитки с помощью электромагнитных волн, но многие из них также обладают функцией конвекции. Они больше не предназначены для того, чтобы приготовить попкорн или подогреть еду для небольшого перекуса. Теперь вы можете готовить целые блюда, используя только микроволновую печь, а также выполнять другие задачи, такие как размораживание продуктов и размягчение сливочного масла. Микроволновки обычно доступны в трех видах: на столешнице, подвесные и встраиваемые. Опять же, есть факторы, которые следует учитывать при выборе микроволновой печи, и у нас есть разные модели, из которых вы можете выбрать. В наличии имеются небольшие устройства с объемом для приготовления пищи от 13 литров или меньше до 44 литров или более. Еще одно соображение - мощность, и у нас есть модели, которые варьируются от менее 700 Вт до более 1000 Вт; чем выше мощность - тем быстрее готовятся ваши продукты.
-						</p>
-					</div>
-				</div>
-			</section>
-			<section class="advantages">
-				<div class="layout">
-					<ul>
-						<li><img src="./images/advantages/one.png" 	alt="advantages image"></li>
-						<li><img src="./images/advantages/two.png" 	alt="advantages image"></li>
-						<li><img src="./images/advantages/three.png" 	alt="advantages image"></li>
-						<li><img src="./images/advantages/four.png" alt="advantages image"></li>
-						<li><img src="./images/advantages/five.png" alt="advantages image"></li>
-						<li id="scroll_top"><a href="#"><img src="./images/advantages/arrow.png" alt=""></a></li>
-					</ul>
-				</div>
-			</section>
+			<div class="layout">
+                <div class="way">
+                    <div class="main">
+                        <a href="./index.html">Главная /</a> 
+                    </div>
+                    <div class="here">
+                        <a href="./amountShoping.html"><b>Корзина</b> </a>
+                    </div>
+                </div>
+            </div>
+            <section class="list-products-shop">
+                <div class="layout">
+                    <h2>Корзина</h2>  
+                    <div class="list-products">
+                        <template></template>
+                        <ul>
+                            <li>
+                                <div class="product-cart">
+                                    <div class="img-product-shop">
+                                        <img src="./images/product/electrolux.png" alt="">
+                                    </div>
+                                    <div class="general-inf">
+                                        <h4 class="name-product-shop"> Холодильник Electrolux EWH 80 Formax</h4>
+                                        <span class="product-code">Код товара: <span> 519868.0</span></span>
+                                        <div class="select-service">
+                                            <label for="additionalService">Дополнительный сервис</label>
+                                            <select name="additionalService" id="" >
+                                                <option value="1">Нет</option>
+                                                <option value="2">1 год (+1130 ₽)</option>
+                                                <option value="3">2 год (+2200 ₽)</option>
+                                            </select>
+                                        </div>
+                                       
+                                    
+                                    
+                                    </div>
+                                    
+                                   
+                                </div>
+                                <div class="amountAndPrice">
+                                    <div class="addQuantity">
+                                        <div class="minus"><a href="#" ><img src="./images/icons/minus.png" alt=""></a></div>
+                                        <div class="amount-sku">1</div>
+                                        <div class="add"><a href="#" > <img src="./images/icons/add.png" alt=""></a></div>
+                                    </div>
+                                    <div class="price">
+                                        <div class="newPrice">14 300 ₽</div>
+                                        <div class="oldPrice">18 000 ₽</div>
+                                        <div class="btn-delete">
+                                            <a href="#"><img src="./images/icons/cross.png" alt=""> Удалить</a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="product-cart">
+                                    <div class="img-product-shop">
+                                        <img src="./images/product/electrolux.png" alt="">
+                                    </div>
+                                    <div class="general-inf">
+                                        <h4 class="name-product-shop"> Холодильник Electrolux EWH 80 Formax</h4>
+                                        <span class="product-code">Код товара: <span> 519868.0</span></span>
+                                        <div class="select-service">
+                                            <label for="additionalService">Дополнительный сервис</label>
+                                            <select name="additionalService" id="" >
+                                                <option value="1">Нет</option>
+                                                <option value="2">1 год (+1130 ₽)</option>
+                                                <option value="3">2 год (+2200 ₽)</option>
+                                            </select>
+                                        </div>
+                                       
+                                    
+                                    
+                                    </div>
+                                    
+                                   
+                                </div>
+                                <div class="amountAndPrice">
+                                    <div class="addQuantity">
+                                        <div class="minus"><a href="#" ><img src="./images/icons/minus.png" alt=""></a></div>
+                                        <div class="amount-sku">1</div>
+                                        <div class="add"><a href="#" > <img src="./images/icons/add.png" alt=""></a></div>
+                                    </div>
+                                    <div class="price">
+                                        <div class="newPrice">14 300 ₽</div>
+                                        <div class="oldPrice">18 000 ₽</div>
+                                        <div class="btn-delete">
+                                            <a href="#"><img src="./images/icons/cross.png" alt=""> Удалить</a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="product-cart">
+                                    <div class="img-product-shop">
+                                        <img src="./images/product/electrolux.png" alt="">
+                                    </div>
+                                    <div class="general-inf">
+                                        <h4 class="name-product-shop"> Холодильник Electrolux EWH 80 Formax</h4>
+                                        <span class="product-code">Код товара: <span> 519868.0</span></span>
+                                        <div class="select-service">
+                                            <label for="additionalService">Дополнительный сервис</label>
+                                            <select name="additionalService" id="" >
+                                                <option value="1">Нет</option>
+                                                <option value="2">1 год (+1130 ₽)</option>
+                                                <option value="3">2 год (+2200 ₽)</option>
+                                            </select>
+                                        </div>
+                                       
+                                    
+                                    
+                                    </div>
+                                    
+                                   
+                                </div>
+                                <div class="amountAndPrice">
+                                    <div class="addQuantity">
+                                        <div class="minus"><a href="#" ><img src="./images/icons/minus.png" alt=""></a></div>
+                                        <div class="amount-sku">1</div>
+                                        <div class="add"><a href="#" > <img src="./images/icons/add.png" alt=""></a></div>
+                                    </div>
+                                    <div class="price">
+                                        <div class="newPrice">14 300 ₽</div>
+                                        <div class="oldPrice">18 000 ₽</div>
+                                        <div class="btn-delete">
+                                            <a href="#"><img src="./images/icons/cross.png" alt=""> Удалить</a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </li>
+                          
+                        </ul>
+                        <div class="total">
+                            <div class="total-sum">
+                                <div class="text">Итого</div>
+                                <div class="num">42 900 ₽</div>
+                            </div>
+                            <div class="total-products">
+                                <div class="total-sku">Товаров, <span> 3 шт</span></div>
+                                <div class="total-sum-without-discount">65 900 ₽</div>
+                            </div>
+                            <div class="total-discount-products">
+                                <div class="text">Скидка</div>
+                                <div class="total-discount">15 000 ₽</div>
+                            </div>
+                            <div class="delivery-products">
+                                <div class="text">Доставка</div>
+                                <div class="price-delivery">бесплатно</div>
+                            </div>
+                            <div class="date-delivery">
+                                <div class="text">Доставка</div>
+                                <div class="date-info"><div class="date">04.02.2021</div><div class="time">10:00-18:00</div></div>
+                            </div>
+                            <div class="confirm-btn">
+                                <a href="#">Оформить заказ</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <section class="method-payment-and-delivery">
+                <div class="layout">
+                    <div class="method-delivery">
+                        <h3>Способ доставки</h3>
+                         <div class="deliveryCourier">
+                            <div class="inp">
+                                <input type="radio" name="methodDelivery">Доставка курьером <input type="date">
+                            </div>
+                            <div class="your-address">
+                                <label for="yourAddress">Введите адрес</label>
+                                <input type="text" name="yourAddress">
+                            </div>
+                         </div>
+                         <div class="pickup">
+                            <div class="inp">
+                                <input type="radio" name="methodDelivery" checked>Самовывоз<input type="date">
+                            </div>
+                            <div class="our-address active">
+                                <label for="ourAddress1"><input type="radio" name="ourAddress" id="ourAddress1"> г. Минск, ул. Набережная 28, пом 54</label>
+                                 <label for="ourAddress2"><input type="radio" name="ourAddress" id="ourAddress2"> г. Минск, ул. Набер 228</label>
+                            </div>
+                         </div>
+                    </div>
+                    <div class="method-payment">
+                        <h3>Способ оплаты</h3>
+                        <div class="payment">
+                            <input type="radio" name="method-payment" id="online">
+                            <label for="online">Оплата онлайн</label>
+                            <input type="radio" name="method-payment" id="swift">
+                            <label for="swift">Оплата при получении картой</label>
+                            <input type="radio" name="method-payment" id="cash">
+                            <label for="cash">Оплата при получении наличными</label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="data-contacts">
+                <div class="layout">
+                    <h3>Контактные данные</h3>
+                    <form action="">
+                      <div class="main-info">
+                        <fieldset>
+                            <label for="number">Телефон</label>
+                            <input type="text" name="number">
+                            <label for="userName">Имя</label>
+                            <input type="text" name="userName">
+                            <label for="city">Город</label>
+                            <input type="text" name="city">
+                        </fieldset>
+                        <fieldset>
+                            <label for="mail">Email</label>
+                            <input type="email" name="mail">
+                            <label for="userLastName">Фамилия</label>
+                            <input type="text" name="userLastName">
+                            <label for="address">Адрес</label>
+                            <input type="text" name="address">
+                        </fieldset>
+                      </div>
+                      <div class="radiobtn">
+                        <label for="raise">
+                            <input type="radio" name="raise" id="">
+                            Нужен подъем
+                        </label>
+                        <label for="installation">
+                            <input type="radio" name="installation" id="">
+                            Нужна установка
+                        </label>
+                        <label for="disposal">
+                            <input type="radio" name="disposal" id="">
+                            Нужна утилизация
+                        </label>
+                      </div>
+                      <div class="user-comment">
+                         <label for="comment">Комментарий</label>
+                      <textarea name="" for="comment" id="" ></textarea>
+                      </div>
+                     
+                    </form>
+                </div>
+            </section>
 		</main>
 		<footer>
 			<div class="layout">
@@ -2032,6 +1906,6 @@
 		</footer>
 	</div>
 	<script src="./js/header-script.js"></script>
-	<script src="./js/script.js"></script>
+	<!-- <script src="./js/script.js"></script> -->
 </body>
 </html>

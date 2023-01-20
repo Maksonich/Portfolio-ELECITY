@@ -16,6 +16,13 @@ body{
 	font-style: normal;
 	color: $colorText;
 }
+h2{
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 35px;
+}
 h3{
 	font-family: 'Montserrat';
 	font-style: normal;
@@ -23,7 +30,7 @@ h3{
 	font-size: 30px;
 	line-height: 35px;
 	color: #1E1E1E;
-	padding-bottom: 7px;
+	padding-bottom: 8px;
 	border-bottom: 1px solid #E5E5E5;
 }
 .way {
@@ -35,6 +42,9 @@ h3{
 		line-height: 35px;
 		color: #1E1E1E;
 		margin-right: 10px;
+		padding-bottom: 5px;
+		position: relative;
+		
 	}
 	.here {
 		

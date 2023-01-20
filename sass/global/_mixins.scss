@@ -15,7 +15,7 @@ font-weight: 600;
 font-size: 14px;
 line-height: 25px;
   color: #FFFFFF;
-  background: #FC443B;
+  background:$orangeSaleAndBuylist;
   border-radius: 5px;
   padding: 4px 7px;
   text-align: center;
@@ -88,6 +88,19 @@ line-height: 25px;
     color: $navHover;
   }
 }
+@mixin btnQuickView{
+  width: 204px;
+  height: 46px;
+  background: #7FB1ED;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px 0;
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 25px;
+  color: #FFFFFF;
+}
 ////
 @mixin anim{
 	-webkit-transition: all 500ms ease-in-out;
@@ -96,7 +109,20 @@ line-height: 25px;
 	-o-transition: all 500ms ease-in-out;
 	transition: all 500ms ease-in-out;
 }
-
+@mixin oldPrice{
+  
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 25px;
+  text-decoration: line-through;
+  color: #6E6E6E;
+}
+@mixin actualPrice{
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 25px;
+  color: #404040;
+}
 
 
 
