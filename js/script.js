@@ -1,4 +1,4 @@
-
+///show products cart
 function productsBlock (sku){
       let item = document.querySelector("template ")
        let cloneItem =  item.content.cloneNode(true);
@@ -22,34 +22,53 @@ function productsBlock (sku){
               cloneItem.querySelector(".btn-buy").classList.add("not-availability");
               cloneItem.querySelector(".btn-buy").classList.remove("btn-buy");
        }
+       // let otherInformation = cloneItem.createElement("template");
+       
+       // raitingProduct(sku.raiting)
+             
+              
+      
+
+       
        cloneItem.querySelector(".review .amount-review").innerHTML = sku.comments;
        return cloneItem;
 }
+//  function raitingProduct(raiting){ 
+//        let raitBlock = document.querySelectorAll(".raiting__group .raiting__star")
 
+//        for ( const item of raitBlock){
+//               for (let i = 0; i < raiting;i++ ){
+//                      item.setAttribute("checked","checked" )
+//               }
+//        }
+//  }
+
+///show products block
 products.forEach(sku =>{
     let productsBuy = productsBlock(sku)
     document.querySelector(".product-block ul").append(productsBuy);
 })
 products.forEach(sku =>{
     let productsBuy = productsBlock(sku)
-    document.querySelector(".product-block-two ul").append(productsBuy);;
+    document.querySelector(".product-block-two ul").append(productsBuy);
+
 })
+/////////////////
+// products.forEach(sku =>{
+//        let productsBuy = productsBlock(sku)
 
 
-// function getBadgeProduct (nameBadge, element, elemStyle){
-       // if(nameBadge){
-       // return   elemStyle.querySelector(element).innerHTML = nameBadge;
-       // }else{
-       // return   elemStyle.querySelector(element).style.display = "none"
-       // }
-// }
-//////under advertising block products
-// function underBlockProducts(){
-//        for (let i = 0; i < products.length; i++){
-//               console.log(products[i])
+//        console.log(productsBuy)
+//showQuantityProductsOnPage(document.querySelector(".product-block ul"),8,productsBuy)
+
+
+//    })
+//////////////////
+// function showQuantityProductsOnPage (arr, quantitySku,resultFunk ){
+//        for (let i = 0; i < quantitySku; i++) {
+//               arr.append(resultFunk);
 //        }
 // }
-// underBlockProducts ()
 /////////////////////////////////////////////////////////////////////////
 //scroll top button
 let scrolled;
@@ -58,7 +77,6 @@ document.querySelector("#scroll_top").addEventListener("click", function(){
        let scrolled = window.pageYOffset;
        console.log(scrolled)
        scrollToTop();
-
        function scrollToTop (){
               if(scrolled > 0){
                      window.scrollTo(0, scrolled)
@@ -71,22 +89,64 @@ document.querySelector("#scroll_top").addEventListener("click", function(){
        }
 })
 /////////////
-// function amountItemProducts(amount, blockProducts) {
-//        for (let i = 0; i < amount; i++) {
-//               document.querySelector(blockProducts).append(productsBlock());
-//        }
-// };
-// amountItemProducts(4,".product-block-two ul")
-
+//show more information about product
 document.querySelector(".product-block").addEventListener("click", function openQuickView(event){
-       if(event.target.id = "#quickView"){
+       event.preventDefault()
+       if(event.target.classList.contains("quickView")){
               document.querySelector(".popup_catalog-quick-view").classList.add("open");
               document.querySelector("#wrapper").classList.add("popup");
+              console.log(event.target.closest(".main-product").querySelector(".nameProduct").innerHTML)
+              viewMoreInfoProduct(event.target.closest(".main-product"))
        }
 })
+document.querySelector(".popup_catalog-quick-view .blocker").addEventListener("click", function closeModalWindLoginPers() {
+       document.querySelector(".popup_catalog-quick-view").classList.remove("open");
+         document.querySelector("#wrapper").classList.remove("popup");
+})
+
+function  viewMoreInfoProduct(element){   
+       let blockProduct = document.querySelector("#view-more-info");
+       blockProduct.querySelector(".naming-product").innerHTML = element.querySelector(".nameProduct").innerHTML;
+      
+       let offer = element.querySelector(".special-offer")
+       showBadgeProduct(offer.querySelector(".sale-prod"), blockProduct.querySelector(".sale-prod"))
+       showBadgeProduct(offer.querySelector(".new"), blockProduct.querySelector(".new"))
+       showBadgeProduct(offer.querySelector(".present"), blockProduct.querySelector(".present"))
+       
+       if (!element.querySelector(".btn-buy")){
+              blockProduct.querySelector(".availability span").innerHTML = "Нет в наличии";
+              blockProduct.querySelector(".availability span").style.color  = "red";
+              blockProduct.querySelector(".availability img").style.display = "none";
+              blockProduct.querySelector(".buttons-buy .btn-buy").classList.add("not-availability");
+              blockProduct.querySelector(".buttons-buy .btn-buy").innerHTML = "Нет в наличии";
 
 
-////////
+       }else {
+              blockProduct.querySelector(".availability span").innerHTML = "В наличие";
+              blockProduct.querySelector(".availability img").style.display = "";
+              blockProduct.querySelector(".buttons-buy .btn-buy").classList.remove("not-availability");
+              blockProduct.querySelector(".buttons-buy .btn-buy").innerHTML = "Купить";
+       }
+       blockProduct.querySelector(".new-price").innerHTML = element.querySelector(".new-price").innerHTML;
+       blockProduct.querySelector(".old-price").innerHTML = element.querySelector(".old-price").innerHTML;
+       
+       let imgAtrr = element.querySelector(".image-product img").getAttribute("src")
+       blockProduct.querySelector(".big-photo-product img").setAttribute("src", `${imgAtrr}`)
+       for (itemImg of blockProduct.querySelectorAll(".photo-ptoducts img")){
+              console.log(itemImg)
+              itemImg.setAttribute("src", `${imgAtrr}`)
+       } 
+
+}
+function showBadgeProduct(elem, usblock){
+       if (elem.innerHTML){
+              usblock.innerHTML  = elem.innerHTML
+              usblock.style.display = ""
+       } else{
+              usblock.style.display = "none"
+       }
+}
+////////switch big photo
 document.querySelector("ul.little-photo").addEventListener("click", function openQuickView(event){
        
        if(event.target.tegName = "li"){
@@ -105,11 +165,79 @@ document.querySelector("ul.little-photo").addEventListener("click", function ope
      
 })
 
-document.querySelector(".additional-info-product .view-all").addEventListener("click" , function (){
-       document.querySelector(".view-all").classList.add("none")
-       let listShow = document.querySelectorAll(".info-about-product.none")
-       for(const item of listShow){
-              item.classList.remove("none")
+///////////add product in cart buy
+function addInCartProducts (){
+       let cartBuy = document.querySelector("#buy-list")
+       let amountBuy = cartBuy.querySelector("#amountShoping")
+       let quantityMany = document.querySelector("#amountPrice")
+document.querySelector(".product-block").addEventListener("click", function (event){
+       
+       if (event.target.classList.contains("btn-buy")) { 
+              let itemPtoduct = event.target.closest(".main-product")
+              amountBuy.innerHTML = ++amountBuy.innerHTML // пишем количество товаров в козине
+              localStorage.setItem("cartAmountBuy", amountBuy.innerHTML)// записуем в память
+
+              let priceProduct = parseInt(itemPtoduct.querySelector(".new-price").innerHTML.match(/\d+/)) //берем из продукта цену и только цыфры
+              let res = priceProduct + Number(localStorage.getItem("sumBuy"))// вічисляем стоимость всех продуктов в корзине
+              localStorage.setItem("sumBuy", res)// записіваем в память
+              quantityMany.innerHTML = res + "₽"// віводим на єкран
+              
+
+              console.log(itemPtoduct.querySelector(".nameProduct"))
+             
+              // localStorage.setItem("catrProducts", itemPtoduct.querySelector(".nameProduct").innerHTML)
        }
 })
+}
+addInCartProducts()
+///////////////////////////////////////
+//slidershow homepage main title
+let slideIndex = 1;
+showSlides(slideIndex);
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+//////////////////////////////////
+// function getCgapterAndSubChapterProduct (){
+//        let nameSearch;  
+//        let nameSubsearch;
+//          document.querySelector(".all-category-menu").addEventListener("click" , function(event){
+              
+//                 if (event.target.tagName == "A"){
+//                        nameSearch = event.target.innerHTML
+//                       localStorage.setItem("chapter", nameSearch)
+                       
+//                 }
+                
+//          }) 
+       
+//          for (const item of document.querySelectorAll(".category-info")){
+//          item.addEventListener("click" , function(e){
+//                   if (e.target.tagName == "A"){
+                      
+//                        nameSubsearch = e.target.innerHTML
+//                        localStorage.setItem("subChapter", nameSubsearch)
+                       
+//                         }
+//          }) }
 
+
+//   }

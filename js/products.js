@@ -47,7 +47,8 @@ let products = [
            present:false,
            availability: true,
            chapter:"Крупная бытовая техника",
-           subChapter:"Холодильник"
+           subChapter:"Холодильник",
+           raiting:3
     },
     {
            nameProduct : "Ноутбук Lenovo sx 3962",
@@ -72,7 +73,8 @@ let products = [
            present:false,
            availability: true,
            chapter:"Компьютерная техника",
-           subChapter:"Ноутбук"
+           subChapter:"Ноутбук",
+           raiting:4
     },
     {
            nameProduct : "Sony playstation 5 ",
@@ -97,7 +99,8 @@ let products = [
            present:false,
            availability: true,
            chapter:"Компьютерная техника",
-           subChapter:"Ноутбук"
+           subChapter:"Ноутбук",
+           raiting:2
     },
     {
            nameProduct : "Xiaomi Mi Robot Vacuum Cleaner",
@@ -122,7 +125,8 @@ let products = [
            present:false,
            availability: true,
            chapter:"Дом и дача",
-           subChapter:"Пылесос"
+           subChapter:"Пылесос",
+           raiting:5
     },
     {
            nameProduct : "Водонагреватель Electrolux EWH 80 Formax",
@@ -147,7 +151,8 @@ let products = [
            present:false,
            availability: true,
            chapter:"Встраиваемая техника",
-           subChapter:"Бойлер"
+           subChapter:"Бойлер",
+           raiting:3
     },
     {
            nameProduct : "Стиральная машина LG F-1096TD3",
@@ -172,7 +177,8 @@ let products = [
            present: false,
            availability: true,
            chapter:"Крупная бытовая техника",
-           subChapter:"Стиральная машина"
+           subChapter:"Стиральная машина",
+           raiting:3
     },
     {
            nameProduct : "Микроволновая печь WHIRLPOOL AMW 730 IX",
@@ -197,7 +203,8 @@ let products = [
            present:"Подарок",
            availability: true,
            chapter:"Техника для кухни",
-           subChapter:"Микроволновая печь"
+           subChapter:"Микроволновая печь",
+           raiting:2
     },
     {
            nameProduct : "Телевизор BLACKTON 2402B",
@@ -222,7 +229,8 @@ let products = [
            present:false,
            availability: true,
            chapter:"Аудио/Видео",
-           subChapter:"Телевизор"
+           subChapter:"Телевизор",
+           raiting:1
     },
     {
            nameProduct : "Микроволновая печь Hansa AMG20BFH",
@@ -247,7 +255,8 @@ let products = [
            present:false,
            availability: true,
            chapter:"Техника для кухни",
-           subChapter:"Микроволновая печь"
+           subChapter:"Микроволновая печь",
+           raiting:5
     },
     {
            nameProduct : "Холодильник Electrolux EWH 80 Formax",
@@ -272,7 +281,8 @@ let products = [
            present:false,
            availability: true,
            chapter:"Крупная бытовая техника",
-           subChapter:"Холодильник"
+           subChapter:"Холодильник",
+           raiting:3
     },
     {
            nameProduct : "Стиральная машина LG F-1096TD3",
@@ -297,7 +307,8 @@ let products = [
            present: false,
            availability: false,
            chapter:"Крупная бытовая техника",
-           subChapter:"Стиральная машина"
+           subChapter:"Стиральная машина",
+           raiting:4
     },
 ]
 
@@ -308,17 +319,45 @@ function getBadgeProduct (nameBadge, element, elemStyle){
     return   elemStyle.querySelector(element).style.display = "none"
     }
 }
+window.addEventListener("load", function (){
+       let nameSearch;  
+       let nameSubsearch;
+       for (const item of document.querySelectorAll(".category-info")){
+                item.addEventListener("click" , function(e){
+                         if (e.target.tagName == "A"){
+                              nameSubsearch = e.target.innerHTML
+                              localStorage.setItem("subChapter",nameSubsearch)
 
-window.addEventListener("load", function(){
-     let nameSearch;  
-     document.querySelector(".all-category-menu").addEventListener("click" , function searchChapterProducts (event){
-      nameSearch = event.target.innerHTML
-      console.log(nameSearch)
+                            // e.preventDefault()
 
-      localStorage.setItem("chapter", `"${nameSearch}"`)
-      
-       })  
+
+                              nameSearch = e.target.closest(".category-info").previousElementSibling.firstElementChild.innerHTML
+                              
+                              localStorage.setItem("сhapter",nameSearch)
+                              console.log(e.target.closest(".category-info").previousElementSibling.firstElementChild.innerHTML)
+                            }
+       }) }
 })
+window.addEventListener("load", function(){
+       //cart buy
+       document.querySelector("#amountPrice").innerHTML = localStorage.getItem("sumBuy") + " ₽"
+       document.querySelector("#amountShoping").innerHTML = localStorage.getItem("cartAmountBuy")
+       //select city 
+       document.querySelector("#city-of-your-choice").innerHTML = localStorage.getItem("yourCity")
+       //user account 
+       // document.querySelector("#editName").value = localStorage.getItem("userName") 
+       // document.querySelector("#title-user-name").innerHTML = localStorage.getItem("userName") 
+
+       // document.querySelector("#editAddress").value = localStorage.getItem("userAddress") 
+       // document.querySelector("#editMail").value = localStorage.getItem("userMailAddress") 
+       // document.querySelector("#editNumber").value = localStorage.getItem("userNumber") 
+       
+
+
+       
+      
+})
+
 
 // function showListManufacturer (event){
        // console.log(event.target)

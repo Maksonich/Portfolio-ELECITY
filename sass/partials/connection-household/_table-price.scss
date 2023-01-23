@@ -42,32 +42,46 @@
                 ul.hidden{
                     display: none;
                 }
-                ul.hidden.active{
-                    display:flex;
-                    justify-content: flex-start;
-                    flex-direction: column;
-                    margin-top: 10px;
-                    li{
-
-                        display: flex;
-                        justify-content: space-between;
-                        background-color: #ffffff;
-                        margin-left: -15px;
+                &.active{
+                    ul.hidden{
+                        display:flex;
+                        justify-content: flex-start;
+                        flex-direction: column;
+                        margin-top: 10px;
+                        li{
+    
+                            display: flex;
+                            justify-content: space-between;
+                            flex-wrap: nowrap;
+                            background-color: #ffffff;
+                            margin-left: -15px;
+                            width: 103%;
+                            
+                        }
+                    }
+                    .arrow-img{
+                        display: block;
+                        transform:  rotateZ(180deg);
+                        img{
+                            position: relative;
+                        }
                         
-                        width: 103%;
+                            
                         
                     }
                 }
+              
                 &.accord-btn{
                     background-color: #EFF3F9;
                     border-bottom: 3px solid #ffffff ;
                     padding-right: 20px;
-                    
+                    padding: 0 25px 0 15px;
                     .click-btn-accord{
                         width: 100%;
                         display: flex;
                         justify-content: space-between;
                         cursor: pointer;
+                        padding: 15px 30px 15px 15px;
                         .naming{
                             font-weight: 500;
                             font-size: 16px;
@@ -79,9 +93,7 @@
                             img{
                                 position: relative;
                             }
-                            &.active{
-                                transform:  rotateZ(180deg);
-                            }
+                         
                         }
                        
                     }

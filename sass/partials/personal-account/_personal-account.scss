@@ -87,6 +87,7 @@
                         height: 20.62px;
                         position: relative;
                         display: block;
+                        cursor: pointer;
                       img{
                         width: 16px;
                         height: 16px;
@@ -126,20 +127,32 @@
                                 color: #999999;
                                 
                             }
-                            input{
-                                font-weight: 400;
-                                font-size: 18px;
-                                line-height: 35px;
-                                color: #404040;
-                                width: 305px;
-                                border: none;
-                                &.active-edit{
+                            
+                            .entry-field{
+                                display: flex;
+                                align-items: center;
+                                input{
+                                    font-weight: 400;
+                                    font-size: 18px;
+                                    line-height: 35px;
+                                    color: #404040;
+                                    width: 305px;
+                                    border: none;
+                                    &.active-edit{
+                                        margin-left: 5px;
+                                        padding-left: 5px;
+                                        box-shadow: 0px 2px 5px #1e1e1e54;
+                                       
+                                    }
+                                }
+                                a{
                                     margin-left: 5px;
-                                    padding-left: 5px;
-                                    box-shadow: 0px 2px 5px #1e1e1e54;
-                                   
+                                    color: green;
+                                    font-size: 18px;
+                                    display: none;
                                 }
                             }
+                           
                                                         
                             .edit {
                                 display: flex;

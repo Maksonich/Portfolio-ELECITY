@@ -72,6 +72,7 @@
                     }
                 }
             }
+            
             .banner-text {
                 margin: 104px 0 0 114px;
                 max-width: 500px;
@@ -101,19 +102,84 @@
                 }
             }
         }
-        .links-slider {
-
+        .mySlides {
+            display: none;
         }
-        .prev {
+        .links-slider {
+        .prev, 
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            border-radius: 50%;
+            margin-top: -22px;
+            width: 35px;
+            height: 35px;
+            transition: 0.6s ease;
+            padding: 9px 11px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            &:hover{
+                background-color: rgba(0, 0, 0, 0.322);
+            }
+            a{ 
+                 display: block;
+                
+               img{ 
+                position: relative;
+                
+               }
+            }
+        }
+        .prev{
+            left: 19px;  
         }
         .next {
+            padding: 9px 0 0 15px;
+            right: 19px;
         }
+       
+        }
+        
         .dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            .dot {
+                cursor: pointer;
+              
+                width: 10px;
+                height: 10px;
+                
+                border: 1px solid #FFFFFF;
+                margin: 0 2px;
+                background-color: #bbb;
+                border-radius: 50%;
+                display: inline-block;
+                transition: background-color 0.6s ease;
+
+              }
+              
+              .active, .dot:hover {
+                background: #FFFFFF;
+              }
+              .fade {
+                animation-name: fade;
+                animation-duration: 2s;
+              }
         }
-        .dot {
-        }
+       
     
     }
+}
+
+
+  
+
+
+@keyframes fade {
+from {opacity: 0}
+to {opacity: 1}
 }
 @keyframes oneAnim{
     33%{

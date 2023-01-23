@@ -391,19 +391,14 @@ header {
 								background-color: #DCE9F8;
 								cursor: pointer;
 							}
-							.name-category{
-								a{
-									display: block;
-									
-									&:hover{
-										color: $colorText;
-									}
-								}
-							}
 							.category-info{
 								width: 1050px;
 								visibility: hidden;
-								&.active{
+								
+							}
+							&.active{
+								.category-info{
+								
 									position: absolute;
 									top: 0px;left: 0;
 									visibility:visible;
@@ -411,7 +406,7 @@ header {
 									justify-content: space-between;
 									margin-left: 290px;
 									.category-menu{
-										margin-left: 20px;
+										padding-left: 20px;
 										display: flex;
 										flex-direction: column;
 										position: relative;
@@ -454,8 +449,9 @@ header {
 																width: 100%;
 																border: none;
 																height:30px;
-																
+																padding: 0px;
 																a{
+																	padding:10px;
 																font-weight: 400;
 																font-size: 14px;
 																line-height: 25px;
@@ -504,41 +500,52 @@ header {
 										}
 									}
 									.categori-banner{
-										background-color:rgba(243, 248, 255, 1);
-										align-self: center;
-										width: 274.64px;
-										height: 490.84px;
-										border-radius: 5px;
-										text-align: center;
-										position: relative;
-										z-index: 20;
-										display: flex;
-										flex-direction: column;
-										align-items: center;
-										padding: 10px;
-										img{
-											
-											width: 189.07px;
-											height: 259px;
-											display: block;
-											margin: 15px 0;
-										}
-										.title-discount {
-											font-weight: 500;
-											font-size: 20px;
-											line-height: 37px;
-										}
-										span{
-											margin-top: 20px;
-											border: none;
-										}
-										a{
-											@include  btnBuy;
-											padding: 8px 0;
-										}
+											background-color:rgba(243, 248, 255, 1);
+											align-self: center;
+											width: 274.64px;
+											height: 490.84px;
+											border-radius: 5px;
+											text-align: center;
+											position: relative;
+											z-index: 20;
+											display: flex;
+											flex-direction: column;
+											align-items: center;
+											padding: 10px;
+											img{
+												
+												width: 189.07px;
+												height: 259px;
+												display: block;
+												margin: 15px 0;
+											}
+											.title-discount {
+												font-weight: 500;
+												font-size: 20px;
+												line-height: 37px;
+											}
+											span{
+												margin-top: 20px;
+												border: none;
+											}
+											a{
+												@include  btnBuy;
+												padding: 8px 0;
+											}
+										
 									}
 								}
 							}
+							.name-category{
+								a{
+									display: block;
+									
+									&:hover{
+										color: $colorText;
+									}
+								}
+							}
+							
 						}
 					}
 				}

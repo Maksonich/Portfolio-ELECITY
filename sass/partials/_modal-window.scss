@@ -623,7 +623,7 @@
 			.img-block {
 				display: flex;
 				align-items: flex-start;
-				margin-left: 55px;
+				margin-left: 15px;
 				.little-photo {
 					height: 371px;
 					.photo-ptoducts {
@@ -647,10 +647,11 @@
 				}
 				.big-photo-product  {
 					margin: 0 20px;
-					width: 320px;
+					width: 350px;
 					height: 670px;
 					img{
-						display: block
+						display: block;
+						width: 100%;
 					}
 				}
 			}

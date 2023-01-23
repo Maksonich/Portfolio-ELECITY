@@ -1,6 +1,6 @@
 //////////////open modal window select sity
 function changeСities(){
-
+       let yourCity;
     let wind = document.querySelector("#selectSity");
     wind.addEventListener("click", function(){
            document.querySelector(".popup_catalog-cities").classList.add("open");
@@ -15,12 +15,17 @@ function changeСities(){
 
     let changeСity = document.querySelector(".list-cities")
     changeСity.addEventListener("click", function(e){
-           wind.querySelector("a").innerHTML = e.target.innerHTML
+              if(e.target.tagName = "a"){
+              localStorage.setItem("yourCity", `${e.target.innerHTML}`)
+                     
+              let yourCity = localStorage.getItem("yourCity");
            
-           document.querySelector(".popup_catalog-cities").classList.remove("open");
-           document.querySelector("#wrapper").classList.remove("popup");  
-    })
+              wind.querySelector("#city-of-your-choice").innerHTML = yourCity 
 
+              document.querySelector(".popup_catalog-cities").classList.remove("open");
+              document.querySelector("#wrapper").classList.remove("popup");}  
+    })
+   
 }
 changeСities()
 //close black-window
@@ -56,8 +61,9 @@ function loginPersonesAccount (){
                   timer.innerHTML = seconds
                   time--;
                   if (time === 0 ){
-                         document.querySelector(".popup").classList.remove("open");
+                         document.querySelector(".popup_catalog-loginAccount").classList.remove("open");
                          document.querySelector("#wrapper").classList.remove("popup");
+                            closeModalWindLoginPers()
                          document.querySelector("#enterNumber").value = ""
                          clearInterval(timerEnterNumber)
                   }
@@ -65,9 +71,9 @@ function loginPersonesAccount (){
            }
     })
 
-    document.querySelector(".popup .blocker").addEventListener("click", function closeModalWindLoginPers() {
-           document.querySelector(".popup").classList.remove("open");
-           document.querySelector("#wrapper").classList.remove("popup");
+    document.querySelector(".popup_catalog-loginAccount .blocker").addEventListener("click", function closeModalWindLoginPers() {
+            document.querySelector(".popup_catalog-loginAccount").classList.remove("open");
+              document.querySelector("#wrapper").classList.remove("popup");
            document.querySelector("#enterNumber").value = ""
            clearInterval(timerEnterNumber)
            
@@ -132,56 +138,27 @@ loginPersonesAccount()
 // start button all category
 //menu all category
 function showAllCategory (){
-
-    let buttonAllCategory = document.querySelector(".all-category")
-    buttonAllCategory.addEventListener('click', function (){
-       buttonAllCategory.classList.toggle("active");
-    document.querySelector(".all-category-menu").classList.toggle("active");
-    })
-
-    const mainMenuAllCategory = document.querySelectorAll(".name-category a");
-//     const mainMenuAllCategory = document.querySelectorAll("[data-filter-product]");
-    const AllMenuAllCategory = document.querySelectorAll(".category-info");
-
-    for (let i = 0; i < mainMenuAllCategory.length;i++){
-       let elemli = mainMenuAllCategory[i]
-       // elemli.addEventListener("mouseover", showSubcategory)
-       let elemShow = AllMenuAllCategory[i]
+       let buttonAllCategoryMenu = document.querySelector(".all-category-menu")
+       let buttonAllCategory = document.querySelector(".all-category")
+      
+       buttonAllCategory.addEventListener('click', function (){
+              buttonAllCategory.classList.toggle("active");
+              buttonAllCategoryMenu.classList.toggle("active");
+       })
+   
+      
+       
+       buttonAllCategoryMenu.addEventListener("mouseover", function(event){
+                     event.target.parentElement.parentElement.classList.add("active")
+                 
               
-          elemli.addEventListener("mouseover", function () {
-                   
-                  AllMenuAllCategory[i].classList.add("active")
-                  
-           })
-           elemli.addEventListener("mouseout", function (){
-                  AllMenuAllCategory[i].classList.remove("active")
-           })
-              // console.log(elemShow.dataset.filProd)
-
-
-
-       // function  showSubcategory(){
-       //        if(elemli.dataset.filterProduct === elemShow.dataset.filProd){
-       //               elemShow.classList.add("active");
-                    
-       //        }
-
-
-       // }
-    }
-
+       })
+       buttonAllCategoryMenu.addEventListener("mouseout", function(event){
+              if(event.target.parentElement.classList.contains("name-category")){
+                     event.target.parentElement.parentElement.classList.remove("active")
+                     
+              }
+       })
        
-       
-       // showSubcategory()
 }
 showAllCategory()
-///////////////////////////////////////////////////////////////
-// function shoppingBascet (){
-//        let amountShop = document.querySelector("#amountShoping")
-//        let btnBuy = document.querySelectorAll(".btn-buy")
-//        let btnBuy = document.querySelectorAll(".btn-buy")
-// for (let i = 0; i < btnBuy.length; i++){
-//        let buy = btnBuy[i]
-//        console,log(buy)
-// }
-// }
