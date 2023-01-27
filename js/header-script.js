@@ -4,7 +4,8 @@ function changeСities(){
     let wind = document.querySelector("#selectSity");
     wind.addEventListener("click", function(){
            document.querySelector(".popup_catalog-cities").classList.add("open");
-           document.querySelector("#wrapper").classList.add("popup");   
+           document.querySelector("#wrapper").classList.add("popup"); 
+           document.querySelector("#searchSity").focus()
     })
 
     let close =  document.querySelector(".popup_catalog-cities .blocker");
@@ -82,10 +83,10 @@ function loginPersonesAccount (){
     buttonError.addEventListener("click", function (){
     if (reg.test(number.value)) {
           
-           verification.focus()
+              
            document.querySelector(".box-one").classList.add("close");
            document.querySelector(".next-step").classList.add("active");
-
+              verification.focus()
            let timer = document.querySelector("#timerNextStep")
            let time = 179
            let timerEnterCodeMessage = setInterval(timeNextStep , 1000);
@@ -101,7 +102,8 @@ function loginPersonesAccount (){
                                 clearInterval(timerEnterCodeMessage)
                          } 
                   }
-           yourNumber.textContent = " 380" + number.value;
+           yourNumber.textContent = "+380" + number.value;
+           localStorage.setItem("userNumber", yourNumber.textContent)
     } else{       
                   number.value = ""
                   number.style.border = "1px solid red";

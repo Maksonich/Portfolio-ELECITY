@@ -25,5 +25,6 @@ allowEditNameUser("#editAddressClick","#editAddress" ,"userAddress")
 allowEditNameUser("#editMailClick","#editMail","userMailAddress")
 allowEditNameUser("#editNumberClick","#editNumber","userNumber")
 
-  
-    
+
+
+

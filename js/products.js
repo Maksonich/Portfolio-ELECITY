@@ -22,7 +22,9 @@ let products = [
            present:false,
            availability: true,
            chapter:"Крупная бытовая техника",
-           subChapter:"Холодильник"
+           subChapter:"Холодильник",
+           raiting:5,
+           
     },
     {
            nameProduct : "Холодильник Electrolux EWH 80 Formax",
@@ -48,7 +50,8 @@ let products = [
            availability: true,
            chapter:"Крупная бытовая техника",
            subChapter:"Холодильник",
-           raiting:3
+           raiting:3,
+           
     },
     {
            nameProduct : "Ноутбук Lenovo sx 3962",
@@ -74,7 +77,8 @@ let products = [
            availability: true,
            chapter:"Компьютерная техника",
            subChapter:"Ноутбук",
-           raiting:4
+           raiting:4,
+          
     },
     {
            nameProduct : "Sony playstation 5 ",
@@ -89,7 +93,7 @@ let products = [
            imageProduct: "playstation5.png",
            new : "Новинка",
            sale : "-25%",
-           codeProduct :"519862",
+           codeProduct :"519861",
            price : 78200 ,
            newPrice : "",
            grade: "",
@@ -100,7 +104,8 @@ let products = [
            availability: true,
            chapter:"Компьютерная техника",
            subChapter:"Ноутбук",
-           raiting:2
+           raiting:2,
+           
     },
     {
            nameProduct : "Xiaomi Mi Robot Vacuum Cleaner",
@@ -115,7 +120,7 @@ let products = [
            imageProduct: "vacuumCleaner.png",
            new : "Новинка",
            sale : "-12%",
-           codeProduct :"519862",
+           codeProduct :"519863",
            price : 108200 ,
            newPrice : "",
            grade: "",
@@ -126,7 +131,8 @@ let products = [
            availability: true,
            chapter:"Дом и дача",
            subChapter:"Пылесос",
-           raiting:5
+           raiting:5,
+          
     },
     {
            nameProduct : "Водонагреватель Electrolux EWH 80 Formax",
@@ -141,7 +147,7 @@ let products = [
            imageProduct: "boiler-ELECTROLUX.png",
            new : "Новинка",
            sale : "-20%",
-           codeProduct :"54567475",
+           codeProduct :"5457475",
            price : 18000,
            newPrice : "",
            comments : "13",
@@ -152,7 +158,8 @@ let products = [
            availability: true,
            chapter:"Встраиваемая техника",
            subChapter:"Бойлер",
-           raiting:3
+           raiting:3,
+           
     },
     {
            nameProduct : "Стиральная машина LG F-1096TD3",
@@ -167,7 +174,7 @@ let products = [
            imageProduct: "washing-mashin.png",
            new : false,
            sale : "-20%",
-           codeProduct :"54567476",
+           codeProduct :"5456776",
            price : 18000,
            grade: "0",
            comments : "12",
@@ -178,7 +185,8 @@ let products = [
            availability: true,
            chapter:"Крупная бытовая техника",
            subChapter:"Стиральная машина",
-           raiting:3
+           raiting:3,
+          
     },
     {
            nameProduct : "Микроволновая печь WHIRLPOOL AMW 730 IX",
@@ -193,7 +201,7 @@ let products = [
            imageProduct: "microvawe_whirlpool.png",
            new : "Новинка",
            sale : "-20%",
-           codeProduct :"54567477",
+           codeProduct :"54567417",
            price : 20300,
            grade: "5",
            comments : "13",
@@ -204,7 +212,8 @@ let products = [
            availability: true,
            chapter:"Техника для кухни",
            subChapter:"Микроволновая печь",
-           raiting:2
+           raiting:2,
+           
     },
     {
            nameProduct : "Телевизор BLACKTON 2402B",
@@ -219,7 +228,7 @@ let products = [
            indication: "-",
            new : "Новинка",
            sale : "-20%",
-           codeProduct :"54567477",
+           codeProduct :"54567475",
            price : 10000,
            grade: "5",
            comments : "13",
@@ -230,7 +239,8 @@ let products = [
            availability: true,
            chapter:"Аудио/Видео",
            subChapter:"Телевизор",
-           raiting:1
+           raiting:1,
+           
     },
     {
            nameProduct : "Микроволновая печь Hansa AMG20BFH",
@@ -245,7 +255,7 @@ let products = [
            imageProduct: "microvave.png",
            new : "Новинка",
            sale : "-20%",
-           codeProduct :"54567477",
+           codeProduct :"54537477",
            price : 15300,
            grade: "5",
            comments : "13",
@@ -256,7 +266,8 @@ let products = [
            availability: true,
            chapter:"Техника для кухни",
            subChapter:"Микроволновая печь",
-           raiting:5
+           raiting:5,
+          
     },
     {
            nameProduct : "Холодильник Electrolux EWH 80 Formax",
@@ -271,7 +282,7 @@ let products = [
            imageProduct: "Beko.png",
            new : "Новинка",
            sale : false,
-           codeProduct :"54567477",
+           codeProduct :"54569477",
            price :18000 ,
            grade: "5",
            comments : "13",
@@ -282,7 +293,8 @@ let products = [
            availability: true,
            chapter:"Крупная бытовая техника",
            subChapter:"Холодильник",
-           raiting:3
+           raiting:3,
+         
     },
     {
            nameProduct : "Стиральная машина LG F-1096TD3",
@@ -297,7 +309,7 @@ let products = [
            imageProduct: "washing-mashin.png",
            new : false,
            sale : "-20%",
-           codeProduct :"54567476",
+           codeProduct :"14567476",
            price : 18000, 
            grade: "0",
            comments : "12",
@@ -308,7 +320,8 @@ let products = [
            availability: false,
            chapter:"Крупная бытовая техника",
            subChapter:"Стиральная машина",
-           raiting:4
+           raiting:4,
+           
     },
 ]
 
@@ -327,31 +340,52 @@ window.addEventListener("load", function (){
                          if (e.target.tagName == "A"){
                               nameSubsearch = e.target.innerHTML
                               localStorage.setItem("subChapter",nameSubsearch)
-
                             // e.preventDefault()
-
-
-                              nameSearch = e.target.closest(".category-info").previousElementSibling.firstElementChild.innerHTML
-                              
-                              localStorage.setItem("сhapter",nameSearch)
-                              console.log(e.target.closest(".category-info").previousElementSibling.firstElementChild.innerHTML)
+                              nameSearch = e.target.closest(".category-info").previousElementSibling.firstElementChild.innerHTML;
+                              localStorage.setItem("сhapter",nameSearch);
                             }
-       }) }
+              }) 
+       }
+       document.querySelector("#searchSity").addEventListener("input", function myFunctionSearchSity() {
+       let a;
+       let i;
+       let txtValue;
+
+       let input = document.getElementById("searchSity");
+       let filter = input.value.toUpperCase();
+       let ul = document.querySelector(".list-cities");
+       let li = ul.querySelectorAll("li");
+     
+              for (i = 0; i < li.length; i++) {
+                     
+                     a = li[i].querySelector("a");
+                    
+                     txtValue = a.textContent || innerHTML; 
+                     if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            
+                            li[i].style.display = "";
+                     } else {
+                            li[i].style.display = "none";
+                     }
+              }
+       })
+       
+
 })
 window.addEventListener("load", function(){
+       
        //cart buy
        document.querySelector("#amountPrice").innerHTML = localStorage.getItem("sumBuy") + " ₽"
        document.querySelector("#amountShoping").innerHTML = localStorage.getItem("cartAmountBuy")
        //select city 
        document.querySelector("#city-of-your-choice").innerHTML = localStorage.getItem("yourCity")
        //user account 
-       // document.querySelector("#editName").value = localStorage.getItem("userName") 
-       // document.querySelector("#title-user-name").innerHTML = localStorage.getItem("userName") 
+       document.querySelector("#editName").value = localStorage.getItem("userName") 
+       document.querySelector("#title-user-name").innerHTML = localStorage.getItem("userName") 
 
-       // document.querySelector("#editAddress").value = localStorage.getItem("userAddress") 
-       // document.querySelector("#editMail").value = localStorage.getItem("userMailAddress") 
-       // document.querySelector("#editNumber").value = localStorage.getItem("userNumber") 
-       
+       document.querySelector("#editAddress").value = localStorage.getItem("userAddress") 
+       document.querySelector("#editMail").value = localStorage.getItem("userMailAddress") 
+       document.querySelector("#editNumber").value = localStorage.getItem("userNumber") 
 
 
        

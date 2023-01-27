@@ -419,6 +419,9 @@
                 }
                 ul.filter-product-list{
                    margin-top: 30px;
+                   .other-information{
+                    display: none;
+                  }
                     li.item-products-sku{
                         display: flex;
                         justify-content: space-between;
@@ -670,109 +673,111 @@
                                         line-height: 22px;
                                     }
                                     .grade-and-review {
-                                        display: flex;
-                                        align-items: center;
-                                        margin-top: 25px;
-                                       .grade{
-                                           .raiting {
-                                               margin: 0 0 16px 0;
-                                               padding: 0;
-                                               border: none;
-                                             }
-                                             
-                                             .raiting__caption {
-                                               padding: 0;
-                                               margin-bottom: 8px;
-                                             }
-                                             
-                                             .raiting__group {
-                                               position: relative;
-                                               width:75px;
-                                               height: 15px;
-                                               background-image: url(/images/icons/star-null.png);
-                                               background-size: 15px 15px;
-                                             }
-                                             
-                                             .raiting__group:focus-within { 
-                                               outline: solid 1px #64686d0c;
-                                               outline-offset: 0.1px;
-                                             }
-                                             
-                                             .raiting__star {
-                                               font-size: inherit;
-                                               margin: 0;
-                                               position: absolute;
-                                               top: 0;
-                                               left: 0;
-                                               width:75px;
-                                               height: 15px;
-                                               -webkit-appearance: none;
-                                               -moz-appearance: none;
-                                               appearance: none;
-                                               background-size: 15px 15px;
-                                               background-repeat: repeat-x;
-                                             }
-                                             
-                                             .raiting__star:focus {
-                                               outline: none;
-                                             }
-                                             
-                                             .raiting__star:hover, .raiting__star:checked {
-                                               background-image: url(../images/icons/star.png);
-                                             }
-                                             
-                                             .raiting__star:hover ~ .raiting__star {
-                                               background-image: url(https://cdn.glitch.com/be154eac-f8a7-4b55-9350-27cb2d6ff6c0%2Foff.svg);
-                                             }
-                                             
-                                             .raiting__star:nth-of-type(1) {
-                                               z-index: 5;
-                                               width: 4px;
-                                             }
-                                             
-                                             .raiting__star:nth-of-type(2) {
-                                               z-index: 4;
-                                               width: 18px;
-                                             }
-                                             
-                                             .raiting__star:nth-of-type(3) {
-                                               z-index: 3;
-                                               width: 32px;
-                                             }
-                                             
-                                             .raiting__star:nth-of-type(4) {
-                                               z-index: 2;
-                                               width: 46px;
-                                             }
-                                             
-                                             .raiting__star:nth-of-type(5) {
-                                               z-index: 1;
-                                               width: 58px;
-                                             }
-                                             
-                                       }
-                                       .review {
-                                           margin-left: 20px;
-                                           
-                                           a{display: flex;
-                                               img{
-                                               display: block;
-                                               width: 20px;
-                                               height: 20px;
-               
-                                               }
-                                               .amount-review {
-                                                   margin-left: 10px;
-                                                   font-size: 14px;
-                                                   line-height: 25px;
-                                                   color: #6E6E6E;
-                                               }
-                                           }
-                                           
-                                       }
-                                   }
+                                        margin-top: 6px;
+                                           display: flex;
+                                              
+                                          .grade{
+                                              .raiting {
+                                                  margin: 0 0 16px 0;
+                                                  padding: 0;
+                                                  border: none;
+                                                }
+                                                
+                                                .raiting__caption {
+                                                  padding: 0;
+                                                  margin-bottom: 8px;
+                                                }
+                                                
+                                                .raiting__group {
+                                                  position: relative;
+                                                  width:76px;
+                                                  height: 15px;
+                                                  background-image: url(../images/icons/star-null.png);
+                                                  background-size: 15px 15px;
+                                                }
+                                                
+                                                .raiting__group:focus-within { 
+                                                  outline: solid 1px #64686d0c;
+                                                  outline-offset: 0.1px;
+                                                }
+                                                
+                                                .raiting__star {
+                                                  font-size: inherit;
+                                                  margin: 0;
+                                                  position: absolute;
+                                                  top: 0;
+                                                  left: 0;
+                                                  width:75px;
+                                                  height: 15px;
+                                                  -webkit-appearance: none;
+                                                  -moz-appearance: none;
+                                                  appearance: none;
+                                                  background-size: 15px 15px;
+                                                  background-repeat: repeat-x;
+                                                }
+                                                
+                                                .raiting__star:focus {
+                                                  outline: none;
+                                                }
+                                                
+                                                .raiting__star:hover, .raiting__star:checked {
+                                                  background-image: url(../images/icons/star.png);
+                                                }
+                                                
+                                                .raiting__star:hover ~ .raiting__star {
+                                                  background-image: url(../images/icons/star-null.png);
+                                                }
+                                                
+                                                .raiting__star:nth-of-type(1) {
+                                                  z-index: 5;
+                                                  width: 14px;
+                                                }
+                                                
+                                                .raiting__star:nth-of-type(2) {
+                                                  z-index: 4;
+                                                  width: 30px;
+                                                }
+                                                
+                                                .raiting__star:nth-of-type(3) {
+                                                  z-index: 3;
+                                                  width: 45px;
+                                                }
+                                                
+                                                .raiting__star:nth-of-type(4) {
+                                                  z-index: 2;
+                                                  width: 60px;
+                                                }
+                                                
+                                                .raiting__star:nth-of-type(5) {
+                                                  z-index: 1;
+                                                  width: 75px;
+                                                }
+                                                
+                                          }
+                                          .review {
+                                              margin-left: 20px;
+                                              
+                                              a{display: flex;
+                                                align-items: flex-start;
+                                                  img{
+                                                  display: block;
+                                                  width: 20px;
+                                                  height: 20px;
+                        
+                                                  }
+                                                  .amount-review {
+                                                      margin-left: 10px;
+                                                      font-size: 14px;
+                                                      line-height: 25px;
+                                                      color: #6E6E6E;
+                                                  }
+                                              }
+                                              
+                                          }
+                                      }
                                 }
                             }
+                            
                              .current-price-block{
                             display: flex;
                             flex-direction: column;
@@ -822,6 +827,9 @@
                                   
                                 }
                             }
+                            .other-information{
+                                display: none;
+                              }
                             }
                         }
                     }

@@ -1,6 +1,6 @@
 ///show products cart
 function productsBlock (sku){
-      let item = document.querySelector("template ")
+       let item = document.querySelector("template")
        let cloneItem =  item.content.cloneNode(true);
        cloneItem.querySelector(".nameProduct").innerHTML = sku.nameProduct;
        cloneItem.querySelector(".image-product img").setAttribute("src", `./images/product/${sku.imageProduct}`);
@@ -22,25 +22,36 @@ function productsBlock (sku){
               cloneItem.querySelector(".btn-buy").classList.add("not-availability");
               cloneItem.querySelector(".btn-buy").classList.remove("btn-buy");
        }
-       // let otherInformation = cloneItem.createElement("template");
-       
+       let otherInformation = cloneItem.querySelector(".other-information")
+       otherInformation.querySelector(".brand-sku").innerHTML = sku.brand;
+       otherInformation.querySelector(".color").innerHTML = sku.color;
+       otherInformation.querySelector(".energy").innerHTML = sku.energyConsumption;
+       otherInformation.querySelector(".code-product").innerHTML = sku.codeProduct;
+
+
+       // let raiting = cloneItem.querySelectorAll("raiting__star");
+       // for ( let i = 0; i < raiting.length;i++){
+       //       raiting[i].setAttribute('checked', 'checekd')
+       // }
+       // let otherInformation = document.createElement("template");
+
        // raitingProduct(sku.raiting)
              
               
       
 
-       
+       // cloneItem.append(otherInformation)
        cloneItem.querySelector(".review .amount-review").innerHTML = sku.comments;
        return cloneItem;
 }
-//  function raitingProduct(raiting){ 
-//        let raitBlock = document.querySelectorAll(".raiting__group .raiting__star")
-
-//        for ( const item of raitBlock){
-//               for (let i = 0; i < raiting;i++ ){
-//                      item.setAttribute("checked","checked" )
-//               }
+//  function raitingProduct( raiting){ 
+//        let raitBlock = document.querySelectorAll(".product-block .raiting__group")
+//        // console.log(raiting)
+//        for (let i = 0 ; i < raitBlock.length;i++){
+//              console.log(raitBlock[i])
 //        }
+      
+       
 //  }
 
 ///show products block
@@ -91,11 +102,12 @@ document.querySelector("#scroll_top").addEventListener("click", function(){
 /////////////
 //show more information about product
 document.querySelector(".product-block").addEventListener("click", function openQuickView(event){
+
        event.preventDefault()
        if(event.target.classList.contains("quickView")){
               document.querySelector(".popup_catalog-quick-view").classList.add("open");
               document.querySelector("#wrapper").classList.add("popup");
-              console.log(event.target.closest(".main-product").querySelector(".nameProduct").innerHTML)
+              
               viewMoreInfoProduct(event.target.closest(".main-product"))
        }
 })
@@ -124,6 +136,7 @@ function  viewMoreInfoProduct(element){
        }else {
               blockProduct.querySelector(".availability span").innerHTML = "В наличие";
               blockProduct.querySelector(".availability img").style.display = "";
+              blockProduct.querySelector(".availability span").style.color  = "#1E1E1E";
               blockProduct.querySelector(".buttons-buy .btn-buy").classList.remove("not-availability");
               blockProduct.querySelector(".buttons-buy .btn-buy").innerHTML = "Купить";
        }
@@ -133,7 +146,7 @@ function  viewMoreInfoProduct(element){
        let imgAtrr = element.querySelector(".image-product img").getAttribute("src")
        blockProduct.querySelector(".big-photo-product img").setAttribute("src", `${imgAtrr}`)
        for (itemImg of blockProduct.querySelectorAll(".photo-ptoducts img")){
-              console.log(itemImg)
+             
               itemImg.setAttribute("src", `${imgAtrr}`)
        } 
 
@@ -164,31 +177,54 @@ document.querySelector("ul.little-photo").addEventListener("click", function ope
        }
      
 })
-
+let userArrowProduct = new Array();
 ///////////add product in cart buy
 function addInCartProducts (){
-       let cartBuy = document.querySelector("#buy-list")
-       let amountBuy = cartBuy.querySelector("#amountShoping")
-       let quantityMany = document.querySelector("#amountPrice")
-document.querySelector(".product-block").addEventListener("click", function (event){
+       let cartBuy = document.querySelector("#buy-list");
+       let amountBuy = cartBuy.querySelector("#amountShoping");
+       let quantityMany = document.querySelector("#amountPrice");
+       document.querySelector(".product-block").addEventListener("click", function (event){
        
        if (event.target.classList.contains("btn-buy")) { 
-              let itemPtoduct = event.target.closest(".main-product")
+              let itemProduct = event.target.closest(".main-product")
               amountBuy.innerHTML = ++amountBuy.innerHTML // пишем количество товаров в козине
               localStorage.setItem("cartAmountBuy", amountBuy.innerHTML)// записуем в память
 
-              let priceProduct = parseInt(itemPtoduct.querySelector(".new-price").innerHTML.match(/\d+/)) //берем из продукта цену и только цыфры
+              let priceProduct = parseInt(itemProduct.querySelector(".new-price").innerHTML.match(/\d+/)) //берем из продукта цену и только цыфры
               let res = priceProduct + Number(localStorage.getItem("sumBuy"))// вічисляем стоимость всех продуктов в корзине
               localStorage.setItem("sumBuy", res)// записіваем в память
               quantityMany.innerHTML = res + "₽"// віводим на єкран
               
+              
+              
+              let productCodeCardBuy = itemProduct.querySelector(".code-product").innerHTML;
+              let nameProductCartBuy = itemProduct.querySelector(".nameProduct").innerHTML;
+              let newPrice = itemProduct.querySelector(".new-price").innerHTML;
+              let oldPrice = itemProduct.querySelector(".old-price").innerHTML;
+              let addressIMG = itemProduct.querySelector(".image-product img").getAttribute("src");
 
-              console.log(itemPtoduct.querySelector(".nameProduct"))
-             
-              // localStorage.setItem("catrProducts", itemPtoduct.querySelector(".nameProduct").innerHTML)
+
+
+                     let objectProduct = new Object();
+                     
+
+                     objectProduct.code  = productCodeCardBuy;
+                     objectProduct.nameProduct  = nameProductCartBuy;
+                     objectProduct.newPrice  = newPrice ;
+                     objectProduct.oldPrice  = oldPrice;
+                     objectProduct.addressIMG  = addressIMG;   
+                     
+                     
+                      userArrowProduct.push(objectProduct);
+
+                     
+                     
        }
+       myBuyProducts = JSON.stringify(userArrowProduct)
+       localStorage.setItem("myProdBuyLocal" , myBuyProducts);
 })
 }
+
 addInCartProducts()
 ///////////////////////////////////////
 //slidershow homepage main title

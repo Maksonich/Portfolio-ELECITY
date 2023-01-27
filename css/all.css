@@ -1838,6 +1838,7 @@ a img {
       display: -ms-flexbox;
       display: flex; }
       .popup_catalog-quick-view .box .additional-info .grade-and-review {
+        margin-top: 6px;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex; }
@@ -1850,9 +1851,9 @@ a img {
           margin-bottom: 8px; }
         .popup_catalog-quick-view .box .additional-info .grade-and-review .grade .raiting__group {
           position: relative;
-          width: 75px;
+          width: 76px;
           height: 15px;
-          background-image: url(/images/icons/star-null.png);
+          background-image: url(../images/icons/star-null.png);
           background-size: 15px 15px; }
         .popup_catalog-quick-view .box .additional-info .grade-and-review .grade .raiting__group:focus-within {
           outline: solid 1px #64686d0c;
@@ -1875,31 +1876,31 @@ a img {
         .popup_catalog-quick-view .box .additional-info .grade-and-review .grade .raiting__star:hover, .popup_catalog-quick-view .box .additional-info .grade-and-review .grade .raiting__star:checked {
           background-image: url(../images/icons/star.png); }
         .popup_catalog-quick-view .box .additional-info .grade-and-review .grade .raiting__star:hover ~ .raiting__star {
-          background-image: url(https://cdn.glitch.com/be154eac-f8a7-4b55-9350-27cb2d6ff6c0%2Foff.svg); }
+          background-image: url(../images/icons/star-null.png); }
         .popup_catalog-quick-view .box .additional-info .grade-and-review .grade .raiting__star:nth-of-type(1) {
           z-index: 5;
-          width: 4px; }
+          width: 14px; }
         .popup_catalog-quick-view .box .additional-info .grade-and-review .grade .raiting__star:nth-of-type(2) {
           z-index: 4;
-          width: 18px; }
+          width: 30px; }
         .popup_catalog-quick-view .box .additional-info .grade-and-review .grade .raiting__star:nth-of-type(3) {
           z-index: 3;
-          width: 32px; }
+          width: 45px; }
         .popup_catalog-quick-view .box .additional-info .grade-and-review .grade .raiting__star:nth-of-type(4) {
           z-index: 2;
-          width: 46px; }
+          width: 60px; }
         .popup_catalog-quick-view .box .additional-info .grade-and-review .grade .raiting__star:nth-of-type(5) {
           z-index: 1;
-          width: 58px; }
+          width: 75px; }
         .popup_catalog-quick-view .box .additional-info .grade-and-review .review {
           margin-left: 20px; }
           .popup_catalog-quick-view .box .additional-info .grade-and-review .review a {
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center; }
+            -webkit-box-align: start;
+            -ms-flex-align: start;
+            align-items: flex-start; }
             .popup_catalog-quick-view .box .additional-info .grade-and-review .review a img {
               display: block;
               width: 20px;
@@ -1951,10 +1952,11 @@ a img {
         .popup_catalog-quick-view .box .img-and-info .img-block .big-photo-product {
           margin: 0 20px;
           width: 350px;
-          height: 670px; }
+          height: 650px; }
           .popup_catalog-quick-view .box .img-and-info .img-block .big-photo-product img {
             display: block;
-            width: 100%; }
+            width: 100%;
+            max-height: 100%; }
       .popup_catalog-quick-view .box .img-and-info .additional-info-product ul {
         margin-top: 10px;
         font-weight: 400;
@@ -2106,6 +2108,9 @@ a img {
         align-items: flex-start;
         -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0);
         box-shadow: 0 0 10px rgba(0, 0, 0, 0); }
+        .products .layout .product-block ul li .other-information,
+        .products .layout .product-block-two ul li .other-information {
+          display: none; }
         .products .layout .product-block ul li .image-product,
         .products .layout .product-block-two ul li .image-product {
           margin: auto;
@@ -2249,7 +2254,7 @@ a img {
             position: relative;
             width: 76px;
             height: 15px;
-            background-image: url(/images/icons/star-null.png);
+            background-image: url(../images/icons/star-null.png);
             background-size: 15px 15px; }
           .products .layout .product-block ul li .grade-and-review .grade .raiting__group:focus-within,
           .products .layout .product-block-two ul li .grade-and-review .grade .raiting__group:focus-within {
@@ -2278,7 +2283,7 @@ a img {
             background-image: url(../images/icons/star.png); }
           .products .layout .product-block ul li .grade-and-review .grade .raiting__star:hover ~ .raiting__star,
           .products .layout .product-block-two ul li .grade-and-review .grade .raiting__star:hover ~ .raiting__star {
-            background-image: url(https://cdn.glitch.com/be154eac-f8a7-4b55-9350-27cb2d6ff6c0%2Foff.svg); }
+            background-image: url(../images/icons/star-null.png); }
           .products .layout .product-block ul li .grade-and-review .grade .raiting__star:nth-of-type(1),
           .products .layout .product-block-two ul li .grade-and-review .grade .raiting__star:nth-of-type(1) {
             z-index: 5;
@@ -3391,6 +3396,7 @@ a img {
               height: 120px;
               margin-right: 15px; }
               .list-products-shop .layout .list-products ul li .product-cart .img-product-shop img {
+                height: 100%;
                 display: block; }
             .list-products-shop .layout .list-products ul li .product-cart .general-inf {
               display: -webkit-box;
@@ -4085,6 +4091,8 @@ a img {
                 filter: contrast(0); }
       .list-search-products .layout .main-filter-product article ul.filter-product-list {
         margin-top: 30px; }
+        .list-search-products .layout .main-filter-product article ul.filter-product-list .other-information {
+          display: none; }
         .list-search-products .layout .main-filter-product article ul.filter-product-list li.item-products-sku {
           display: -webkit-box;
           display: -ms-flexbox;
@@ -4416,13 +4424,10 @@ a img {
                   font-size: 18px;
                   line-height: 22px; }
                 .list-search-products .layout .main-filter-product article ul.filter-product-list.table li .img-and-name-block .name-block .grade-and-review {
+                  margin-top: 6px;
                   display: -webkit-box;
                   display: -ms-flexbox;
-                  display: flex;
-                  -webkit-box-align: center;
-                  -ms-flex-align: center;
-                  align-items: center;
-                  margin-top: 25px; }
+                  display: flex; }
                   .list-search-products .layout .main-filter-product article ul.filter-product-list.table li .img-and-name-block .name-block .grade-and-review .grade .raiting {
                     margin: 0 0 16px 0;
                     padding: 0;
@@ -4432,9 +4437,9 @@ a img {
                     margin-bottom: 8px; }
                   .list-search-products .layout .main-filter-product article ul.filter-product-list.table li .img-and-name-block .name-block .grade-and-review .grade .raiting__group {
                     position: relative;
-                    width: 75px;
+                    width: 76px;
                     height: 15px;
-                    background-image: url(/images/icons/star-null.png);
+                    background-image: url(../images/icons/star-null.png);
                     background-size: 15px 15px; }
                   .list-search-products .layout .main-filter-product article ul.filter-product-list.table li .img-and-name-block .name-block .grade-and-review .grade .raiting__group:focus-within {
                     outline: solid 1px #64686d0c;
@@ -4457,28 +4462,31 @@ a img {
                   .list-search-products .layout .main-filter-product article ul.filter-product-list.table li .img-and-name-block .name-block .grade-and-review .grade .raiting__star:hover, .list-search-products .layout .main-filter-product article ul.filter-product-list.table li .img-and-name-block .name-block .grade-and-review .grade .raiting__star:checked {
                     background-image: url(../images/icons/star.png); }
                   .list-search-products .layout .main-filter-product article ul.filter-product-list.table li .img-and-name-block .name-block .grade-and-review .grade .raiting__star:hover ~ .raiting__star {
-                    background-image: url(https://cdn.glitch.com/be154eac-f8a7-4b55-9350-27cb2d6ff6c0%2Foff.svg); }
+                    background-image: url(../images/icons/star-null.png); }
                   .list-search-products .layout .main-filter-product article ul.filter-product-list.table li .img-and-name-block .name-block .grade-and-review .grade .raiting__star:nth-of-type(1) {
                     z-index: 5;
-                    width: 4px; }
+                    width: 14px; }
                   .list-search-products .layout .main-filter-product article ul.filter-product-list.table li .img-and-name-block .name-block .grade-and-review .grade .raiting__star:nth-of-type(2) {
                     z-index: 4;
-                    width: 18px; }
+                    width: 30px; }
                   .list-search-products .layout .main-filter-product article ul.filter-product-list.table li .img-and-name-block .name-block .grade-and-review .grade .raiting__star:nth-of-type(3) {
                     z-index: 3;
-                    width: 32px; }
+                    width: 45px; }
                   .list-search-products .layout .main-filter-product article ul.filter-product-list.table li .img-and-name-block .name-block .grade-and-review .grade .raiting__star:nth-of-type(4) {
                     z-index: 2;
-                    width: 46px; }
+                    width: 60px; }
                   .list-search-products .layout .main-filter-product article ul.filter-product-list.table li .img-and-name-block .name-block .grade-and-review .grade .raiting__star:nth-of-type(5) {
                     z-index: 1;
-                    width: 58px; }
+                    width: 75px; }
                   .list-search-products .layout .main-filter-product article ul.filter-product-list.table li .img-and-name-block .name-block .grade-and-review .review {
                     margin-left: 20px; }
                     .list-search-products .layout .main-filter-product article ul.filter-product-list.table li .img-and-name-block .name-block .grade-and-review .review a {
                       display: -webkit-box;
                       display: -ms-flexbox;
-                      display: flex; }
+                      display: flex;
+                      -webkit-box-align: start;
+                      -ms-flex-align: start;
+                      align-items: flex-start; }
                       .list-search-products .layout .main-filter-product article ul.filter-product-list.table li .img-and-name-block .name-block .grade-and-review .review a img {
                         display: block;
                         width: 20px;
@@ -4569,3 +4577,5 @@ a img {
                   line-height: 25px;
                   text-align: center;
                   white-space: nowrap; }
+              .list-search-products .layout .main-filter-product article ul.filter-product-list.table li .current-price-block .other-information {
+                display: none; }

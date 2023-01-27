@@ -36,7 +36,11 @@ function productsBlock (sku){
             cloneItem.querySelector(".btn-buy").classList.add("not-availability");
             cloneItem.querySelector(".btn-buy").classList.remove("btn-buy");
      }
-
+     let otherInformation = cloneItem.querySelector(".other-information")
+       otherInformation.querySelector(".brand-sku").innerHTML = sku.brand;
+       otherInformation.querySelector(".color").innerHTML = sku.color;
+       otherInformation.querySelector(".energy").innerHTML = sku.energyConsumption;
+       otherInformation.querySelector(".code-product").innerHTML = sku.codeProduct;
 
      getSkuBrand(sku.brand)
  
