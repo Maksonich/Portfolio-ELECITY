@@ -56,7 +56,9 @@
                             background-color: #ffffff;
                             margin-left: -15px;
                             width: 103%;
-                            
+                            &:last-child{
+                                border-bottom: #C4C4C4;
+                            }
                         }
                     }
                     .arrow-img{
@@ -75,7 +77,7 @@
                     background-color: #EFF3F9;
                     border-bottom: 3px solid #ffffff ;
                     padding-right: 20px;
-                    padding: 0 25px 0 15px;
+                    padding: 0 25px 2px 15px;
                     .click-btn-accord{
                         width: 100%;
                         display: flex;

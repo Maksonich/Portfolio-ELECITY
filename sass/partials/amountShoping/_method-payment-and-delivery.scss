@@ -6,6 +6,7 @@
                 border: none;
                 margin-bottom: 10px;
             }
+
             .inp{
                 display: flex;
                 align-items: center;
@@ -23,13 +24,27 @@
             input[type="radio"]{
                 margin-right: 10px;
                 cursor:pointer;
-                width: 24px;
+                width: 26px;
                 height: 24px;
                 border: 1px solid #C4C4C4;
                 &:checked{
-                    // background-color:$colorBuy;
+                    // color:$colorBuy;
                     
                 }
+            }
+            input[type="date"]{
+                cursor:pointer;
+                width: 126px;
+                padding: 0 6px;
+                height: 24px;
+                border: 1px solid #C4C4C4;
+                border-radius: 3px;
+                &::-webkit-calendar-picker-indicator {
+                    color: transparent;
+                    opacity: 1;
+                    background: url(../images/icons/calendar.png) no-repeat center;
+                    background-size: contain;
+                  }
             }
             
             .deliveryCourier{
@@ -55,15 +70,46 @@
                 }
             }
             .pickup{
-                .our-address.active{
+                .our-address{
                     display: flex;
                     flex-direction: column;
+                    height: 0px;
+                    overflow: hidden;
                     label{
                         margin:10px 0 0px 30px;
                     }
                 }
             }
-            
+            .check-active{
+                .your-address{
+                        padding: 20px 40px;
+                        width: 600px;
+                        height: 80px;
+                        label{
+                            margin-right: 20px;
+                        }
+                        input{
+                            border: 1px solid #C4C4C4;
+                            border-radius: 5px;
+                            height: 30px;
+                            width: 300px;
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 14px;
+                            padding-left: 10px;
+                        }
+                    
+                }
+                .our-address{
+                    display: flex;
+                    flex-direction: column;
+                    height: 80px;
+
+                    label{
+                        margin:10px 0 0px 30px;
+                    }
+                }
+            }
             
         }
         .method-payment {

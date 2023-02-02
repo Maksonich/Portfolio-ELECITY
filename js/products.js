@@ -369,15 +369,15 @@ window.addEventListener("load", function (){
                      }
               }
        })
-       
-
+      
+     
 })
 window.addEventListener("load", function(){
        
-       //cart buy
-       document.querySelector("#amountPrice").innerHTML = localStorage.getItem("sumBuy") + " ₽"
+     //  cart buy
+       document.querySelector("#amountPrice").innerHTML = localStorage.getItem("sumBuy") + " ₴"
        document.querySelector("#amountShoping").innerHTML = localStorage.getItem("cartAmountBuy")
-       //select city 
+     //  select city 
        document.querySelector("#city-of-your-choice").innerHTML = localStorage.getItem("yourCity")
        //user account 
        document.querySelector("#editName").value = localStorage.getItem("userName") 
@@ -391,12 +391,3 @@ window.addEventListener("load", function(){
        
       
 })
-
-
-// function showListManufacturer (event){
-       // console.log(event.target)
-//      let ul = document.querySelector(".brand-list");
-//      let li = document.querySelector("template.brand-list-template");
-//      li.querySelector("name").textContent = elem;
-//     return ul.append(li)
-// }

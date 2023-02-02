@@ -1761,7 +1761,7 @@
                                         <div class="newPrice"></div>
                                         <div class="oldPrice"></div>
                                         <div class="btn-delete">
-                                            <a href="#"><img src="./images/icons/cross.png" alt=""> Удалить</a>
+                                            <a href="#" class="remove-product"><img src="./images/icons/cross.png" alt=""> Удалить</a>
                                         </div>
                                         
                                     </div>
@@ -1776,11 +1776,11 @@
                             </div>
                             <div class="total-products">
                                 <div class="total-sku">Товаров, <span></span></div>
-                                <div class="total-sum-without-discount">65 900 ₽</div>
+                                <div class="total-sum-without-discount">0 ₴</div>
                             </div>
                             <div class="total-discount-products">
                                 <div class="text">Скидка</div>
-                                <div class="total-discount">15 000 ₽</div>
+                                <div class="total-discount">0 ₴</div>
                             </div>
                             <div class="delivery-products">
                                 <div class="text">Доставка</div>
@@ -1788,7 +1788,7 @@
                             </div>
                             <div class="date-delivery">
                                 <div class="text">Доставка</div>
-                                <div class="date-info"><div class="date"><span class="day">04.</span><span class="mounth">02.</span><span class="year">2021</span></div><div class="time">10:00-18:00</div></div>
+                                <div class="date-info"><div class="date"><span class="day">01.</span><span class="mounth">01.</span><span class="year">2000</span></div><div class="time">10:00-18:00</div></div>
                             </div>
                             <div class="confirm-btn">
                                 <a href="#">Оформить заказ</a>
@@ -1802,33 +1802,33 @@
                 <div class="layout">
                     <div class="method-delivery">
                         <h3>Способ доставки</h3>
-                         <div class="deliveryCourier">
+                         <div class="deliveryCourier ">
                             <div class="inp">
-                                <input type="radio" name="methodDelivery">Доставка курьером <input type="date">
+                                <input type="radio" name="methodDelivery" value="Доставка курьером">Доставка курьером <input type="date" name="" disabled >
                             </div>
                             <div class="your-address">
                                 <label for="yourAddress">Введите адрес</label>
-                                <input type="text" name="yourAddress">
+                                <input type="text" name="yourAddress" name="ourAddress">
                             </div>
                          </div>
-                         <div class="pickup">
+                         <div class="pickup check-active">
                             <div class="inp">
-                                <input type="radio" name="methodDelivery" checked>Самовывоз<input type="date">
+                                <input type="radio" name="methodDelivery" value="Самовывоз" checked>Самовывоз<input type="date" >
                             </div>
-                            <div class="our-address active">
-                                <label for="ourAddress1"><input type="radio" name="ourAddress" id="ourAddress1"> г. Минск, ул. Набережная 28, пом 54</label>
-                                 <label for="ourAddress2"><input type="radio" name="ourAddress" id="ourAddress2"> г. Минск, ул. Набер 228</label>
+                            <div class="our-address">
+                                <label for="ourAddress1"><input type="radio" name="ourAddress" id="ourAddress1"  value="г. Киев, ул. Набережная 28, пом 54" checked> г. Киев, ул. Набережная 28, пом 54</label>
+                                 <label for="ourAddress2"><input type="radio" name="ourAddress" id="ourAddress2" value="г. Киев, ул. Набер 228" > г. Киев, ул. Набер 228</label>
                             </div>
                          </div>
                     </div>
                     <div class="method-payment">
                         <h3>Способ оплаты</h3>
                         <div class="payment">
-                            <input type="radio" name="method-payment" id="online">
-                            <label for="online">Оплата онлайн</label>
-                            <input type="radio" name="method-payment" id="swift">
+                            <input type="radio" name="method-payment" id="online" checked value="Оплата онлайн">
+                            <label for="online" >Оплата онлайн</label>
+                            <input type="radio" name="method-payment" id="swift" value="Оплата при получении картой">
                             <label for="swift">Оплата при получении картой</label>
-                            <input type="radio" name="method-payment" id="cash">
+                            <input type="radio" name="method-payment" id="cash" value="Оплата при получении наличными">
                             <label for="cash">Оплата при получении наличными</label>
                         </div>
                     </div>
@@ -1837,42 +1837,42 @@
             <section class="data-contacts">
                 <div class="layout">
                     <h3>Контактные данные</h3>
-                    <form action="">
+                    <form action="" id="yoursData">
                       <div class="main-info">
                         <fieldset>
-                            <label for="number">Телефон</label>
-                            <input type="text" name="number">
-                            <label for="userName">Имя</label>
-                            <input type="text" name="userName">
-                            <label for="city">Город</label>
-                            <input type="text" name="city">
+                            <label for="number">Телефон <input type="text" class="ent" name="number" id="userNumber" placeholder="123 456 78 90"></label>
+                            
+                            <label for="userName">Имя<input type="text"    class="ent" name="userName" id="userName"></label>
+                           
+                            <label for="city">Город<input type="text"      class="ent" name="city" id="cityUser"></label>
+                            
                         </fieldset>
                         <fieldset>
-                            <label for="mail">Email</label>
-                            <input type="email" name="mail">
-                            <label for="userLastName">Фамилия</label>
-                            <input type="text" name="userLastName">
-                            <label for="address">Адрес</label>
-                            <input type="text" name="address">
+                            <label for="mail">Email <input type="email" class="ent" name="mail" id="userMail"></label>
+                           
+                            <label for="userLastName">Фамилия<input type="text" class="ent" name="userLastName" id="userLastName"></label>
+                            
+                            <label for="address">Адрес<input type="text" class="ent" name="address" id="userAddress" minlength="6"></label>
+                            
                         </fieldset>
                       </div>
                       <div class="radiobtn">
                         <label for="raise">
-                            <input type="radio" name="raise" id="">
+                            <input type="radio"	class="additionalServices"name="additionalServices" id="" value="Нужен подъем">
                             Нужен подъем
                         </label>
                         <label for="installation">
-                            <input type="radio" name="installation" id="">
+                            <input type="radio" class="additionalServices" name="additionalServices" id="" value="Нужна установка">
                             Нужна установка
                         </label>
                         <label for="disposal">
-                            <input type="radio" name="disposal" id="">
+                            <input type="radio" class="additionalServices" name="additionalServi" id="" value="Нужна утилизация">
                             Нужна утилизация
                         </label>
                       </div>
                       <div class="user-comment">
-                         <label for="comment">Комментарий</label>
-                      <textarea name="" for="comment" id="" ></textarea>
+						<label for="comment">Комментарий</label>
+						<textarea name="" for="comment" id="Form-comment" ></textarea>
                       </div>
                      
                     </form>
@@ -1949,6 +1949,5 @@
 	</div>
 	<script  src="js/header-script.js"></script>
 	<script  src="js/user-shopping-cart.js"></script>
-	<!-- <script src="./js/script.js"></script> -->
 </body>
 </html>

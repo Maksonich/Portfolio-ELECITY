@@ -2390,171 +2390,355 @@ a img {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
-    .personal-account .layout .control li a {
+    .personal-account .layout .control li {
+      cursor: pointer;
       font-weight: 400;
       font-size: 18px;
       line-height: 35px;
-      color: #404040; }
-      .personal-account .layout .control li a img {
+      color: #404040;
+      position: relative; }
+      .personal-account .layout .control li:hover {
+        color: #437fc8; }
+      .personal-account .layout .control li img {
         position: relative;
         top: 6px;
-        margin-right: 9px; }
-      .personal-account .layout .control li a:hover {
-        color: #437fc8; }
-    .personal-account .layout .control li:last-child a {
-      color: red; }
+        margin-right: 9px;
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%); }
+      .personal-account .layout .control li.tabs-nav__item.is-active {
+        color: red; }
+        .personal-account .layout .control li.tabs-nav__item.is-active img {
+          -webkit-filter: grayscale(0%);
+          filter: grayscale(0%); }
+      .personal-account .layout .control li .quantity-order {
+        position: absolute;
+        top: 13px;
+        right: -25px;
+        background-color: #fc413c;
+        display: block;
+        width: 16px;
+        height: 16px;
+        font-weight: 700;
+        font-size: 11px;
+        line-height: 13px;
+        color: #FFFFFF;
+        padding: 2px 0 0 5px;
+        border-radius: 50%; }
   .personal-account .layout h2 {
     margin-top: 34px;
     font-weight: 400;
     font-size: 30px;
     line-height: 35px;
     color: #1E1E1E; }
-  .personal-account .layout .user-data {
-    margin-top: 12px; }
-    .personal-account .layout .user-data .main-data {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex; }
-      .personal-account .layout .user-data .main-data .user-photo {
-        width: 108px;
-        height: 108px;
-        background-color: #eff3f9;
-        border-radius: 50%;
-        margin-right: 20px; }
-        .personal-account .layout .user-data .main-data .user-photo img {
-          padding: 27px 30px; }
-      .personal-account .layout .user-data .main-data .user-name h3 {
-        border: none;
-        font-weight: 600;
-        font-size: 24px;
-        line-height: 30px;
-        color: #1E1E1E; }
-      .personal-account .layout .user-data .main-data .user-name input[type=file] {
-        display: none; }
-      .personal-account .layout .user-data .main-data .user-name label {
-        width: 203.11px;
-        height: 20.62px;
-        position: relative;
-        display: block;
-        cursor: pointer; }
-        .personal-account .layout .user-data .main-data .user-name label img {
-          width: 16px;
-          height: 16px;
-          position: relative;
-          top: 4px;
-          margin-right: 10px; }
-    .personal-account .layout .user-data .data {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex; }
-      .personal-account .layout .user-data .data .data-settings h3 {
-        margin-top: 30px;
-        font-weight: 400;
-        font-size: 24px;
-        line-height: 35px;
-        color: #1E1E1E;
-        border: none; }
-      .personal-account .layout .user-data .data .data-settings ul {
+  .personal-account .layout .tab {
+    display: none; }
+    .personal-account .layout .tab.is-active {
+      display: block; }
+      .personal-account .layout .tab.is-active .opted-block {
+        margin-top: 90px;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
         -webkit-box-pack: justify;
         -ms-flex-pack: justify;
         justify-content: space-between; }
-        .personal-account .layout .user-data .data .data-settings ul:last-child {
-          -webkit-box-pack: start;
-          -ms-flex-pack: start;
-          justify-content: flex-start; }
-        .personal-account .layout .user-data .data .data-settings ul li {
-          margin-right: 160px;
-          width: 305px; }
-          .personal-account .layout .user-data .data .data-settings ul li h4 {
+        .personal-account .layout .tab.is-active .opted-block ul.save-user-prod {
+          width: 70%; }
+        .personal-account .layout .tab.is-active .opted-block .user-orders {
+          border: 1px solid #E5E5E5;
+          border-radius: 10px;
+          width: 1045px;
+          height: 228px;
+          -webkit-transition-duration: 2s;
+          -o-transition-duration: 2s;
+          transition-duration: 2s;
+          overflow: hidden; }
+          .personal-account .layout .tab.is-active .opted-block .user-orders .title-order {
+            background-color: #eff3f9;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            padding: 15px 15px 13px 19px; }
+            .personal-account .layout .tab.is-active .opted-block .user-orders .title-order .h4 {
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex; }
+              .personal-account .layout .tab.is-active .opted-block .user-orders .title-order .h4 .status {
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 18px; }
+              .personal-account .layout .tab.is-active .opted-block .user-orders .title-order .h4 .order-code {
+                margin-left: 35px;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 18px;
+                color: #437fc8; }
+            .personal-account .layout .tab.is-active .opted-block .user-orders .title-order .sum-order {
+              font-weight: 500;
+              font-size: 18px;
+              line-height: 18px; }
+          .personal-account .layout .tab.is-active .opted-block .user-orders .informations-order {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            padding: 27px 0 35px 20px; }
+            .personal-account .layout .tab.is-active .opted-block .user-orders .informations-order .inform-delivery .status-prod {
+              font-weight: 500;
+              font-size: 13px;
+              line-height: 18px;
+              color: #FFFFFF;
+              background: #55BB9F;
+              width: 189.1px;
+              height: 26.11px;
+              padding: 3px  0 0 9px;
+              border-radius: 2px; }
+            .personal-account .layout .tab.is-active .opted-block .user-orders .informations-order .inform-delivery .method-delivery {
+              margin-top: 15px;
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 18px; }
+            .personal-account .layout .tab.is-active .opted-block .user-orders .informations-order .inform-delivery .delivery-date {
+              margin-top: 19px;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 18px;
+              color: #6E6E6E; }
+            .personal-account .layout .tab.is-active .opted-block .user-orders .informations-order .inform-delivery .payment-method {
+              margin-top: 6px;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 18px;
+              color: #6E6E6E; }
+            .personal-account .layout .tab.is-active .opted-block .user-orders .informations-order ul.list-shop {
+              margin-top: 13px;
+              margin-left: 270px;
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex; }
+              .personal-account .layout .tab.is-active .opted-block .user-orders .informations-order ul.list-shop li {
+                display: block;
+                width: 200px;
+                padding: 10px; }
+                .personal-account .layout .tab.is-active .opted-block .user-orders .informations-order ul.list-shop li .img-prod {
+                  width: 74.15px;
+                  height: 74.15px;
+                  margin: 0 auto; }
+                  .personal-account .layout .tab.is-active .opted-block .user-orders .informations-order ul.list-shop li .img-prod img {
+                    display: block;
+                    height: 100%;
+                    width: 100%; }
+                .personal-account .layout .tab.is-active .opted-block .user-orders .informations-order ul.list-shop li h6 {
+                  text-align: center;
+                  font-weight: 400;
+                  font-size: 14px;
+                  line-height: 16px; }
+          .personal-account .layout .tab.is-active .opted-block .user-orders .buyer-data {
             font-weight: 400;
             font-size: 14px;
-            line-height: 35px;
-            color: #999999; }
-          .personal-account .layout .user-data .data .data-settings ul li .entry-field {
+            line-height: 18px;
+            color: #6E6E6E;
+            padding-left: 20px; }
+            .personal-account .layout .tab.is-active .opted-block .user-orders .buyer-data b {
+              color: #1E1E1E; }
+            .personal-account .layout .tab.is-active .opted-block .user-orders .buyer-data .userName {
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex; }
+              .personal-account .layout .tab.is-active .opted-block .user-orders .buyer-data .userName .name {
+                margin-right: 5px; }
+          .personal-account .layout .tab.is-active .opted-block .user-orders:hover {
+            height: 378px; }
+        .personal-account .layout .tab.is-active .opted-block .my-profile {
+          margin-left: auto; }
+          .personal-account .layout .tab.is-active .opted-block .my-profile .user-photo-and-name {
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
             -webkit-box-align: center;
             -ms-flex-align: center;
             align-items: center; }
-            .personal-account .layout .user-data .data .data-settings ul li .entry-field input {
+            .personal-account .layout .tab.is-active .opted-block .my-profile .user-photo-and-name .photo-user {
+              margin-right: 21px;
+              padding: 30px;
+              background-color: #eff3f9;
+              border-radius: 50%; }
+              .personal-account .layout .tab.is-active .opted-block .my-profile .user-photo-and-name .photo-user img {
+                display: block;
+                height: 49px;
+                width: 48px; }
+            .personal-account .layout .tab.is-active .opted-block .my-profile .user-photo-and-name .name {
+              width: 140px;
+              font-weight: 600;
+              font-size: 24px;
+              line-height: 30px;
+              color: #1E1E1E; }
+          .personal-account .layout .tab.is-active .opted-block .my-profile .edit {
+            margin-top: 15px;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 30px;
+            color: #437fc8; }
+            .personal-account .layout .tab.is-active .opted-block .my-profile .edit img {
+              width: 20px;
+              height: 20px; }
+          .personal-account .layout .tab.is-active .opted-block .my-profile ul {
+            margin-top: 15px;
+            margin-left: -80xp; }
+            .personal-account .layout .tab.is-active .opted-block .my-profile ul li {
+              margin-bottom: 25px;
               font-weight: 400;
               font-size: 18px;
               line-height: 35px;
-              color: #404040;
-              width: 305px;
-              border: none; }
-              .personal-account .layout .user-data .data .data-settings ul li .entry-field input.active-edit {
-                margin-left: 5px;
-                padding-left: 5px;
-                -webkit-box-shadow: 0px 2px 5px #1e1e1e54;
-                box-shadow: 0px 2px 5px #1e1e1e54; }
-            .personal-account .layout .user-data .data .data-settings ul li .entry-field a {
-              margin-left: 5px;
-              color: green;
-              font-size: 18px;
-              display: none; }
-          .personal-account .layout .user-data .data .data-settings ul li .edit {
+              color: #1E1E1E; }
+      .personal-account .layout .tab.is-active .user-data {
+        margin-top: 12px; }
+        .personal-account .layout .tab.is-active .user-data .main-data {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex; }
+          .personal-account .layout .tab.is-active .user-data .main-data .user-photo {
+            width: 108px;
+            height: 108px;
+            background-color: #eff3f9;
+            border-radius: 50%;
+            margin-right: 20px; }
+            .personal-account .layout .tab.is-active .user-data .main-data .user-photo img {
+              padding: 27px 30px; }
+          .personal-account .layout .tab.is-active .user-data .main-data .user-name h3 {
+            border: none;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 30px;
+            color: #1E1E1E; }
+          .personal-account .layout .tab.is-active .user-data .main-data .user-name input[type=file] {
+            display: none; }
+          .personal-account .layout .tab.is-active .user-data .main-data .user-name label {
+            width: 203.11px;
+            height: 20.62px;
+            position: relative;
+            display: block;
+            cursor: pointer; }
+            .personal-account .layout .tab.is-active .user-data .main-data .user-name label img {
+              width: 16px;
+              height: 16px;
+              position: relative;
+              top: 4px;
+              margin-right: 10px; }
+        .personal-account .layout .tab.is-active .user-data .data {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex; }
+          .personal-account .layout .tab.is-active .user-data .data .data-settings h3 {
+            margin-top: 30px;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 35px;
+            color: #1E1E1E;
+            border: none; }
+          .personal-account .layout .tab.is-active .user-data .data .data-settings ul {
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center; }
-            .personal-account .layout .user-data .data .data-settings ul li .edit img {
-              margin-right: 10px;
-              width: 16px;
-              height: 16px; }
-            .personal-account .layout .user-data .data .data-settings ul li .edit span {
-              font-weight: 500;
-              font-size: 14px;
-              line-height: 30px;
-              color: #437fc8;
-              cursor: pointer; }
-      .personal-account .layout .user-data .data .form {
-        max-width: 30%; }
-        .personal-account .layout .user-data .data .form h4 {
-          font-weight: 400;
-          font-size: 24px;
-          line-height: 35px;
-          color: #1E1E1E;
-          margin-bottom: 11px; }
-        .personal-account .layout .user-data .data .form form {
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-box-orient: vertical;
-          -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-          flex-direction: column; }
-          .personal-account .layout .user-data .data .form form label {
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 35px;
-            color: #999999; }
-          .personal-account .layout .user-data .data .form form input {
-            border: 1px solid #C4C4C4;
-            border-radius: 5px;
-            width: 332.49px;
-            height: 45.82px;
-            padding-left: 20px; }
-          .personal-account .layout .user-data .data .form form button {
-            width: 213.49px;
-            height: 54.65px;
-            background: #437FC8;
-            border-radius: 5px;
-            border: none;
-            color: #fff;
-            font-weight: 600;
-            font-size: 18px;
-            line-height: 25px;
-            margin-top: 25px;
-            -ms-flex-item-align: center;
-            -ms-grid-row-align: center;
-            align-self: center; }
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between; }
+            .personal-account .layout .tab.is-active .user-data .data .data-settings ul:last-child {
+              -webkit-box-pack: start;
+              -ms-flex-pack: start;
+              justify-content: flex-start; }
+            .personal-account .layout .tab.is-active .user-data .data .data-settings ul li {
+              margin-right: 160px;
+              width: 305px; }
+              .personal-account .layout .tab.is-active .user-data .data .data-settings ul li h4 {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 35px;
+                color: #999999; }
+              .personal-account .layout .tab.is-active .user-data .data .data-settings ul li .entry-field {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center; }
+                .personal-account .layout .tab.is-active .user-data .data .data-settings ul li .entry-field input {
+                  font-weight: 400;
+                  font-size: 18px;
+                  line-height: 35px;
+                  color: #404040;
+                  width: 305px;
+                  border: none; }
+                  .personal-account .layout .tab.is-active .user-data .data .data-settings ul li .entry-field input.active-edit {
+                    margin-left: 5px;
+                    padding-left: 5px;
+                    -webkit-box-shadow: 0px 2px 5px #1e1e1e54;
+                    box-shadow: 0px 2px 5px #1e1e1e54; }
+                .personal-account .layout .tab.is-active .user-data .data .data-settings ul li .entry-field a {
+                  margin-left: 5px;
+                  color: green;
+                  font-size: 18px;
+                  display: none; }
+              .personal-account .layout .tab.is-active .user-data .data .data-settings ul li .edit {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center; }
+                .personal-account .layout .tab.is-active .user-data .data .data-settings ul li .edit img {
+                  margin-right: 10px;
+                  width: 16px;
+                  height: 16px; }
+                .personal-account .layout .tab.is-active .user-data .data .data-settings ul li .edit span {
+                  font-weight: 500;
+                  font-size: 14px;
+                  line-height: 30px;
+                  color: #437fc8;
+                  cursor: pointer; }
+          .personal-account .layout .tab.is-active .user-data .data .form {
+            max-width: 30%; }
+            .personal-account .layout .tab.is-active .user-data .data .form h4 {
+              font-weight: 400;
+              font-size: 24px;
+              line-height: 35px;
+              color: #1E1E1E;
+              margin-bottom: 11px; }
+            .personal-account .layout .tab.is-active .user-data .data .form form {
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              -webkit-box-orient: vertical;
+              -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+              flex-direction: column; }
+              .personal-account .layout .tab.is-active .user-data .data .form form label {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 35px;
+                color: #999999; }
+              .personal-account .layout .tab.is-active .user-data .data .form form input {
+                border: 1px solid #C4C4C4;
+                border-radius: 5px;
+                width: 332.49px;
+                height: 45.82px;
+                padding-left: 20px; }
+              .personal-account .layout .tab.is-active .user-data .data .form form button {
+                width: 213.49px;
+                height: 54.65px;
+                background: #437FC8;
+                border-radius: 5px;
+                border: none;
+                color: #fff;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 25px;
+                margin-top: 25px;
+                -ms-flex-item-align: center;
+                -ms-grid-row-align: center;
+                align-self: center; }
 
 .robot-vacuum-cleaner .layout .robot-info-block {
   display: -webkit-box;
@@ -3002,6 +3186,8 @@ a img {
         background-color: #ffffff;
         margin-left: -15px;
         width: 103%; }
+        .table-price .layout ul li.active ul.hidden li:last-child {
+          border-bottom: #C4C4C4; }
     .table-price .layout ul li.active .arrow-img {
       display: block;
       -webkit-transform: rotateZ(180deg);
@@ -3013,7 +3199,7 @@ a img {
       background-color: #EFF3F9;
       border-bottom: 3px solid #ffffff;
       padding-right: 20px;
-      padding: 0 25px 0 15px; }
+      padding: 0 25px 2px 15px; }
       .table-price .layout ul li.accord-btn .click-btn-accord {
         width: 100%;
         display: -webkit-box;
@@ -3374,7 +3560,8 @@ a img {
       display: flex;
       -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-      justify-content: space-between; }
+      justify-content: space-between;
+      position: relative; }
       .list-products-shop .layout .list-products ul {
         width: 925.7px; }
         .list-products-shop .layout .list-products ul li {
@@ -3396,6 +3583,7 @@ a img {
               height: 120px;
               margin-right: 15px; }
               .list-products-shop .layout .list-products ul li .product-cart .img-product-shop img {
+                margin: auto;
                 height: 100%;
                 display: block; }
             .list-products-shop .layout .list-products ul li .product-cart .general-inf {
@@ -3582,9 +3770,21 @@ a img {
   .method-payment-and-delivery .layout .method-delivery input[type="radio"] {
     margin-right: 10px;
     cursor: pointer;
-    width: 24px;
+    width: 26px;
     height: 24px;
     border: 1px solid #C4C4C4; }
+  .method-payment-and-delivery .layout .method-delivery input[type="date"] {
+    cursor: pointer;
+    width: 126px;
+    padding: 0 6px;
+    height: 24px;
+    border: 1px solid #C4C4C4;
+    border-radius: 3px; }
+    .method-payment-and-delivery .layout .method-delivery input[type="date"]::-webkit-calendar-picker-indicator {
+      color: transparent;
+      opacity: 1;
+      background: url(../images/icons/calendar.png) no-repeat center;
+      background-size: contain; }
   .method-payment-and-delivery .layout .method-delivery .deliveryCourier .your-address {
     height: 0;
     overflow: hidden; }
@@ -3600,15 +3800,43 @@ a img {
         border-radius: 5px;
         height: 30px;
         width: 300px; }
-  .method-payment-and-delivery .layout .method-delivery .pickup .our-address.active {
+  .method-payment-and-delivery .layout .method-delivery .pickup .our-address {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
-    flex-direction: column; }
-    .method-payment-and-delivery .layout .method-delivery .pickup .our-address.active label {
+    flex-direction: column;
+    height: 0px;
+    overflow: hidden; }
+    .method-payment-and-delivery .layout .method-delivery .pickup .our-address label {
+      margin: 10px 0 0px 30px; }
+  .method-payment-and-delivery .layout .method-delivery .check-active .your-address {
+    padding: 20px 40px;
+    width: 600px;
+    height: 80px; }
+    .method-payment-and-delivery .layout .method-delivery .check-active .your-address label {
+      margin-right: 20px; }
+    .method-payment-and-delivery .layout .method-delivery .check-active .your-address input {
+      border: 1px solid #C4C4C4;
+      border-radius: 5px;
+      height: 30px;
+      width: 300px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 14px;
+      padding-left: 10px; }
+  .method-payment-and-delivery .layout .method-delivery .check-active .our-address {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 80px; }
+    .method-payment-and-delivery .layout .method-delivery .check-active .our-address label {
       margin: 10px 0 0px 30px; }
   .method-payment-and-delivery .layout .method-payment {
     margin: 90px  0 80px; }
@@ -3652,17 +3880,62 @@ a img {
           -webkit-box-orient: vertical;
           -webkit-box-direction: normal;
           -ms-flex-direction: column;
-          flex-direction: column; }
-          .data-contacts .layout form .main-info fieldset input {
-            width: 332.49px;
-            height: 45.82px;
-            border: 1px solid #C4C4C4;
-            border-radius: 5px;
-            padding: 10px;
+          flex-direction: column;
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+          justify-content: space-between; }
+          .data-contacts .layout form .main-info fieldset label {
+            margin-left: 18px;
             font-weight: 400;
-            font-size: 16px;
+            font-size: 14px;
             line-height: 35px;
-            color: #404040; }
+            color: #999999; }
+            .data-contacts .layout form .main-info fieldset label input {
+              margin-left: -18px;
+              width: 332.49px;
+              height: 45.82px;
+              border: 1px solid #C4C4C4;
+              border-radius: 5px;
+              padding: 10px;
+              font-family: 'Montserrat';
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 28px;
+              letter-spacing: 0px; }
+            .data-contacts .layout form .main-info fieldset label[for="number"]::after {
+              content: "+380";
+              position: absolute;
+              top: 87px;
+              left: 9px;
+              font-family: 'Montserrat';
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 28px;
+              letter-spacing: 2px;
+              color: #999999; }
+            .data-contacts .layout form .main-info fieldset label[for="number"] input {
+              padding-left: 60px;
+              font-family: 'Montserrat';
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 28px;
+              letter-spacing: 1.5px; }
+              .data-contacts .layout form .main-info fieldset label[for="number"] input::-webkit-input-placeholder {
+                line-height: 28px;
+                letter-spacing: 2px;
+                color: #999999; }
+              .data-contacts .layout form .main-info fieldset label[for="number"] input:-ms-input-placeholder {
+                line-height: 28px;
+                letter-spacing: 2px;
+                color: #999999; }
+              .data-contacts .layout form .main-info fieldset label[for="number"] input::-ms-input-placeholder {
+                line-height: 28px;
+                letter-spacing: 2px;
+                color: #999999; }
+              .data-contacts .layout form .main-info fieldset label[for="number"] input::placeholder {
+                line-height: 28px;
+                letter-spacing: 2px;
+                color: #999999; }
       .data-contacts .layout form .radiobtn {
         margin: 22px 0 25px 0;
         display: -webkit-box;
@@ -3694,12 +3967,6 @@ a img {
           border: 1px solid #C4C4C4;
           border-radius: 5px;
           padding: 5px 10px; }
-      .data-contacts .layout form label {
-        margin-left: 18px;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 35px;
-        color: #999999; }
 
 .appliances-information {
   margin: 63px 0 60px 0; }
@@ -3743,14 +4010,17 @@ a img {
         font-size: 15px;
         line-height: 35px;
         color: #1E1E1E; }
-        .list-search-products .layout .main-filter-product aside .brand-filter .brand-list .brand-item {
+        .list-search-products .layout .main-filter-product aside .brand-filter .brand-list .brand-item,
+        .list-search-products .layout .main-filter-product aside .brand-filter .brand-list .brand-item-main {
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
           margin: 5px 0; }
-          .list-search-products .layout .main-filter-product aside .brand-filter .brand-list .brand-item .name {
+          .list-search-products .layout .main-filter-product aside .brand-filter .brand-list .brand-item .name,
+          .list-search-products .layout .main-filter-product aside .brand-filter .brand-list .brand-item-main .name {
             margin-left: 6px; }
-            .list-search-products .layout .main-filter-product aside .brand-filter .brand-list .brand-item .name .quntity {
+            .list-search-products .layout .main-filter-product aside .brand-filter .brand-list .brand-item .name .quntity,
+            .list-search-products .layout .main-filter-product aside .brand-filter .brand-list .brand-item-main .name .quntity {
               margin-left: 6px; }
       .list-search-products .layout .main-filter-product aside .brand-filter .open-rest {
         margin-left: 30px;

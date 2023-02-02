@@ -10,10 +10,10 @@ function productsBlock (sku){
        let currentPrice; 
        if (sku.sale){
               currentPrice = sku.price - ((sku.price / 100) * Number(sku.sale.match(/\d+/)) )
-              cloneItem.querySelector(".new-price").innerHTML =  currentPrice + " ₽";
-              cloneItem.querySelector(".old-price").innerHTML = sku.price;
+              cloneItem.querySelector(".new-price").innerHTML =  currentPrice + " ₴";
+              cloneItem.querySelector(".old-price").innerHTML = sku.price + " ₴";
        }else{
-       cloneItem.querySelector(".new-price").innerHTML = sku.price + " ₽";
+       cloneItem.querySelector(".new-price").innerHTML = sku.price + " ₴";
        }
        if(sku.availability){
               cloneItem.querySelector(".btn-buy").innerHTML = "Купить"
@@ -38,7 +38,7 @@ function productsBlock (sku){
        // raitingProduct(sku.raiting)
              
               
-      
+       
 
        // cloneItem.append(otherInformation)
        cloneItem.querySelector(".review .amount-review").innerHTML = sku.comments;
@@ -142,6 +142,7 @@ function  viewMoreInfoProduct(element){
        }
        blockProduct.querySelector(".new-price").innerHTML = element.querySelector(".new-price").innerHTML;
        blockProduct.querySelector(".old-price").innerHTML = element.querySelector(".old-price").innerHTML;
+       blockProduct.querySelector(".code").innerHTML = element.querySelector(".code-product").innerHTML;
        
        let imgAtrr = element.querySelector(".image-product img").getAttribute("src")
        blockProduct.querySelector(".big-photo-product img").setAttribute("src", `${imgAtrr}`)
@@ -177,12 +178,16 @@ document.querySelector("ul.little-photo").addEventListener("click", function ope
        }
      
 })
-let userArrowProduct = new Array();
+
+
 ///////////add product in cart buy
 function addInCartProducts (){
        let cartBuy = document.querySelector("#buy-list");
        let amountBuy = cartBuy.querySelector("#amountShoping");
        let quantityMany = document.querySelector("#amountPrice");
+       let userArrowProduct = new Array();
+       // localStorage.setItem("sumBuy", quantityMany.innerHTML)
+       // localStorage.setItem("cartAmountBuy",amountBuy.innerHTML)
        document.querySelector(".product-block").addEventListener("click", function (event){
        
        if (event.target.classList.contains("btn-buy")) { 
@@ -193,9 +198,9 @@ function addInCartProducts (){
               let priceProduct = parseInt(itemProduct.querySelector(".new-price").innerHTML.match(/\d+/)) //берем из продукта цену и только цыфры
               let res = priceProduct + Number(localStorage.getItem("sumBuy"))// вічисляем стоимость всех продуктов в корзине
               localStorage.setItem("sumBuy", res)// записіваем в память
-              quantityMany.innerHTML = res + "₽"// віводим на єкран
+              quantityMany.innerHTML = res + "₴"// віводим на єкран
               
-              
+              let objectProduct = new Object();
               
               let productCodeCardBuy = itemProduct.querySelector(".code-product").innerHTML;
               let nameProductCartBuy = itemProduct.querySelector(".nameProduct").innerHTML;
@@ -203,26 +208,74 @@ function addInCartProducts (){
               let oldPrice = itemProduct.querySelector(".old-price").innerHTML;
               let addressIMG = itemProduct.querySelector(".image-product img").getAttribute("src");
 
-
-
-                     let objectProduct = new Object();
+                     // let quantityOfUnitsNum = 0
                      
+                     // if (productCodeCardBuy === productCodeCardBuy) {
+                     //        quantityOfUnitsNum++; 
+                     //        return
+                     // }
+                    
 
                      objectProduct.code  = productCodeCardBuy;
                      objectProduct.nameProduct  = nameProductCartBuy;
                      objectProduct.newPrice  = newPrice ;
                      objectProduct.oldPrice  = oldPrice;
                      objectProduct.addressIMG  = addressIMG;   
+                     // objectProduct.quantityOfUnits = quantityOfUnitsNum;
+
+                     userArrowProduct.push(objectProduct);
+                    
                      
                      
-                      userArrowProduct.push(objectProduct);
+                      
 
                      
                      
        }
-       myBuyProducts = JSON.stringify(userArrowProduct)
+       let myBuyProducts = JSON.stringify(userArrowProduct)
        localStorage.setItem("myProdBuyLocal" , myBuyProducts);
-})
+       })
+       document.querySelector(".product-block-two").addEventListener("click", function (event){
+       
+              if (event.target.classList.contains("btn-buy")) { 
+                     let itemProduct = event.target.closest(".main-product")
+                     amountBuy.innerHTML = ++amountBuy.innerHTML // пишем количество товаров в козине
+                     localStorage.setItem("cartAmountBuy", amountBuy.innerHTML)// записуем в память
+       
+                     let priceProduct = parseInt(itemProduct.querySelector(".new-price").innerHTML.match(/\d+/)) //берем из продукта цену и только цыфры
+                     let res = priceProduct + Number(localStorage.getItem("sumBuy"))// вічисляем стоимость всех продуктов в корзине
+                     localStorage.setItem("sumBuy", res)// записіваем в память
+                     quantityMany.innerHTML = res + "₴"// віводим на єкран
+                     
+                     let objectProduct = new Object();
+                     
+                     let productCodeCardBuy = itemProduct.querySelector(".code-product").innerHTML;
+                     let nameProductCartBuy = itemProduct.querySelector(".nameProduct").innerHTML;
+                     let newPrice = itemProduct.querySelector(".new-price").innerHTML;
+                     let oldPrice = itemProduct.querySelector(".old-price").innerHTML;
+                     let addressIMG = itemProduct.querySelector(".image-product img").getAttribute("src");
+       
+       
+                     
+                           
+                            
+       
+                            objectProduct.code  = productCodeCardBuy;
+                            objectProduct.nameProduct  = nameProductCartBuy;
+                            objectProduct.newPrice  = newPrice ;
+                            objectProduct.oldPrice  = oldPrice;
+                            objectProduct.addressIMG  = addressIMG;   
+                            
+                            
+                             userArrowProduct.push(objectProduct);
+       
+                            
+                            
+              }
+              let myBuyProducts = JSON.stringify(userArrowProduct)
+              localStorage.setItem("myProdBuyLocal" , myBuyProducts);
+              })
+       
 }
 
 addInCartProducts()

@@ -29,25 +29,44 @@
             justify-content: space-between;
             align-items: center;
             li{
-                
-                
-                a{
-                    img{
-                        position: relative;
-                        top: 6px;
-                        margin-right: 9px;
-                    }
-                    font-weight: 400;
-                    font-size: 18px;
-                    line-height: 35px;
-                    color: #404040;
-                    @include navHover;
+                cursor: pointer;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 35px;
+                color: #404040;
+                position: relative;
+                @include navHover;
+                img{
+                    position: relative;
+                    top: 6px;
+                    margin-right: 9px;
+                    filter:grayscale(100%);
                 }
-                &:last-child{
-                    a{
-                        color: red;}
+                &.tabs-nav__item.is-active{
+                    
+                        color: red;
+                        img{
+                             filter:grayscale(0%);
+                        }
+                       
+                    
+                }
+                .quantity-order{
+                    position: absolute;
+                    top:13px;right: -25px;
+                    background-color: $orangeSaleAndBuylist;
+                    display: block;
+                    width: 16px;
+                    height: 16px;
+                    font-weight: 700;
+                    font-size: 11px;
+                    line-height: 13px;
+                    color: #FFFFFF;
+                    padding: 2px 0 0 5px;
+                    border-radius: 50%;
                 }
             }
+
         }
         h2{
             margin-top: 34px;
@@ -56,163 +75,380 @@
             line-height: 35px;
             color: #1E1E1E;
         }
-        .user-data {
-            margin-top: 12px;
-            .main-data {
-                 display: flex;
-                .user-photo {
-                    width: 108px;
-                    height: 108px;
-                    background-color:rgba(239, 243, 249, 1) ;
-                    border-radius: 50%;
-                    margin-right: 20px;
-                    img{
-                        padding: 27px 30px;
+        .tab {
+            display: none;
+            &.is-active { 
+                display: block;
+                .opted-block{
+                    margin-top: 90px;
+                    display: flex;
+                    justify-content: space-between;
+                    ul.save-user-prod{
+                        width: 70%;
+                    li{
+        
                     }
-                }
-                .user-name {
-                    h3{
-                        border:none;
-                        font-weight: 600;
-                        font-size: 24px;
-                        line-height: 30px;
-                        color: #1E1E1E;
-                        
                     }
-                    input[type=file]{
-                        display: none;
-                    }
-                    label{
-                        width: 203.11px;
-                        height: 20.62px;
-                        position: relative;
-                        display: block;
-                        cursor: pointer;
-                      img{
-                        width: 16px;
-                        height: 16px;
-                        position: relative;
-                        top: 4px;
-                        margin-right: 10px;
-                      }
-                    }
-                    
-                    
-                }
-            }
-            .data {
-                display: flex;
-                .data-settings {
-                    h3{
-                        margin-top: 30px;
-                        font-weight: 400;
-                        font-size: 24px;
-                        line-height: 35px;
-                        color: #1E1E1E;
-                        border:none;
-                    }
-                    ul{
-                        display: flex;
-                        justify-content: space-between;
-                        &:last-child{
-                            justify-content: flex-start;
-                        }
-                        li{
-                            margin-right: 160px;
-                           width: 305px;
-                            h4{
-                                font-weight: 400;
-                                font-size: 14px;
-                                line-height: 35px;
-                                color: #999999;
+                    .user-orders {
+                        border: 1px solid #E5E5E5;
+                        border-radius: 10px;
+                        width: 1045px;
+                        height: 228px;
+                        transition-duration: 2s;
+                        overflow: hidden;
+                        .title-order {
+                            background-color: rgba(239, 243, 249, 1);
+                            display: flex;
+                            justify-content: space-between;
+                            padding: 15px 15px 13px 19px;
+                            .h4 {
+                                display: flex;
+                                
+                                .status {
+                                    font-weight: 500;
+                                    font-size: 18px;
+                                    line-height: 18px;
+                                }
+                                .order-code {
+                                    margin-left: 35px;
+                                    font-weight: 500;
+                                    font-size: 16px;
+                                    line-height: 18px;
+                                    color: $colorBuy;
+                                }
+
+                            }
+                             .sum-order {
+                                font-weight: 500;
+                                font-size: 18px;
+                                line-height: 18px;
                                 
                             }
-                            
-                            .entry-field{
-                                display: flex;
-                                align-items: center;
-                                input{
+                        }
+                        .informations-order {
+                            display: flex;
+                            padding: 27px 0 35px 20px;
+
+                            .inform-delivery {
+
+                                .status-prod {
+                                    font-weight: 500;
+                                    font-size: 13px;
+                                    line-height: 18px;
+                                    color: #FFFFFF;
+                                    background: #55BB9F;
+                                    width: 189.1px;
+                                    height: 26.11px;
+                                    padding: 3px  0 0 9px;
+                                    border-radius: 2px;
+                                }
+                                .method-delivery {
+                                    margin-top: 15px;
+                                    font-weight: 500;
+                                    font-size: 16px;
+                                    line-height: 18px;
+                                }
+                                .delivery-date {
+                                    margin-top: 19px;
                                     font-weight: 400;
-                                    font-size: 18px;
-                                    line-height: 35px;
-                                    color: #404040;
-                                    width: 305px;
-                                    border: none;
-                                    &.active-edit{
-                                        margin-left: 5px;
-                                        padding-left: 5px;
-                                        box-shadow: 0px 2px 5px #1e1e1e54;
+                                    font-size: 14px;
+                                    line-height: 18px;
+                                    color: #6E6E6E;
+                                }
+                                .payment-method {
+                                    margin-top: 6px;
+                                    font-weight: 400;
+                                    font-size: 14px;
+                                    line-height: 18px;
+                                    color: #6E6E6E;
+                                }
+                            }
+                            ul.list-shop {
+                                margin-top: 13px;
+                                margin-left: 270px;
+                                display: flex;
+                                
+                                li{
+                                    display: block;
+                                    width: 200px;
+                                    padding: 10px;
+                                    .img-prod {
+                                        width: 74.15px;
+                                        height: 74.15px;
+                                        margin: 0 auto;
+                                        img{
+                                            
+                                            display: block;
+                                            height: 100%;
+                                            width: 100%;
+                                        }
+                                    }
+                                    h6{
+                                        text-align: center;
+                                        font-weight: 400;
+                                        font-size: 14px;
+                                        line-height: 16px;
                                        
+                                        
                                     }
                                 }
-                                a{
-                                    margin-left: 5px;
-                                    color: green;
-                                    font-size: 18px;
-                                    display: none;
-                                }
-                            }
-                           
-                                                        
-                            .edit {
-                                display: flex;
-                                align-items: center;
-                                img{
-                                    margin-right: 10px;
-                                    width: 16px;
-                                    height: 16px;
-                                }
-                                span{
-                                    font-weight: 500;
-                                    font-size: 14px;
-                                    line-height: 30px;
-                                    color: $navHover;
-                                    cursor: pointer;
-
-                                }
                             }
                         }
-                    }
-                }
-                .form {
-                    max-width: 30%;
-                    h4{
-                        font-weight: 400;
-                        font-size: 24px;
-                        line-height: 35px;
-                        color: #1E1E1E;
-                        margin-bottom: 11px;
-                    }
-                    form{
-                        display: flex;
-                        flex-direction: column;
-
-                        label{
+                        .buyer-data{
                             font-weight: 400;
                             font-size: 14px;
-                            line-height: 35px;
-                            color: #999999;
-                           
-                        }
-                        input{
-                            border: 1px solid #C4C4C4;
-                            border-radius: 5px;
-                            width: 332.49px;
-                            height: 45.82px;
+                            line-height: 18px;
+                            color: #6E6E6E;
                             padding-left: 20px;
+                            b{
+                                color: #1E1E1E;
+                            }
+                            .userName{
+                                display: flex;
+                                .name {
+                                    margin-right: 5px;
+                                }
+                                .last {
+                                }
+                            }
+                            
+                            .number {
+                            }
+                            .mail {
+                            }
+                            .city {
+                            }
+                            .address {
+                            }
+                            .delivery-your-address {
+                            }
+                            .additional {
+                            }
                         }
-                        button{
-                            width: 213.49px;
-                            height: 54.65px;
-                            background: #437FC8;
-                            border-radius: 5px;
-                            border: none;
-                            color: #fff;
-                            font-weight: 600;
+                        &:hover{
+                            height: 378px;
+                        }
+                    }
+                  
+                   
+                   
+                   
+                    
+                    
+                    
+                    
+                  
+                    .my-profile {
+                        margin-left: auto;
+                        .user-photo-and-name {
+                            display: flex;
+                            align-items: center;
+                            .photo-user {
+                                margin-right: 21px;
+                                padding: 30px;
+                                background-color: rgba(239, 243, 249, 1);
+                                border-radius: 50%;
+                                img{
+                                    display: block;
+                                    height: 49px;
+                                    width: 48px;
+                                }
+                            }
+                            .name {
+                                width: 140px;
+                                font-weight: 600;
+                                font-size: 24px;
+                                line-height: 30px;
+                                color: #1E1E1E;
+                            }
+                        }
+                        .edit {
+                            img{
+                                width: 20px;
+                                height: 20px;
+                            }
+                            margin-top: 15px;
+                            font-weight: 500;
                             font-size: 18px;
-                            line-height: 25px;
-                            margin-top:25px;
-                            align-self: center;
+                            line-height: 30px;
+                            color: $colorBuy;
+            
+                        
+                        } 
+                        ul{
+                            margin-top: 15px;
+                            margin-left: -80xp;
+                            li{
+                                margin-bottom: 25px;
+                                font-weight: 400;
+                                font-size: 18px;
+                                line-height: 35px;
+                
+                                color: #1E1E1E;
+                            }
+                        }
+                    }           
+                    
+                }
+                .user-data {
+                    margin-top: 12px;
+                    .main-data {
+                         display: flex;
+                        .user-photo {
+                            width: 108px;
+                            height: 108px;
+                            background-color:rgba(239, 243, 249, 1) ;
+                            border-radius: 50%;
+                            margin-right: 20px;
+                            img{
+                                padding: 27px 30px;
+                            }
+                        }
+                        .user-name {
+                            h3{
+                                border:none;
+                                font-weight: 600;
+                                font-size: 24px;
+                                line-height: 30px;
+                                color: #1E1E1E;
+                                
+                            }
+                            input[type=file]{
+                                display: none;
+                            }
+                            label{
+                                width: 203.11px;
+                                height: 20.62px;
+                                position: relative;
+                                display: block;
+                                cursor: pointer;
+                              img{
+                                width: 16px;
+                                height: 16px;
+                                position: relative;
+                                top: 4px;
+                                margin-right: 10px;
+                              }
+                            }
+                            
+                            
+                        }
+                    }
+                    .data {
+                        display: flex;
+                        .data-settings {
+                            h3{
+                                margin-top: 30px;
+                                font-weight: 400;
+                                font-size: 24px;
+                                line-height: 35px;
+                                color: #1E1E1E;
+                                border:none;
+                            }
+                            ul{
+                                display: flex;
+                                justify-content: space-between;
+                                &:last-child{
+                                    justify-content: flex-start;
+                                }
+                                li{
+                                    margin-right: 160px;
+                                   width: 305px;
+                                    h4{
+                                        font-weight: 400;
+                                        font-size: 14px;
+                                        line-height: 35px;
+                                        color: #999999;
+                                        
+                                    }
+                                    
+                                    .entry-field{
+                                        display: flex;
+                                        align-items: center;
+                                        input{
+                                            font-weight: 400;
+                                            font-size: 18px;
+                                            line-height: 35px;
+                                            color: #404040;
+                                            width: 305px;
+                                            border: none;
+                                            &.active-edit{
+                                                margin-left: 5px;
+                                                padding-left: 5px;
+                                                box-shadow: 0px 2px 5px #1e1e1e54;
+                                               
+                                            }
+                                        }
+                                        a{
+                                            margin-left: 5px;
+                                            color: green;
+                                            font-size: 18px;
+                                            display: none;
+                                        }
+                                    }
+                                   
+                                                                
+                                    .edit {
+                                        display: flex;
+                                        align-items: center;
+                                        img{
+                                            margin-right: 10px;
+                                            width: 16px;
+                                            height: 16px;
+                                        }
+                                        span{
+                                            font-weight: 500;
+                                            font-size: 14px;
+                                            line-height: 30px;
+                                            color: $navHover;
+                                            cursor: pointer;
+        
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .form {
+                            max-width: 30%;
+                            h4{
+                                font-weight: 400;
+                                font-size: 24px;
+                                line-height: 35px;
+                                color: #1E1E1E;
+                                margin-bottom: 11px;
+                            }
+                            form{
+                                display: flex;
+                                flex-direction: column;
+        
+                                label{
+                                    font-weight: 400;
+                                    font-size: 14px;
+                                    line-height: 35px;
+                                    color: #999999;
+                                   
+                                }
+                                input{
+                                    border: 1px solid #C4C4C4;
+                                    border-radius: 5px;
+                                    width: 332.49px;
+                                    height: 45.82px;
+                                    padding-left: 20px;
+                                }
+                                button{
+                                    width: 213.49px;
+                                    height: 54.65px;
+                                    background: #437FC8;
+                                    border-radius: 5px;
+                                    border: none;
+                                    color: #fff;
+                                    font-weight: 600;
+                                    font-size: 18px;
+                                    line-height: 25px;
+                                    margin-top:25px;
+                                    align-self: center;
+                                }
+                            }
                         }
                     }
                 }
@@ -220,8 +456,6 @@
         }
     }
 }
-
-
 
 
 

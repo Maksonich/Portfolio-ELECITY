@@ -1,6 +1,5 @@
 //////////////open modal window select sity
 function changeСities(){
-       let yourCity;
     let wind = document.querySelector("#selectSity");
     wind.addEventListener("click", function(){
            document.querySelector(".popup_catalog-cities").classList.add("open");
@@ -18,10 +17,9 @@ function changeСities(){
     changeСity.addEventListener("click", function(e){
               if(e.target.tagName = "a"){
               localStorage.setItem("yourCity", `${e.target.innerHTML}`)
+              document.querySelector("#city-of-your-choice").innerHTML = e.target.innerHTML
                      
-              let yourCity = localStorage.getItem("yourCity");
-           
-              wind.querySelector("#city-of-your-choice").innerHTML = yourCity 
+              
 
               document.querySelector(".popup_catalog-cities").classList.remove("open");
               document.querySelector("#wrapper").classList.remove("popup");}  
@@ -71,7 +69,7 @@ function loginPersonesAccount (){
                   
            }
     })
-
+   
     document.querySelector(".popup_catalog-loginAccount .blocker").addEventListener("click", function closeModalWindLoginPers() {
             document.querySelector(".popup_catalog-loginAccount").classList.remove("open");
               document.querySelector("#wrapper").classList.remove("popup");

@@ -1,4 +1,4 @@
-	// my personal account    
+ 
 function allowEditNameUser (editElemClickP,editElemP,datalocal){
     let editElemClick = document.querySelector(editElemClickP)
     let editElem = document.querySelector(editElemP);
@@ -27,4 +27,93 @@ allowEditNameUser("#editNumberClick","#editNumber","userNumber")
 
 
 
+let tab = function () {
+        let tabNav = document.querySelectorAll('.tabs-nav__item'),
+            tabContent = document.querySelectorAll('.tab'),
+            tabName;
+       
+        tabNav.forEach(item => {
+            item.addEventListener('click', selectTabNav)
+            
+        });
+    
+        function selectTabNav() {
+            tabNav.forEach(item => {
+                item.classList.remove('is-active');
+            });
+            this.classList.add('is-active');
+            tabName = this.getAttribute('data-tab-name');
+            selectTabContent(tabName);
+        }
+    
+        function selectTabContent(tabName) {
+            tabContent.forEach(item => {
+                item.classList.contains(tabName) ? item.classList.add('is-active') : item.classList.remove('is-active');
+            })
+        }
+    
+    };
+ tab();
+ ////////////////////////////////
+ //my shop list
+let listUserDatas = localStorage.getItem("userDataConfirmationShop")
+let ArrUserOrder = JSON.parse(listUserDatas)
+let listShopStr = localStorage.getItem("ConfirmationList")
+let listShopConfirm = JSON.parse(listShopStr)
+console.log(listShopConfirm)
+console.log(ArrUserOrder)
 
+if (listShopConfirm.length == "0"){
+    document.querySelector(".quantity-order").style.display = "none"
+} else {
+    document.querySelector(".quantity-order").textContent = listShopConfirm.length;
+}
+function showListConfirmationShops(arrowProducts, arrowDataBuyer){
+    let blockOrders = document.querySelector("template.ord-user")
+    let cloneBlockOrd = blockOrders.content.cloneNode(true)
+
+    let sumOrder = 0
+    let ul = cloneBlockOrd.querySelector(".list-shop")
+    for(let item of arrowProducts){
+        let li = document.createElement("li");
+        let div = document.createElement("div");
+        let img = document.createElement("img");
+        let h6 = document.createElement("h6");
+
+        sumOrder += parseInt(item.newPrice.match(/\d+/))
+       
+        
+        img.setAttribute("src", item.addressIMG)
+        h6.innerHTML = item.nameProduct
+        div.classList.add("img-prod")
+        div.append(img)
+        li.append(div)
+        li.append(h6)
+        
+        ul.append(li)
+
+    }
+    // .CommentsUser
+    cloneBlockOrd.querySelector(".sum-order").innerHTML = sumOrder + "₴";
+    // console.log( sumOrder)
+    let buyer = cloneBlockOrd.querySelector(".buyer-data")
+    for(let userData of arrowDataBuyer){
+        buyer.querySelector(".name").innerHTML ="<b>Получатель  </b> - " + userData.userName
+        buyer.querySelector(".last").innerHTML = userData.userLastName
+        buyer.querySelector(".number").innerHTML = "<b>Мобильный номер получателя </b> - +380" + userData.userNumber
+        buyer.querySelector(".mail").innerHTML = "<b>Электронная почта получателя </b> - " + userData.userMail
+        buyer.querySelector(".city").innerHTML ="<b>Город получателя</b>   - " + userData.userCity
+        buyer.querySelector(".address").innerHTML ="<b>Адрес получателя</b>   - " + userData.userAddress
+        buyer.querySelector(".delivery-your-address").innerHTML ="<b>Заказ по адресу</b>   - " +  userData.ourAddress
+        buyer.querySelector(".user-comments").innerHTML = userData.CommentsUser
+        buyer.querySelector(".additionalServices1").innerHTML = userData.inpAdditionalServices
+
+        console.log(userData)
+        cloneBlockOrd.querySelector(".delivery-date").textContent = "Доставка " + userData.dateDelivery
+        cloneBlockOrd.querySelector(".payment-method").textContent = userData.methodPayment
+        cloneBlockOrd.querySelector(".method-delivery").textContent = userData.methodDelivery
+    }
+    document.querySelector(".tab-1 .opted-block").prepend(cloneBlockOrd)
+}
+   
+showListConfirmationShops(listShopConfirm,ArrUserOrder)
