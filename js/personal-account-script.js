@@ -24,7 +24,11 @@ allowEditNameUser("#editNameClick","#editName","userName")
 allowEditNameUser("#editAddressClick","#editAddress" ,"userAddress")
 allowEditNameUser("#editMailClick","#editMail","userMailAddress")
 allowEditNameUser("#editNumberClick","#editNumber","userNumber")
+/////////////
 
+
+// // dateStr.querySelector("span.date").innerHTML = yourDay;
+// dateStr.querySelector(".mounth").innerHTML = nameMounth;
 
 
 let tab = function () {
@@ -60,8 +64,7 @@ let listUserDatas = localStorage.getItem("userDataConfirmationShop")
 let ArrUserOrder = JSON.parse(listUserDatas)
 let listShopStr = localStorage.getItem("ConfirmationList")
 let listShopConfirm = JSON.parse(listShopStr)
-console.log(listShopConfirm)
-console.log(ArrUserOrder)
+
 
 if (listShopConfirm.length == "0"){
     document.querySelector(".quantity-order").style.display = "none"
@@ -93,9 +96,57 @@ function showListConfirmationShops(arrowProducts, arrowDataBuyer){
         ul.append(li)
 
     }
-    // .CommentsUser
+
+
+    let yourDate = new Date();
+    let yourDay = yourDate.getDate();
+    let yourMounth = yourDate.getMonth() +1;
+    let nameMounth;
+    switch (yourMounth){
+        case 1:
+        nameMounth = "Январь";
+        break;
+        case 2:
+        nameMounth = "Февраль";
+        break;
+        case 3:
+        nameMounth = "Март";
+        break;
+        case 4:
+        nameMounth = "Апрель";
+        break;
+        case 5:
+        nameMounth = "Май";
+        break;
+        case 6:
+        nameMounth = "Июнь";
+        break;
+        case 7:
+        nameMounth = "Июль";
+        break;
+        case 8:
+        nameMounth = "Августа";
+        break;
+        case 9:
+        nameMounth = "Сентября";
+        break;
+        case 10:
+        nameMounth = "Сентября";
+        break;
+        case 11:
+        nameMounth = "Октября";
+        break;
+        case 12:
+        nameMounth = "Декабря";
+        break;
+
+    }
+    cloneBlockOrd.querySelector(".date-status").innerHTML = yourDay;
+    cloneBlockOrd.querySelector(".mounth-status").innerHTML = nameMounth;
+
+    
     cloneBlockOrd.querySelector(".sum-order").innerHTML = sumOrder + "₴";
-    // console.log( sumOrder)
+   
     let buyer = cloneBlockOrd.querySelector(".buyer-data")
     for(let userData of arrowDataBuyer){
         buyer.querySelector(".name").innerHTML ="<b>Получатель  </b> - " + userData.userName
@@ -105,7 +156,7 @@ function showListConfirmationShops(arrowProducts, arrowDataBuyer){
         buyer.querySelector(".city").innerHTML ="<b>Город получателя</b>   - " + userData.userCity
         buyer.querySelector(".address").innerHTML ="<b>Адрес получателя</b>   - " + userData.userAddress
         buyer.querySelector(".delivery-your-address").innerHTML ="<b>Заказ по адресу</b>   - " +  userData.ourAddress
-        buyer.querySelector(".user-comments").innerHTML = userData.CommentsUser
+        buyer.querySelector(".user-comments").innerHTML = userData.commentsUser
         buyer.querySelector(".additionalServices1").innerHTML = userData.inpAdditionalServices
 
         console.log(userData)

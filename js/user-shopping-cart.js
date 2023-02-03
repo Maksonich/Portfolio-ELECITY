@@ -72,7 +72,7 @@ function removeProductCart(){
             button.closest("li").remove()
             location.reload()
                 for(let i = 0; i < productsList.length;i++){
-                    console.log(productsList[i])
+                   
                     if(button.closest("li").querySelector(".product-code span").innerHTML === productsList[i].code){
                         productsList.splice([i], 1)
                         let confirmedPurchases = JSON.stringify(productsList);
@@ -112,8 +112,6 @@ function blockTotalSum(totalSum,withDiscount,totaldiscount){
 
     
     
-    
-    console.log()
 
 }
 //method delivery
@@ -249,7 +247,7 @@ function formSubmission(){
                     userDatas.inpAdditionalServices = arrayAdditionalServices
                 }
             }
-            userDatas.CommentsUser = document.querySelector("#Form-comment").value
+            userDatas.commentsUser = document.querySelector("#Form-comment").value
            
             let confirmationListShop = productsList;
             let confirmationListShopStr = JSON.stringify(confirmationListShop)
@@ -281,7 +279,7 @@ function formSubmission(){
 }
 formSubmission()
 
-console.log(document.querySelector("[name='methodDelivery']").nextElementSibling.value)
+
 
 
 
