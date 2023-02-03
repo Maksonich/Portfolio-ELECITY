@@ -15,7 +15,7 @@ function changeСities(){
 
     let changeСity = document.querySelector(".list-cities")
     changeСity.addEventListener("click", function(e){
-              if(e.target.tagName = "a"){
+              if(e.target.classList.contais("item-city")){
               localStorage.setItem("yourCity", `${e.target.innerHTML}`)
               document.querySelector("#city-of-your-choice").innerHTML = e.target.innerHTML
                      
