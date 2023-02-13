@@ -375,10 +375,21 @@ window.addEventListener("load", function (){
 window.addEventListener("load", function(){
        
      //  cart buy
-       document.querySelector("#amountPrice").innerHTML = localStorage.getItem("sumBuy") + " ₴"
-       document.querySelector("#amountShoping").innerHTML = localStorage.getItem("cartAmountBuy")
+     function showElem (elem,locait,grn){
+       let element = elem;
+       if(element){
+              locait.innerHTML = element + grn
+       }else {
+              locait.innerHTML = locait.innerHTML
+       }
+     }
+     showElem(localStorage.getItem("sumBuy"),  document.querySelector("#amountPrice")," ₴")
+     showElem(localStorage.getItem("cartAmountBuy"),  document.querySelector("#amountShoping"), "")
+     showElem(localStorage.getItem("yourCity"), document.querySelector("#city-of-your-choice"), "")
+       // document.querySelector("#amountPrice").innerHTML = localStorage.getItem("sumBuy") + " ₴"
+       // document.querySelector("#amountShoping").innerHTML = localStorage.getItem("cartAmountBuy")
      //  select city 
-       document.querySelector("#city-of-your-choice").innerHTML = localStorage.getItem("yourCity")
+       // document.querySelector("#city-of-your-choice").innerHTML = localStorage.getItem("yourCity")
        //user account 
        document.querySelector("#editName").value = localStorage.getItem("userName") 
        document.querySelector("#title-user-name").innerHTML = localStorage.getItem("userName") 

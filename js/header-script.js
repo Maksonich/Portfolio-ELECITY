@@ -15,14 +15,16 @@ function changeСities(){
 
     let changeСity = document.querySelector(".list-cities")
     changeСity.addEventListener("click", function(e){
-              if(e.target.classList.contais("item-city")){
+       console.log(e.target)
+              if(e.target.classList.contains("item-city")){
               localStorage.setItem("yourCity", `${e.target.innerHTML}`)
               document.querySelector("#city-of-your-choice").innerHTML = e.target.innerHTML
                      
               
 
               document.querySelector(".popup_catalog-cities").classList.remove("open");
-              document.querySelector("#wrapper").classList.remove("popup");}  
+              document.querySelector("#wrapper").classList.remove("popup");
+       }  
     })
    
 }

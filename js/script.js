@@ -1,3 +1,5 @@
+
+
 ///show products cart
 function productsBlock (sku){
        let item = document.querySelector("template")
@@ -29,30 +31,11 @@ function productsBlock (sku){
        otherInformation.querySelector(".code-product").innerHTML = sku.codeProduct;
 
 
-       // let raiting = cloneItem.querySelectorAll("raiting__star");
-       // for ( let i = 0; i < raiting.length;i++){
-       //       raiting[i].setAttribute('checked', 'checekd')
-       // }
-       // let otherInformation = document.createElement("template");
 
-       // raitingProduct(sku.raiting)
-             
-              
-       
-
-       // cloneItem.append(otherInformation)
        cloneItem.querySelector(".review .amount-review").innerHTML = sku.comments;
        return cloneItem;
 }
-//  function raitingProduct( raiting){ 
-//        let raitBlock = document.querySelectorAll(".product-block .raiting__group")
-//        // console.log(raiting)
-//        for (let i = 0 ; i < raitBlock.length;i++){
-//              console.log(raitBlock[i])
-//        }
-      
-       
-//  }
+
 
 ///show products block
 products.forEach(sku =>{
@@ -65,21 +48,7 @@ products.forEach(sku =>{
 
 })
 /////////////////
-// products.forEach(sku =>{
-//        let productsBuy = productsBlock(sku)
 
-
-//        console.log(productsBuy)
-//showQuantityProductsOnPage(document.querySelector(".product-block ul"),8,productsBuy)
-
-
-//    })
-//////////////////
-// function showQuantityProductsOnPage (arr, quantitySku,resultFunk ){
-//        for (let i = 0; i < quantitySku; i++) {
-//               arr.append(resultFunk);
-//        }
-// }
 /////////////////////////////////////////////////////////////////////////
 //scroll top button
 let scrolled;
@@ -164,14 +133,10 @@ function showBadgeProduct(elem, usblock){
 document.querySelector("ul.little-photo").addEventListener("click", function openQuickView(event){
        
        if(event.target.tegName = "li"){
-              // let li = event.target.closest("li")
-              // for (const i of li){
-              //        i.classList.remove("active-photo")
-              // }
+            
               let newValue =  event.target.getAttribute("src")
               document.querySelector(".big-photo-product img").setAttribute("src", newValue)
-              // li.classList.add("active-photo")
-              // console.log()
+            
        }
        else{
               return
@@ -186,8 +151,7 @@ function addInCartProducts (){
        let amountBuy = cartBuy.querySelector("#amountShoping");
        let quantityMany = document.querySelector("#amountPrice");
        let userArrowProduct = new Array();
-       // localStorage.setItem("sumBuy", quantityMany.innerHTML)
-       // localStorage.setItem("cartAmountBuy",amountBuy.innerHTML)
+      
        document.querySelector(".product-block").addEventListener("click", function (event){
        
        if (event.target.classList.contains("btn-buy")) { 
@@ -208,12 +172,7 @@ function addInCartProducts (){
               let oldPrice = itemProduct.querySelector(".old-price").innerHTML;
               let addressIMG = itemProduct.querySelector(".image-product img").getAttribute("src");
 
-                     // let quantityOfUnitsNum = 0
-                     
-                     // if (productCodeCardBuy === productCodeCardBuy) {
-                     //        quantityOfUnitsNum++; 
-                     //        return
-                     // }
+                 
                     
 
                      objectProduct.code  = productCodeCardBuy;
@@ -221,7 +180,7 @@ function addInCartProducts (){
                      objectProduct.newPrice  = newPrice ;
                      objectProduct.oldPrice  = oldPrice;
                      objectProduct.addressIMG  = addressIMG;   
-                     // objectProduct.quantityOfUnits = quantityOfUnitsNum;
+                     
 
                      userArrowProduct.push(objectProduct);
                     
@@ -305,28 +264,3 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 //////////////////////////////////
-// function getCgapterAndSubChapterProduct (){
-//        let nameSearch;  
-//        let nameSubsearch;
-//          document.querySelector(".all-category-menu").addEventListener("click" , function(event){
-              
-//                 if (event.target.tagName == "A"){
-//                        nameSearch = event.target.innerHTML
-//                       localStorage.setItem("chapter", nameSearch)
-                       
-//                 }
-                
-//          }) 
-       
-//          for (const item of document.querySelectorAll(".category-info")){
-//          item.addEventListener("click" , function(e){
-//                   if (e.target.tagName == "A"){
-                      
-//                        nameSubsearch = e.target.innerHTML
-//                        localStorage.setItem("subChapter", nameSubsearch)
-                       
-//                         }
-//          }) }
-
-
-//   }
